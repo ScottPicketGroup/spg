@@ -5,9 +5,9 @@ export default {
       name: "Desktop",
       colors: {
         body: "#FFFFFF",
-        text: "#000000",
+        text: "#333333",
       },
-      font: "Tinos",
+      font: "sans-serif",
       fontSize: "20px",
     },
     mobile: {
@@ -17,7 +17,7 @@ export default {
         body: "#9be7ff",
         text: "#0d47a1",
       },
-      font: "Ubuntu",
+      font: "sans-serif",
       fontSize: "12px",
     },
   },

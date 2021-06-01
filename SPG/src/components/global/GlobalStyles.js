@@ -6,10 +6,15 @@ export const Title = styled.h1`
 `;
 
 export const Container = styled.div`
-  display: flex;
   width: 100%;
   padding: 0 5.25rem;
   font-size: ${(props) => props.theme.fontSize};
+  background-color: #f9f9f4;
+`;
+
+export const SectionContainer = styled.div`
+  width: 100%;
+  display: flex;
 `;
 export const TextContainer = styled.div`
   display: inline;
