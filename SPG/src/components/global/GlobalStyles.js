@@ -7,7 +7,8 @@ export const Title = styled.h1`
 
 export const Container = styled.div`
   width: 100%;
-  padding: 0 5.25rem;
+  padding: ${(props) =>
+    props.theme.name === "Desktop" ? "0 5.25rem" : "0 2.25rem"};
   font-size: ${(props) => props.theme.fontSize};
   background-color: #f9f9f4;
 `;
@@ -18,9 +19,9 @@ export const SectionContainer = styled.div`
 `;
 export const TextContainer = styled.div`
   display: inline;
-  width: 42%;
+  width: ${(props) => (props.device === "Desktop" ? "42%" : "100%")};
 `;
 export const ImageContainer = styled.img`
   display: inline;
-  width: 58%;
+  width: ${(props) => (props.device === "Desktop" ? "58%" : "100%")};
 `;
