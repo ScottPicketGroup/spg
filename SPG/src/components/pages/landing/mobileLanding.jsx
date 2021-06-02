@@ -208,7 +208,15 @@ const MobileLanding = () => {
             <MenuItem theme={theme}>Gift Vouchers</MenuItem>
             <MenuItem theme={theme}>Provider</MenuItem>
             <MenuItem theme={theme}>Shop</MenuItem>
-            <MenuItem theme={theme}>Careers</MenuItem>
+            <MenuItem theme={theme}>
+              {" "}
+              <Link
+                to="/careers"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                Careers
+              </Link>
+            </MenuItem>
             <MenuItem theme={theme}>Contact</MenuItem>
           </Menu>
         </MenuBox>

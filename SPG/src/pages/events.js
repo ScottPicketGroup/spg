@@ -1,17 +1,16 @@
 import React from "react";
-
 import Seo from "../components/seo";
 import { useTheme } from "styled-components";
 
-import Landing from "../components/pages/scott-picket/scottPickett";
-import MobileLanding from "../components/pages/scott-picket/mobileScottPickett";
+import Landing from "../components/pages/events/events";
+import MobileLanding from "../components/pages/events/eventsMobile";
 
-const ScottPicket = () => {
+const IndexPage = () => {
   const theme = useTheme();
 
   return theme ? (
     <div theme={theme}>
-      <Seo title="Scott-Picket" />
+      <Seo title="Events" />
       {theme.name === "Desktop" ? <Landing /> : <MobileLanding />}
     </div>
   ) : (
@@ -19,4 +18,4 @@ const ScottPicket = () => {
   );
 };
 
-export default ScottPicket;
+export default IndexPage;

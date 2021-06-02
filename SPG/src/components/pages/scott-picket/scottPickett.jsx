@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 
 import { useTheme } from "styled-components";
 import {
@@ -50,7 +50,7 @@ import {
 
 const Landing = () => {
   const theme = useTheme();
-  console.log(theme.name);
+
   return theme ? (
     <div>
       <Container theme={theme}>
@@ -91,7 +91,15 @@ const Landing = () => {
               <MenuItem theme={theme}>Gift Vouchers</MenuItem>
               <MenuItem theme={theme}>Provider</MenuItem>
               <MenuItem theme={theme}>Shop</MenuItem>
-              <MenuItem theme={theme}>Careers</MenuItem>
+              <MenuItem theme={theme}>
+                {" "}
+                <Link
+                  to="/careers"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  Careers
+                </Link>
+              </MenuItem>
               <MenuItem theme={theme}>Contact</MenuItem>
             </Menu>
           </TextContainer>
