@@ -2,15 +2,15 @@ import React from "react";
 import Seo from "../components/seo";
 import { useTheme } from "styled-components";
 
-import Landing from "../components/pages/careers/careers";
-import MobileLanding from "../components/pages/careers/careersMobile";
+import Landing from "../components/pages/whats-on/whatsOn";
+import MobileLanding from "../components/pages/whats-on/mobileWhatsOn";
 
-const Careers = (props) => {
+const WhatsOn = (props) => {
   const theme = useTheme();
 
   return theme ? (
     <div theme={theme}>
-      <Seo title="Careers" />
+      <Seo title="WhatsOn" />
       {theme.name === "Desktop" ? (
         <Landing pageProps={props} />
       ) : (
@@ -22,4 +22,4 @@ const Careers = (props) => {
   );
 };
 
-export default Careers;
+export default WhatsOn;

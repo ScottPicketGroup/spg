@@ -12,68 +12,27 @@ import HomeImage from "../../../images/Screen Shot 2021-04-18 at 1.42.07 pm.png"
 import Logo from "../../../images/logo.svg";
 import LogoWhite from "../../../images/logoWhite.svg";
 
-import Estelle from "../../../images/Group 4576.png";
-import LM from "../../../images/Group 4577.png";
-import CL from "../../../images/Path 10285.png";
-import LON from "../../../images/Group 4578.png";
-import MAT from "../../../images/Group 4579.png";
-import PAS from "../../../images/Group 4580.png";
-import PIC from "../../../images/Group 4581.png";
-import SP from "../../../images/Group 4582.png";
-import LogoW from "../../../images/Group 4583.png";
-
 import MenuBox from "../../Common/Menue";
 
 import {
-  Menu,
-  MenuHeading,
-  MenuItem,
   InnerContainer,
   RightContainer,
-  LeftContainer,
-  LogoImg,
   Header1,
   BC1,
-  MenuBtn,
-  CloseBtn,
-  MenuHeader,
-  Grid,
-  Item,
   BC3,
   Button,
   Header2,
   Header4,
-  Footer,
-  FooterLogo,
-  FooterContainer,
 } from "./styled-components";
-
-const MobileLanding = () => {
+import Footer from "../../Common/Footer";
+import Home from "../../Common/MobileHome";
+const MobileLanding = ({ pageProps }) => {
   const theme = useTheme();
-  console.log(theme.name);
-  const [show, setShow] = useState(false);
 
-  const hideModal = (arg) => {
-    setShow(false);
-  };
   return theme ? (
     <div>
       <Container theme={theme}>
-        <SectionContainer>
-          <InnerContainer theme={theme} top={true}>
-            <LeftContainer>
-              <LogoImg src={Logo} theme={theme} />
-            </LeftContainer>
-            <RightContainer device={theme.name}>
-              <MenuBtn theme={theme} onClick={() => setShow(true)}>
-                Menu
-              </MenuBtn>
-            </RightContainer>
-          </InnerContainer>
-        </SectionContainer>
-        <SectionContainer>
-          <ImageContainer theme={theme} src={HomeImage} device={theme.name} />
-        </SectionContainer>
+        <Home HomeImage={HomeImage} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
             <Header1 theme={theme}>Careers</Header1>
@@ -141,103 +100,8 @@ const MobileLanding = () => {
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
-
-        <MenuBox
-          show={show}
-          handleClose={hideModal}
-          // openPos={Pos.CM_TOP_CENTER}
-        >
-          <SectionContainer>
-            <MenuHeader theme={theme}>
-              <LeftContainer>
-                <LogoImg src={LogoWhite} theme={theme} />
-              </LeftContainer>
-              <RightContainer device={theme.name}>
-                <CloseBtn theme={theme} onClick={() => setShow(false)}>
-                  X Close
-                </CloseBtn>
-              </RightContainer>
-            </MenuHeader>
-          </SectionContainer>
-
-          <Menu theme={theme}>
-            <MenuHeading theme={theme}>Menu</MenuHeading>
-            <MenuItem theme={theme}>
-              <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-                Home
-              </Link>
-            </MenuItem>
-            <MenuItem theme={theme}>
-              <Link
-                to="/scott-picket"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                Scott Picket
-              </Link>
-            </MenuItem>
-
-            <MenuItem theme={theme}>Book a table</MenuItem>
-
-            <MenuItem theme={theme}>
-              <Link
-                to="/events"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                Events
-              </Link>
-            </MenuItem>
-            <MenuItem theme={theme}>What's On</MenuItem>
-            <MenuItem theme={theme}>Gift Vouchers</MenuItem>
-            <MenuItem theme={theme}>Provider</MenuItem>
-            <MenuItem theme={theme}>Shop</MenuItem>
-            <MenuItem theme={theme}>
-              {" "}
-              <Link
-                to="/careers"
-                style={{ color: "inherit", textDecoration: "none" }}
-              >
-                Careers
-              </Link>
-            </MenuItem>
-            <MenuItem theme={theme}>Contact</MenuItem>
-          </Menu>
-        </MenuBox>
       </Container>
-      <FooterContainer>
-        <InnerContainer>
-          <Footer>
-            <Grid cols={3}>
-              <Item>
-                <FooterLogo src={CL} />
-              </Item>
-              <Item>
-                <FooterLogo src={Estelle} />
-              </Item>
-              <Item>
-                <FooterLogo src={LM} />
-              </Item>
-              <Item>
-                <FooterLogo src={LON} />
-              </Item>
-              <Item>
-                <FooterLogo src={MAT} />
-              </Item>
-              <Item>
-                <FooterLogo src={PAS} />
-              </Item>
-              <Item>
-                <FooterLogo src={PIC} />
-              </Item>
-              <Item>
-                <FooterLogo src={SP} />
-              </Item>
-              <Item>
-                <FooterLogo src={LogoW} />
-              </Item>
-            </Grid>
-          </Footer>
-        </InnerContainer>
-      </FooterContainer>
+      <Footer />
     </div>
   ) : (
     <div></div>

@@ -1,14 +1,14 @@
 import React from "react";
+
 import { useTheme } from "styled-components";
 import { Container, SectionContainer } from "../../global/GlobalStyles";
+
 import HomeImage from "../../../images/Screen Shot 2021-04-18 at 2.00.31 pm.png";
 import CarouselImg from "../../../images/Screen Shot -1.png";
-import Logo from "../../../images/logo.svg";
+
 import {
   InnerContainer,
   RightContainer,
-  LeftContainer,
-  LogoImg,
   Header1,
   BC1,
   BC3,
@@ -17,12 +17,12 @@ import {
   Header4,
   Header3,
   Grid,
-  Item,
   GridImg,
+  Item,
 } from "./styled-components";
 import Footer from "../../Common/Footer";
-import Home from "../../Common/DesktopHome";
-const Landing = ({ pageProps }) => {
+import Home from "../../Common/MobileHome";
+const MobileLanding = ({ pageProps }) => {
   const theme = useTheme();
 
   return theme ? (
@@ -30,31 +30,23 @@ const Landing = ({ pageProps }) => {
       <Container theme={theme}>
         <Home HomeImage={HomeImage} path={pageProps.path} />
         <SectionContainer>
-          <InnerContainer>
-            <LeftContainer>
-              <LogoImg src={Logo} />
-            </LeftContainer>
-            <RightContainer>
-              <Header1 theme={theme}>What's On</Header1>
-              <BC1 theme={theme}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur.
-              </BC1>
-            </RightContainer>
+          <InnerContainer theme={theme} displayBlock={true}>
+            <Header1 theme={theme}>What's On</Header1>
+            <BC1 theme={theme}>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis et quasi architecto beatae vitae
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+              eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+              est, qui dolorem ipsum quia dolor sit amet, consectetur.
+            </BC1>
           </InnerContainer>
         </SectionContainer>
-
         <SectionContainer>
-          <InnerContainer>
-            <LeftContainer></LeftContainer>
+          <InnerContainer displayBlock={true}>
             <RightContainer>
-              <Grid cols="2">
+              <Grid cols="1">
                 <Item>
                   <Header2 theme={theme}>
                     Longrain X Sutton Grange Winery
@@ -83,13 +75,9 @@ const Landing = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
-            <LeftContainer></LeftContainer>
+          <InnerContainer displayBlock={true}>
             <RightContainer>
-              <Grid cols="2">
-                <Item>
-                  <GridImg src={CarouselImg} />
-                </Item>
+              <Grid cols="1">
                 <Item>
                   <Header2 theme={theme}>
                     Longrain X Sutton Grange Winery
@@ -109,13 +97,15 @@ const Landing = ({ pageProps }) => {
                     it offers.
                   </BC3>
                   <Button>Learn More</Button>
+                </Item>
+                <Item>
+                  <GridImg src={CarouselImg} />
                 </Item>
               </Grid>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
       </Container>
-
       <Footer />
     </div>
   ) : (
@@ -123,4 +113,4 @@ const Landing = ({ pageProps }) => {
   );
 };
 
-export default Landing;
+export default MobileLanding;

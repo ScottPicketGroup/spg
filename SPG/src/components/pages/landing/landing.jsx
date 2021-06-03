@@ -3,8 +3,9 @@ import React, { useLayoutEffect, useState } from "react";
 import { useTheme } from "styled-components";
 import {
   Container,
-  TextContainer,
-  ImageContainer,
+  FullImageContainer,
+  ImageDiv,
+  ImageView,
   SectionContainer,
 } from "../../global/GlobalStyles";
 import { Link } from "gatsby";
@@ -15,16 +16,6 @@ import gridPic1 from "../../../images/gridPic1.png";
 import gridPic2 from "../../../images/gridPic2.png";
 import gridPic3 from "../../../images/gridPic3.png";
 import gridPic4 from "../../../images/gridPic4.png";
-
-import Estelle from "../../../images/Group 4576.png";
-import LM from "../../../images/Group 4577.png";
-import CL from "../../../images/Path 10285.png";
-import LON from "../../../images/Group 4578.png";
-import MAT from "../../../images/Group 4579.png";
-import PAS from "../../../images/Group 4580.png";
-import PIC from "../../../images/Group 4581.png";
-import SP from "../../../images/Group 4582.png";
-import LogoW from "../../../images/Group 4583.png";
 
 import {
   Menu,
@@ -41,68 +32,18 @@ import {
   ItemImg,
   ItemImgCaption,
   BC3,
-  Footer,
-  FooterLogo,
-  FooterContainer,
 } from "./styled-components";
 
-const Landing = () => {
+import Footer from "../../Common/Footer";
+import Home from "../../Common/DesktopHome";
+
+const Landing = ({ pageProps }) => {
   const theme = useTheme();
 
   return theme ? (
     <div>
       <Container theme={theme}>
-        <SectionContainer>
-          <TextContainer theme={theme}>
-            <Menu theme={theme}>
-              <MenuHeading theme={theme}>Menu</MenuHeading>
-
-              <MenuItem theme={theme}>
-                <Link
-                  to="/"
-                  style={{ color: "inherit", textDecoration: "none" }}
-                >
-                  Home
-                </Link>
-              </MenuItem>
-              <MenuItem theme={theme}>
-                <Link
-                  to="/scott-picket"
-                  style={{ color: "inherit", textDecoration: "none" }}
-                >
-                  Scott Picket
-                </Link>
-              </MenuItem>
-
-              <MenuItem theme={theme}>Book a table</MenuItem>
-
-              <MenuItem theme={theme}>
-                <Link
-                  to="/events"
-                  style={{ color: "inherit", textDecoration: "none" }}
-                >
-                  Events
-                </Link>
-              </MenuItem>
-
-              <MenuItem theme={theme}>What's On</MenuItem>
-              <MenuItem theme={theme}>Gift Vouchers</MenuItem>
-              <MenuItem theme={theme}>Provider</MenuItem>
-              <MenuItem theme={theme}>Shop</MenuItem>
-              <MenuItem theme={theme}>
-                {" "}
-                <Link
-                  to="/careers"
-                  style={{ color: "inherit", textDecoration: "none" }}
-                >
-                  Careers
-                </Link>
-              </MenuItem>
-              <MenuItem theme={theme}>Contact</MenuItem>
-            </Menu>
-          </TextContainer>
-          <ImageContainer theme={theme} src={HomeImage} />
-        </SectionContainer>
+        <Home HomeImage={HomeImage} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer>
             <LeftContainer>
@@ -120,7 +61,7 @@ const Landing = () => {
                 nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
                 sit amet, consectetur.
               </BC1>
-              <BC1 link theme={theme}>
+              <BC1 link={true} theme={theme}>
                 Learn More
               </BC1>
             </RightContainer>
@@ -151,23 +92,39 @@ const Landing = () => {
             <RightContainer>
               <Grid cols={2}>
                 <Item>
-                  <ItemImg src={gridPic1} />
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic1}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
                   <ItemImgCaption>CHANCERY LANE</ItemImgCaption>
                   <BC3>Little Collins St, Melbourne</BC3>
                 </Item>
                 <Item>
-                  <ItemImg src={gridPic2} />
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic2}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
                   <ItemImgCaption>Estelle</ItemImgCaption>
                   <BC3>High St, Northcote</BC3>
                 </Item>
                 <Item>
-                  <ItemImg src={gridPic3} />
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic3}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
                   <ItemImgCaption>Longrain</ItemImgCaption>
                   <BC3>Little Bourke St, Melbourne </BC3>
                 </Item>
 
                 <Item>
-                  <ItemImg src={gridPic4} />
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic4}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
                   <ItemImgCaption>Venue</ItemImgCaption>
                   <BC3>Domain Rd, South Yarra</BC3>
                 </Item>
@@ -198,41 +155,7 @@ const Landing = () => {
           </InnerContainer>
         </SectionContainer>
       </Container>
-      <FooterContainer>
-        <InnerContainer>
-          <Footer>
-            <Grid cols={9}>
-              <Item>
-                <FooterLogo src={CL} />
-              </Item>
-              <Item>
-                <FooterLogo src={Estelle} />
-              </Item>
-              <Item>
-                <FooterLogo src={LM} />
-              </Item>
-              <Item>
-                <FooterLogo src={LON} />
-              </Item>
-              <Item>
-                <FooterLogo src={MAT} />
-              </Item>
-              <Item>
-                <FooterLogo src={PAS} />
-              </Item>
-              <Item>
-                <FooterLogo src={PIC} />
-              </Item>
-              <Item>
-                <FooterLogo src={SP} />
-              </Item>
-              <Item>
-                <FooterLogo src={LogoW} />
-              </Item>
-            </Grid>
-          </Footer>
-        </InnerContainer>
-      </FooterContainer>
+      <Footer />
     </div>
   ) : (
     <div></div>

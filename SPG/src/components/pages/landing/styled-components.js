@@ -52,7 +52,8 @@ export const MenuBtn = styled.div`
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
-  &:hover: {
+  cursor: ${(props) => (props.link ? "pointer" : "text")};
+  &:hover {
     color: ${(props) =>
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
   }
@@ -73,7 +74,8 @@ export const BC1 = styled.p`
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   line-height: 2.15rem;
   color: ${(props) => props.theme.colors.text};
-  &:hover: {
+  cursor: ${(props) => (props.link ? "pointer" : "text")};
+  &:hover {
     color: ${(props) =>
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
   }
@@ -84,7 +86,8 @@ export const BC3 = styled.p`
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   line-height: 2.15rem;
   color: ${(props) => props.theme.colors.text};
-  &:hover: {
+  cursor: ${(props) => (props.link ? "pointer" : "text")};
+  &:hover {
     color: ${(props) =>
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
   }
@@ -140,8 +143,20 @@ export const Footer = styled.div`
   min-width: 100%;
   padding: 20px;
   background-color: ${(props) => props.theme.colors.text};
-  display: flex;
-  align-items: center;
 `;
 
+export const FooterLogoGrid = styled.div`
+  display: flex;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;
+export const FooterLogoContainer = styled.div`
+  flex: 0 0 200px;
+  padding: 1rem;
+`;
 export const FooterLogo = styled.img``;

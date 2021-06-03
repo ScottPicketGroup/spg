@@ -5,6 +5,7 @@ export default {
       name: "Desktop",
       colors: {
         body: "#f9f9f4",
+
         text: "#333333",
         hoverText: "#80333333",
       },
