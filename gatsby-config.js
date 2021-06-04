@@ -34,22 +34,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-shopify`,
-      options: {
-        shopName: 'scottpickettgroup',
-        accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
-        verbose: true,
-      },
-     
-    },
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `s1sz6aratr2c`,
-        // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-      },
-    },
+    
   ],
 }
