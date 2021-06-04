@@ -69,6 +69,12 @@ export const Header1 = styled.h1`
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
 `;
+export const Header2 = styled.h2`
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
+  font-family: ${(props) => props.theme.fontFamily.Times};
+  font-weight: bold;
+  color: ${(props) => props.theme.colors.text};
+`;
 export const BC1 = styled.p`
   margin-top: 3.5rem;
   margin-bottom: 6rem;
@@ -87,7 +93,19 @@ export const BC3 = styled.p`
   margin-top: 0.75rem;
   font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-  line-height: 2.15rem;
+  line-height: 1.2rem;
+  color: ${(props) => props.theme.colors.text};
+  cursor: ${(props) => (props.link ? "pointer" : "text")};
+
+  &:hover {
+    color: ${(props) =>
+      props.link ? props.theme.colors.hoverText : props.theme.colors.text};
+  }
+`;
+export const BC2 = styled.p`
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "24px" : "20px")};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  line-height: 1.17rem;
   color: ${(props) => props.theme.colors.text};
   cursor: ${(props) => (props.link ? "pointer" : "text")};
 
@@ -112,7 +130,6 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
   grid-gap: 6rem 0rem;
-  align-items: center;
 `;
 
 export const Item = styled.div`
@@ -164,4 +181,8 @@ export const Quotation = styled.div`
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
   line-height: 3.5rem;
+`;
+export const Divider = styled.hr`
+  background-color: ${(props) => props.theme.colors.text};
+  opacity: 0.2;
 `;
