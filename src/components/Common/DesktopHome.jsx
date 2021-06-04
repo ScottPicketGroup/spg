@@ -102,3 +102,6 @@ const DesktopHome = ({ HomeImage, path }) => {
 };
 
 export default DesktopHome;
+
+
+//menu to be refactored
