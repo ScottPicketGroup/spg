@@ -50,13 +50,19 @@ export const Menu = styled.div`
 export const MenuHeading = styled.div`
   width: 100%;
   margin: 1.15rem 0;
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "24px")};
+  line-height: ${(props) =>
+    props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
   text-transform: uppercase;
 `;
 export const MenuItem = styled.div`
   width: 100%;
-  text-transform: capitalize;
   font-weight: ${(props) => (props.bold ? "bold" : "normal")};
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "20px")};
+  line-height: ${(props) =>
+    props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
+  text-transform: capitalize;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
 `;
 
@@ -90,7 +96,7 @@ export const MenuHeader = styled.div`
 
 const MobileHome = ({ HomeImage, path }) => {
   const theme = useTheme();
-  console.log(theme.name);
+
   const [show, setShow] = useState(false);
 
   const hideModal = (arg) => {
@@ -111,7 +117,6 @@ const MobileHome = ({ HomeImage, path }) => {
         </InnerContainer>
       </SectionContainer>
       <SectionContainer>
-        {/* <ImageContainer theme={theme} src={HomeImage} device={theme.name} /> */}
         <ImageContainer theme={theme} device={theme.name}>
           <ImageView>
             <ImageDiv
