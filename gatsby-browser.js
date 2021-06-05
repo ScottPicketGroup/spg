@@ -13,7 +13,7 @@ import Theme from "./src/components/global/variables";
 import { createGlobalStyle } from "styled-components";
 
 import UntitledSansLight from "./static/fonts/test-untitled-sans-light.woff";
-import UntitledSansMedium from "./static/fonts/test-untitled-sans-medium.woff";
+import UntitledSansMedium from "./static/fonts/untitled-sans-web-regular.woff";
 
 const GlobalFonts = createGlobalStyle`
     @font-face {
