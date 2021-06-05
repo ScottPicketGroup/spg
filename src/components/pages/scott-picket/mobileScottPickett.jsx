@@ -10,13 +10,14 @@ import {
 } from "../../global/GlobalStyles";
 import SideImage from "../../../images/Screen Shot 2021-04-18 at 1.39.34 pm.png";
 
-import HomeImage from "../../../images/homeImage.png";
+import HomeImage from "../../../images/Screen Shot 2021-04-18 at 2.05.39 pm.png";
 
 import {
   Menu,
   MenuHeading,
   MenuItem,
   InnerContainer,
+  TimeLineContainer,
   RightContainer,
   LeftContainer,
   LogoImg,
@@ -32,6 +33,8 @@ import {
   BC2,
   Quotation,
   QuotationContainer,
+  CookiesBanner,
+  Button,
 } from "./styled-components";
 import Footer from "../../Common/Footer";
 import MobileHome from "../../Common/MobileHome";
@@ -99,7 +102,7 @@ const MobileLanding = ({ pageProps }) => {
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -118,11 +121,11 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -140,11 +143,11 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -163,11 +166,11 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -185,11 +188,11 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -207,11 +210,11 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -229,10 +232,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -251,10 +254,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer>
               <ImageContainer theme={theme}>
                 <ImageView theme={theme}>
@@ -292,10 +295,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -311,10 +314,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -332,10 +335,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -353,10 +356,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -375,10 +378,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -397,10 +400,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -433,7 +436,7 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
@@ -452,7 +455,7 @@ const MobileLanding = ({ pageProps }) => {
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -486,10 +489,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -501,10 +504,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -516,10 +519,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -574,11 +577,11 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -613,10 +616,10 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
@@ -656,8 +659,13 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
               </Grid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
+        <CookiesBanner theme={theme}>
+          this website uses cookies to ensure you get the best experience on our
+          website learn more
+          <Button>I Accept</Button>
+        </CookiesBanner>
       </Container>
 
       <Footer />

@@ -24,6 +24,7 @@ export const Footer = styled.div`
   min-width: 100%;
   padding: 0 1rem;
   background-color: ${(props) => props.theme.colors.text};
+  padding-bottom: 2.25rem;
 `;
 
 export const FooterLogoGrid = styled.div`

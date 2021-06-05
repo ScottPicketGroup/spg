@@ -33,11 +33,11 @@ export const InnerContainer = styled.div`
 `;
 export const LeftContainer = styled.div`
   display: inline;
-  width: 42%;
+  width: 33%;
 `;
 export const RightContainer = styled.div`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
-  width: 58%;
+  width: 66%;
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
 `;
@@ -181,8 +181,70 @@ export const Quotation = styled.div`
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
   line-height: 3.5rem;
+  text-align: center;
 `;
 export const Divider = styled.hr`
   background-color: ${(props) => props.theme.colors.text};
   opacity: 0.2;
+`;
+export const TimeLineContainer = styled.div`
+  margin-top: 2.25rem;
+  display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
+  width: 100%;
+`;
+export const TimeLineIMGContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+`;
+export const TimeLineIMGInnerContainer = styled.div`
+  width: 60%;
+`;
+export const TimeLineGrid = styled.div`
+  display: flex;
+  width: 100%;
+`;
+export const LeftGrid = styled.div`
+  padding: 0 0.5rem;
+  display: inline;
+  width: 37.5%;
+`;
+export const RightGrid = styled.div`
+  padding: 0 0.5rem;
+  display: inline;
+  width: 62.5%;
+`;
+export const CookiesBanner = styled.div`
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  padding: 0.5rem 2rem;
+  border-top: ${(props) => `2px solid ${props.theme.colors.text}`};
+  background-color: ${(props) => ` ${props.theme.colors.body}`};
+  color: ${(props) => ` ${props.theme.colors.text}`};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height:1rem
+  box-sizing: border-box;
+  display:${(props) => (props.theme.name === "Desktop" ? `flex` : `block`)};
+  align-items:center;
+  justify-content:space-between;
+`;
+
+export const Button = styled.button`
+  color: ${(props) => props.theme.colors.text};
+  margin: 1em;
+  padding: 0.25em 1em;
+  width: ${(props) => (props.theme.name === "Desktop" ? "10%" : "100%")};
+
+  background-color: ${(props) => props.theme.colors.body};
+  border: ${(props) => `1px solid ${props.theme.colors.text}`};
+  text-transform: uppercase;
+  transition: background-color 1s, color 1s;
+  &:hover {
+    background-color: ${(props) => `${props.theme.colors.text}`};
+    color: ${(props) => props.theme.colors.body};
+  }
 `;

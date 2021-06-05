@@ -8,14 +8,18 @@ import {
   ImageView,
   SectionContainer,
 } from "../../global/GlobalStyles";
-import { Link } from "gatsby";
-
-import HomeImage from "../../../images/homeImage.png";
+import HomeImage from "../../../images/Screen Shot 2021-04-18 at 2.05.39 pm.png";
 import Logo from "../../../images/logo.svg";
 import SideImage from "../../../images/Screen Shot 2021-04-18 at 1.39.34 pm.png";
-
 import {
   InnerContainer,
+  TimeLineIMGContainer,
+  Button,
+  TimeLineContainer,
+  TimeLineIMGInnerContainer,
+  TimeLineGrid,
+  RightGrid,
+  LeftGrid,
   RightContainer,
   LeftContainer,
   LogoImg,
@@ -28,7 +32,7 @@ import {
   BC2,
   Quotation,
   QuotationContainer,
-  Divider,
+  CookiesBanner,
 } from "./styled-components";
 import Footer from "../../Common/Footer";
 import Home from "../../Common/DesktopHome";
@@ -73,6 +77,7 @@ const Landing = ({ pageProps }) => {
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
+
         <SectionContainer>
           <InnerContainer displayBlock="true">
             <QuotationContainer>
@@ -106,15 +111,15 @@ const Landing = ({ pageProps }) => {
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>1975</Header2>
                   <BC3>Childhood</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     “My grandmother, Audrey, used to cook a Sunday roast,
                     usually lamb. That’s my first lasting recollection of food.
@@ -122,44 +127,44 @@ const Landing = ({ pageProps }) => {
                     Grandmother Audrey Masterson is an important part of my
                     story.”
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>Early 90S</Header2>
                   <BC3>Apprenticeship</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     “For a small city, Adelaide punched above its weight. I was
                     so excited on my first day at Jarmer’s. I owe Peter Jarmer a
                     lot. He was the first person to instil a work ethic in me.
                     He taught me discipline and attention to detail.”
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>Late 90S</Header2>
                   <BC3>To Melbourne</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     “It was great, moving to Melbourne to work with Bruno Cerdan
                     at the Hotel Windsor, one of the great hotel kitchens. I
@@ -167,87 +172,87 @@ const Landing = ({ pageProps }) => {
                     very different experience. He likes a silent kitchen… I
                     don’t.”
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>1999</Header2>
                   <BC3>In London</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     I walked into The Square. That was it. Life-changing. I
                     thought, “This is for me.” I loved the mood, the energy, the
                     banter, and that was even before I spent the morning working
                     with Phil Howard making terrines.
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2002</Header2>
                   <BC3>Back to Australia</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     I owe Donovan Cooke a lot. Working with him was like a
                     finishing school. I thought I was a good saucier until I saw
                     him work. My whole philosophical view of meat and sauces
                     changed because of him.
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2005</Header2>
                   <BC3>Bocuse D’Or</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     I like competitions. I knew them, what they were like to
                     train for, the adrenalin rush of competition. The Bocuse
                     d’Or was in a different league. We trained for a year and
                     came 14th – the highest ever for an Australian team.
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2006</Header2>
                   <BC3>The Point</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     I was at the Point for more than five years, the longest I
                     had been anywhere. It was a great time, very challenging. It
@@ -255,27 +260,31 @@ const Landing = ({ pageProps }) => {
                     beef tasting plate with five cuts. We won Best Steak
                     restaurant in 2009 and 2011.
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer>
-              <ImageContainer theme={theme}>
-                <ImageView theme={theme}>
-                  <ImageDiv src={SideImage} theme={theme}></ImageDiv>
-                </ImageView>
-              </ImageContainer>
+              <TimeLineIMGContainer>
+                <TimeLineIMGInnerContainer>
+                  <ImageContainer theme={theme}>
+                    <ImageView theme={theme}>
+                      <ImageDiv src={SideImage} theme={theme}></ImageDiv>
+                    </ImageView>
+                  </ImageContainer>
+                </TimeLineIMGInnerContainer>
+              </TimeLineIMGContainer>
             </LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2011</Header2>
                   <BC3>Estelle</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     Opening Estelle Bar and Kitchen was probably the biggest
                     leap of faith of my career. It was a huge effort by a lot of
@@ -283,12 +292,22 @@ const Landing = ({ pageProps }) => {
                     improvisation – those DIY skills learnt on the farm came in
                     handy.
                   </BC2>
-                </Item>
-                <Item>
+                </RightGrid>
+              </TimeLineGrid>
+            </RightContainer>
+          </TimeLineContainer>
+        </SectionContainer>
+
+        <SectionContainer>
+          <TimeLineContainer>
+            <LeftContainer></LeftContainer>
+            <RightContainer>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2013</Header2>
                   <BC3>Saint Crispin</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     Each of my restaurants has a bit of local flavour from the
                     place it’s in, whether Northcote, Collingwood or the Queen
@@ -296,82 +315,83 @@ const Landing = ({ pageProps }) => {
                     but it’s a little bit raucous, too. It’s eclectic, just like
                     Smith Street.
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2014</Header2>
                   <BC3>Publication of Scott Pickett</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     A Cook’s Story – My first book, where you can read the whole
                     story… no holds barred…
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
+
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2015</Header2>
                   <BC3>ESP and Estelle Bistro</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     Meanwhile, when Estelle Bar and Kitchen was growing, the
                     opportunity came along to acquire the property next door,
                     and Estelle evolved into two separate restaurants: Estelle
                     Bistro and Estelle by Scott Pickett (ESP).
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2015</Header2>
                   <BC3>Television</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     I co-presented Hotplate on Channel 9 with UK author, food
                     writer and journalist Tom Parker Bowles. I learnt a lot
                     about what to do and what not to do on camera, which has
                     held me in good stead for media appearances moving forward.
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2016</Header2>
                   <BC3>Pickett’s Deli</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     Then came Pickett’s Deli & Rotisserie – very different to
                     the rest. It’s a homage to the neighbourhood chook shop
@@ -379,21 +399,21 @@ const Landing = ({ pageProps }) => {
                     iconic Queen Victoria Market. Rotisserie chicken, bacon and
                     egg rolls and coffee. It’s just bloody yummy.
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2018</Header2>
                   <BC3>Matilda</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     Matilda. Named after my daughter. A sensory journey, all
                     about flames and open grills, and a true labour of love for
@@ -401,21 +421,21 @@ const Landing = ({ pageProps }) => {
                     visit often and be guaranteed a local piece of meat, cooked
                     exceptionally well.
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>2019</Header2>
                   <BC3>What a Year!</BC3>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>
                     Estelle, Lupo, my newest publication “Marriage of Flavours”,
                     the launch of new venture “Pastore” & the move of Pickett’s
@@ -437,10 +457,10 @@ const Landing = ({ pageProps }) => {
                     Airport. I’m looking forward to giving travelers a true
                     taste of the quality of Melbourne food!
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
@@ -463,14 +483,14 @@ const Landing = ({ pageProps }) => {
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>Matilda</Header2>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>2020 Age Good Food Guide –</BC2>
                   <BC2>
                     2019 Time Out 50 Best Restaurants in Melbourne – Ranked #12
@@ -494,50 +514,50 @@ const Landing = ({ pageProps }) => {
                     2018 Delicious Top 100 Restaurants 2018 The Australian Top
                     100 Restaurants
                   </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>Estelle</Header2>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>2020 Age Good Food Guide – </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>Saint Crispin</Header2>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2>2020 Age Good Food Guide – </BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>Saint Crispin</Header2>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC2> 2019 Age Good Food Guide –</BC2>
                   <BC2> 2018 Age Good Food Guide –</BC2>
                   <BC2> 2018 Gault & Millau Guide – 14.5/20</BC2>
@@ -582,21 +602,21 @@ const Landing = ({ pageProps }) => {
                     –Finalist Best New Wine List
                   </BC2>
                   <BC2> 2013 The Australian Hot 50 Restaurants</BC2>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>Estelle Bistro</Header2>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC3> 2018 Delicious Top 100 Restaurants</BC3>
                   <BC3> 2018 Gault & Millau Guide</BC3> – 15/20
                   <BC3> 2017 Gourmet Traveller Restaurant Guide</BC3>
@@ -621,20 +641,20 @@ const Landing = ({ pageProps }) => {
                     2013 Age Good Food Guide – Winner Young Chef of the Year,
                     Josh Pelham
                   </BC3>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer>
+          <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Grid cols={2}>
-                <Item>
+              <TimeLineGrid>
+                <LeftGrid>
                   <Header2>Estelle By Scott Pickett (ESP)</Header2>
-                </Item>
-                <Item>
+                </LeftGrid>
+                <RightGrid>
                   <BC3>
                     {" "}
                     2018 Australian Financial Review Top 100 Restaurants –
@@ -664,11 +684,17 @@ const Landing = ({ pageProps }) => {
                     2016 Australian Financial Review Top 100 Restaurants –
                     Ranked #58
                   </BC3>
-                </Item>
-              </Grid>
+                </RightGrid>
+              </TimeLineGrid>
             </RightContainer>
-          </InnerContainer>
+          </TimeLineContainer>
         </SectionContainer>
+
+        <CookiesBanner theme={theme}>
+          this website uses cookies to ensure you get the best experience on our
+          website learn more
+          <Button>I Accept</Button>
+        </CookiesBanner>
       </Container>
 
       <Footer />

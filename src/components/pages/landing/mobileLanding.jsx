@@ -13,6 +13,10 @@ import gridPic1 from "../../../images/gridPic1.png";
 import gridPic2 from "../../../images/gridPic2.png";
 import gridPic3 from "../../../images/gridPic3.png";
 import gridPic4 from "../../../images/gridPic4.png";
+import gridPic5 from "../../../images/gridPic5.png";
+import gridPic6 from "../../../images/gridPic6.png";
+import gridPic7 from "../../../images/gridPic7.png";
+import gridPic8 from "../../../images/gridPic8.png";
 
 import {
   InnerContainer,
@@ -23,6 +27,7 @@ import {
   Item,
   ItemImg,
   ItemImgCaption,
+  ItemImgLink,
   BC3,
 } from "./styled-components";
 import Footer from "../../Common/Footer";
@@ -77,41 +82,102 @@ const MobileLanding = ({ pageProps }) => {
             <RightContainer>
               <Grid cols={1}>
                 <Item>
-                  <FullImageContainer>
-                    <ImageView>
-                      <ImageDiv src={gridPic1}></ImageDiv>
-                    </ImageView>
-                  </FullImageContainer>
-                  <ItemImgCaption>CHANCERY LANE</ItemImgCaption>
-                  <BC3>Little Collins St, Melbourne</BC3>
+                  {" "}
+                  <ItemImgLink href="#">
+                    <FullImageContainer>
+                      <ImageView>
+                        <ImageDiv src={gridPic1}></ImageDiv>
+                      </ImageView>
+                    </FullImageContainer>
+                    <ItemImgCaption>CHANCERY LANE</ItemImgCaption>
+                    <BC3>Little Collins St, Melbourne</BC3>
+                  </ItemImgLink>
                 </Item>
                 <Item>
-                  <FullImageContainer>
-                    <ImageView>
-                      <ImageDiv src={gridPic2}></ImageDiv>
-                    </ImageView>
-                  </FullImageContainer>
-                  <ItemImgCaption>Estelle</ItemImgCaption>
-                  <BC3>High St, Northcote</BC3>
+                  {" "}
+                  <ItemImgLink href="#">
+                    <FullImageContainer>
+                      <ImageView>
+                        <ImageDiv src={gridPic2}></ImageDiv>
+                      </ImageView>
+                    </FullImageContainer>
+                    <ItemImgCaption>Estelle</ItemImgCaption>
+                    <BC3>High St, Northcote</BC3>
+                  </ItemImgLink>
                 </Item>
                 <Item>
-                  <FullImageContainer>
-                    <ImageView>
-                      <ImageDiv src={gridPic3}></ImageDiv>
-                    </ImageView>
-                  </FullImageContainer>
-                  <ItemImgCaption>Longrain</ItemImgCaption>
-                  <BC3>Little Bourke St, Melbourne </BC3>
+                  {" "}
+                  <ItemImgLink href="#">
+                    <FullImageContainer>
+                      <ImageView>
+                        <ImageDiv src={gridPic3}></ImageDiv>
+                      </ImageView>
+                    </FullImageContainer>
+                    <ItemImgCaption>Longrain</ItemImgCaption>
+                    <BC3>Little Bourke St, Melbourne </BC3>
+                  </ItemImgLink>
                 </Item>
 
                 <Item>
-                  <FullImageContainer>
-                    <ImageView>
-                      <ImageDiv src={gridPic4}></ImageDiv>
-                    </ImageView>
-                  </FullImageContainer>
-                  <ItemImgCaption>Venue</ItemImgCaption>
-                  <BC3>Domain Rd, South Yarra</BC3>
+                  {" "}
+                  <ItemImgLink href="#">
+                    <FullImageContainer>
+                      <ImageView>
+                        <ImageDiv src={gridPic4}></ImageDiv>
+                      </ImageView>
+                    </FullImageContainer>
+                    <ItemImgCaption>Venue</ItemImgCaption>
+                    <BC3>Domain Rd, South Yarra</BC3>
+                  </ItemImgLink>
+                </Item>
+
+                <Item>
+                  {" "}
+                  <ItemImgLink href="#">
+                    <FullImageContainer>
+                      <ImageView>
+                        <ImageDiv src={gridPic5}></ImageDiv>
+                      </ImageView>
+                    </FullImageContainer>
+                    <ItemImgCaption>Pastore</ItemImgCaption>
+                    <BC3>Dandenong Rd, Chadstone</BC3>
+                  </ItemImgLink>
+                </Item>
+                <Item>
+                  {" "}
+                  <ItemImgLink href="#">
+                    <FullImageContainer>
+                      <ImageView>
+                        <ImageDiv src={gridPic6}></ImageDiv>
+                      </ImageView>
+                    </FullImageContainer>
+                    <ItemImgCaption>Longsong</ItemImgCaption>
+                    <BC3>UPSTAIRS, Little Bourke St, Melbourne</BC3>
+                  </ItemImgLink>
+                </Item>
+                <Item>
+                  {" "}
+                  <ItemImgLink href="#">
+                    <FullImageContainer>
+                      <ImageView>
+                        <ImageDiv src={gridPic7}></ImageDiv>
+                      </ImageView>
+                    </FullImageContainer>
+                    <ItemImgCaption>Le Shoppe</ItemImgCaption>
+                    <BC3>Dandenong Rd, Chadstone</BC3>
+                  </ItemImgLink>
+                </Item>
+                <Item>
+                  {" "}
+                  <ItemImgLink href="#">
+                    <FullImageContainer>
+                      <ImageView>
+                        <ImageDiv src={gridPic8}></ImageDiv>
+                      </ImageView>
+                    </FullImageContainer>
+                    <ItemImgCaption>SP Events</ItemImgCaption>
+                    <BC3>AUSTRALIA</BC3>
+                  </ItemImgLink>
                 </Item>
               </Grid>
             </RightContainer>

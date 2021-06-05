@@ -33,11 +33,11 @@ export const InnerContainer = styled.div`
 `;
 export const LeftContainer = styled.div`
   display: inline;
-  width: 42%;
+  width: 33%;
 `;
 export const RightContainer = styled.div`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
-  width: 58%;
+  width: 66%;
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
 `;
@@ -114,6 +114,13 @@ export const Grid = styled.div`
 export const Item = styled.div`
   padding: 0 0.5rem;
   display: block;
+  &:hover {
+    opacity: ${(props) => (props.link ? 0.25 : 1)};
+  }
+`;
+
+export const ItemImgLink = styled.a`
+  text-decoration: none;
 `;
 export const ItemImg = styled.div`
   min-height: 250px;
@@ -123,6 +130,9 @@ export const ItemImg = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 2.25 rem;
+  &:hover {
+    opacity: 0.25;
+  }
 `;
 export const ItemImgCaption = styled.div`
   margin-top: 2.25rem;
@@ -130,6 +140,9 @@ export const ItemImgCaption = styled.div`
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
+  &:hover {
+    color: ${(props) => props.theme.colors.hoverText};
+  }
 `;
 
 export const FooterContainer = styled.div`
