@@ -110,7 +110,7 @@ export const MenuHeader = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
-  grid-gap: 6rem 0rem;
+  grid-gap: ${(props) => (props.theme.name === "Desktop" ? "6rem 0rem" : "3.5rem 0")};
   align-items: center;
 `;
 
@@ -128,7 +128,7 @@ export const ItemImg = styled.div`
   margin-bottom: 2.25 rem;
 `;
 export const ItemImgCaption = styled.div`
-  margin-top: 2.25rem;
+  margin-top: ${(props) => (props.theme.name === "Desktop" ? "3.5rem" : "1.5rem")};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;

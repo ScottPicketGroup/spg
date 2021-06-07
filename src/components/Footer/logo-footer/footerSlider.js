@@ -776,6 +776,8 @@ const Sliderer = styled(Slider)`
   .slick-slide {
     width: 300px !important;
     height: 60px;
+    padding-bottom: 1rem;
+    padding-top: .5rem;
     display: flex !important;
     justify-content: center;
     align-items: center;

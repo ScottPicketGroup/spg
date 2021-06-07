@@ -31,7 +31,7 @@ const MobileEvents = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Container theme={theme}>
+      <Container theme={theme} style={{paddingBottom: `6rem`}}>
         <MobileHome HomeImage={HomeImage} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>

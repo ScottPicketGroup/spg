@@ -33,11 +33,11 @@ export const InnerContainer = styled.div`
 `;
 export const LeftContainer = styled.div`
   display: inline;
-  width: 33%;
+  width: ${(props) => (props.theme.name === "Desktop" ? "33%" : "0%")};
 `;
 export const RightContainer = styled.div`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
-  width: 66%;
+  width: ${(props) => (props.theme.name === "Desktop" ? "66%" : "100%")};
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
 `;
@@ -129,7 +129,7 @@ export const MenuHeader = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
-  grid-gap: 6rem 0rem;
+  grid-gap: width: ${(props) => (props.theme.name === "Desktop" ? "6rem" : "2.5rem")};
 `;
 
 export const Item = styled.div`
@@ -146,7 +146,7 @@ export const ItemImg = styled.div`
   margin-bottom: 2.25 rem;
 `;
 export const ItemImgCaption = styled.div`
-  margin-top: 2.25rem;
+  margin-top: ${(props) => (props.theme.name === "Desktop" ? "3.5rem" : "1.5rem")};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
@@ -172,8 +172,9 @@ export const FooterContainer = styled.div`
 export const QuotationContainer = styled.div`
   display: flex;
   width: 100%;
-  padding: 0 8.25rem;
+  padding: ${(props) => (props.theme.name === "Desktop" ? "0 8.25rem" : "0 2rem")};
   justify-content: center;
+
 `;
 export const Quotation = styled.div`
   font-size: ${(props) => (props.theme.name === "Desktop" ? "64px" : "28px")};

@@ -8,7 +8,7 @@ const Model = styled.div`
   top: 0;
   left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   padding: 0.5rem 1.25rem;
   background: ${(props) => props.theme.colors.text};
   color: ${(props) => props.theme.colors.body};

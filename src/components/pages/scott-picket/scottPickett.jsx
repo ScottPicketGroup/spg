@@ -43,7 +43,7 @@ const Landing = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Container theme={theme}>
+      <Container theme={theme} style={{paddingBottom: `9rem`}}>
         <Home HomeImage={HomeImage} path={pageProps.path} />
 
         <SectionContainer>
@@ -273,7 +273,7 @@ const Landing = ({ pageProps }) => {
                 <TimeLineIMGInnerContainer>
                   <ImageContainer theme={theme}>
                     <ImageView theme={theme}>
-                      <ImageDiv src={SideImage} theme={theme}></ImageDiv>
+                      {/* <ImageDiv src={SideImage} theme={theme}></ImageDiv> */}
                     </ImageView>
                   </ImageContainer>
                 </TimeLineIMGInnerContainer>
@@ -618,30 +618,30 @@ const Landing = ({ pageProps }) => {
                   <Header2>Estelle Bistro</Header2>
                 </LeftGrid>
                 <RightGrid>
-                  <BC3> 2018 Delicious Top 100 Restaurants</BC3>
-                  <BC3> 2018 Gault & Millau Guide</BC3> – 15/20
-                  <BC3> 2017 Gourmet Traveller Restaurant Guide</BC3>
-                  <BC3> 2017 Age Good Food Guide</BC3>
-                  <BC3> 2016 Delicious Top 100 Restaurants</BC3>
-                  <BC3> 2016 Age Good Food Guide</BC3>
-                  <BC3>
+                  <BC2> 2018 Delicious Top 100 Restaurants</BC2>
+                  <BC2> 2018 Gault & Millau Guide</BC2> – 15/20
+                  <BC2> 2017 Gourmet Traveller Restaurant Guide</BC2>
+                  <BC2> 2017 Age Good Food Guide</BC2>
+                  <BC2> 2016 Delicious Top 100 Restaurants</BC2>
+                  <BC2> 2016 Age Good Food Guide</BC2>
+                  <BC2>
                     {" "}
                     2015 Australian Financial Review Top 100 Restaurants –
                     Ranked #27
-                  </BC3>
-                  <BC3> 2015 Age Good Food Guide – </BC3>
-                  <BC3> 2014 Age Good Food Guide – </BC3>
-                  <BC3>
+                  </BC2>
+                  <BC2> 2015 Age Good Food Guide – </BC2>
+                  <BC2> 2014 Age Good Food Guide – </BC2>
+                  <BC2>
                     {" "}
                     2014 Age Good Food Guide – Finalist for New Restaurant of
                     the Year
-                  </BC3>
-                  <BC3> 2013 Age Good Food Guide – </BC3>
-                  <BC3>
+                  </BC2>
+                  <BC2> 2013 Age Good Food Guide – </BC2>
+                  <BC2>
                     {" "}
                     2013 Age Good Food Guide – Winner Young Chef of the Year,
                     Josh Pelham
-                  </BC3>
+                  </BC2>
                 </RightGrid>
               </TimeLineGrid>
             </RightContainer>
@@ -656,35 +656,35 @@ const Landing = ({ pageProps }) => {
                   <Header2>Estelle By Scott Pickett (ESP)</Header2>
                 </LeftGrid>
                 <RightGrid>
-                  <BC3>
+                  <BC2>
                     {" "}
                     2018 Australian Financial Review Top 100 Restaurants –
                     Ranked #75|
-                  </BC3>
-                  <BC3>
+                  </BC2>
+                  <BC2>
                     {" "}
                     2017 Gourmet Traveller Restaurant Guide Top 100 – Ranked #28
-                  </BC3>
-                  <BC3>
+                  </BC2>
+                  <BC2>
                     {" "}
                     2017 Australian Financial Review Top 100 Restaurants –
                     Ranked #55
-                  </BC3>
-                  <BC3> 2017 The Australian Hot 50 Restaurants</BC3>
-                  <BC3> 2017 Age Good Food Guide – </BC3>
-                  <BC3> 2016 Delicious Top 100 Restaurants</BC3>
-                  <BC3> 2016 The Australian Hot 50 Restaurants</BC3>
-                  <BC3>
+                  </BC2>
+                  <BC2> 2017 The Australian Hot 50 Restaurants</BC2>
+                  <BC2> 2017 Age Good Food Guide – </BC2>
+                  <BC2> 2016 Delicious Top 100 Restaurants</BC2>
+                  <BC2> 2016 The Australian Hot 50 Restaurants</BC2>
+                  <BC2>
                     {" "}
                     2016 Restaurant & Catering Awards For Excellence Victoria –
                     Winner Best
-                  </BC3>
-                  <BC3> New Restaurant</BC3>
-                  <BC3>
+                  </BC2>
+                  <BC2> New Restaurant</BC2>
+                  <BC2>
                     {" "}
                     2016 Australian Financial Review Top 100 Restaurants –
                     Ranked #58
-                  </BC3>
+                  </BC2>
                 </RightGrid>
               </TimeLineGrid>
             </RightContainer>

@@ -13,6 +13,8 @@ import SP from "../../images/Group 4582.png";
 import LogoW from "../../images/Group 4583.png";
 import LogoFooter from "../Footer/logo-footer/LogoFooter";
 
+
+
 export const FooterContainer = styled.div`
   width: 100%;
   display: flex;
@@ -20,33 +22,22 @@ export const FooterContainer = styled.div`
 `;
 
 export const Footer = styled.div`
+overflow: hidden;
   min-height: 50px;
   min-width: 100%;
   padding: 0 1rem;
   background-color: ${(props) => props.theme.colors.text};
-  padding-bottom: 2.25rem;
+  padding-bottom: 9rem;
   position: relative;
   z-index: 2;
+  padding-top: 56px;
+  @media screen and (max-width: 450px) {
+    padding-bottom: 6rem;
+    padding-top: 56px;
+}
 `;
 
-export const FooterLogoGrid = styled.div`
-  display: flex;
 
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
-export const FooterLogoContainer = styled.div`
-  flex: 0 0 200px;
-  padding: 1rem;
-`;
-export const FooterLogo = styled.img`
-  width: 100px;
-`;
 export const InnerContainer = styled.div`
   margin-top: 1rem;
   display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
@@ -60,7 +51,7 @@ export const Grid = styled.div`
     props.theme.name === "Desktop"
       ? `repeat(${props.cols}, 1fr) 20rem`
       : `repeat(${props.cols}, 1fr)`};
-  grid-gap: 6rem 0rem;
+  grid-gap: ${(props) => (props.theme.name === "Desktop" ? "6rem 0rem" : "2.25rem 0")};
 `;
 
 export const Item = styled.div`
@@ -79,7 +70,7 @@ export const Menu = styled.div`
 `;
 export const MenuHeading = styled.div`
   width: 100%;
-  margin: 1.15rem 0;
+  margin: 0  0 1.5rem ;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   text-transform: uppercase;
 `;
@@ -87,6 +78,7 @@ export const MenuItem = styled.div`
   width: 100%;
   text-transform: capitalize;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
+  margin-bottom: 1rem;
 `;
 export const SubMenuHeading = styled.div`
   width: 100%;
@@ -110,12 +102,13 @@ const Input = styled.input`
 
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.body};
-  margin: 1em 0;
+  margin: 1.5rem 0;
   padding: 0.25em 1em;
   background-color: ${(props) => props.theme.colors.text};
   border: ${(props) => `1px solid ${props.theme.colors.body}`};
   text-transform: uppercase;
-  width: ${(props) => (props.theme.name === "Desktop" ? "50%" : "100%")};
+  width: 50%;
+  font-size: .71rem;
   transition: background-color 1s, color 1s;
   &:hover {
     background-color: ${(props) => `${props.theme.colors.body}`};
@@ -126,7 +119,7 @@ const FooterComponent = () => {
   const theme = useTheme();
   return theme ? (
     <div>
-      <FooterContainer>
+      <FooterContainer >
        
         <InnerContainer>
         
@@ -135,9 +128,9 @@ const FooterComponent = () => {
           </Footer>
         </InnerContainer>
       </FooterContainer>
-      <FooterContainer>
+      <FooterContainer style={{borderTop: `white solid 1px`}}>
         {" "}
-        <Footer>
+        <Footer >
           <Grid cols={theme.name === "Desktop" ? 4 : 1} theme={theme}>
             <Item theme={theme}>
               <Menu theme={theme}>
@@ -217,7 +210,10 @@ const FooterComponent = () => {
               <Menu theme={theme}>
                 <MenuHeading theme={theme}>Contact Details</MenuHeading>
                 <MenuItem theme={theme}>
-                  Le Shoppe 513 Elizabeth Street Melbourne 3000
+                11/205 JOHNSTON ST,  <br/>
+FITZROY 3065<br/>
+Australia
+
                 </MenuItem>
               </Menu>
             </Item>
