@@ -1,9 +1,11 @@
 import React from "react";
 
 import { useTheme } from "styled-components";
-import { TextContainer } from "../../components/global/GlobalStyles";
+import { LeftContainer, LogoImg } from "../../components/global/GlobalStyles";
 import { Link } from "gatsby";
 import styled from "styled-components";
+
+import logo from '../../images/logo.svg'
 
 export const Menu = styled.div`
   position: fixed;
@@ -39,7 +41,7 @@ const SideBar = ({ path }) => {
   const theme = useTheme();
 
   return theme ? (
-    <TextContainer theme={theme}>
+    <LeftContainer theme={theme}>
       <Menu theme={theme}>
         <MenuHeading theme={theme}>Menu</MenuHeading>
 
@@ -89,7 +91,8 @@ const SideBar = ({ path }) => {
         </MenuItem>
         <MenuItem theme={theme}>Contact</MenuItem>
       </Menu>
-    </TextContainer>
+      <LogoImg src={logo}/>
+    </LeftContainer>
   ) : (
     <div></div>
   );

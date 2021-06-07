@@ -17,6 +17,17 @@ export const SectionContainer = styled.div`
   width: 100%;
   display: flex;
 `;
+
+export const LeftContainer = styled.div`
+  display: inline;
+  width: 33%;
+`;
+export const RightContainer = styled.div`
+  display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
+  width: 66%;
+  justify-content: ${(props) =>
+    props.device === "Mobile" ? "flex-end" : "flex-start"};
+`;
 export const TextContainer = styled.div`
   display: inline;
   width: ${(props) => (props.device === "Desktop" ? "42%" : "100%")};
@@ -24,6 +35,14 @@ export const TextContainer = styled.div`
 export const ImageContainer = styled.div`
   display: inline;
   width: ${(props) => (props.device === "Desktop" ? "58%" : "100%")};
+`;
+
+export const LogoImg = styled.img`
+position: fixed;
+left: 56px;
+bottom: 56px;
+  display: inline;
+  width: ${(props) => props.theme.name === "Mobile" && "100px"};
 `;
 export const FullImageContainer = styled.div`
   display: inline;
@@ -52,3 +71,4 @@ export const ImageDiv = styled.div`
     opacity: ${(props) => (props.link ? 0.25 : 1)};
   }
 `;
+

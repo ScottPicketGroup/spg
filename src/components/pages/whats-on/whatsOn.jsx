@@ -32,7 +32,7 @@ const Landing = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer>
-              <LogoImg src={Logo} />
+            
             </LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>What's On</Header1>
