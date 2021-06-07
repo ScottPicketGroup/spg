@@ -49,13 +49,12 @@ export const InnerContainer = styled.div`
   width: 100%;
 `;
 
-
 export const LogoImg = styled.img`
-position: fixed;
-z-index: 1;
-left: 3.84rem;
-bottom: 36px;
-width: 15%;
+  position: fixed;
+  z-index: 1;
+  left: 3.84rem;
+  bottom: 36px;
+  width: 15%;
   display: inline;
   width: ${(props) => props.theme.name === "Mobile" && "100px"};
 `;
@@ -72,6 +71,7 @@ export const ImageView = styled.div`
 
 export const ImageDiv = styled.div`
   position: absolute;
+  z-index: 1000;
   top: 0;
   left: 0;
   bottom: 0;
@@ -86,4 +86,3 @@ export const ImageDiv = styled.div`
     opacity: ${(props) => (props.link ? 0.25 : 1)};
   }
 `;
-

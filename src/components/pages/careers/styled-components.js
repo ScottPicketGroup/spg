@@ -133,7 +133,6 @@ export const Header4 = styled.h4`
 
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.text};
-
   margin: 1em;
   padding: 0.25em 1em;
   background-color: ${(props) => props.theme.colors.body};

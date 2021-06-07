@@ -12,6 +12,8 @@ export const Header2 = styled.h2`
   font-size: ${(props) =>
     props.theme.name === "Desktop" ? "1.59rem" : "1.5rem"};
   margin-bottom: 1rem;
+  line-height: ${(props) =>
+    props.theme.name === "Desktop" ? "1.11rem" : "1rem"};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
@@ -94,6 +96,8 @@ export const ItemImgCaption = styled.div`
 export const ImageCaption = styled.p`
   font-size: ${(props) =>
     props.theme.name === "Desktop" ? "7.71rem" : ".59rem"};
+  line-height: ${(props) =>
+    props.theme.name === "Desktop" ? "1.25rem" : "1rem"};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   color: ${(props) => props.theme.colors.text};
 `;
@@ -122,7 +126,7 @@ export const MenuItem = styled.div`
   font-weight: ${(props) => (props.bold ? "bold" : "normal")};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "20px")};
   line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "1.5rem" : "1.5rem"};
+    props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
   text-transform: capitalize;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
 
