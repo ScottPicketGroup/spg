@@ -23,6 +23,7 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+body { margin: 0}
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
