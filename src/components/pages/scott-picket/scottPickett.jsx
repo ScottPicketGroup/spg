@@ -23,17 +23,18 @@ import {
   RightContainer,
   LeftContainer,
   LogoImg,
-  Header1,
-  BC1,
-  Grid,
-  Item,
-  Header2,
-  BC3,
-  BC2,
-  Quotation,
   QuotationContainer,
   CookiesBanner,
 } from "./styled-components";
+
+import {
+  BC1,
+  Header1,
+  BC3,
+  Header2,
+  Quotation,
+  BC2,
+} from "../../global/fontStyles";
 import Footer from "../../Common/Footer";
 import Home from "../../Common/DesktopHome";
 
@@ -52,7 +53,7 @@ const Landing = ({ pageProps }) => {
             </LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Scott Pickett</Header1>
-              <BC1 theme={theme}>
+              <BC1 theme={theme} marginBottom="6rem" marginBottom="6rem">
                 My love for great produce began early. As a kid on a farm in
                 Kangarilla, it taught me a lot about food and seasonality.
                 Knowing the growers and producers behind the food we ate gave me
@@ -60,7 +61,7 @@ const Landing = ({ pageProps }) => {
                 environment like that influenced me to become a chef. So did
                 growing up with my grandmother Audrey’s Sunday roasts.
               </BC1>
-              <BC1 theme={theme}>
+              <BC1 theme={theme} marginBottom="6rem" marginBottom="6rem">
                 Those years set the foundations of my values as a chef and
                 restaurateur today. My approach always puts food at the front.
                 It’s based on real cooking – with the greatest respect to the
@@ -96,7 +97,7 @@ const Landing = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Timeline</Header1>
-              <BC1 theme={theme}>
+              <BC1 theme={theme} marginBottom="6rem">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae
@@ -468,7 +469,7 @@ const Landing = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Accolades</Header1>
-              <BC1 theme={theme}>
+              <BC1 theme={theme} marginBottom="6rem">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae

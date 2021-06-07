@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useTheme } from "styled-components";
 import { LeftContainer, LogoImg } from "../../components/global/GlobalStyles";
 import { Link } from "gatsby";
-import styled from "styled-components";
-
+import styled from 'styled-components'
 import logo from '../../images/logo.svg'
 import MenuResusable from './menuResusable'
 
 export const Menu = styled.div`
   position: fixed;
-  top: 2.25rem;
+  top: 4.84rem;
   left: 4.25rem;
   display: flex;
   flex-direction: column;
@@ -41,7 +40,18 @@ export const MenuItem = styled.div`
 
 const SideBar = ({ path }) => {
   const theme = useTheme();
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState(null);
 
+  const hideModal = () => {
+    setShowSubMenu(false);
+    setSelectedMenu(null);
+  };
+
+  const handleOpenSubMenu = (key) => {
+    setShowSubMenu(true);
+    setSelectedMenu(key);
+  };
   return theme ? (
     <LeftContainer theme={theme}>
       <MenuResusable theme={theme}/>

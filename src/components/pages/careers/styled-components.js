@@ -1,24 +1,4 @@
 import styled from "styled-components";
-export const Menu = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 2.25rem 2.25rem;
-  color: ${(props) =>
-    props.theme.name === "Desktop"
-      ? props.theme.colors.text
-      : props.theme.colors.body};
-`;
-export const MenuHeading = styled.div`
-  width: 100%;
-  margin: 1.15rem 0;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
-  text-transform: uppercase;
-`;
-export const MenuItem = styled.div`
-  width: 100%;
-  text-transform: capitalize;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-`;
 
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>

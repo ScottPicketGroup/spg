@@ -12,8 +12,10 @@ import Theme from "./src/components/global/variables";
 
 import { createGlobalStyle } from "styled-components";
 
-import UntitledSansLight from "./static/fonts/test-untitled-sans-light.woff";
-import UntitledSansMedium from "./static/fonts/untitled-sans-web-regular.woff";
+import UntitledSansLight from "./static/fonts/untitled-sans-web-light.woff";
+import UntitledSansMedium from "./static/fonts/untitled-sans-web-medium.woff";
+import UntitledSansRegular from "./static/fonts/untitled-sans-web-regular.woff";
+import Times from "./static/fonts/timr45w.ttf";
 
 const GlobalFonts = createGlobalStyle`
     @font-face {
@@ -23,6 +25,14 @@ const GlobalFonts = createGlobalStyle`
     @font-face {
       font-family: 'UntitledSansMedium';
       src: url(${UntitledSansMedium}) format("woff"); 
+  }
+    @font-face {
+      font-family: 'UntitledSansRegular';
+      src: url(${UntitledSansRegular}) format("woff"); 
+  }
+    @font-face {
+      font-family: 'Times';
+      src: url(${Times}) format("ttf"); 
   }
 `;
 

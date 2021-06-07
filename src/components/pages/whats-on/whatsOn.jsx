@@ -9,17 +9,13 @@ import {
   RightContainer,
   LeftContainer,
   LogoImg,
-  Header1,
-  BC1,
-  BC3,
   Button,
-  Header2,
-  Header4,
-  Header3,
   Grid,
   Item,
   GridImg,
 } from "./styled-components";
+import { BC1, Header1, BC3, Header2, Header3 } from "../../global/fontStyles";
+
 import Footer from "../../Common/Footer";
 import Home from "../../Common/DesktopHome";
 const Landing = ({ pageProps }) => {

@@ -1,29 +1,13 @@
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 
 import { useTheme } from "styled-components";
-import {
-  Container,
-  ImageContainer,
-  SectionContainer,
-} from "../../global/GlobalStyles";
+import { Container, SectionContainer } from "../../global/GlobalStyles";
 
-import { Link } from "gatsby";
 import HomeImage from "../../../images/Screen Shot 2021-04-18 at 1.42.07 pm.png";
-import Logo from "../../../images/logo.svg";
-import LogoWhite from "../../../images/logoWhite.svg";
 
-import MenuBox from "../../Common/Menue";
+import { InnerContainer, RightContainer, Button } from "./styled-components";
+import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";
 
-import {
-  InnerContainer,
-  RightContainer,
-  Header1,
-  BC1,
-  BC3,
-  Button,
-  Header2,
-  Header4,
-} from "./styled-components";
 import Footer from "../../Common/Footer";
 import Home from "../../Common/MobileHome";
 const MobileLanding = ({ pageProps }) => {
