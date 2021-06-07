@@ -1,41 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useTheme } from "styled-components";
 import { TextContainer } from "../../components/global/GlobalStyles";
 import { Link } from "gatsby";
-import styled from "styled-components";
 
-export const Menu = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 2.25rem 2.25rem;
-  color: ${(props) =>
-    props.theme.name === "Desktop"
-      ? props.theme.colors.text
-      : props.theme.colors.body};
-`;
-export const MenuHeading = styled.div`
-  width: 100%;
-  margin: 1.15rem 0;
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "24px")};
-  line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
-  text-transform: uppercase;
-`;
-export const MenuItem = styled.div`
-  width: 100%;
-  font-weight: ${(props) => (props.bold ? "bold" : "normal")};
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "20px")};
-  line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
-  text-transform: capitalize;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-`;
+import { Menu, MenuHeading, MenuItem } from "../global/fontStyles";
+import MenuBox from "../Common/Menue";
+import SubMenu from "./SubMenue";
 
 const SideBar = ({ path }) => {
   const theme = useTheme();
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState(null);
 
+  const hideModal = () => {
+    setShowSubMenu(false);
+    setSelectedMenu(null);
+  };
+
+  const handleOpenSubMenu = (key) => {
+    setShowSubMenu(true);
+    setSelectedMenu(key);
+  };
   return theme ? (
     <TextContainer theme={theme}>
       <Menu theme={theme}>
@@ -55,15 +41,16 @@ const SideBar = ({ path }) => {
           </Link>
         </MenuItem>
 
-        <MenuItem theme={theme}>Book a table</MenuItem>
+        <MenuItem theme={theme} onClick={() => handleOpenSubMenu("bookATable")}>
+          Book a table
+        </MenuItem>
 
-        <MenuItem theme={theme} bold={path && path.includes("/events")}>
-          <Link
-            to="/events"
-            style={{ color: "inherit", textDecoration: "none" }}
-          >
-            Events
-          </Link>
+        <MenuItem
+          onClick={() => handleOpenSubMenu("events")}
+          theme={theme}
+          bold={path && path.includes("/events")}
+        >
+          Events
         </MenuItem>
 
         <MenuItem theme={theme} bold={path && path.includes("/whatson")}>
@@ -74,8 +61,15 @@ const SideBar = ({ path }) => {
             What's On
           </Link>
         </MenuItem>
-        <MenuItem theme={theme}>Gift Vouchers</MenuItem>
-        <MenuItem theme={theme}>Provider</MenuItem>
+        <MenuItem
+          theme={theme}
+          onClick={() => handleOpenSubMenu("giftVoucher")}
+        >
+          Gift Vouchers
+        </MenuItem>
+        <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
+          Provider
+        </MenuItem>
         <MenuItem theme={theme}>Shop</MenuItem>
         <MenuItem theme={theme} bold={path && path.includes("/careers")}>
           <Link
@@ -87,6 +81,19 @@ const SideBar = ({ path }) => {
         </MenuItem>
         <MenuItem theme={theme}>Contact</MenuItem>
       </Menu>
+
+      <MenuBox
+        show={showSubMenu}
+        handleClose={hideModal}
+        // openPos={Pos.CM_TOP_CENTER}
+      >
+        <SubMenu
+          hideModal={hideModal}
+          path={path}
+          selectedMenu={selectedMenu}
+          handleOpenSubMenu={handleOpenSubMenu}
+        />
+      </MenuBox>
     </TextContainer>
   ) : (
     <div></div>

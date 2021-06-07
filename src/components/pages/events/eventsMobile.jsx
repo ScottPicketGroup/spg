@@ -9,36 +9,20 @@ import {
   ImageView,
 } from "../../global/GlobalStyles";
 
-import { Link } from "gatsby";
 import HomeImage from "../../../images/Screen Shot -1@2x.png";
-import Logo from "../../../images/logo.svg";
-import LogoWhite from "../../../images/logoWhite.svg";
+
 import gridPic1 from "../../../images/gridPic1.png";
 import gridPic2 from "../../../images/gridPic2.png";
 import gridPic3 from "../../../images/gridPic3.png";
 import gridPic4 from "../../../images/gridPic4.png";
 
-import MenuBox from "../../Common/Menue";
-
 import {
-  Menu,
-  MenuHeading,
-  MenuItem,
   InnerContainer,
   RightContainer,
-  LeftContainer,
-  LogoImg,
-  Header1,
-  BC1,
-  MenuBtn,
-  CloseBtn,
-  MenuHeader,
   Grid,
   Item,
-  ItemImg,
-  ItemImgCaption,
-  BC3,
 } from "./styled-components";
+import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles";
 import Footer from "../../Common/Footer";
 import MobileHome from "../../Common/MobileHome";
 

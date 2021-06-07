@@ -9,13 +9,17 @@ import {
 } from "../global/GlobalStyles";
 
 import { Link } from "gatsby";
-
+import styled from "styled-components";
 import Logo from "../../images/logo.svg";
 import LogoWhite from "../../images/logoWhite.svg";
+import expandIcon from "../../images/expandIcon.png";
 
 import MenuBox from "../Common/Menue";
-
-import styled from "styled-components";
+import { Menu, MenuHeading, MenuItem } from "../global/fontStyles";
+import TableMenu from "./SubMenus/BookTableMenu";
+import GiftVoucher from "./SubMenus/GiftVoucher";
+import Provider from "./SubMenus/Provider";
+import Events from "./SubMenus/Events";
 
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>
@@ -38,34 +42,6 @@ export const RightContainer = styled.div`
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
 `;
-export const Menu = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 2.25rem 2.25rem;
-  color: ${(props) =>
-    props.theme.name === "Desktop"
-      ? props.theme.colors.text
-      : props.theme.colors.body};
-`;
-export const MenuHeading = styled.div`
-  width: 100%;
-  margin: 1.15rem 0;
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "24px")};
-  line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
-  text-transform: uppercase;
-`;
-export const MenuItem = styled.div`
-  width: 100%;
-  font-weight: ${(props) => (props.bold ? "bold" : "normal")};
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "20px")};
-  line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
-  text-transform: capitalize;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-`;
-
 export const MenuBtn = styled.div`
   font-size: 16px;
   text-transform: uppercase;
@@ -86,8 +62,10 @@ export const LogoImg = styled.img`
 export const CloseBtn = styled.div`
   font-size: 16px;
   text-transform: uppercase;
+  cursor: pointer;
   color: ${(props) => props.theme.colors.body};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
+  opacity: ${(props) => props.opacity && props.opacity};
 `;
 export const MenuHeader = styled.div`
   display: flex;
@@ -101,7 +79,21 @@ const MobileHome = ({ HomeImage, path }) => {
 
   const hideModal = (arg) => {
     setShow(false);
+    hideModalSubMenu();
   };
+
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState(null);
+
+  const hideModalSubMenu = (arg) => {
+    setShowSubMenu(false);
+    setSelectedMenu(null);
+  };
+  const handleOpenSubMenu = (key) => {
+    setShowSubMenu(true);
+    setSelectedMenu(key);
+  };
+
   return theme ? (
     <div>
       <SectionContainer>
@@ -147,6 +139,7 @@ const MobileHome = ({ HomeImage, path }) => {
 
         <Menu theme={theme}>
           <MenuHeading theme={theme}>Menu</MenuHeading>
+
           <MenuItem theme={theme} bold={path && path === "/"}>
             <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
               Home
@@ -161,15 +154,21 @@ const MobileHome = ({ HomeImage, path }) => {
             </Link>
           </MenuItem>
 
-          <MenuItem theme={theme}>Book a table</MenuItem>
+          <MenuItem
+            theme={theme}
+            expandIcon={expandIcon}
+            onClick={() => handleOpenSubMenu("bookATable")}
+          >
+            Book a table
+          </MenuItem>
 
-          <MenuItem theme={theme} bold={path && path.includes("/events")}>
-            <Link
-              to="/events"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              Events
-            </Link>
+          <MenuItem
+            theme={theme}
+            bold={path && path.includes("/events")}
+            expandIcon={expandIcon}
+            onClick={() => handleOpenSubMenu("events")}
+          >
+            Events
           </MenuItem>
           <MenuItem theme={theme} bold={path && path.includes("/whatson")}>
             {" "}
@@ -180,8 +179,20 @@ const MobileHome = ({ HomeImage, path }) => {
               What's On
             </Link>
           </MenuItem>
-          <MenuItem theme={theme}>Gift Vouchers</MenuItem>
-          <MenuItem theme={theme}>Provider</MenuItem>
+          <MenuItem
+            theme={theme}
+            expandIcon={expandIcon}
+            onClick={() => handleOpenSubMenu("giftVouchers")}
+          >
+            Gift Vouchers
+          </MenuItem>
+          <MenuItem
+            theme={theme}
+            expandIcon={expandIcon}
+            onClick={() => handleOpenSubMenu("provider")}
+          >
+            Provider
+          </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
           <MenuItem theme={theme} bold={path && path.includes("/careers")}>
             {" "}
@@ -194,6 +205,38 @@ const MobileHome = ({ HomeImage, path }) => {
           </MenuItem>
           <MenuItem theme={theme}>Contact</MenuItem>
         </Menu>
+      </MenuBox>
+
+      <MenuBox show={showSubMenu} handleClose={hideModalSubMenu}>
+        <SectionContainer>
+          <MenuHeader theme={theme}>
+            <LeftContainer>
+              <LogoImg src={LogoWhite} theme={theme} />
+            </LeftContainer>
+            <RightContainer device={theme.name}>
+              <CloseBtn theme={theme} onClick={() => hideModal()}>
+                X Close
+              </CloseBtn>
+            </RightContainer>
+          </MenuHeader>
+        </SectionContainer>
+        <CloseBtn theme={theme} onClick={hideModalSubMenu} opacity="0.5">
+          Back
+        </CloseBtn>
+        {(() => {
+          switch (selectedMenu) {
+            case "bookATable":
+              return <TableMenu />;
+            case "giftVoucher":
+              return <GiftVoucher />;
+            case "provider":
+              return <Provider />;
+            case "events":
+              return <Events />;
+            default:
+              return <div></div>;
+          }
+        })()}
       </MenuBox>
     </div>
   ) : (

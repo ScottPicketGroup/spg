@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 
 import { useTheme } from "styled-components";
 import {
@@ -21,14 +21,11 @@ import {
   RightContainer,
   LeftContainer,
   LogoImg,
-  Header1,
-  BC1,
   Grid,
   Item,
-  ItemImg,
-  ItemImgCaption,
-  BC3,
 } from "./styled-components";
+import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles";
+
 import Footer from "../../Common/Footer";
 import Home from "../../Common/DesktopHome";
 

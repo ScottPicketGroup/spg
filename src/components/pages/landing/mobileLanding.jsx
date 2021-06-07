@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 
 import { useTheme } from "styled-components";
 import {
@@ -17,18 +17,14 @@ import gridPic5 from "../../../images/gridPic5.png";
 import gridPic6 from "../../../images/gridPic6.png";
 import gridPic7 from "../../../images/gridPic7.png";
 import gridPic8 from "../../../images/gridPic8.png";
+import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles";
 
 import {
   InnerContainer,
   RightContainer,
-  Header1,
-  BC1,
   Grid,
   Item,
-  ItemImg,
-  ItemImgCaption,
   ItemImgLink,
-  BC3,
 } from "./styled-components";
 import Footer from "../../Common/Footer";
 import MobileHome from "../../Common/MobileHome";

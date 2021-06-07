@@ -13,31 +13,26 @@ import SideImage from "../../../images/Screen Shot 2021-04-18 at 1.39.34 pm.png"
 import HomeImage from "../../../images/Screen Shot 2021-04-18 at 2.05.39 pm.png";
 
 import {
-  Menu,
-  MenuHeading,
-  MenuItem,
   InnerContainer,
   TimeLineContainer,
   RightContainer,
   LeftContainer,
-  LogoImg,
-  Header1,
-  BC1,
-  MenuBtn,
-  CloseBtn,
-  MenuHeader,
   Grid,
   Item,
-  Header2,
-  BC3,
-  BC2,
-  Quotation,
   QuotationContainer,
   CookiesBanner,
   Button,
 } from "./styled-components";
 import Footer from "../../Common/Footer";
 import MobileHome from "../../Common/MobileHome";
+import {
+  BC1,
+  Header1,
+  BC3,
+  Header2,
+  Quotation,
+  BC2,
+} from "../../global/fontStyles";
 
 const MobileLanding = ({ pageProps }) => {
   const theme = useTheme();
@@ -50,7 +45,7 @@ const MobileLanding = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
             <Header1 theme={theme}>Scott Pickett </Header1>
-            <BC1 theme={theme}>
+            <BC1 theme={theme} marginBottom="6rem">
               My love for great produce began early. As a kid on a farm in
               Kangarilla, it taught me a lot about food and seasonality. Knowing
               the growers and producers behind the food we ate gave me a respect
@@ -58,7 +53,7 @@ const MobileLanding = ({ pageProps }) => {
               like that influenced me to become a chef. So did growing up with
               my grandmother Audrey’s Sunday roasts.
             </BC1>
-            <BC1 theme={theme}>
+            <BC1 theme={theme} marginBottom="6rem">
               Those years set the foundations of my values as a chef and
               restaurateur today. My approach always puts food at the front.
               It’s based on real cooking – with the greatest respect to the
@@ -89,7 +84,7 @@ const MobileLanding = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
             <Header1 theme={theme}>Timeline</Header1>
-            <BC1 theme={theme}>
+            <BC1 theme={theme} marginBottom="6rem">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -442,7 +437,7 @@ const MobileLanding = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
             <Header1 theme={theme}>Accolades</Header1>
-            <BC1 theme={theme}>
+            <BC1 theme={theme} marginBottom="6rem">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
               quae ab illo inventore veritatis et quasi architecto beatae vitae

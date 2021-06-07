@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from "react";
+import React from "react";
 
 import { useTheme } from "styled-components";
 import {
@@ -21,22 +21,15 @@ import gridPic7 from "../../../images/gridPic7.png";
 import gridPic8 from "../../../images/gridPic8.png";
 
 import {
-  Menu,
-  MenuHeading,
-  MenuItem,
   InnerContainer,
   RightContainer,
   LeftContainer,
   LogoImg,
-  Header1,
-  BC1,
   Grid,
   Item,
-  ItemImg,
-  ItemImgCaption,
   ItemImgLink,
-  BC3,
 } from "./styled-components";
+import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles";
 
 import Footer from "../../Common/Footer";
 import Home from "../../Common/DesktopHome";
@@ -76,7 +69,7 @@ const Landing = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Venues</Header1>
-              <BC1 link={true} theme={theme}>
+              <BC1 theme={theme}>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
                 quae ab illo inventore veritatis et quasi architecto beatae
