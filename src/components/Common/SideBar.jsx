@@ -6,9 +6,11 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 export const Menu = styled.div`
+  position: fixed;
+  top: 2.25rem;
+  left: 4.25rem;
   display: flex;
   flex-direction: column;
-  padding: 2.25rem 2.25rem;
   color: ${(props) =>
     props.theme.name === "Desktop"
       ? props.theme.colors.text
