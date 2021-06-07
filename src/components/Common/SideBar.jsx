@@ -6,6 +6,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import logo from '../../images/logo.svg'
+import MenuResusable from './menuResusable'
 
 export const Menu = styled.div`
   position: fixed;
@@ -20,6 +21,7 @@ export const Menu = styled.div`
 `;
 export const MenuHeading = styled.div`
   width: 100%;
+  position: relative;
   margin: 1.15rem 0;
   font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "24px")};
   line-height: ${(props) =>
@@ -42,55 +44,8 @@ const SideBar = ({ path }) => {
 
   return theme ? (
     <LeftContainer theme={theme}>
-      <Menu theme={theme}>
-        <MenuHeading theme={theme}>Menu</MenuHeading>
-
-        <MenuItem theme={theme} bold={path && path === "/"}>
-          <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
-            Home
-          </Link>
-        </MenuItem>
-        <MenuItem theme={theme} bold={path && path.includes("/scott-picket")}>
-          <Link
-            to="/scott-picket"
-            style={{ color: "inherit", textDecoration: "none" }}
-          >
-            Scott Picket
-          </Link>
-        </MenuItem>
-
-        <MenuItem theme={theme}>Book a table</MenuItem>
-
-        <MenuItem theme={theme} bold={path && path.includes("/events")}>
-          <Link
-            to="/events"
-            style={{ color: "inherit", textDecoration: "none" }}
-          >
-            Events
-          </Link>
-        </MenuItem>
-
-        <MenuItem theme={theme} bold={path && path.includes("/whatson")}>
-          <Link
-            to="/whatson"
-            style={{ color: "inherit", textDecoration: "none" }}
-          >
-            What's On
-          </Link>
-        </MenuItem>
-        <MenuItem theme={theme}>Gift Vouchers</MenuItem>
-        <MenuItem theme={theme}>Provider</MenuItem>
-        <MenuItem theme={theme}>Shop</MenuItem>
-        <MenuItem theme={theme} bold={path && path.includes("/careers")}>
-          <Link
-            to="/careers"
-            style={{ color: "inherit", textDecoration: "none" }}
-          >
-            Careers
-          </Link>
-        </MenuItem>
-        <MenuItem theme={theme}>Contact</MenuItem>
-      </Menu>
+      <MenuResusable theme={theme}/>
+     
       <LogoImg src={logo}/>
     </LeftContainer>
   ) : (

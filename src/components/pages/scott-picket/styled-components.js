@@ -25,7 +25,7 @@ export const InnerContainer = styled.div`
     props.top === true
       ? "1rem"
       : props.theme.name === "Desktop"
-      ? "9rem"
+      ? "6.93rem"
       : "6rem"};
   display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
 

@@ -8,7 +8,7 @@ export const Title = styled.h1`
 export const Container = styled.div`
   width: 100%;
   padding: ${(props) =>
-    props.theme.name === "Desktop" ? "0 5.25rem" : "0 2.25rem"};
+    props.theme.name === "Desktop" ? "0 3.84rem" : "0 1.12rem"};
   font-size: ${(props) => props.theme.fontSize};
   background-color: #f9f9f4;
 `;
@@ -37,10 +37,25 @@ export const ImageContainer = styled.div`
   width: ${(props) => (props.device === "Desktop" ? "58%" : "100%")};
 `;
 
+export const InnerContainer = styled.div`
+  margin-top: ${(props) =>
+    props.top === true
+      ? "1rem"
+      : props.theme.name === "Desktop"
+      ? "6.93rem"
+      : "6rem"};
+  display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
+
+  width: 100%;
+`;
+
+
 export const LogoImg = styled.img`
 position: fixed;
-left: 56px;
-bottom: 56px;
+z-index: 1;
+left: 3.84rem;
+bottom: 36px;
+width: 15%;
   display: inline;
   width: ${(props) => props.theme.name === "Mobile" && "100px"};
 `;

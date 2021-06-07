@@ -690,11 +690,11 @@ const Landing = ({ pageProps }) => {
           </TimeLineContainer>
         </SectionContainer>
 
-        <CookiesBanner theme={theme}>
+        {/* <CookiesBanner theme={theme}>
           this website uses cookies to ensure you get the best experience on our
           website learn more
           <Button>I Accept</Button>
-        </CookiesBanner>
+        </CookiesBanner> */}
       </Container>
 
       <Footer />

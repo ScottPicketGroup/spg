@@ -26,6 +26,8 @@ export const Footer = styled.div`
   padding: 0 1rem;
   background-color: ${(props) => props.theme.colors.text};
   padding-bottom: 2.25rem;
+  position: relative;
+  z-index: 2;
 `;
 
 export const FooterLogoGrid = styled.div`
@@ -109,7 +111,7 @@ const Input = styled.input`
 
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.body};
-  margin: 1em;
+  margin: 1em 0;
   padding: 0.25em 1em;
   background-color: ${(props) => props.theme.colors.text};
   border: ${(props) => `1px solid ${props.theme.colors.body}`};
@@ -129,7 +131,7 @@ const FooterComponent = () => {
        
         <InnerContainer>
         
-          <Footer theme={theme}>
+          <Footer theme={theme} style={{padding: `0`}}>
           <LogoFooter />
           </Footer>
         </InnerContainer>

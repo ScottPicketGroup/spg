@@ -107,7 +107,7 @@ const MobileHome = ({ HomeImage, path }) => {
       <SectionContainer>
         <InnerContainer theme={theme} top={true}>
           <LeftContainer>
-           
+           <LogoImg src={Logo}/>
           </LeftContainer>
           <RightContainer device={theme.name}>
             <MenuBtn theme={theme} onClick={() => setShow(true)}>
