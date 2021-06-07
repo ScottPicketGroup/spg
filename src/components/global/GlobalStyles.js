@@ -6,7 +6,7 @@ export const Title = styled.h1`
 `;
 
 export const Container = styled.div`
-  width: 100%;
+
   padding: ${(props) =>
     props.theme.name === "Desktop" ? "0 3.84rem" : "0 1.12rem"};
   font-size: ${(props) => props.theme.fontSize};
