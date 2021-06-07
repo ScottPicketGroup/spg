@@ -43,7 +43,7 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer>
-              <LogoImg src={Logo} />
+            
             </LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Events</Header1>
