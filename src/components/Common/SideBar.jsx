@@ -8,7 +8,7 @@ import styled from "styled-components";
 export const Menu = styled.div`
   position: fixed;
   top: 2.25rem;
-  left: 8.25rem;
+  left: 4.25rem;
   display: flex;
   flex-direction: column;
   color: ${(props) =>
