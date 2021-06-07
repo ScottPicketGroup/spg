@@ -1,28 +1,43 @@
-import React, { useState, useLayoutEffect, useEffect } from "react"
-import { useLocation } from "@reach/router"
-import styled, { useTheme } from "styled-components"
-import { Link } from "gatsby"
+import React, { useState, useLayoutEffect, useEffect } from "react";
+import { useLocation } from "@reach/router";
+import styled, { useTheme } from "styled-components";
+import { Link } from "gatsby";
 
 import {
+  MenuDropDownContainer,
   Menu,
   MenuHeading,
   MenuItem,
-  MenuDropDownContainer,
-} from "./styled-components"
+} from "./styled-components";
+
+import MenuBox from "../Common/Menue";
+import SubMenu from "./SubMenue";
 
 const MenuResusable = () => {
-  const location = useLocation()
-  const theme = useTheme()
-  const [offset, setOffset] = useState(0)
-  const [open, setOpen] = useState(true)
+  const location = useLocation();
+  const theme = useTheme();
+  const [offset, setOffset] = useState(0);
+  const [open, setOpen] = useState(true);
+
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState(null);
+
+  const hideModalSubMenu = (arg) => {
+    setShowSubMenu(false);
+    setSelectedMenu(null);
+  };
+  const handleOpenSubMenu = (key) => {
+    setShowSubMenu(true);
+    setSelectedMenu(key);
+  };
 
   useEffect(() => {
     window.onscroll = () => {
-      if (window.pageYOffset > 50) setOpen(false)
-    }
-  })
+      if (window.pageYOffset > 50) setOpen(false);
+    };
+  });
 
-  console.log(open)
+  console.log(open);
 
   return (
     <Menu theme={theme} onMouseLeave={() => setOpen(false)}>
@@ -55,21 +70,33 @@ const MenuResusable = () => {
           </MenuItem>
         ) : null}
 
-        <MenuItem theme={theme}>Book a table</MenuItem>
+        <MenuItem theme={theme} onClick={() => handleOpenSubMenu("bookATable")}>
+          Book a table
+        </MenuItem>
+
+        <MenuItem theme={theme} onClick={() => handleOpenSubMenu("events")}>
+          Events
+        </MenuItem>
 
         <MenuItem theme={theme}>
           <Link
-            to="/events"
+            to="/whatson"
             style={{ color: "inherit", textDecoration: "none" }}
+            partiallyActive={true}
             activeStyle={{ fontFamily: `UntitledSansMedium` }}
           >
-            Events
+            What's On
           </Link>
         </MenuItem>
-
-        <MenuItem theme={theme}>What's On</MenuItem>
-        <MenuItem theme={theme}>Gift Vouchers</MenuItem>
-        <MenuItem theme={theme}>Provider</MenuItem>
+        <MenuItem
+          theme={theme}
+          onClick={() => handleOpenSubMenu("giftVouchers")}
+        >
+          Gift Vouchers
+        </MenuItem>
+        <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
+          Provider
+        </MenuItem>
         <MenuItem theme={theme}>Shop</MenuItem>
         <MenuItem theme={theme}>
           {" "}
@@ -84,8 +111,16 @@ const MenuResusable = () => {
         </MenuItem>
         <MenuItem theme={theme}>Contact</MenuItem>
       </MenuDropDownContainer>
-    </Menu>
-  )
-}
 
-export default MenuResusable
+      <MenuBox show={showSubMenu} handleClose={hideModalSubMenu}>
+        <SubMenu
+          hideModal={hideModalSubMenu}
+          selectedMenu={selectedMenu}
+          handleOpenSubMenu={handleOpenSubMenu}
+        />
+      </MenuBox>
+    </Menu>
+  );
+};
+
+export default MenuResusable;

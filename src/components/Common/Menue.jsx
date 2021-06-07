@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useTheme } from "styled-components";
 const Model = styled.div`
-  z-index: 1000;
+  z-index: 2000;
   display: ${({ show }) => (show ? "block" : "none")};
   position: fixed;
   top: 0;

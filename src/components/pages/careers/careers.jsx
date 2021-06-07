@@ -23,9 +23,7 @@ const Landing = ({ pageProps }) => {
         <Home HomeImage={HomeImage} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer>
-            <LeftContainer>
-             
-            </LeftContainer>
+            <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Careers</Header1>
               <BC1 theme={theme}>
