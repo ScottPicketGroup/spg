@@ -12,7 +12,13 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import { Menu, MenuHeading, Menu2Item } from "../../global/fontStyles";
+import fbIcon from "../../../images/fb.png";
+import instaIcon from "../../../images/insta.png";
 
+export const FooterLogo = styled.img`
+  margin-top: 3rem;
+  margin-right: 1rem;
+`;
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>
     props.top === true
@@ -99,6 +105,8 @@ const GiftVouchers = ({ path }) => {
           </Link>
         </Menu2Item>
       </Menu>
+      {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
+      {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}{" "}
     </div>
   ) : (
     <div></div>

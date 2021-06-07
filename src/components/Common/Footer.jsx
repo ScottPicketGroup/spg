@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useTheme } from "styled-components";
 import styled from "styled-components";
 import { Link } from "gatsby";
@@ -65,7 +64,7 @@ export const Item = styled.div`
   padding: 0 0.5rem;
   display: block;
   color: ${(props) => props.theme.colors.body};
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   font-size: 16px;
 `;
 
@@ -78,19 +77,19 @@ export const Menu = styled.div`
 export const MenuHeading = styled.div`
   width: 100%;
   margin: 1.15rem 0;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   text-transform: uppercase;
 `;
 export const MenuItem = styled.div`
   width: 100%;
   text-transform: capitalize;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
 `;
 export const SubMenuHeading = styled.div`
   width: 100%;
   margin-top: 1rem;
   text-transform: uppercase;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
 `;
 
 const Input = styled.input`

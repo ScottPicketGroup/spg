@@ -20,7 +20,11 @@ import TableMenu from "./SubMenus/BookTableMenu";
 import GiftVoucher from "./SubMenus/GiftVoucher";
 import Provider from "./SubMenus/Provider";
 import Events from "./SubMenus/Events";
+import footerLogo from "../../images/Group 6228.png";
 
+export const FooterLogo = styled.img`
+  margin-top: 3rem;
+`;
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>
     props.top === true
@@ -205,6 +209,7 @@ const MobileHome = ({ HomeImage, path }) => {
           </MenuItem>
           <MenuItem theme={theme}>Contact</MenuItem>
         </Menu>
+        <FooterLogo src={footerLogo} />
       </MenuBox>
 
       <MenuBox show={showSubMenu} handleClose={hideModalSubMenu}>

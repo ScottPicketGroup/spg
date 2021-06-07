@@ -7,6 +7,9 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 import LogoWhite from "../../images/logoWhite.svg";
 
+import fbIcon from "../../images/fb.png";
+import instaIcon from "../../images/insta.png";
+
 import { Menu, MenuItem } from "../global/fontStyles";
 import TableMenu from "./SubMenus/BookTableMenu";
 import GiftVoucher from "./SubMenus/GiftVoucher";
@@ -61,6 +64,11 @@ export const CloseBtn = styled.div`
 export const MenuHeader = styled.div`
   display: flex;
   width: 100%;
+`;
+
+export const FooterLogo = styled.img`
+  margin-top: 3rem;
+  margin-right: 1rem;
 `;
 
 const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
@@ -188,6 +196,9 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           })()}
         </RightContainer>
       </SectionContainer>
+
+      <FooterLogo src={fbIcon} />
+      <FooterLogo src={instaIcon} />
     </div>
   ) : (
     <div></div>

@@ -19,7 +19,7 @@ export const Header2 = styled.h2`
 export const Header3 = styled.h3`
   font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "18px")};
   margin-bottom: 1rem;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
 `;
