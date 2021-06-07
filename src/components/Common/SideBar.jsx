@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { useTheme } from "styled-components";
-import { TextContainer } from "../../components/global/GlobalStyles";
+import { LeftContainer, LogoImg } from "../../components/global/GlobalStyles";
 import { Link } from "gatsby";
 
 import { Menu, MenuHeading, MenuItem } from "../global/fontStyles";
@@ -23,7 +23,7 @@ const SideBar = ({ path }) => {
     setSelectedMenu(key);
   };
   return theme ? (
-    <TextContainer theme={theme}>
+    <LeftContainer theme={theme}>
       <Menu theme={theme}>
         <MenuHeading theme={theme}>Menu</MenuHeading>
 
@@ -94,7 +94,7 @@ const SideBar = ({ path }) => {
           handleOpenSubMenu={handleOpenSubMenu}
         />
       </MenuBox>
-    </TextContainer>
+    </LeftContainer>
   ) : (
     <div></div>
   );

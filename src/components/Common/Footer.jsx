@@ -11,6 +11,7 @@ import PAS from "../../images/Group 4580.png";
 import PIC from "../../images/Group 4581.png";
 import SP from "../../images/Group 4582.png";
 import LogoW from "../../images/Group 4583.png";
+import LogoFooter from "../Footer/logo-footer/LogoFooter";
 
 export const FooterContainer = styled.div`
   width: 100%;
@@ -124,37 +125,11 @@ const FooterComponent = () => {
   return theme ? (
     <div>
       <FooterContainer>
+       
         <InnerContainer>
+        
           <Footer theme={theme}>
-            <FooterLogoGrid>
-              <FooterLogoContainer>
-                <FooterLogo src={CL} alt="pic" />
-              </FooterLogoContainer>
-              <FooterLogoContainer>
-                <FooterLogo src={Estelle} alt="pic" />
-              </FooterLogoContainer>
-              <FooterLogoContainer>
-                <FooterLogo src={LM} alt="pic" />
-              </FooterLogoContainer>
-              <FooterLogoContainer>
-                <FooterLogo src={LON} alt="pic" />
-              </FooterLogoContainer>
-              <FooterLogoContainer>
-                <FooterLogo src={MAT} alt="pic" />
-              </FooterLogoContainer>
-              <FooterLogoContainer>
-                <FooterLogo src={PAS} alt="pic" />
-              </FooterLogoContainer>
-              <FooterLogoContainer>
-                <FooterLogo src={PIC} alt="pic" />
-              </FooterLogoContainer>
-              <FooterLogoContainer>
-                <FooterLogo src={SP} alt="pic" />
-              </FooterLogoContainer>
-              <FooterLogoContainer>
-                <FooterLogo src={LogoW} alt="pic" />
-              </FooterLogoContainer>
-            </FooterLogoGrid>
+          <LogoFooter />
           </Footer>
         </InnerContainer>
       </FooterContainer>

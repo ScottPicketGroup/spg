@@ -44,7 +44,7 @@ const Landing = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer>
-              <LogoImg src={Logo} />
+            
             </LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Scott Pickett Group</Header1>
