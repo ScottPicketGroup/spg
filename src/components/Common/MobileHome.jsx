@@ -110,7 +110,9 @@ const MobileHome = ({ HomeImage, path }) => {
       >
         <InnerContainer theme={theme} top={true}>
           <LeftContainer>
-            <LogoImg src={Logo} />
+            <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
+              <LogoImg src={Logo} />
+            </Link>
           </LeftContainer>
           <RightContainer device={theme.name}>
             <MenuBtn theme={theme} onClick={() => setShow(true)}>
@@ -226,7 +228,7 @@ const MobileHome = ({ HomeImage, path }) => {
           <MenuItem
             theme={theme}
             expandIcon={expandIcon}
-            onClick={() => handleOpenSubMenu("giftVouchers")}
+            onClick={() => handleOpenSubMenu("giftVoucher")}
           >
             Gift Vouchers
           </MenuItem>
@@ -261,7 +263,7 @@ const MobileHome = ({ HomeImage, path }) => {
             <RightContainer device={theme.name}>
               <CloseBtn
                 theme={theme}
-                onClick={() => setShow(false)}
+                onClick={() => hideModal(false)}
                 style={{ display: `flex`, alignItems: `center` }}
               >
                 <svg
