@@ -68,7 +68,11 @@ export const BC3 = styled.p`
   line-height: 1.22;
   color: ${(props) => props.theme.colors.text};
   cursor: ${(props) => (props.link ? "pointer" : "text")};
-
+ 
+      li {
+        list-style-type: none;
+      }
+     
   &:hover {
     color: ${(props) =>
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};

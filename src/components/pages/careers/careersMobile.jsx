@@ -39,15 +39,21 @@ const MobileLanding = ({ pageProps }) => {
               <Header4 theme={theme}>Longrain melbourne</Header4>
               <Header4 theme={theme}>10th April 2021</Header4>
               <BC3 theme={theme}>
-                <li> Casual, part-time & full-time positions available</li>
-                <li> Must have experience in Hospitality </li>
-                <li>
-                  {" "}
-                  Must be a passionate, friendly and reliable team player
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                volutpat risus efficitur nulla aliquam suscipit. Nulla sed
+                ullamcorper felis, a vulputate mi. Aenean enim leo, egestas
+                vitae ultrices at, placerat ac lorem. Donec tortor augue,
+                pulvinar et dictum vel, euismod id velit. Sed nec suscipit
+                mauris. Ut sollicitudin rutrum eros at maximus. Duis vitae dui
+                eu tellus dignissim commodo et in tortor. Praesent ac magna
+                vulputate, fringilla odio et, vehicula lorem.
+                </BC3>
+                <BC3>
+                <li>- Casual, part-time & full-time positions available</li>
+                <li>- Must have experience in Hospitality </li>
+                <li>- Must be a passionate, friendly and reliable team player
                 </li>
-                <li>
-                  {" "}
-                  Must thrive in a busy environment - Immediate start necessary
+                <li>- Must thrive in a busy environment - Immediate start necessary
                 </li>
               </BC3>
               <Button>Apply</Button>
@@ -69,15 +75,13 @@ const MobileLanding = ({ pageProps }) => {
                 mauris. Ut sollicitudin rutrum eros at maximus. Duis vitae dui
                 eu tellus dignissim commodo et in tortor. Praesent ac magna
                 vulputate, fringilla odio et, vehicula lorem.
-                <li> Casual, part-time & full-time positions available</li>
-                <li> Must have experience in Hospitality </li>
-                <li>
-                  {" "}
-                  Must be a passionate, friendly and reliable team player
+                </BC3>
+                <BC3>
+                <li>- Casual, part-time & full-time positions available</li>
+                <li>- Must have experience in Hospitality </li>
+                <li>- Must be a passionate, friendly and reliable team player
                 </li>
-                <li>
-                  {" "}
-                  Must thrive in a busy environment - Immediate start necessary
+                <li>- Must thrive in a busy environment - Immediate start necessary
                 </li>
               </BC3>
               <Button>Apply</Button>
