@@ -89,9 +89,20 @@ const GiftVoucher = ({ path }) => {
             Estelle{" "}
           </Link>
         </Menu3Item>
+
         <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Longrain{" "}
+          </Link>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
+          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+            Matilda{" "}
+          </Link>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
+          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+            Pastore{" "}
           </Link>
         </Menu3Item>
         <Menu3Item theme={theme}>
