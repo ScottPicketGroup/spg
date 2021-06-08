@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useTheme } from "styled-components";
 import {
@@ -12,7 +12,6 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 import { Menu, MenuHeading, Menu3Item } from "../../global/fontStyles";
-
 import fbIcon from "../../../images/fb.png";
 import instaIcon from "../../../images/insta.png";
 
@@ -77,7 +76,12 @@ const GiftVoucher = ({ path }) => {
       <Menu theme={theme} inModal={true}>
         <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
-            Matilda{" "}
+            SPG Vouchers
+          </Link>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
+          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+            CHANCERY LANE
           </Link>
         </Menu3Item>
         <Menu3Item theme={theme}>
@@ -90,10 +94,19 @@ const GiftVoucher = ({ path }) => {
             Longrain{" "}
           </Link>
         </Menu3Item>
+        <Menu3Item theme={theme}>
+          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+            Longsong{" "}
+          </Link>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
+          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+            Le Shoppe{" "}
+          </Link>
+        </Menu3Item>
       </Menu>
-
       {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
-      {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}
+      {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}{" "}
     </div>
   ) : (
     <div></div>

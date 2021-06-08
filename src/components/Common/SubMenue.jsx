@@ -122,7 +122,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           Book a table
         </MenuItem>
 
-        <MenuItem theme={theme}>
+        <MenuItem theme={theme} onClick={() => handleOpenSubMenu("events")}>
           Events
         </MenuItem>
 
@@ -138,7 +138,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
         </MenuItem>
         <MenuItem
           theme={theme}
-          onClick={() => handleOpenSubMenu("giftVouchers")}
+          onClick={() => handleOpenSubMenu("giftVoucher")}
         >
           Gift Vouchers
         </MenuItem>
