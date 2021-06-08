@@ -103,7 +103,7 @@ const MobileHome = ({ HomeImage, path }) => {
 
   return theme ? (
     <div style={{padding: `0 1rem`}}>
-      <SectionContainer >
+      <SectionContainer style={{height: `58px`}}>
         <InnerContainer theme={theme} top={true}>
           <LeftContainer>
            <LogoImg src={Logo}/>
@@ -132,7 +132,7 @@ const MobileHome = ({ HomeImage, path }) => {
         handleClose={hideModal}
         // openPos={Pos.CM_TOP_CENTER}
       >
-        <SectionContainer    style={{marginTop: `-1.84rem`}}>
+        <SectionContainer    style={{marginTop: `-1.84rem`, height: `58px`}}>
           <MenuHeader theme={theme}>
             <LeftContainer>
               <LogoImg src={LogoWhite} theme={theme} style={{height: `60%`}}/>
@@ -153,7 +153,7 @@ const MobileHome = ({ HomeImage, path }) => {
         </SectionContainer>
 
         <Menu theme={theme}>
-          <MenuHeading theme={theme}>Menu</MenuHeading>
+          
 
           <MenuItem theme={theme} bold={path && path === "/"}>
             <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
