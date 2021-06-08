@@ -104,8 +104,10 @@ export const ImageCaption = styled.p`
 
 export const Menu = styled.div`
   display: flex;
+  display: relative;
+  z-index: 2;
   flex-direction: column;
-  padding: ${(props) => props.theme.name === "Desktop" && `2.25rem 2.25rem`};
+  padding: ${(props) => props.theme.name === "Desktop" && `0 2.25rem`};
   color: ${(props) =>
     props.theme.name === "Desktop" && props.inModal !== true
       ? props.theme.colors.text
@@ -113,29 +115,35 @@ export const Menu = styled.div`
 `;
 export const MenuHeading = styled.div`
   width: 100%;
-  margin: 1.15rem 0;
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "24px")};
-  line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
+  font-size: ${(props) => props.theme.name === "Mobile" && `24px`};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
   text-transform: uppercase;
 `;
 export const MenuItem = styled.div`
   width: 100%;
-  cursor: pointer;
-  font-weight: ${(props) => (props.bold ? "bold" : "normal")};
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "20px")};
-  line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
   text-transform: capitalize;
+  cursor: pointer;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-
-  background-image: ${(props) =>
-    props.expandIcon && `url('${props.expandIcon}')`};
-  background-position: right center;
-
-  background-repeat: no-repeat;
+  font-size: ${(props) => props.theme.name === "Mobile" && `24px`};
 `;
+
+// export const MenuItem = styled.div`
+
+//   width: 100%;
+//   cursor: pointer;
+//   font-weight: ${(props) => (props.bold ? "bold" : "normal")};
+//   font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "20px")};
+//   line-height: ${(props) =>
+//     props.theme.name === "Desktop" ? "1.2" : "1.2"};
+//   text-transform: capitalize;
+//   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+
+//   background-image: ${(props) =>
+//     props.expandIcon && `url('${props.expandIcon}')`};
+//   background-position: right center;
+
+//   background-repeat: no-repeat;
+// `;
 
 export const Menu2Item = styled.div`
   width: 100%;
@@ -143,7 +151,7 @@ export const Menu2Item = styled.div`
   font-weight: ${(props) => (props.bold ? "bold" : "normal")};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "40px" : "20px")};
   line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "2.25rem" : "1.2"};
+    props.theme.name === "Desktop" ? "1.2" : "1.2"};
   text-transform: capitalize;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   opacity: ${(props) => (props.theme.name === "Desktop" ? "0.5" : "1")};

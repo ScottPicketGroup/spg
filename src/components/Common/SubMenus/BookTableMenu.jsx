@@ -66,6 +66,7 @@ export const CloseBtn = styled.div`
 export const MenuHeader = styled.div`
   display: flex;
   width: 100%;
+  margin: 0 2.25rem;
 `;
 
 const BookATable = ({ path }) => {

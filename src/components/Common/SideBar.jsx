@@ -54,9 +54,11 @@ const SideBar = ({ path }) => {
   };
   return theme ? (
     <LeftContainer theme={theme}>
-      <MenuResusable theme={theme}/>
+      <MenuResusable theme={theme}>
+      {/* <LogoImg src={logo}/> */}
+        </MenuResusable>
      
-      <LogoImg src={logo}/>
+      
     </LeftContainer>
   ) : (
     <div></div>
