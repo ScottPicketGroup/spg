@@ -11,10 +11,11 @@ import {
 
 import HomeImage from "../../../images/Screen Shot -1@2x.png";
 
-import gridPic1 from "../../../images/gridPic1.png";
-import gridPic2 from "../../../images/gridPic2.png";
+import gridPic1 from "../../../images/Screen Shot 2021-04-18 at 1.46.46 pm.png";
+import gridPic2 from "../../../images/Screen Shot -1.png";
 import gridPic3 from "../../../images/gridPic3.png";
-import gridPic4 from "../../../images/gridPic4.png";
+import gridPic4 from "../../../images/Screen Shot -4.png";
+import gridPic5 from "../../../images/Screen Shot -3.png";
 
 import {
   InnerContainer,
@@ -31,7 +32,7 @@ const MobileEvents = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Container theme={theme} style={{paddingBottom: `6rem`}}>
+      <Container theme={theme} style={{ paddingBottom: `6rem` }}>
         <MobileHome HomeImage={HomeImage} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
@@ -105,8 +106,17 @@ const MobileEvents = ({ pageProps }) => {
                       <ImageDiv src={gridPic4}></ImageDiv>
                     </ImageView>
                   </FullImageContainer>
-                  <ItemImgCaption>Venue</ItemImgCaption>
+                  <ItemImgCaption>Matilda</ItemImgCaption>
                   <BC3>Domain Rd, South Yarra</BC3>
+                </Item>
+                <Item>
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic5}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
+                  <ItemImgCaption>Pastore</ItemImgCaption>
+                  <BC3>Dandenong Rd, Chadstone</BC3>
                 </Item>
               </Grid>
             </RightContainer>

@@ -4,7 +4,7 @@ import { useTheme } from "styled-components";
 import { Container, SectionContainer } from "../../global/GlobalStyles";
 
 import HomeImage from "../../../images/Screen Shot 2021-04-18 at 2.00.31 pm.png";
-import CarouselImg from "../../../images/Screen Shot -1.png";
+import CarouselImg from "../../../images/Screen Shot -5.png";
 
 import {
   InnerContainer,
@@ -24,7 +24,7 @@ const MobileLanding = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Container theme={theme} style={{paddingBottom: `9rem`}}>
+      <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <Home HomeImage={HomeImage} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
@@ -77,9 +77,12 @@ const MobileLanding = ({ pageProps }) => {
               <Grid cols="1">
                 <Item>
                   <Header2 theme={theme}>
-                    Longrain X Sutton Grange Winery
+                    Treat Mum To Mother’s Day Lunch At Matilda
                   </Header2>
-                  <Header3 theme={theme}>Sat 13th March - Sun 30th May</Header3>
+                  <Header3 theme={theme}>
+                    Three-course Mother’s Day lunch with snacks and petit fours.
+                    Sunday 9th May
+                  </Header3>
 
                   <BC3 theme={theme}>
                     We are delighted to be hosting weekend lunches at the
@@ -92,6 +95,34 @@ const MobileLanding = ({ pageProps }) => {
                     stunning views, where you will walk away with a renewed
                     appreciation for our regional Victoria and the bounty that
                     it offers.
+                  </BC3>
+                  <Button>Learn More</Button>
+                </Item>
+                <Item>
+                  <GridImg src={CarouselImg} />
+                </Item>
+              </Grid>
+            </RightContainer>
+          </InnerContainer>
+        </SectionContainer>
+
+        <SectionContainer>
+          <InnerContainer displayBlock={true}>
+            <RightContainer>
+              <Grid cols="1">
+                <Item>
+                  <Header2 theme={theme}>
+                    Interactive Masterclass With Scott Pickett At The Estelle{" "}
+                  </Header2>
+                  <Header3 theme={theme}>Sat 13th March - Sun 30th May</Header3>
+
+                  <BC3 theme={theme}>
+                    Have you ever wanted the chance to jump in the kitchen with
+                    a famous chef and learn the tricks of the trade? Now is your
+                    time! With only 12 places available for each event, you will
+                    have the opportunity to watch, learn, taste and even jump in
+                    and get involved with Scott in the open kitchen at Estelle.
+                    Find out more & to book your spot now.
                   </BC3>
                   <Button>Learn More</Button>
                 </Item>

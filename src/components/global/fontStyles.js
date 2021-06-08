@@ -13,7 +13,7 @@ export const Header2 = styled.h2`
     props.theme.name === "Desktop" ? "1.59rem" : "1.5rem"};
   margin-bottom: 1rem;
   line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "1.11rem" : "1rem"};
+    props.theme.name === "Desktop" ? "1.5rem" : "1.2rem"};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
