@@ -33,14 +33,15 @@ import {
   Quotation,
   BC2,
 } from "../../global/fontStyles";
-
+import Home from "../../Common/MobileHome";
 const MobileLanding = ({ pageProps }) => {
   const theme = useTheme();
 
   return theme ? (
     <div>
+        <Home HomeImage={HomeImage} path={pageProps.path} />
       <Container theme={theme} style={{paddingBottom: `6rem`}}>
-        <MobileHome HomeImage={HomeImage} path={pageProps.path} />
+        
 
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
