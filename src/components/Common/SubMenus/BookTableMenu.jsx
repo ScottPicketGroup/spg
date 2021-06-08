@@ -11,7 +11,7 @@ import {
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import { Menu, MenuHeading, Menu2Item } from "../../global/fontStyles";
+import { Menu, MenuHeading, Menu3Item } from "../../global/fontStyles";
 import fbIcon from "../../../images/fb.png";
 import instaIcon from "../../../images/insta.png";
 
@@ -59,6 +59,7 @@ export const LogoImg = styled.img`
 
 export const CloseBtn = styled.div`
   font-size: 16px;
+  padding-top: .75rem;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.body};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
@@ -75,31 +76,31 @@ const BookATable = ({ path }) => {
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>
-        <Menu2Item theme={theme}>
+        <Menu3Item theme={theme} >
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
-            CHANCERY LANE
+            Chancery Lane
           </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Estelle{" "}
           </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Longrain{" "}
           </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Matilda{" "}
           </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Pastore{" "}
           </Link>
-        </Menu2Item>
+        </Menu3Item>
       </Menu>
       {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
       {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}

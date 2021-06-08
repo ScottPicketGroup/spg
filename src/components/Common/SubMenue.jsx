@@ -30,11 +30,11 @@ export const InnerContainer = styled.div`
 export const LeftContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  width: 42%;
+  width: 33%;
 `;
 export const RightContainer = styled.div`
   display: flex;
-  width: 58%;
+  width: 67%;
   justify-content: ${(props) => (props.justifyEnd ? "flex-end" : "flex-start")};
 `;
 export const MenuBtn = styled.div`

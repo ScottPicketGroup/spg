@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { useTheme } from "styled-components";
 import {
@@ -11,7 +11,8 @@ import {
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import { Menu, MenuHeading, Menu2Item } from "../../global/fontStyles";
+import { Menu, MenuHeading, Menu3Item } from "../../global/fontStyles";
+
 import fbIcon from "../../../images/fb.png";
 import instaIcon from "../../../images/insta.png";
 
@@ -68,49 +69,35 @@ export const MenuHeader = styled.div`
   width: 100%;
 `;
 
-const GiftVouchers = ({ path }) => {
+const GiftVoucher = ({ path }) => {
   const theme = useTheme();
 
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>
-        <Menu2Item theme={theme}>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
-            SPG Vouchers
+            Matilda{" "}
           </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
-            CHANCERY LANE
-          </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Estelle{" "}
           </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Longrain{" "}
           </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
-            Longsong{" "}
-          </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
-            Le Shoppe{" "}
-          </Link>
-        </Menu2Item>
+        </Menu3Item>
       </Menu>
+
       {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
-      {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}{" "}
+      {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}
     </div>
   ) : (
     <div></div>
   );
 };
 
-export default GiftVouchers;
+export default GiftVoucher;
