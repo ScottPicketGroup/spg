@@ -178,6 +178,11 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
             Provider
           </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
+
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
+            Provider
+          </MenuItem>
+          <MenuItem theme={theme}>Shop</MenuItem>
           <MenuItem
             theme={theme}
             onClick={() => {

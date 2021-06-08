@@ -25,15 +25,15 @@ export const Footer = styled.div`
 overflow: hidden;
   min-height: 50px;
   min-width: 100%;
-  padding: 0 1rem;
+  padding: 0 3.84rem 9rem 3.84rem ;
   background-color: ${(props) => props.theme.colors.text};
   padding-bottom: 9rem;
   position: relative;
   z-index: 2;
   padding-top: 56px;
   @media screen and (max-width: 450px) {
-    padding-bottom: 6rem;
-    padding-top: 56px;
+    padding: 3.5rem 1rem 6rem 1rem ;
+    
 }
 `;
 

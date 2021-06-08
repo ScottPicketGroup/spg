@@ -175,7 +175,7 @@ export const Menu3Item = styled.div`
   cursor: pointer;
   margin-bottom: ${(props) => (props.theme.name === "Desktop" ? "2.25rem" : "1.5rem")};
   font-weight: ${(props) => (props.bold ? "bold" : "normal")};
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "56px" : "20px")};
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "2.48rem" : "20px")};
   line-height: ${(props) =>
     props.theme.name === "Desktop" ? "1.2" : "1.2"};
   text-transform: capitalize;
