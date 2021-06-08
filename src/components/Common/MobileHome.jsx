@@ -104,8 +104,8 @@ const MobileHome = ({ HomeImage, path }) => {
   }
 
   return theme ? (
-    <div style={{ padding: `0 1rem` }}>
-      <SectionContainer style={{marginBottom: `.75rem`}}>
+    <div >
+      <SectionContainer style={{marginBottom: `.75rem`, padding: `0 1.12rem`}}>
         <InnerContainer theme={theme} top={true}>
           <LeftContainer>
             <LogoImg src={Logo} />
@@ -117,17 +117,9 @@ const MobileHome = ({ HomeImage, path }) => {
           </RightContainer>
         </InnerContainer>
       </SectionContainer>
-      <SectionContainer>
-        <ImageContainer theme={theme} device={theme.name}>
-          <ImageView>
-            <ImageDiv
-              theme={theme}
-              src={HomeImage}
-              device={theme.name}
-            ></ImageDiv>
-          </ImageView>
-        </ImageContainer>
-      </SectionContainer>
+     
+        <ImageDiv src={HomeImage}/>
+      
       <MenuBox
         show={show}
         handleClose={hideModal}

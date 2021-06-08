@@ -65,7 +65,7 @@ export const Item = styled.div`
 export const Menu = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 2.25rem;
+  padding: ${(props) => (props.device === "Desktop" ? " 0 2.25" : "0")};
   color: ${(props) => props.theme.colors.body};
 `;
 export const MenuHeading = styled.div`

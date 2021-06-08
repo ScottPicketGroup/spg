@@ -76,7 +76,7 @@ export const ImageView = styled.div`
 export const ImageDiv = styled.img`
   height: 100%;
   width: 100%;
- 
+ aspect-ratio: 4/3;
   &:hover {
     opacity: ${(props) => (props.link ? 0.5 : 1)};
   }

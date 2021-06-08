@@ -34,8 +34,9 @@ const MobileLanding = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Container theme={theme} style={{paddingBottom: `6rem`}}>
         <MobileHome HomeImage={HomeImage} path={pageProps.path} />
+      <Container theme={theme} style={{paddingBottom: `6rem`}}>
+      
         {/* <SectionContainer>
           <ImageContainer theme={theme} src={HomeImage} device={theme.name} />
         </SectionContainer> */}
