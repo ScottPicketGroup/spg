@@ -167,7 +167,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
               partiallyActive={true}
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
             >
-              Gift Vouchers
+              Careers
             </Link>
           </MenuItem>
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
