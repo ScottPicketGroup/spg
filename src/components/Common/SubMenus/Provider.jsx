@@ -11,7 +11,7 @@ import {
 import { Link } from "gatsby";
 import styled from "styled-components";
 
-import { Menu, MenuHeading, Menu2Item } from "../../global/fontStyles";
+import { Menu, MenuHeading, Menu3Item } from "../../global/fontStyles";
 
 import fbIcon from "../../../images/fb.png";
 import instaIcon from "../../../images/insta.png";
@@ -75,21 +75,21 @@ const Provider = ({ path }) => {
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>
-        <Menu2Item theme={theme}>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Matilda{" "}
           </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Estelle{" "}
           </Link>
-        </Menu2Item>
-        <Menu2Item theme={theme}>
+        </Menu3Item>
+        <Menu3Item theme={theme}>
           <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
             Longrain{" "}
           </Link>
-        </Menu2Item>
+        </Menu3Item>
       </Menu>
 
       {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}

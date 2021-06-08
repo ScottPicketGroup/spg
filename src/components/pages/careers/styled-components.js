@@ -1,12 +1,7 @@
 import styled from "styled-components";
 
 export const InnerContainer = styled.div`
-  margin-top: ${(props) =>
-    props.top === true
-      ? "1rem"
-      : props.theme.name === "Desktop"
-      ? "9rem"
-      : "6rem"};
+  margin-top: 6rem;
   display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
 
   width: 100%;
@@ -99,44 +94,20 @@ export const Item = styled.div`
   display: block;
 `;
 
-export const FooterContainer = styled.div`
-  width: 100%;
-  display: flex;
-  background-color: #f9f9f4;
-`;
+export const PostContainer = styled.div`
+width: 75%;
+`
 
-export const Footer = styled.div`
-  min-height: 100px;
-  min-width: 100%;
-  padding: 20px;
-  background-color: ${(props) => props.theme.colors.text};
-  display: flex;
-  align-items: center;
-`;
-
-export const FooterLogo = styled.img``;
-
-export const Header2 = styled.h2`
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
-  margin-bottom: 1rem;
-  font-family: ${(props) => props.theme.fontFamily.Times};
-  font-weight: bold;
-  color: ${(props) => props.theme.colors.text};
-`;
-export const Header4 = styled.h4`
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "18px")};
-  margin-bottom: 1.75rem;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-  color: ${(props) => props.theme.colors.text};
-  text-transform: uppercase;
-`;
 
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.text};
-  margin: 1em;
-  padding: 0.25em 1em;
+  margin: 2.45rem 0 ;
+  padding: 0.5em 3.5rem;
   background-color: ${(props) => props.theme.colors.body};
   border: ${(props) => `1px solid ${props.theme.colors.text}`};
   text-transform: uppercase;
-  border-radius: 3px;
+  &:hover {
+    background-color: ${(props) => `${props.theme.colors.body}`};
+    color: ${(props) => props.theme.colors.text};
+  }
 `;

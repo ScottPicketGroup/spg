@@ -68,7 +68,11 @@ export const BC3 = styled.p`
   line-height: 1.22;
   color: ${(props) => props.theme.colors.text};
   cursor: ${(props) => (props.link ? "pointer" : "text")};
-
+ 
+      li {
+        list-style-type: none;
+      }
+     
   &:hover {
     color: ${(props) =>
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
@@ -126,6 +130,11 @@ export const MenuItem = styled.div`
   cursor: pointer;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   font-size: ${(props) => props.theme.name === "Mobile" && `24px`};
+  margin-bottom: ${(props) => props.theme.name === "Mobile" && `1.5rem`};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.2;
 `;
 
 // export const MenuItem = styled.div`
@@ -149,9 +158,26 @@ export const MenuItem = styled.div`
 export const Menu2Item = styled.div`
   width: 100%;
   cursor: pointer;
+  margin-bottom: ${(props) => props.theme.name === "Mobile" && `1.5rem`};
   font-weight: ${(props) => (props.bold ? "bold" : "normal")};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "40px" : "20px")};
   line-height: ${(props) => (props.theme.name === "Desktop" ? "1.2" : "1.2")};
+  text-transform: capitalize;
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  opacity: ${(props) => (props.theme.name === "Desktop" ? "0.5" : "1")};
+  &:hover {
+    opacity: 1;
+  }
+`;
+
+export const Menu3Item = styled.div`
+  width: 100%;
+  cursor: pointer;
+  margin-bottom: ${(props) => (props.theme.name === "Desktop" ? "2.25rem" : "1.5rem")};
+  font-weight: ${(props) => (props.bold ? "bold" : "normal")};
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "56px" : "20px")};
+  line-height: ${(props) =>
+    props.theme.name === "Desktop" ? "1.2" : "1.2"};
   text-transform: capitalize;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   opacity: ${(props) => (props.theme.name === "Desktop" ? "0.5" : "1")};

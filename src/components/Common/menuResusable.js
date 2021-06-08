@@ -79,7 +79,9 @@ const MenuResusable = () => {
             Book a table
           </MenuItem>
 
-          <MenuItem theme={theme}>Events</MenuItem>
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("events")}>
+            Events
+          </MenuItem>
 
           <MenuItem theme={theme}>
             <Link

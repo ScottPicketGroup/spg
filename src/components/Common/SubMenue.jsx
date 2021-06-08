@@ -30,11 +30,11 @@ export const InnerContainer = styled.div`
 export const LeftContainer = styled.div`
   display: flex;
   justify-content: flex-start;
-  width: 42%;
+  width: 33%;
 `;
 export const RightContainer = styled.div`
   display: flex;
-  width: 58%;
+  width: 67%;
   justify-content: ${(props) => (props.justifyEnd ? "flex-end" : "flex-start")};
 `;
 export const MenuBtn = styled.div`
@@ -134,7 +134,9 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
             Book a table
           </MenuItem>
 
-          <MenuItem theme={theme}>Events</MenuItem>
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("events")}>
+            Events
+          </MenuItem>
 
           <MenuItem theme={theme}>
             <Link
@@ -149,9 +151,24 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           </MenuItem>
           <MenuItem
             theme={theme}
-            onClick={() => handleOpenSubMenu("giftVouchers")}
+            onClick={() => handleOpenSubMenu("giftVoucher")}
           >
             Gift Vouchers
+          </MenuItem>
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
+            Provider
+          </MenuItem>
+          <MenuItem theme={theme}>Shop</MenuItem>
+          <MenuItem theme={theme}>
+            {" "}
+            <Link
+              to="/careers"
+              style={{ color: "inherit", textDecoration: "none" }}
+              partiallyActive={true}
+              activeStyle={{ fontFamily: `UntitledSansMedium` }}
+            >
+              Gift Vouchers
+            </Link>
           </MenuItem>
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
             Provider
