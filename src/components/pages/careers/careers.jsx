@@ -19,7 +19,7 @@ const Landing = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Container theme={theme} style={{paddingBottom: `9rem`}}>
+      <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <Home HomeImage={HomeImage} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer>
@@ -89,6 +89,27 @@ const Landing = ({ pageProps }) => {
                   {" "}
                   Must thrive in a busy environment - Immediate start necessary
                 </li>
+              </BC3>
+              <Button>Apply</Button>
+            </RightContainer>
+          </InnerContainer>
+        </SectionContainer>
+        <SectionContainer>
+          <InnerContainer>
+            <LeftContainer></LeftContainer>
+            <RightContainer>
+              <Header2 theme={theme}>BAR SUPERVISOR</Header2>
+              <Header4 theme={theme}>Longrain melbourne</Header4>
+              <Header4 theme={theme}>10th April 2021</Header4>
+              <BC3 theme={theme}>
+                <li> Casual, part-time & full-time positions available</li>
+                <li> Must have experience in Hospitality </li>
+                <li>
+                  {" "}
+                  Must be a passionate, friendly and reliable team player
+                </li>
+                <li> Must thrive in a busy environment</li>
+                <li> Immediate start necessary</li>
               </BC3>
               <Button>Apply</Button>
             </RightContainer>
