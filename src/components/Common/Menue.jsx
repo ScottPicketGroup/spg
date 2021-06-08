@@ -9,8 +9,9 @@ const Model = styled.div`
   left: 0;
   height: 100vh;
   width: 100%;
-  padding: ${(props) => (props.theme.name === "Desktop" ? "3.84rem 1.59rem" : "1.85rem 1.59rem")};
-  
+  padding: ${(props) =>
+    props.theme.name === "Desktop" ? "3.84rem 1.59rem" : "1.85rem 1.59rem"};
+
   background: ${(props) => props.theme.colors.text};
   color: ${(props) => props.theme.colors.body};
 `;
