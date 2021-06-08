@@ -12,12 +12,9 @@ const HeroImage = ({ HomeImage }) => {
   const theme = useTheme();
 
   return theme ? (
+    
     <RightContainer style={{marginTop: `4.75rem`}}>
-    <ImageContainer>
-      <ImageView>
-        <ImageDiv src={HomeImage} />
-      </ImageView>
-    </ImageContainer>
+      <ImageDiv src={HomeImage}/>
     </RightContainer>
   ) : (
     <div></div>

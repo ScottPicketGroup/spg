@@ -103,7 +103,7 @@ const Input = styled.input`
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.body};
   margin: 1.5rem 0;
-  padding: 0.25em 1em;
+  padding: 0.5em 1em;
   background-color: ${(props) => props.theme.colors.text};
   border: ${(props) => `1px solid ${props.theme.colors.body}`};
   text-transform: uppercase;
