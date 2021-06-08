@@ -263,7 +263,7 @@ const MobileHome = ({ HomeImage, path }) => {
             <RightContainer device={theme.name}>
               <CloseBtn
                 theme={theme}
-                onClick={() => setShow(false)}
+                onClick={() => hideModal(false)}
                 style={{ display: `flex`, alignItems: `center` }}
               >
                 <svg
