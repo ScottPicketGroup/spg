@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { useLocation } from "@reach/router";
+import { useLocation, globalHistory } from "@reach/router";
 import { useTheme } from "styled-components";
 import { SectionContainer } from "../global/GlobalStyles";
 
@@ -79,6 +79,11 @@ export const CloseX = styled.div`
 const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
   const theme = useTheme();
   const location = useLocation();
+
+  const handleRedirect = (path) => {
+    hideModal();
+    setTimeout(() => globalHistory.navigate(path), 200);
+  };
   return theme ? (
     <SectionContainer>
       <CloseX onClick={() => hideModal()}>
@@ -102,9 +107,14 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
             Close
           </MenuHeading>
 
-          <MenuItem theme={theme}>
+          <MenuItem
+            theme={theme}
+            onClick={() => {
+              handleRedirect("/");
+            }}
+          >
             <Link
-              to="/"
+              // to="/"
               style={{ color: "inherit", textDecoration: "none" }}
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
             >
@@ -113,9 +123,13 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           </MenuItem>
           {location.pathname === "/" ||
           location.pathname === "/scott-picket" ? (
-            <MenuItem theme={theme}>
+            <MenuItem
+              theme={theme}
+              onClick={() => {
+                handleRedirect("/scott-picket");
+              }}
+            >
               <Link
-                to="/scott-picket"
                 style={{
                   color: "inherit",
                   textDecoration: "none",
@@ -138,9 +152,13 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
             Events
           </MenuItem>
 
-          <MenuItem theme={theme}>
+          <MenuItem
+            theme={theme}
+            onClick={() => {
+              handleRedirect("/whatson");
+            }}
+          >
             <Link
-              to="/whatson"
               onClick={() => handleOpenSubMenu("bookATable")}
               style={{ color: "inherit", textDecoration: "none" }}
               partiallyActive={true}
@@ -155,29 +173,19 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           >
             Gift Vouchers
           </MenuItem>
+
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
             Provider
           </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
-          <MenuItem theme={theme}>
+          <MenuItem
+            theme={theme}
+            onClick={() => {
+              handleRedirect("/careers");
+            }}
+          >
             {" "}
             <Link
-              to="/careers"
-              style={{ color: "inherit", textDecoration: "none" }}
-              partiallyActive={true}
-              activeStyle={{ fontFamily: `UntitledSansMedium` }}
-            >
-              Gift Vouchers
-            </Link>
-          </MenuItem>
-          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Provider
-          </MenuItem>
-          <MenuItem theme={theme}>Shop</MenuItem>
-          <MenuItem theme={theme}>
-            {" "}
-            <Link
-              to="/careers"
               style={{ color: "inherit", textDecoration: "none" }}
               partiallyActive={true}
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
@@ -192,13 +200,13 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
         {(() => {
           switch (selectedMenu) {
             case "bookATable":
-              return <TableMenu />;
+              return <TableMenu hideModal={hideModal} />;
             case "giftVoucher":
-              return <GiftVoucher />;
+              return <GiftVoucher hideModal={hideModal} />;
             case "provider":
-              return <Provider />;
+              return <Provider hideModal={hideModal} />;
             case "events":
-              return <Events />;
+              return <Events hideModal={hideModal} />;
             default:
               return <div></div>;
           }

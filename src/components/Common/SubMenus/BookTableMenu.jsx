@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { useTheme } from "styled-components";
+import { globalHistory } from "@reach/router";
 import {
   SectionContainer,
   ImageContainer,
@@ -59,7 +60,7 @@ export const LogoImg = styled.img`
 
 export const CloseBtn = styled.div`
   font-size: 16px;
-  padding-top: .75rem;
+  padding-top: 0.75rem;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.body};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
@@ -70,34 +71,62 @@ export const MenuHeader = styled.div`
   margin: 0 2.25rem;
 `;
 
-const BookATable = ({ path }) => {
+const BookATable = ({ hideModal }) => {
   const theme = useTheme();
-
+  const handleRedirect = (path) => {
+    hideModal();
+    setTimeout(() => globalHistory.navigate(path), 200);
+  };
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>
-        <Menu3Item theme={theme} >
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+        <Menu3Item
+          onClick={() => {
+            handleRedirect("#");
+          }}
+          theme={theme}
+        >
+          <Link style={{ color: "inherit", textDecoration: "none" }}>
             Chancery Lane
           </Link>
         </Menu3Item>
-        <Menu3Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+        <Menu3Item
+          onClick={() => {
+            handleRedirect("#");
+          }}
+          theme={theme}
+        >
+          <Link style={{ color: "inherit", textDecoration: "none" }}>
             Estelle{" "}
           </Link>
         </Menu3Item>
-        <Menu3Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+        <Menu3Item
+          onClick={() => {
+            handleRedirect("#");
+          }}
+          theme={theme}
+        >
+          <Link style={{ color: "inherit", textDecoration: "none" }}>
             Longrain{" "}
           </Link>
         </Menu3Item>
-        <Menu3Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+        <Menu3Item
+          onClick={() => {
+            handleRedirect("#");
+          }}
+          theme={theme}
+        >
+          <Link style={{ color: "inherit", textDecoration: "none" }}>
             Matilda{" "}
           </Link>
         </Menu3Item>
-        <Menu3Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+        <Menu3Item
+          onClick={() => {
+            handleRedirect("#");
+          }}
+          theme={theme}
+        >
+          <Link style={{ color: "inherit", textDecoration: "none" }}>
             Pastore{" "}
           </Link>
         </Menu3Item>

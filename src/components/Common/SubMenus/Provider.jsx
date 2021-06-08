@@ -10,7 +10,7 @@ import {
 
 import { Link } from "gatsby";
 import styled from "styled-components";
-
+import { globalHistory } from "@reach/router";
 import { Menu, MenuHeading, Menu3Item } from "../../global/fontStyles";
 
 import fbIcon from "../../../images/fb.png";
@@ -69,24 +69,27 @@ export const MenuHeader = styled.div`
   width: 100%;
 `;
 
-const Provider = ({ path }) => {
+const Provider = ({ hideModal }) => {
   const theme = useTheme();
-
+  const handleRedirect = (path) => {
+    hideModal();
+    setTimeout(() => globalHistory.navigate(path), 200);
+  };
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>
-        <Menu3Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+        <Menu3Item onClick={() => handleRedirect("#")} theme={theme}>
+          <Link style={{ color: "inherit", textDecoration: "none" }}>
             Matilda{" "}
           </Link>
         </Menu3Item>
-        <Menu3Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+        <Menu3Item onClick={() => handleRedirect("#")} theme={theme}>
+          <Link style={{ color: "inherit", textDecoration: "none" }}>
             Estelle{" "}
           </Link>
         </Menu3Item>
-        <Menu3Item theme={theme}>
-          <Link to="#" style={{ color: "inherit", textDecoration: "none" }}>
+        <Menu3Item onClick={() => handleRedirect("#")} theme={theme}>
+          <Link style={{ color: "inherit", textDecoration: "none" }}>
             Longrain{" "}
           </Link>
         </Menu3Item>

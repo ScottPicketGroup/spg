@@ -7,7 +7,7 @@ import {
   ImageView,
   ImageDiv,
 } from "../global/GlobalStyles";
-
+import { globalHistory } from "@reach/router";
 import { Link } from "gatsby";
 import styled from "styled-components";
 import Logo from "../../images/logo.svg";
@@ -102,7 +102,10 @@ const MobileHome = ({ HomeImage, path }) => {
     setShowSubMenu(true);
     setSelectedMenu(key);
   };
-
+  const handleRedirect = (path) => {
+    hideModal();
+    setTimeout(() => globalHistory.navigate(path), 200);
+  };
   return theme ? (
     <div>
       <SectionContainer
@@ -186,16 +189,25 @@ const MobileHome = ({ HomeImage, path }) => {
         </SectionContainer>
 
         <Menu theme={theme}>
-          <MenuItem theme={theme} bold={path && path === "/"}>
-            <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
+          <MenuItem
+            theme={theme}
+            bold={path && path === "/"}
+            onClick={() => {
+              handleRedirect("/");
+            }}
+          >
+            <Link style={{ color: "inherit", textDecoration: "none" }}>
               Home
             </Link>
           </MenuItem>
-          <MenuItem theme={theme} bold={path && path.includes("/scott-picket")}>
-            <Link
-              to="/scott-picket"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
+          <MenuItem
+            theme={theme}
+            bold={path && path.includes("/scott-picket")}
+            onClick={() => {
+              handleRedirect("/scott-picket");
+            }}
+          >
+            <Link style={{ color: "inherit", textDecoration: "none" }}>
               Scott Picket
             </Link>
           </MenuItem>
@@ -216,12 +228,15 @@ const MobileHome = ({ HomeImage, path }) => {
           >
             Events
           </MenuItem>
-          <MenuItem theme={theme} bold={path && path.includes("/whatson")}>
+          <MenuItem
+            theme={theme}
+            bold={path && path.includes("/whatson")}
+            onClick={() => {
+              handleRedirect("/whatson");
+            }}
+          >
             {" "}
-            <Link
-              to="/whatson"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
+            <Link style={{ color: "inherit", textDecoration: "none" }}>
               What's On
             </Link>
           </MenuItem>
@@ -240,12 +255,15 @@ const MobileHome = ({ HomeImage, path }) => {
             Provider
           </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
-          <MenuItem theme={theme} bold={path && path.includes("/careers")}>
+          <MenuItem
+            theme={theme}
+            bold={path && path.includes("/careers")}
+            onClick={() => {
+              handleRedirect("/careers");
+            }}
+          >
             {" "}
-            <Link
-              to="/careers"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
+            <Link style={{ color: "inherit", textDecoration: "none" }}>
               Careers
             </Link>
           </MenuItem>
@@ -309,13 +327,13 @@ const MobileHome = ({ HomeImage, path }) => {
         {(() => {
           switch (selectedMenu) {
             case "bookATable":
-              return <TableMenu />;
+              return <TableMenu hideModal={hideModal} />;
             case "giftVoucher":
-              return <GiftVoucher />;
+              return <GiftVoucher hideModal={hideModal} />;
             case "provider":
-              return <Provider />;
+              return <Provider hideModal={hideModal} />;
             case "events":
-              return <Events />;
+              return <Events hideModal={hideModal} />;
             default:
               return <div></div>;
           }
