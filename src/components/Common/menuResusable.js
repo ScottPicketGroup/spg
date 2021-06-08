@@ -40,77 +40,81 @@ const MenuResusable = () => {
   console.log(open);
 
   return (
-    <Menu theme={theme} onMouseLeave={() => setOpen(false)}>
-      <MenuHeading theme={theme} onMouseOver={() => setOpen(true)}>
-        Menu
-      </MenuHeading>
-      <MenuDropDownContainer open={open}>
-        <MenuItem theme={theme}>
-          <Link
-            to="/"
-            style={{ color: "inherit", textDecoration: "none" }}
-            activeStyle={{ fontFamily: `UntitledSansMedium` }}
-          >
-            Home
-          </Link>
-        </MenuItem>
-        {location.pathname === "/" || location.pathname === "/scott-picket" ? (
+    <div>
+      <Menu theme={theme} onMouseLeave={() => setOpen(false)}>
+        <MenuHeading theme={theme} onMouseOver={() => setOpen(true)}>
+          Menu
+        </MenuHeading>
+        <MenuDropDownContainer open={open}>
           <MenuItem theme={theme}>
             <Link
-              to="/scott-picket"
-              style={{
-                color: "inherit",
-                textDecoration: "none",
-                paddingLeft: ".75rem",
-              }}
+              to="/"
+              style={{ color: "inherit", textDecoration: "none" }}
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
             >
-              Scott Picket
+              Home
             </Link>
           </MenuItem>
-        ) : null}
+          {location.pathname === "/" ||
+          location.pathname === "/scott-picket" ? (
+            <MenuItem theme={theme}>
+              <Link
+                to="/scott-picket"
+                style={{
+                  color: "inherit",
+                  textDecoration: "none",
+                  paddingLeft: ".75rem",
+                }}
+                activeStyle={{ fontFamily: `UntitledSansMedium` }}
+              >
+                Scott Picket
+              </Link>
+            </MenuItem>
+          ) : null}
 
-        <MenuItem theme={theme} onClick={() => handleOpenSubMenu("bookATable")}>
-          Book a table
-        </MenuItem>
-
-        <MenuItem theme={theme}>
-          Events
-        </MenuItem>
-
-        <MenuItem theme={theme}>
-          <Link
-            to="/whatson"
-            style={{ color: "inherit", textDecoration: "none" }}
-            partiallyActive={true}
-            activeStyle={{ fontFamily: `UntitledSansMedium` }}
+          <MenuItem
+            theme={theme}
+            onClick={() => handleOpenSubMenu("bookATable")}
           >
-            What's On
-          </Link>
-        </MenuItem>
-        <MenuItem
-          theme={theme}
-          onClick={() => handleOpenSubMenu("giftVouchers")}
-        >
-          Gift Vouchers
-        </MenuItem>
-        <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-          Provider
-        </MenuItem>
-        <MenuItem theme={theme}>Shop</MenuItem>
-        <MenuItem theme={theme}>
-          {" "}
-          <Link
-            to="/careers"
-            style={{ color: "inherit", textDecoration: "none" }}
-            partiallyActive={true}
-            activeStyle={{ fontFamily: `UntitledSansMedium` }}
+            Book a table
+          </MenuItem>
+
+          <MenuItem theme={theme}>Events</MenuItem>
+
+          <MenuItem theme={theme}>
+            <Link
+              to="/whatson"
+              style={{ color: "inherit", textDecoration: "none" }}
+              partiallyActive={true}
+              activeStyle={{ fontFamily: `UntitledSansMedium` }}
+            >
+              What's On
+            </Link>
+          </MenuItem>
+          <MenuItem
+            theme={theme}
+            onClick={() => handleOpenSubMenu("giftVoucher")}
           >
-            Careers
-          </Link>
-        </MenuItem>
-        <MenuItem theme={theme}>Contact</MenuItem>
-      </MenuDropDownContainer>
+            Gift Vouchers
+          </MenuItem>
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
+            Provider
+          </MenuItem>
+          <MenuItem theme={theme}>Shop</MenuItem>
+          <MenuItem theme={theme}>
+            {" "}
+            <Link
+              to="/careers"
+              style={{ color: "inherit", textDecoration: "none" }}
+              partiallyActive={true}
+              activeStyle={{ fontFamily: `UntitledSansMedium` }}
+            >
+              Careers
+            </Link>
+          </MenuItem>
+          <MenuItem theme={theme}>Contact</MenuItem>
+        </MenuDropDownContainer>
+      </Menu>
 
       <MenuBox show={showSubMenu} handleClose={hideModalSubMenu}>
         <SubMenu
@@ -119,7 +123,7 @@ const MenuResusable = () => {
           handleOpenSubMenu={handleOpenSubMenu}
         />
       </MenuBox>
-    </Menu>
+    </div>
   );
 };
 

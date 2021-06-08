@@ -15,6 +15,7 @@ import TableMenu from "./SubMenus/BookTableMenu";
 import GiftVoucher from "./SubMenus/GiftVoucher";
 import Provider from "./SubMenus/Provider";
 import Events from "./SubMenus/Events";
+import { useLocation } from "@reach/router";
 
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>
@@ -73,6 +74,7 @@ export const FooterLogo = styled.img`
 
 const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
   const theme = useTheme();
+  const location = useLocation();
 
   return theme ? (
     <div>
@@ -101,18 +103,26 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
                 Home
               </Link>
             </MenuItem>
-            <MenuItem
-              theme={theme}
-              inModal={true}
-              bold={selectedMenu && selectedMenu === "scott-picket"}
-            >
-              <Link
-                to="/scott-picket"
-                style={{ color: "inherit", textDecoration: "none" }}
+
+            {location.pathname === "/" ||
+            location.pathname === "/scott-picket" ? (
+              <MenuItem
+                theme={theme}
+                inModal={true}
+                bold={selectedMenu && selectedMenu === "scott-picket"}
               >
-                Scott Picket
-              </Link>
-            </MenuItem>
+                <Link
+                  to="/scott-picket"
+                  style={{
+                    color: "inherit",
+                    textDecoration: "none",
+                    paddingLeft: ".75rem",
+                  }}
+                >
+                  Scott Picket
+                </Link>
+              </MenuItem>
+            ) : null}
 
             <MenuItem
               theme={theme}

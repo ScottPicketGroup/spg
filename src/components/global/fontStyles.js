@@ -34,7 +34,8 @@ export const Header4 = styled.h4`
 `;
 
 export const BC1 = styled.p`
-  margin-top: ${(props) => (props.theme.name === "Desktop" ? "3.5rem" : "1.5rem")};
+  margin-top: ${(props) =>
+    props.theme.name === "Desktop" ? "3.5rem" : "1.5rem"};
   margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : 0)};
   font-size: ${(props) =>
     props.theme.name === "Desktop" ? "1.59rem" : "1.25rem"};
@@ -62,8 +63,7 @@ export const BC2 = styled.p`
 `;
 export const BC3 = styled.p`
   margin-top: 0.75rem;
-  font-size: ${(props) =>
-    props.theme.name === "Desktop" ? ".88rem" : "1rem"};
+  font-size: ${(props) => (props.theme.name === "Desktop" ? ".88rem" : "1rem")};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   line-height: 1.22;
   color: ${(props) => props.theme.colors.text};
@@ -86,7 +86,8 @@ export const Quotation = styled.div`
 `;
 
 export const ItemImgCaption = styled.div`
-  margin-top: ${(props) => (props.theme.name === "Desktop" ? "3.5rem" : "1.5rem")};
+  margin-top: ${(props) =>
+    props.theme.name === "Desktop" ? "3.5rem" : "1.5rem"};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
@@ -114,7 +115,6 @@ export const Menu = styled.div`
 export const MenuHeading = styled.div`
   width: 100%;
   margin: 1.15rem 0;
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "24px")};
   line-height: ${(props) =>
     props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
@@ -124,7 +124,6 @@ export const MenuItem = styled.div`
   width: 100%;
   cursor: pointer;
   font-weight: ${(props) => (props.bold ? "bold" : "normal")};
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "28px" : "20px")};
   line-height: ${(props) =>
     props.theme.name === "Desktop" ? "1.3rem" : "1.2rem"};
   text-transform: capitalize;

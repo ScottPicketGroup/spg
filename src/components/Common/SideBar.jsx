@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { useTheme } from "styled-components";
 import { LeftContainer, LogoImg } from "../../components/global/GlobalStyles";
 import { Link } from "gatsby";
-import styled from 'styled-components'
-import logo from '../../images/logo.svg'
-import MenuResusable from './menuResusable'
+import styled from "styled-components";
+import logo from "../../images/logo.svg";
+import MenuResusable from "./menuResusable";
 
 export const Menu = styled.div`
   position: fixed;
@@ -54,9 +54,9 @@ const SideBar = ({ path }) => {
   };
   return theme ? (
     <LeftContainer theme={theme}>
-      <MenuResusable theme={theme}/>
-     
-      <LogoImg src={logo}/>
+      <MenuResusable theme={theme} />
+
+      <LogoImg src={logo} />
     </LeftContainer>
   ) : (
     <div></div>
