@@ -214,7 +214,24 @@ const MobileHome = ({ HomeImage, path }) => {
 
           <MenuItem
             theme={theme}
-            expandIcon={expandIcon}
+            expandIcon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="7.823"
+                height="14.231"
+                viewBox="0 0 7.823 14.231"
+              >
+                <path
+                  id="Path_11818"
+                  data-name="Path 11818"
+                  d="M-1211.2,6896l6.762,6.762-6.762,6.762"
+                  transform="translate(1211.552 -6895.646)"
+                  fill="none"
+                  stroke="#befbf2"
+                  stroke-width="2"
+                />
+              </svg>
+            }
             onClick={() => handleOpenSubMenu("bookATable")}
           >
             Book a table
