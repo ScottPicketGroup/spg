@@ -10,7 +10,6 @@ import {
 } from "../../global/GlobalStyles";
 
 import HomeImage from "../../../images/homeImage.png";
-import Logo from "../../../images/logo.svg";
 import gridPic1 from "../../../images/gridPic1.png";
 import gridPic2 from "../../../images/gridPic2.png";
 import gridPic3 from "../../../images/gridPic3.png";
@@ -24,7 +23,6 @@ import {
   InnerContainer,
   RightContainer,
   LeftContainer,
-  LogoImg,
   Grid,
   Item,
   ItemImgLink,
@@ -39,13 +37,11 @@ const Landing = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Container theme={theme} style={{paddingBottom: `9rem`}}>
+      <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <Home HomeImage={HomeImage} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer>
-            <LeftContainer>
-            
-            </LeftContainer>
+            <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Scott Pickett Group</Header1>
               <BC1 theme={theme}>

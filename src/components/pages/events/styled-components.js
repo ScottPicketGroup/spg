@@ -63,54 +63,12 @@ export const LogoImg = styled.img`
   display: inline;
   width: ${(props) => props.theme.name === "Mobile" && "100px"};
 `;
-export const Header1 = styled.h1`
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "64px" : "28px")};
-  font-family: ${(props) => props.theme.fontFamily.Times};
-  font-weight: bold;
-  color: ${(props) => props.theme.colors.text};
-`;
-export const BC1 = styled.p`
-  margin-top: 3.5rem;
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-  line-height: 2.15rem;
-  color: ${(props) => props.theme.colors.text};
-  cursor: ${(props) => (props.link ? "pointer" : "text")};
-
-  &:hover {
-    color: ${(props) =>
-      props.link ? props.theme.colors.hoverText : props.theme.colors.text};
-  }
-`;
-export const BC3 = styled.p`
-  margin-top: 0.75rem;
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "20px")};
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-  line-height: 2.15rem;
-  color: ${(props) => props.theme.colors.text};
-  cursor: ${(props) => (props.link ? "pointer" : "text")};
-
-  &:hover {
-    color: ${(props) =>
-      props.link ? props.theme.colors.hoverText : props.theme.colors.text};
-  }
-`;
-
-export const CloseBtn = styled.div`
-  font-size: 16px;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.body};
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
-`;
-export const MenuHeader = styled.div`
-  display: flex;
-  width: 100%;
-`;
 
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
-  grid-gap: ${(props) => (props.theme.name === "Desktop" ? "6rem 0rem" : "3.5rem 0")};
+  grid-gap: ${(props) =>
+    props.theme.name === "Desktop" ? "6rem 0rem" : "3.5rem 0"};
   align-items: center;
 `;
 
@@ -128,26 +86,10 @@ export const ItemImg = styled.div`
   margin-bottom: 2.25 rem;
 `;
 export const ItemImgCaption = styled.div`
-  margin-top: ${(props) => (props.theme.name === "Desktop" ? "3.5rem" : "1.5rem")};
+  margin-top: ${(props) =>
+    props.theme.name === "Desktop" ? "3.5rem" : "1.5rem"};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
 `;
-
-export const FooterContainer = styled.div`
-  width: 100%;
-  display: flex;
-  background-color: #f9f9f4;
-`;
-
-export const Footer = styled.div`
-  min-height: 100px;
-  min-width: 100%;
-  padding: 20px;
-  background-color: ${(props) => props.theme.colors.text};
-  display: flex;
-  align-items: center;
-`;
-
-export const FooterLogo = styled.img``;

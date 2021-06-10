@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "@reach/router";
 import { useTheme } from "styled-components";
 import { Link } from "gatsby";
@@ -39,8 +39,6 @@ const MenuResusable = () => {
       if (window.pageYOffset > 50) setOpen(false);
     };
   });
-
-  console.log(open);
 
   return (
     <div>

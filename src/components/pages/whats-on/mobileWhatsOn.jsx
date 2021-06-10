@@ -8,20 +8,13 @@ import CarouselImg from "../../../images/Screen Shot -5.png";
 import CarouselImg2 from "../../../images/Screen Shot -6.png";
 import CarouselImg3 from "../../../images/Screen Shot 2021-04-18 at 2.21.05 pm.png";
 
-import {
-  InnerContainer,
-  RightContainer,
-  Button,
-  Grid,
-  GridImg,
-  Item,
-} from "./styled-components";
+import { InnerContainer, RightContainer } from "./styled-components";
 
-import { BC1, Header1, BC3, Header2, Header3 } from "../../global/fontStyles";
+import { BC1, Header1 } from "../../global/fontStyles";
 
 import Footer from "../../Common/Footer";
 import Home from "../../Common/MobileHome";
-import EventImage from "./eventImage";
+
 import RightAligned from "./rightAligned";
 
 const whatsOnEvents = [

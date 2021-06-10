@@ -7,25 +7,25 @@ import {
   ImageView,
   ImageDiv,
 } from "../global/GlobalStyles";
-import { globalHistory } from "@reach/router";
-import { Link } from "gatsby";
+
+import { Link, navigate } from "gatsby";
 import styled from "styled-components";
 import Logo from "../../images/logo.svg";
 import LogoWhite from "../../images/logoWhite.svg";
 import expandIcon from "../../images/expandIcon.png";
 
 import MenuBox from "../Common/Menue";
-import { Menu, MenuHeading, MenuItem } from "../global/fontStyles";
+import { Menu, MenuItem } from "../global/fontStyles";
 import TableMenu from "./SubMenus/BookTableMenu";
 import GiftVoucher from "./SubMenus/GiftVoucher";
 import Provider from "./SubMenus/Provider";
 import Events from "./SubMenus/Events";
 import footerLogo from "../../images/Group 6228.png";
 
-export const FooterLogo = styled.img`
+const FooterLogo = styled.img`
   margin-top: 3rem;
 `;
-export const InnerContainer = styled.div`
+const InnerContainer = styled.div`
   margin-top: ${(props) =>
     props.top === true
       ? "1rem"
@@ -36,17 +36,17 @@ export const InnerContainer = styled.div`
 
   width: 100%;
 `;
-export const LeftContainer = styled.div`
+const LeftContainer = styled.div`
   display: inline;
   width: 42%;
 `;
-export const RightContainer = styled.div`
+const RightContainer = styled.div`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
   width: 58%;
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
 `;
-export const MenuBtn = styled.div`
+const MenuBtn = styled.div`
   font-size: 16px;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.text};
@@ -58,12 +58,12 @@ export const MenuBtn = styled.div`
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
   }
 `;
-export const LogoImg = styled.img`
+const LogoImg = styled.img`
   display: inline;
   width: ${(props) => props.theme.name === "Mobile" && "100px"};
 `;
 
-export const CloseBtn = styled.div`
+const CloseBtn = styled.div`
   font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
@@ -73,7 +73,7 @@ export const CloseBtn = styled.div`
   padding-top: 0.75rem;
   opacity: ${(props) => props.opacity && props.opacity};
 `;
-export const MenuHeader = styled.div`
+const MenuHeader = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
@@ -91,7 +91,6 @@ const MobileHome = ({ HomeImage, path }) => {
     hideModalSubMenu();
   };
 
-  console.log({ globalHistory });
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
 
@@ -105,7 +104,7 @@ const MobileHome = ({ HomeImage, path }) => {
   };
   const handleRedirect = (path) => {
     hideModal();
-    setTimeout(() => globalHistory.navigate(path), 200);
+    setTimeout(() => navigate(path), 200);
   };
   return theme ? (
     <div>

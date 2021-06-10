@@ -1,19 +1,15 @@
 import React from "react";
-
 import { useTheme } from "styled-components";
 import { SectionContainer } from "../../components/global/GlobalStyles";
-import { Link } from "gatsby";
-
 import SideBar from "./SideBar";
 import HeroImage from "./HeroImage";
-import styled from "styled-components";
 
 const DesktopHome = ({ HomeImage, path }) => {
   const theme = useTheme();
 
   return theme ? (
-    <SectionContainer >
-      <SideBar path={path} style={{marginTop: `4.75rem`}}/>
+    <SectionContainer>
+      <SideBar path={path} style={{ marginTop: `4.75rem` }} />
       <HeroImage HomeImage={HomeImage} />
     </SectionContainer>
   ) : (

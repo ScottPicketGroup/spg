@@ -10,7 +10,6 @@ import {
 } from "../../global/GlobalStyles";
 
 import HomeImage from "../../../images/Screen Shot -1@2x.png";
-import Logo from "../../../images/logo.svg";
 import gridPic1 from "../../../images/Screen Shot 2021-04-18 at 1.46.46 pm.png";
 import gridPic2 from "../../../images/Screen Shot -1.png";
 import gridPic3 from "../../../images/gridPic3.png";
@@ -21,7 +20,6 @@ import {
   InnerContainer,
   RightContainer,
   LeftContainer,
-  LogoImg,
   Grid,
   Item,
 } from "./styled-components";

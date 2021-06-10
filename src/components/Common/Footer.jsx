@@ -5,13 +5,13 @@ import { Link } from "gatsby";
 
 import LogoFooter from "../Footer/logo-footer/LogoFooter";
 
-export const FooterContainer = styled.div`
+const FooterContainer = styled.div`
   width: 100%;
   display: flex;
   background-color: #f9f9f4;
 `;
 
-export const Footer = styled.div`
+const Footer = styled.div`
   overflow: hidden;
   min-height: 50px;
   min-width: 100%;
@@ -26,14 +26,14 @@ export const Footer = styled.div`
   }
 `;
 
-export const InnerContainer = styled.div`
+const InnerContainer = styled.div`
   margin-top: 1rem;
   display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
 
   width: 100%;
 `;
 
-export const Grid = styled.div`
+const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) =>
     props.theme.name === "Desktop"
@@ -43,7 +43,7 @@ export const Grid = styled.div`
     props.theme.name === "Desktop" ? "6rem 0rem" : "2.25rem 0"};
 `;
 
-export const Item = styled.div`
+const Item = styled.div`
   padding: 0 0.5rem;
   display: block;
   color: ${(props) => props.theme.colors.body};
@@ -51,25 +51,25 @@ export const Item = styled.div`
   font-size: 16px;
 `;
 
-export const Menu = styled.div`
+const Menu = styled.div`
   display: flex;
   flex-direction: column;
   padding: ${(props) => (props.device === "Desktop" ? " 0 2.25" : "0")};
   color: ${(props) => props.theme.colors.body};
 `;
-export const MenuHeading = styled.div`
+const MenuHeading = styled.div`
   width: 100%;
   margin: 0 0 1.5rem;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   text-transform: uppercase;
 `;
-export const MenuItem = styled.div`
+const MenuItem = styled.div`
   width: 100%;
   text-transform: capitalize;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   margin-bottom: 1rem;
 `;
-export const SubMenuHeading = styled.div`
+const SubMenuHeading = styled.div`
   width: 100%;
   margin-top: 1rem;
   text-transform: uppercase;
@@ -89,7 +89,7 @@ const Input = styled.input`
   }
 `;
 
-export const Button = styled.button`
+const Button = styled.button`
   color: ${(props) => props.theme.colors.body};
   margin: 1.5rem 0;
   padding: 1em;

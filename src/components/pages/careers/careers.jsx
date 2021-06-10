@@ -2,12 +2,10 @@ import React from "react";
 import { useTheme } from "styled-components";
 import { Container, SectionContainer } from "../../global/GlobalStyles";
 import HomeImage from "../../../images/Screen Shot 2021-04-18 at 1.42.07 pm.png";
-import Logo from "../../../images/logo.svg";
 import {
   InnerContainer,
   RightContainer,
   LeftContainer,
-  LogoImg,
   Button,
   PostContainer,
 } from "./styled-components";
