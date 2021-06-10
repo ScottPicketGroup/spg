@@ -1,10 +1,14 @@
-import React from "react";
-import { useLocation } from "@reach/router";
+import React, { useRef, useEffect } from "react";
+import { useLocation, globalHistory } from "@reach/router";
 import { useTheme } from "styled-components";
 import { SectionContainer } from "../global/GlobalStyles";
 
-import { Link, navigate } from "gatsby";
+import { Link } from "gatsby";
 import styled from "styled-components";
+import LogoWhite from "../../images/logoWhite.svg";
+
+import fbIcon from "../../images/fb.png";
+import instaIcon from "../../images/insta.png";
 
 import { Menu, MenuHeading, MenuItem } from "../global/fontStyles";
 import TableMenu from "./SubMenus/BookTableMenu";
@@ -12,18 +16,61 @@ import GiftVoucher from "./SubMenus/GiftVoucher";
 import Provider from "./SubMenus/Provider";
 import Events from "./SubMenus/Events";
 
-const LeftContainer = styled.div`
+export const InnerContainer = styled.div`
+  margin-top: ${(props) =>
+    props.top === true
+      ? "1rem"
+      : props.theme.name === "Desktop"
+      ? "9rem"
+      : "6rem"};
+  display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
+
+  width: 100%;
+`;
+export const LeftContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   width: 33%;
 `;
-const RightContainer = styled.div`
+export const RightContainer = styled.div`
   display: flex;
   width: 67%;
   justify-content: ${(props) => (props.justifyEnd ? "flex-end" : "flex-start")};
 `;
+export const MenuBtn = styled.div`
+  font-size: 16px;
+  text-transform: uppercase;
+  color: ${(props) => props.theme.colors.text};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
+  cursor: ${(props) => (props.link ? "pointer" : "text")};
 
-const CloseX = styled.div`
+  &:hover {
+    color: ${(props) =>
+      props.link ? props.theme.colors.hoverText : props.theme.colors.text};
+  }
+`;
+export const LogoImg = styled.img`
+  display: inline;
+  width: ${(props) => props.theme.name === "Mobile" && "100px"};
+`;
+
+export const CloseBtn = styled.div`
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: ${(props) => props.theme.colors.body};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
+`;
+export const MenuHeader = styled.div`
+  display: flex;
+  width: 100%;
+`;
+
+export const FooterLogo = styled.img`
+  margin-top: 3rem;
+  margin-right: 1rem;
+`;
+export const CloseX = styled.div`
   position: absolute;
   right: 3.94rem;
   cursor: url(hand.cur), pointer;
@@ -35,8 +82,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
 
   const handleRedirect = (path) => {
     hideModal();
-    console.log("navigate");
-    setTimeout(() => navigate(path), 200);
+    setTimeout(() => globalHistory.navigate(path), 200);
   };
   return theme ? (
     <SectionContainer>
@@ -56,7 +102,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
         </svg>
       </CloseX>
       <LeftContainer>
-        <Menu theme={theme} inModal={true}>
+        <Menu theme={theme} inModal={true} inModal={true}>
           <MenuHeading theme={theme} onClick={() => hideModal()}>
             Close
           </MenuHeading>
@@ -97,17 +143,12 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           ) : null}
           <MenuItem
             theme={theme}
-            bold={selectedMenu && selectedMenu.includes("bookATable")}
             onClick={() => handleOpenSubMenu("bookATable")}
           >
             Book a table
           </MenuItem>
 
-          <MenuItem
-            theme={theme}
-            bold={selectedMenu && selectedMenu.includes("events")}
-            onClick={() => handleOpenSubMenu("events")}
-          >
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("events")}>
             Events
           </MenuItem>
 
@@ -129,19 +170,18 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           <MenuItem
             theme={theme}
             onClick={() => handleOpenSubMenu("giftVoucher")}
-            bold={selectedMenu && selectedMenu.includes("giftVoucher")}
           >
             Gift Vouchers
           </MenuItem>
 
-          <MenuItem
-            theme={theme}
-            onClick={() => handleOpenSubMenu("Providor")}
-            bold={selectedMenu && selectedMenu.includes("Providor")}
-          >
-            Providor
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
+            Provider
           </MenuItem>
+          <MenuItem theme={theme}>Shop</MenuItem>
 
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
+            Provider
+          </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
           <MenuItem
             theme={theme}
@@ -168,7 +208,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
               return <TableMenu hideModal={hideModal} />;
             case "giftVoucher":
               return <GiftVoucher hideModal={hideModal} />;
-            case "Providor":
+            case "provider":
               return <Provider hideModal={hideModal} />;
             case "events":
               return <Events hideModal={hideModal} />;

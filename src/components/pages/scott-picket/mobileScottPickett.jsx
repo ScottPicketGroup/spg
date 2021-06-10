@@ -20,8 +20,11 @@ import {
   Grid,
   Item,
   QuotationContainer,
+  CookiesBanner,
+  Button,
 } from "./styled-components";
 import Footer from "../../Common/Footer";
+import MobileHome from "../../Common/MobileHome";
 import {
   BC1,
   Header1,
@@ -36,8 +39,10 @@ const MobileLanding = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Home HomeImage={HomeImage} path={pageProps.path} />
-      <Container theme={theme} style={{ paddingBottom: `6rem` }}>
+        <Home HomeImage={HomeImage} path={pageProps.path} />
+      <Container theme={theme} style={{paddingBottom: `6rem`}}>
+        
+
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
             <Header1 theme={theme}>Scott Pickett </Header1>
@@ -65,7 +70,7 @@ const MobileLanding = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer displayBlock="true" style={{ marginTop: `0` }}>
+          <InnerContainer displayBlock="true" style={{marginTop: `0`}}>
             <QuotationContainer>
               <Quotation>
                 “ Those years set the foundations of my values as a chef and
@@ -78,7 +83,7 @@ const MobileLanding = ({ pageProps }) => {
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer theme={theme} displayBlock={true}>
+          <InnerContainer theme={theme} displayBlock={true} >
             <Header1 theme={theme}>Timeline</Header1>
             <BC1 theme={theme} marginBottom="6rem">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem

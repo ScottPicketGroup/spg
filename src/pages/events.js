@@ -5,7 +5,7 @@ import { useTheme } from "styled-components";
 import Landing from "../components/pages/events/events";
 import MobileLanding from "../components/pages/events/eventsMobile";
 
-const Events = (props) => {
+const IndexPage = (props) => {
   const theme = useTheme();
 
   return theme ? (
@@ -22,4 +22,4 @@ const Events = (props) => {
   );
 };
 
-export default Events;
+export default IndexPage;

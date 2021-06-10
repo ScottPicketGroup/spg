@@ -40,17 +40,3 @@ export const LogoImg = styled.img`
   bottom: 3rem;
   width: ${(props) => props.theme.name === "Desktop" && "190px"};
 `;
-
-export const BottomLogoContainer = styled.div`
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  padding: 0.5rem 2rem;
-  box-sizing: border-box;
-`;
-export const BottomLogo = styled.img`
-  left: 3.84rem;
-  bottom: 36px;
-  width: 15%;
-`;

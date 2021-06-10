@@ -38,12 +38,48 @@ export const LogoImg = styled.img`
   display: inline;
   width: ${(props) => props.theme.name === "Mobile" && "100px"};
 `;
+export const Header1 = styled.h1`
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "64px" : "28px")};
+  font-family: ${(props) => props.theme.fontFamily.Times};
+  font-weight: bold;
+  color: ${(props) => props.theme.colors.text};
+`;
+export const BC1 = styled.p`
+  margin-top: 3.5rem;
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  line-height: 2.15rem;
+  color: ${(props) => props.theme.colors.text};
+  cursor: ${(props) => (props.link ? "pointer" : "text")};
+
+  &:hover {
+    color: ${(props) =>
+      props.link ? props.theme.colors.hoverText : props.theme.colors.text};
+  }
+`;
+export const BC3 = styled.ul`
+  margin-top: 0.75rem;
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "20px")};
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  line-height: 2.15rem;
+  color: ${(props) => props.theme.colors.text};
+  cursor: ${(props) => (props.link ? "pointer" : "text")};
+
+  &:hover {
+    color: ${(props) =>
+      props.link ? props.theme.colors.hoverText : props.theme.colors.text};
+  }
+`;
 
 export const CloseBtn = styled.div`
   font-size: 16px;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.body};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
+`;
+export const MenuHeader = styled.div`
+  display: flex;
+  width: 100%;
 `;
 
 export const Grid = styled.div`
@@ -59,12 +95,13 @@ export const Item = styled.div`
 `;
 
 export const PostContainer = styled.div`
-  width: 75%;
-`;
+width: 75%;
+`
+
 
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.text};
-  margin: 2.45rem 0;
+  margin: 2.45rem 0 ;
   padding: 0.5em 3.5rem;
   background-color: ${(props) => props.theme.colors.body};
   border: ${(props) => `1px solid ${props.theme.colors.text}`};

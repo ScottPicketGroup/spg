@@ -7,25 +7,25 @@ import {
   ImageView,
   ImageDiv,
 } from "../global/GlobalStyles";
-
-import { Link, navigate } from "gatsby";
+import { globalHistory } from "@reach/router";
+import { Link } from "gatsby";
 import styled from "styled-components";
 import Logo from "../../images/logo.svg";
 import LogoWhite from "../../images/logoWhite.svg";
 import expandIcon from "../../images/expandIcon.png";
 
 import MenuBox from "../Common/Menue";
-import { Menu, MenuItem } from "../global/fontStyles";
+import { Menu, MenuHeading, MenuItem } from "../global/fontStyles";
 import TableMenu from "./SubMenus/BookTableMenu";
 import GiftVoucher from "./SubMenus/GiftVoucher";
 import Provider from "./SubMenus/Provider";
 import Events from "./SubMenus/Events";
 import footerLogo from "../../images/Group 6228.png";
 
-const FooterLogo = styled.img`
+export const FooterLogo = styled.img`
   margin-top: 3rem;
 `;
-const InnerContainer = styled.div`
+export const InnerContainer = styled.div`
   margin-top: ${(props) =>
     props.top === true
       ? "1rem"
@@ -36,17 +36,17 @@ const InnerContainer = styled.div`
 
   width: 100%;
 `;
-const LeftContainer = styled.div`
+export const LeftContainer = styled.div`
   display: inline;
   width: 42%;
 `;
-const RightContainer = styled.div`
+export const RightContainer = styled.div`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
   width: 58%;
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
 `;
-const MenuBtn = styled.div`
+export const MenuBtn = styled.div`
   font-size: 16px;
   text-transform: uppercase;
   color: ${(props) => props.theme.colors.text};
@@ -58,12 +58,12 @@ const MenuBtn = styled.div`
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
   }
 `;
-const LogoImg = styled.img`
+export const LogoImg = styled.img`
   display: inline;
   width: ${(props) => props.theme.name === "Mobile" && "100px"};
 `;
 
-const CloseBtn = styled.div`
+export const CloseBtn = styled.div`
   font-size: 16px;
   text-transform: uppercase;
   cursor: pointer;
@@ -73,7 +73,7 @@ const CloseBtn = styled.div`
   padding-top: 0.75rem;
   opacity: ${(props) => props.opacity && props.opacity};
 `;
-const MenuHeader = styled.div`
+export const MenuHeader = styled.div`
   display: flex;
   width: 100%;
   align-items: center;
@@ -104,7 +104,7 @@ const MobileHome = ({ HomeImage, path }) => {
   };
   const handleRedirect = (path) => {
     hideModal();
-    setTimeout(() => navigate(path), 200);
+    setTimeout(() => globalHistory.navigate(path), 200);
   };
   return theme ? (
     <div>
@@ -214,7 +214,24 @@ const MobileHome = ({ HomeImage, path }) => {
 
           <MenuItem
             theme={theme}
-            expandIcon={expandIcon}
+            expandIcon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="7.823"
+                height="14.231"
+                viewBox="0 0 7.823 14.231"
+              >
+                <path
+                  id="Path_11818"
+                  data-name="Path 11818"
+                  d="M-1211.2,6896l6.762,6.762-6.762,6.762"
+                  transform="translate(1211.552 -6895.646)"
+                  fill="none"
+                  stroke="#befbf2"
+                  stroke-width="2"
+                />
+              </svg>
+            }
             onClick={() => handleOpenSubMenu("bookATable")}
           >
             Book a table
@@ -250,9 +267,9 @@ const MobileHome = ({ HomeImage, path }) => {
           <MenuItem
             theme={theme}
             expandIcon={expandIcon}
-            onClick={() => handleOpenSubMenu("Providor")}
+            onClick={() => handleOpenSubMenu("provider")}
           >
-            Providor
+            Provider
           </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
           <MenuItem
@@ -330,7 +347,7 @@ const MobileHome = ({ HomeImage, path }) => {
               return <TableMenu hideModal={hideModal} />;
             case "giftVoucher":
               return <GiftVoucher hideModal={hideModal} />;
-            case "Providor":
+            case "provider":
               return <Provider hideModal={hideModal} />;
             case "events":
               return <Events hideModal={hideModal} />;

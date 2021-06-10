@@ -4,14 +4,17 @@ import { useTheme } from "styled-components";
 import {
   Container,
   ImageContainer,
+  ImageDiv,
   ImageView,
   SectionContainer,
 } from "../../global/GlobalStyles";
 import HomeImage from "../../../images/Screen Shot 2021-04-18 at 2.05.39 pm.png";
-
+import Logo from "../../../images/logo.svg";
+import SideImage from "../../../images/Screen Shot 2021-04-18 at 1.39.34 pm.png";
 import {
   InnerContainer,
   TimeLineIMGContainer,
+  Button,
   TimeLineContainer,
   TimeLineIMGInnerContainer,
   TimeLineGrid,
@@ -19,7 +22,9 @@ import {
   LeftGrid,
   RightContainer,
   LeftContainer,
+  LogoImg,
   QuotationContainer,
+  CookiesBanner,
 } from "./styled-components";
 
 import {
@@ -38,15 +43,17 @@ const Landing = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Container theme={theme} style={{ paddingBottom: `9rem` }}>
+      <Container theme={theme} style={{paddingBottom: `9rem`}}>
         <Home HomeImage={HomeImage} path={pageProps.path} />
 
         <SectionContainer>
           <InnerContainer>
-            <LeftContainer></LeftContainer>
+            <LeftContainer>
+            
+            </LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Scott Pickett</Header1>
-              <BC1 theme={theme} marginBottom="6rem">
+              <BC1 theme={theme} marginBottom="6rem" marginBottom="6rem">
                 My love for great produce began early. As a kid on a farm in
                 Kangarilla, it taught me a lot about food and seasonality.
                 Knowing the growers and producers behind the food we ate gave me
@@ -54,7 +61,7 @@ const Landing = ({ pageProps }) => {
                 environment like that influenced me to become a chef. So did
                 growing up with my grandmother Audrey’s Sunday roasts.
               </BC1>
-              <BC1 theme={theme} marginBottom="6rem">
+              <BC1 theme={theme} marginBottom="6rem" marginBottom="6rem">
                 Those years set the foundations of my values as a chef and
                 restaurateur today. My approach always puts food at the front.
                 It’s based on real cooking – with the greatest respect to the
