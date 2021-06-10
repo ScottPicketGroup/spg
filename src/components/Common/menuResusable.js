@@ -1,6 +1,6 @@
-import React, { useState, useLayoutEffect, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "@reach/router";
-import styled, { useTheme } from "styled-components";
+import { useTheme } from "styled-components";
 import { Link } from "gatsby";
 import logo from '../../images/logo.svg'
 import {
@@ -37,8 +37,6 @@ const MenuResusable = () => {
       if (window.pageYOffset > 50) setOpen(false);
     };
   });
-
-  console.log(open);
 
   return (
     <div>
@@ -109,8 +107,8 @@ const MenuResusable = () => {
           >
             Gift Vouchers
           </MenuItem>
-          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Provider
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("Providor")}>
+            Providor
           </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
           <MenuItem theme={theme}>
@@ -134,6 +132,9 @@ const MenuResusable = () => {
           selectedMenu={selectedMenu}
           handleOpenSubMenu={handleOpenSubMenu}
         />
+        <BottomLogoContainer>
+          <BottomLogo src={LogoW}></BottomLogo>
+        </BottomLogoContainer>
       </MenuBox>
     </div>
   );

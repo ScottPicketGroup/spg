@@ -1,22 +1,12 @@
-import React, { useState } from "react";
-
+import React from "react";
 import { useTheme } from "styled-components";
-import { globalHistory } from "@reach/router";
-import {
-  SectionContainer,
-  ImageContainer,
-  ImageView,
-  ImageDiv,
-} from "../../global/GlobalStyles";
-
-import { Link } from "gatsby";
+import { Link, navigate } from "gatsby";
 import styled from "styled-components";
-
-import { Menu, MenuHeading, Menu3Item } from "../../global/fontStyles";
+import { Menu, Menu3Item } from "../../global/fontStyles";
 import fbIcon from "../../../images/fb.png";
 import instaIcon from "../../../images/insta.png";
 
-export const FooterLogo = styled.img`
+const FooterLogo = styled.img`
   margin-top: 3rem;
   margin-right: 1rem;
 `;
@@ -38,7 +28,7 @@ const BookATable = ({ hideModal }) => {
   const theme = useTheme();
   const handleRedirect = (path) => {
     hideModal();
-    setTimeout(() => globalHistory.navigate(path), 200);
+    setTimeout(() => navigate(path), 200);
   };
   return theme ? (
     <div>
@@ -94,8 +84,8 @@ const BookATable = ({ hideModal }) => {
           </Link>
         </Menu3Item>
       </Menu>
-      {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
       {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}
+      {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
     </div>
   ) : (
     <div></div>

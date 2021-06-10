@@ -98,7 +98,8 @@ export const MenuHeader = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
-  grid-gap: ${(props) => (props.theme.name === "Desktop" ? "6rem 0rem" : "3.5rem 0")};
+  grid-gap: ${(props) =>
+    props.theme.name === "Desktop" ? "6rem 0rem" : "3.5rem 0"};
   align-items: center;
 `;
 
@@ -126,7 +127,8 @@ export const ItemImg = styled.div`
   }
 `;
 export const ItemImgCaption = styled.div`
-  margin-top: ${(props) => (props.theme.name === "Desktop" ? "3.5rem" : "1.5rem")};
+  margin-top: ${(props) =>
+    props.theme.name === "Desktop" ? "3.5rem" : "1.5rem"};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
@@ -135,32 +137,3 @@ export const ItemImgCaption = styled.div`
     color: ${(props) => props.theme.colors.hoverText};
   }
 `;
-
-export const FooterContainer = styled.div`
-  width: 100%;
-  display: flex;
-  background-color: #f9f9f4;
-`;
-
-export const Footer = styled.div`
-  min-height: 100px;
-  min-width: 100%;
-  padding: 20px;
-  background-color: ${(props) => props.theme.colors.text};
-`;
-
-export const FooterLogoGrid = styled.div`
-  display: flex;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-`;
-export const FooterLogoContainer = styled.div`
-  flex: 0 0 200px;
-  padding: 1rem;
-`;
-export const FooterLogo = styled.img``;
