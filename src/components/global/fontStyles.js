@@ -128,7 +128,10 @@ export const MenuItem = styled.div`
   width: 100%;
   text-transform: capitalize;
   cursor: pointer;
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
+  font-family: ${(props) =>
+    props.bold
+      ? props.theme.fontFamily.UntitledSansMedium
+      : props.theme.fontFamily.UntitledSansLight};
   font-size: ${(props) => props.theme.name === "Mobile" && `24px`};
   margin-bottom: ${(props) => props.theme.name === "Mobile" && `1.5rem`};
   display: flex;

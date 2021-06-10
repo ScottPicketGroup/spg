@@ -91,6 +91,7 @@ const MobileHome = ({ HomeImage, path }) => {
     hideModalSubMenu();
   };
 
+  console.log({ globalHistory });
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [selectedMenu, setSelectedMenu] = useState(null);
 
@@ -214,24 +215,7 @@ const MobileHome = ({ HomeImage, path }) => {
 
           <MenuItem
             theme={theme}
-            expandIcon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="7.823"
-                height="14.231"
-                viewBox="0 0 7.823 14.231"
-              >
-                <path
-                  id="Path_11818"
-                  data-name="Path 11818"
-                  d="M-1211.2,6896l6.762,6.762-6.762,6.762"
-                  transform="translate(1211.552 -6895.646)"
-                  fill="none"
-                  stroke="#befbf2"
-                  stroke-width="2"
-                />
-              </svg>
-            }
+            expandIcon={expandIcon}
             onClick={() => handleOpenSubMenu("bookATable")}
           >
             Book a table
@@ -267,9 +251,9 @@ const MobileHome = ({ HomeImage, path }) => {
           <MenuItem
             theme={theme}
             expandIcon={expandIcon}
-            onClick={() => handleOpenSubMenu("provider")}
+            onClick={() => handleOpenSubMenu("Providor")}
           >
-            Provider
+            Providor
           </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
           <MenuItem
@@ -347,7 +331,7 @@ const MobileHome = ({ HomeImage, path }) => {
               return <TableMenu hideModal={hideModal} />;
             case "giftVoucher":
               return <GiftVoucher hideModal={hideModal} />;
-            case "provider":
+            case "Providor":
               return <Provider hideModal={hideModal} />;
             case "events":
               return <Events hideModal={hideModal} />;

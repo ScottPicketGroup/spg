@@ -95,8 +95,8 @@ const Provider = ({ hideModal }) => {
         </Menu3Item>
       </Menu>
 
-      {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
       {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}
+      {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
     </div>
   ) : (
     <div></div>

@@ -99,8 +99,8 @@ const MenuResusable = () => {
           >
             Gift Vouchers
           </MenuItem>
-          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Provider
+          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("Providor")}>
+            Providor
           </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
           <MenuItem theme={theme}>

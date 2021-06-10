@@ -143,12 +143,17 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           ) : null}
           <MenuItem
             theme={theme}
+            bold={selectedMenu && selectedMenu.includes("bookATable")}
             onClick={() => handleOpenSubMenu("bookATable")}
           >
             Book a table
           </MenuItem>
 
-          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("events")}>
+          <MenuItem
+            theme={theme}
+            bold={selectedMenu && selectedMenu.includes("events")}
+            onClick={() => handleOpenSubMenu("events")}
+          >
             Events
           </MenuItem>
 
@@ -170,18 +175,19 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           <MenuItem
             theme={theme}
             onClick={() => handleOpenSubMenu("giftVoucher")}
+            bold={selectedMenu && selectedMenu.includes("giftVoucher")}
           >
             Gift Vouchers
           </MenuItem>
 
-          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Provider
+          <MenuItem
+            theme={theme}
+            onClick={() => handleOpenSubMenu("Providor")}
+            bold={selectedMenu && selectedMenu.includes("Providor")}
+          >
+            Providor
           </MenuItem>
-          <MenuItem theme={theme}>Shop</MenuItem>
 
-          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Provider
-          </MenuItem>
           <MenuItem theme={theme}>Shop</MenuItem>
           <MenuItem
             theme={theme}
@@ -208,7 +214,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
               return <TableMenu hideModal={hideModal} />;
             case "giftVoucher":
               return <GiftVoucher hideModal={hideModal} />;
-            case "provider":
+            case "Providor":
               return <Provider hideModal={hideModal} />;
             case "events":
               return <Events hideModal={hideModal} />;
