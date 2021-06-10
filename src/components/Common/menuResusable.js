@@ -1,13 +1,16 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
 import { useLocation } from "@reach/router";
-import styled, { useTheme } from "styled-components";
+import { useTheme } from "styled-components";
 import { Link } from "gatsby";
+import LogoW from "../../images/logoWhite.svg";
 
 import {
   MenuDropDownContainer,
   Menu,
   MenuHeading,
   MenuItem,
+  BottomLogoContainer,
+  BottomLogo,
 } from "./styled-components";
 
 import MenuBox from "../Common/Menue";
@@ -124,6 +127,9 @@ const MenuResusable = () => {
           selectedMenu={selectedMenu}
           handleOpenSubMenu={handleOpenSubMenu}
         />
+        <BottomLogoContainer>
+          <BottomLogo src={LogoW}></BottomLogo>
+        </BottomLogoContainer>
       </MenuBox>
     </div>
   );
