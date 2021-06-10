@@ -35,7 +35,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
 
   const handleRedirect = (path) => {
     hideModal();
-    console.log("navigate");
+
     setTimeout(() => navigate(path), 200);
   };
   return theme ? (
@@ -73,6 +73,20 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
             >
               Home
+            </Link>
+          </MenuItem>
+
+          <MenuItem
+            theme={theme}
+            onClick={() => {
+              handleRedirect("/adapted");
+            }}
+          >
+            <Link
+              style={{ color: "inherit", textDecoration: "none" }}
+              activeStyle={{ fontFamily: `UntitledSansMedium` }}
+            >
+              AdaptedREM
             </Link>
           </MenuItem>
           {location.pathname === "/" ||

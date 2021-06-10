@@ -202,6 +202,16 @@ const MobileHome = ({ HomeImage, path }) => {
           </MenuItem>
           <MenuItem
             theme={theme}
+            onClick={() => {
+              handleRedirect("/adapted");
+            }}
+          >
+            <Link style={{ color: "inherit", textDecoration: "none" }}>
+              AdaptedREM
+            </Link>
+          </MenuItem>
+          <MenuItem
+            theme={theme}
             bold={path && path.includes("/scott-picket")}
             onClick={() => {
               handleRedirect("/scott-picket");

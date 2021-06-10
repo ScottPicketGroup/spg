@@ -2,14 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useLocation } from "@reach/router";
 import { useTheme } from "styled-components";
 import { Link } from "gatsby";
-import logo from '../../images/logo.svg'
+import logo from "../../images/logo.svg";
 import {
   MenuDropDownContainer,
   Menu,
   MenuHeading,
   MenuItem,
-  LogoImg
+  LogoImg,
+  BottomLogo,
+  BottomLogoContainer,
 } from "./styled-components";
+import LogoW from "../../images/logoWhite.svg";
 
 import MenuBox from "../Common/Menue";
 import SubMenu from "./SubMenue";
