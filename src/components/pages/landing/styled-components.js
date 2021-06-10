@@ -46,13 +46,24 @@ export const Header1 = styled.h1`
   font-size: ${(props) => (props.theme.name === "Desktop" ? "64px" : "28px")};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
+  line-height: 0.94;
+  color: ${(props) => props.theme.colors.text};
+`;
+export const Header2 = styled.h2`
+  font-size: ${(props) =>
+    props.theme.name === "Desktop" ? "36px" : "1.5rem"};
+  margin-bottom: 1rem;
+  line-height: ${(props) =>
+    props.theme.name === "Desktop" ? "" : "1.11"};
+  font-family: ${(props) => props.theme.fontFamily.Times};
+  font-weight: bold;
   color: ${(props) => props.theme.colors.text};
 `;
 export const BC1 = styled.p`
   margin-top: 3.5rem;
   font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-  line-height: 2.15rem;
+  line-height: 1.22;
   color: ${(props) => props.theme.colors.text};
   cursor: ${(props) => (props.link ? "pointer" : "text")};
   &:hover {
@@ -64,7 +75,7 @@ export const BC3 = styled.p`
   margin-top: 0.75rem;
   font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-  line-height: 2.15rem;
+  line-height: 1.2;
   color: ${(props) => props.theme.colors.text};
   cursor: ${(props) => (props.link ? "pointer" : "text")};
   &:hover {
@@ -95,7 +106,7 @@ export const Item = styled.div`
   padding: 0 0.5rem;
   display: block;
   &:hover {
-    opacity: ${(props) => (props.link ? 0.25 : 1)};
+    opacity: ${(props) => (props.link ? 0.5 : 1)};
   }
 `;
 

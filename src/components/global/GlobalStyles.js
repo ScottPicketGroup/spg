@@ -81,6 +81,7 @@ export const ImageDiv = styled.div`
   background-image: ${(props) => `url('${props.src}')`};
   background-repeat: no-repeat;
   background-size: cover;
+  aspect-ratio: ${props => props.ratio};
   &:hover {
     opacity: ${(props) => (props.link ? 0.5 : 1)};
   }

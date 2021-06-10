@@ -2,12 +2,13 @@ import React, { useState, useLayoutEffect, useEffect } from "react";
 import { useLocation } from "@reach/router";
 import styled, { useTheme } from "styled-components";
 import { Link } from "gatsby";
-
+import logo from '../../images/logo.svg'
 import {
   MenuDropDownContainer,
   Menu,
   MenuHeading,
   MenuItem,
+  LogoImg
 } from "./styled-components";
 
 import MenuBox from "../Common/Menue";
@@ -53,6 +54,15 @@ const MenuResusable = () => {
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
             >
               Home
+            </Link>
+          </MenuItem>
+          <MenuItem theme={theme}>
+            <Link
+              to="/adapted"
+              style={{ color: "inherit", textDecoration: "none" }}
+              activeStyle={{ fontFamily: `UntitledSansMedium` }}
+            >
+              AdaptedREM
             </Link>
           </MenuItem>
           {location.pathname === "/" ||
@@ -117,7 +127,7 @@ const MenuResusable = () => {
           <MenuItem theme={theme}>Contact</MenuItem>
         </MenuDropDownContainer>
       </Menu>
-
+      <LogoImg src={logo} />
       <MenuBox show={showSubMenu} handleClose={hideModalSubMenu}>
         <SubMenu
           hideModal={hideModalSubMenu}

@@ -7,6 +7,7 @@ import {
   ImageDiv,
   ImageView,
   SectionContainer,
+
 } from "../../global/GlobalStyles";
 
 import HomeImage from "../../../images/homeImage.png";
@@ -28,8 +29,9 @@ import {
   Grid,
   Item,
   ItemImgLink,
+  BC1, Header1, BC3, Header2
 } from "./styled-components";
-import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles";
+
 
 import Footer from "../../Common/Footer";
 import Home from "../../Common/DesktopHome";
@@ -84,7 +86,7 @@ const Landing = ({ pageProps }) => {
         </SectionContainer>
 
         <SectionContainer>
-          <InnerContainer>
+          <InnerContainer style={{marginTop: `6rem`}}>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={2}>
@@ -92,10 +94,10 @@ const Landing = ({ pageProps }) => {
                   <ItemImgLink href="#">
                     <FullImageContainer>
                       <ImageView>
-                        <ImageDiv src={gridPic1} link={true}></ImageDiv>
+                        <ImageDiv src={gridPic1} link={true} ratio="3/2"></ImageDiv>
                       </ImageView>
                     </FullImageContainer>
-                    <ItemImgCaption>CHANCERY LANE</ItemImgCaption>
+                    <Header2>Chancery Lane</Header2>
                     <BC3 link={true}>Little Collins St, Melbourne</BC3>
                   </ItemImgLink>
                 </Item>
@@ -103,10 +105,10 @@ const Landing = ({ pageProps }) => {
                   <ItemImgLink href="#">
                     <FullImageContainer>
                       <ImageView>
-                        <ImageDiv src={gridPic2}></ImageDiv>
+                        <ImageDiv src={gridPic2} ratio="3/2"></ImageDiv>
                       </ImageView>
                     </FullImageContainer>
-                    <ItemImgCaption>Estelle</ItemImgCaption>
+                    <Header2>Estelle</Header2>
                     <BC3 link={true}>High St, Northcote</BC3>
                   </ItemImgLink>
                 </Item>
@@ -115,10 +117,10 @@ const Landing = ({ pageProps }) => {
                   <ItemImgLink href="#">
                     <FullImageContainer>
                       <ImageView>
-                        <ImageDiv src={gridPic3}></ImageDiv>
+                        <ImageDiv src={gridPic3} ratio="3/2"></ImageDiv>
                       </ImageView>
                     </FullImageContainer>
-                    <ItemImgCaption>Longrain</ItemImgCaption>
+                    <Header2>Longrain</Header2>
                     <BC3 link={true}>Little Bourke St, Melbourne </BC3>
                   </ItemImgLink>
                 </Item>
@@ -128,10 +130,10 @@ const Landing = ({ pageProps }) => {
                   <ItemImgLink href="#">
                     <FullImageContainer>
                       <ImageView>
-                        <ImageDiv src={gridPic4}></ImageDiv>
+                        <ImageDiv src={gridPic4} ratio="3/2"></ImageDiv>
                       </ImageView>
                     </FullImageContainer>
-                    <ItemImgCaption>Matilda</ItemImgCaption>
+                    <Header2>Matilda</Header2>
                     <BC3 link={true}>Domain Rd, South Yarra</BC3>
                   </ItemImgLink>
                 </Item>
@@ -140,10 +142,10 @@ const Landing = ({ pageProps }) => {
                   <ItemImgLink href="#">
                     <FullImageContainer>
                       <ImageView>
-                        <ImageDiv src={gridPic5}></ImageDiv>
+                        <ImageDiv src={gridPic5} ratio="3/2"></ImageDiv>
                       </ImageView>
                     </FullImageContainer>
-                    <ItemImgCaption>Pastore</ItemImgCaption>
+                    <Header2>Pastore</Header2>
                     <BC3 link={true}>Dandenong Rd, Chadstone</BC3>
                   </ItemImgLink>
                 </Item>
@@ -152,10 +154,10 @@ const Landing = ({ pageProps }) => {
                   <ItemImgLink href="#">
                     <FullImageContainer>
                       <ImageView>
-                        <ImageDiv src={gridPic6}></ImageDiv>
+                        <ImageDiv src={gridPic6} ratio="3/2"></ImageDiv>
                       </ImageView>
                     </FullImageContainer>
-                    <ItemImgCaption>Longsong</ItemImgCaption>
+                    <Header2>Longsong</Header2>
                     <BC3 link={true}>UPSTAIRS, Little Bourke St, Melbourne</BC3>
                   </ItemImgLink>
                 </Item>
@@ -164,10 +166,10 @@ const Landing = ({ pageProps }) => {
                   <ItemImgLink href="#">
                     <FullImageContainer>
                       <ImageView>
-                        <ImageDiv src={gridPic7}></ImageDiv>
+                        <ImageDiv src={gridPic7} ratio="3/2"></ImageDiv>
                       </ImageView>
                     </FullImageContainer>
-                    <ItemImgCaption>Le Shoppe</ItemImgCaption>
+                    <Header2>Le Shoppe</Header2>
                     <BC3 link={true}>Dandenong Rd, Chadstone</BC3>
                   </ItemImgLink>
                 </Item>
@@ -176,10 +178,10 @@ const Landing = ({ pageProps }) => {
                   <ItemImgLink href="#">
                     <FullImageContainer>
                       <ImageView>
-                        <ImageDiv src={gridPic8}></ImageDiv>
+                        <ImageDiv src={gridPic8} ratio="3/2"></ImageDiv>
                       </ImageView>
                     </FullImageContainer>
-                    <ItemImgCaption>SP Events</ItemImgCaption>
+                    <Header2>SP Events</Header2>
                     <BC3 link={true}>AUSTRALIA</BC3>
                   </ItemImgLink>
                 </Item>

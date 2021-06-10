@@ -13,7 +13,7 @@ const DesktopHome = ({ HomeImage, path }) => {
 
   return theme ? (
     <SectionContainer >
-      <SideBar path={path} style={{marginTop: `4.75rem`}}/>
+      <SideBar path={path}/>
       <HeroImage HomeImage={HomeImage} />
     </SectionContainer>
   ) : (

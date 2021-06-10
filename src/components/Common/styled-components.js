@@ -9,7 +9,7 @@ export const Menu = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 3.84rem;
+  margin-top: 4.75rem;
   color: ${(props) =>
     props.theme.name === "Desktop"
       ? props.theme.colors.text
@@ -17,7 +17,7 @@ export const Menu = styled.div`
 `;
 export const MenuHeading = styled.div`
   width: 100%;
-
+  margin-bottom: 1rem;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
   text-transform: uppercase;
 `;
@@ -37,6 +37,6 @@ export const MenuItem = styled.div`
 export const LogoImg = styled.img`
   position: fixed;
 
-  bottom: 36px;
-  width: ${(props) => props.theme.name === "Mobile" && "16%"};
+  bottom: 3rem;
+  width: ${(props) => props.theme.name === "Desktop" && "190px"};
 `;

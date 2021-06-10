@@ -6,20 +6,23 @@ export const Header1 = styled.h1`
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
+  margin: 0;
 `;
 
 export const Header2 = styled.h2`
   font-size: ${(props) =>
-    props.theme.name === "Desktop" ? "1.59rem" : "1.5rem"};
+    props.theme.name === "Desktop" ? "2.25rem" : "1.5rem"};
   margin-bottom: 1rem;
   line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "1.5rem" : "1.2rem"};
+    props.theme.name === "Desktop" ? "" : "1"};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
   color: ${(props) => props.theme.colors.text};
 `;
 export const Header3 = styled.h3`
   font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "1rem")};
+  line-height: ${(props) =>
+    props.theme.name === "Desktop" ? "1.2" : "1.25"};
   margin-bottom: 1rem;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   font-weight: bold;
@@ -27,6 +30,8 @@ export const Header3 = styled.h3`
 `;
 export const Header4 = styled.h4`
   font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "1rem")};
+  line-height: ${(props) =>
+    props.theme.name === "Desktop" ? "1.2" : "1.25"};
   margin-bottom: 1.75rem;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   color: ${(props) => props.theme.colors.text};
@@ -63,7 +68,7 @@ export const BC2 = styled.p`
 `;
 export const BC3 = styled.p`
   margin-top: 0.75rem;
-  font-size: ${(props) => (props.theme.name === "Desktop" ? ".88rem" : "1rem")};
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "1.25rem" : "1rem")};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   line-height: 1.22;
   color: ${(props) => props.theme.colors.text};
@@ -91,7 +96,7 @@ export const Quotation = styled.div`
 
 export const ItemImgCaption = styled.div`
   margin-top: ${(props) =>
-    props.theme.name === "Desktop" ? "3.5rem" : "1.5rem"};
+    props.theme.name === "Desktop" ? "2.25rem" : "1.5rem"};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "36px" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
