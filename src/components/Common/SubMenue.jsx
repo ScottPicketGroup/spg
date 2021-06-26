@@ -103,7 +103,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
       </CloseX>
       <LeftContainer>
         <Menu theme={theme} inModal={true} inModal={true}>
-          <MenuHeading theme={theme} onClick={() => hideModal()}>
+          <MenuHeading theme={theme} onClick={() => hideModal()} style={{paddingBottom: `1.5rem`}}>
             Close
           </MenuHeading>
 
@@ -175,14 +175,13 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           </MenuItem>
 
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Provider
+            Providor
           </MenuItem>
-          <MenuItem theme={theme}>Shop</MenuItem>
 
-          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Provider
-          </MenuItem>
-          <MenuItem theme={theme}>Shop</MenuItem>
+          {/* <MenuItem theme={theme}>Shop</MenuItem> */}
+
+          
+         
           <MenuItem
             theme={theme}
             onClick={() => {

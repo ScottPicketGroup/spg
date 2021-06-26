@@ -16,7 +16,7 @@ import NextIcon from "./control-elements/NextIcon"
 import PreviousIcon from "./control-elements/PreviousIcon"
 
 import img1 from "../../../../images/landing-carousel/matilda.jpg"
-import img2 from "../../../../images/landing-carousel/chanceryLane.jpg"
+import img2 from "../../../../images/landing-carousel/chancerylane.jpg"
 import img3 from "../../../../images/landing-carousel/estelle.jpg"
 import img4 from "../../../../images/landing-carousel/longgrain.jpg"
 import { ImageCaption } from "../../../global/fontStyles"

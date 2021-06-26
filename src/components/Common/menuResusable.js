@@ -56,7 +56,7 @@ const MenuResusable = () => {
               Home
             </Link>
           </MenuItem>
-          <MenuItem theme={theme}>
+          {/* <MenuItem theme={theme}>
             <Link
               to="/adapted"
               style={{ color: "inherit", textDecoration: "none" }}
@@ -64,7 +64,7 @@ const MenuResusable = () => {
             >
               AdaptedREM
             </Link>
-          </MenuItem>
+          </MenuItem> */}
           {location.pathname === "/" ||
           location.pathname === "/scott-picket" ? (
             <MenuItem theme={theme}>
@@ -110,9 +110,9 @@ const MenuResusable = () => {
             Gift Vouchers
           </MenuItem>
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Provider
+            Providor
           </MenuItem>
-          <MenuItem theme={theme}>Shop</MenuItem>
+          {/* <MenuItem theme={theme}>Shop</MenuItem> */}
           <MenuItem theme={theme}>
             {" "}
             <Link
