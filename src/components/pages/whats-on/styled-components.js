@@ -46,7 +46,7 @@ export const LogoImg = styled.img`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
-  grid-gap: 6rem 1rem;
+  grid-gap: ${(props) => (props.device === "Mobile" ? "6rem 1rem" : "1.5rem 1rem")};
 `;
 
 export const Item = styled.div`
