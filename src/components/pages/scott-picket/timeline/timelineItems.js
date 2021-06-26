@@ -25,10 +25,9 @@ const [display, setDisplay] = useState(0)
     <div>
 {timeline.map((item, i) => (
     <SectionContainer>
-      <TimeLineContainer
+      <TimeLineContainer>
       
-      onMouseOver={() => setDisplay(i +1)}
-      onMouseOut={() => setDisplay(0)}>
+     
         <LeftContainer
         style={{
           justifyContent: `center `
@@ -37,7 +36,8 @@ const [display, setDisplay] = useState(0)
           <HoverImage Image={`${item.image}`} display={image1} />
         </LeftContainer>
         <RightContainer
-          
+           onMouseOver={() => setDisplay(i +1)}
+           onMouseOut={() => setDisplay(0)}>
         >
           <TimeLineGrid>
             <LeftGrid>

@@ -2,7 +2,7 @@ import React, {useEffect, useRef} from 'react'
 import styled from 'styled-components'
 import image1 from '../../../../images/timeline/image1.png'
 import { TweenLite, Power3 } from "gsap";
-const HoverImage = ({Image, display}) => {
+const HoverImage = ({Image, display, id}) => {
     let imageList = useRef(null);
     useEffect(() => {
         TweenLite.fromTo(imageList, 1, {
@@ -15,7 +15,7 @@ const HoverImage = ({Image, display}) => {
 
     return (
         <div ref={el => (imageList = el)}>{
-      display ? (
+      display  === id ? (
             <div >
             <Img src={image1} alt='image1'  />
          </div>) : null}
