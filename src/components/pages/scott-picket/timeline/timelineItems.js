@@ -12,6 +12,7 @@ import {
 } from "../styled-components"
 import timeline from "./timeline.json"
 import HoverImage from "./hoverImage"
+import HoverImage1 from "../hovers/hover1"
 const TimelineItems = () => {
   const [image1, setImage1] = React.useState(
    false
@@ -125,7 +126,7 @@ const TimelineItems = () => {
       <SectionContainer>
         <TimeLineContainer>
           <LeftContainer>
-            <HoverImage display={image1} />
+            <HoverImage1 display={image1} />
           </LeftContainer>
           <RightContainer>
             <TimeLineGrid
