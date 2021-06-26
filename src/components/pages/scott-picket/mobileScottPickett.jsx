@@ -10,7 +10,7 @@ import {
 } from "../../global/GlobalStyles"
 import SideImage from "../../../images/Screen Shot 2021-04-18 at 1.39.34 pm.png"
 
-import HomeImage from "../../../images/Screen Shot 2021-04-18 at 2.05.39 pm.png"
+import HomeImage from "../../../images/scott-portrait.jpg"
 import hat from "./timeline/chef-hat.png"
 import {
   InnerContainer,
