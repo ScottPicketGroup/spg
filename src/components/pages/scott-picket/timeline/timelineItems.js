@@ -23,7 +23,35 @@ const TimelineItems = () => {
 const [display, setDisplay] = useState(0)
   return theme ? (
     <div>
-
+{timeline.map((item, i) => (
+    <SectionContainer>
+      <TimeLineContainer
+      
+      onMouseOver={() => setDisplay(i +1)}
+      onMouseOut={() => setDisplay(0)}>
+        <LeftContainer
+        style={{
+          justifyContent: `center `
+        }}
+        >
+          <HoverImage Image={`${item.image}`} display={image1} />
+        </LeftContainer>
+        <RightContainer
+          
+        >
+          <TimeLineGrid>
+            <LeftGrid>
+              <Header2>{item.year}</Header2>
+              <BC3>{item.phase}</BC3>
+            </LeftGrid>
+            <RightGrid>
+              <BC2>{item.qoute}</BC2>
+            </RightGrid>
+          </TimeLineGrid>
+        </RightContainer>
+      </TimeLineContainer>
+    </SectionContainer>
+  ))}
 
       <SectionContainer>
         <TimeLineContainer>
