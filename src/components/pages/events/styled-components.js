@@ -38,8 +38,21 @@ export const LeftContainer = styled.div`
 export const RightContainer = styled.div`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
   width: 66%;
+  transition: opacity .2s ease-out;
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
+  
+`;
+export const RightContainerLink = styled.a`
+  display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
+  width: 66%;
+  transition: opacity .2s ease-out;
+  text-decoration: none;
+  justify-content: ${(props) =>
+    props.device === "Mobile" ? "flex-end" : "flex-start"};
+    :hover {
+      opacity: ${props => props.hover ? `25%` : `0`};
+    }
 `;
 export const FullContainer = styled.div`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
@@ -114,7 +127,7 @@ export const Grid = styled.div`
   align-items: center;
 `;
 
-export const Item = styled.div`
+export const Item = styled.a`
   padding: 0 0.5rem;
   display: block;
 `;

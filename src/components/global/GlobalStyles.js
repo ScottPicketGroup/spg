@@ -26,6 +26,7 @@ export const RightContainer = styled.div`
   width: 66%;
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
+   
 `;
 export const TextContainer = styled.div`
   display: inline;

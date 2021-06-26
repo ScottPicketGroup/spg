@@ -22,6 +22,7 @@ export const MenuItem = styled.div`
 
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>
+  props.marginTop ? props.marginTop : 
     props.top === true
       ? "1rem"
       : props.theme.name === "Desktop"
@@ -171,12 +172,14 @@ export const FooterContainer = styled.div`
 
 export const QuotationContainer = styled.div`
   display: flex;
+  justify-content: center;
   width: 100%;
-  padding: ${(props) => (props.theme.name === "Desktop" ? "0 8.25rem" : "0 2rem")};
+  padding: ${(props) => (props.theme.name === "Desktop" ? "0 8.25rem" : "0")};
   justify-content: center;
 
 `;
 export const Quotation = styled.div`
+width: 50%;
   font-size: ${(props) => (props.theme.name === "Desktop" ? "64px" : "28px")};
   font-family: ${(props) => props.theme.fontFamily.Times};
   font-weight: bold;
@@ -189,9 +192,11 @@ export const Divider = styled.hr`
   opacity: 0.2;
 `;
 export const TimeLineContainer = styled.div`
-  margin-top: 2.25rem;
+  margin-top: ${(props) => (props.theme.name === "Mobile" ? "1.5rem" : "2.25rem")};
   display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
+  flex-direction: ${(props) => (props.theme.name === "Mobile" ? "column" : "")};;
   width: 100%;
+  padding: ${(props) => (props.theme.name === "Mobile" ? "1.5rem 0" : "0")};
 `;
 export const TimeLineIMGContainer = styled.div`
   display: flex;
@@ -204,11 +209,21 @@ export const TimeLineIMGInnerContainer = styled.div`
 export const TimeLineGrid = styled.div`
   display: flex;
   width: 100%;
+  border-top: 1px solid rgba(51, 51, 51, 25%);
+ padding-top: 2.25rem;
+ padding-bottom: 3.5rem;
+ @media screen and (max-width: 450px) {
+   border-top: none;
+   flex-direction: column;
+ }
 `;
 export const LeftGrid = styled.div`
   padding: 0 0.5rem;
   display: inline;
   width: 37.5%;
+  @media screen and (max-width: 450px) {
+   padding-bottom: 1.5rem;
+ }
 `;
 export const RightGrid = styled.div`
   padding: 0 0.5rem;
@@ -249,3 +264,13 @@ export const Button = styled.button`
     color: ${(props) => props.theme.colors.body};
   }
 `;
+
+export const Award = styled.div`
+display: flex;
+
+`
+export const Hat = styled.img`
+height: 1.2rem;
+margin-top: .1rem;
+padding-left: .2rem;
+`

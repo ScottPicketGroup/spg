@@ -18,6 +18,9 @@ import UntitledSansRegular from "./static/fonts/untitled-sans-web-regular.woff";
 import Times from "./static/fonts/timr45w.ttf";
 
 const GlobalFonts = createGlobalStyle`
+h1, h2, h3, h4, h5, p {
+  margin: 0;
+}
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -28,6 +31,7 @@ body { margin: 0}
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+
   }
     @font-face {
         font-family: 'UntitledSansLight';

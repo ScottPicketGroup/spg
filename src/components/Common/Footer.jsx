@@ -2,15 +2,6 @@ import React from "react";
 import { useTheme } from "styled-components";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import Estelle from "../../images/Group 4576.png";
-import LM from "../../images/Group 4577.png";
-import CL from "../../images/Path 10285.png";
-import LON from "../../images/Group 4578.png";
-import MAT from "../../images/Group 4579.png";
-import PAS from "../../images/Group 4580.png";
-import PIC from "../../images/Group 4581.png";
-import SP from "../../images/Group 4582.png";
-import LogoW from "../../images/Group 4583.png";
 import LogoFooter from "../Footer/logo-footer/LogoFooter";
 
 
