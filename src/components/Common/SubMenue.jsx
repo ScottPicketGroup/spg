@@ -10,7 +10,8 @@ import LogoWhite from "../../images/logoWhite.svg";
 import fbIcon from "../../images/fb.png";
 import instaIcon from "../../images/insta.png";
 
-import { Menu, MenuHeading, MenuItem } from "../global/fontStyles";
+import { Menu, MenuHeading} from "../global/fontStyles";
+import {MenuItem} from './styled-components'
 import TableMenu from "./SubMenus/BookTableMenu";
 import GiftVoucher from "./SubMenus/GiftVoucher";
 import Provider from "./SubMenus/Provider";

@@ -21,17 +21,12 @@ import LeftAligned from "./leftAligned";
 
 const whatsOnEvents = [
   {
-    heading: "Longrain X Sutton Grange Winery",
-    subHeading: "Sat 13th March - Sun 30th May",
-    content: `We are delighted to be hosting weekend lunches at the breathtaking
-    Sutton Grange Winery near Bendigo for a limited time. The first
-    lunch is on Sat 13th March, and the last one will be on Sun 30 May.
-    We are introducing an exclusive banquet menu that can be matched
-    with the winery’s award-winning selection. Located 1.5 hours from
-    Melbourne CBD and just 20 minutes south of Bendigo, the winery
-    offers stunning views, where you will walk away with a renewed
-    appreciation for our regional Victoria and the bounty that it
-    offers.`,
+    heading: "Truffle Dinners",
+    subHeading: "Truffle season is upon us.",
+    content: `And its arguably the best season of the year. <br> We’ve curated a number of exclusive events to celebrate the earthy, musky complexity of this season's truffles. 
+
+    Join us at Estelle, Matilda and Chancery Lane as we celebrate truffle season with three decadent truffle menus. 
+    `,
     image: CarouselImg3,
   },
   {
@@ -75,14 +70,9 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>What's On</Header1>
               <BC1 theme={theme}>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae
-                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
-                voluptas sit aspernatur aut odit aut fugit, sed quia
-                consequuntur magni dolores eos qui ratione voluptatem sequi
-                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                sit amet, consectetur.
+              Six restaurants + two bars + two delis + one events company + more in the pipeline = plenty of things to keep us busy and you entertained.
+Read on to hear what’s coming up at our Scott Pickett Group venues. 
+
               </BC1>
             </RightContainer>
           </InnerContainer>
