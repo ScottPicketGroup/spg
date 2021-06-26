@@ -11,11 +11,7 @@ import {
 
 import HomeImage from "../../../images/events-hero.jpg"
 
-import gridPic1 from "../../../images/Screen Shot -4.png"
-import gridPic2 from "../../../images/Screen Shot -4.png"
-import gridPic3 from "../../../images/Screen Shot -4.png"
-import gridPic4 from "../../../images/Screen Shot -4.png"
-import gridPic5 from "../../../images/Screen Shot -4.png"
+
 
 import {
   InnerContainer,
