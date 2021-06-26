@@ -20,7 +20,7 @@ const TimelineItems = () => {
   const [lastImage, setLastImage] = React.useState(false)
   console.log(`timeline`, timeline)
   const theme = useTheme()
-
+const [display, setDisplay] = useState(0)
   return theme ? (
     <div>
 
@@ -28,7 +28,7 @@ const TimelineItems = () => {
       <SectionContainer>
         <TimeLineContainer>
           <LeftContainer>
-            <HoverImage1 display={image1} />
+            <HoverImage1 display={display} id={1} />
           </LeftContainer>
           <RightContainer>
             <TimeLineGrid
@@ -38,7 +38,10 @@ const TimelineItems = () => {
                 <Header2>2019</Header2>
                 <BC3>What a year! Estelle, Lupo, my newest publication ‘Marriage of Flavours’, the launch of new venture ‘Pastore’ & the move of Pickett’s Deli & Rotisserie to Melbourne Airport</BC3>
               </LeftGrid>
-              <RightGrid>
+              <RightGrid 
+              onMouseOver={() => setDisplay(1)}
+              onMouseOut={() => setDisplay(0)}
+              >
                 <BC2>
                
                   In February, the space which had previously housed ESP,
@@ -78,7 +81,8 @@ const TimelineItems = () => {
                 <Header2>2020</Header2>
                 <BC3>A year where most rested, I didn’t. Longrain & Longong, Chancery Lane and our production kitchen.</BC3>
               </LeftGrid>
-              <RightGrid>
+              <RightGrid    onMouseOver={() => setDisplay(1)}
+              onMouseOut={() => setDisplay(0)}>
                 <BC2>
                
                 When COVID struck the city and the hospitality industry down, the opportunity arose to purchase Longrain from John and Lisa Van Haandel. I couldn’t pass it up. We we’re able to keep the existing staff and management employed and keep the business operating through lockdown on Providoor. I am so proud to continue the legacy of the Melbourne institution. 
