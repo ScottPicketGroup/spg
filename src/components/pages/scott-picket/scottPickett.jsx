@@ -2,7 +2,7 @@ import React from "react"
 
 import { useTheme } from "styled-components"
 import { Container, SectionContainer } from "../../global/GlobalStyles"
-import HomeImage from "../../../images/Screen Shot 2021-04-18 at 2.05.39 pm.png"
+import HomeImage from "../../../images/scott-portrait.jpg"
 import hat from "./timeline/chef-hat.png"
 import {
   InnerContainer,
