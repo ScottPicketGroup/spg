@@ -16,7 +16,7 @@ import HomeImage from "../../../images/homeImage.png";
 
 
 import gridPic1 from "../../../images/home-venues/CL.jpg";
-import gridPic2 from "../../../images/home-venues/Estelle.jpg";
+import gridPic2 from "../../../images/home-venues/estelle.jpg";
 import gridPic3 from "../../../images/home-venues/LG.jpg";
 import gridPic4 from "../../../images/home-venues/Matilda.jpg";
 import gridPic5 from "../../../images/home-venues/Pastore.jpg";

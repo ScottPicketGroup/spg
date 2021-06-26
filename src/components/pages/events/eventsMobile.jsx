@@ -12,7 +12,7 @@ import {
 import HomeImage from "../../../images/Screen Shot -1@2x.png";
 
 import gridPic1 from "../../../images/events-pdrs/CL.jpg"
-import gridPic2 from "../../../images/events-pdrs/Estelle.jpg"
+import gridPic2 from "../../../images/events-pdrs/estelle.jpg"
 import gridPic3 from "../../../images/events-pdrs/longgrain.jpeg"
 import gridPic4 from "../../../images/Screen Shot -4.png"
 import gridPic5 from "../../../images/events-pdrs/pastore.png"
