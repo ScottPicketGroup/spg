@@ -22,9 +22,6 @@ import {
   RightContainer,
   RightContainerLink,
   LeftContainer,
-  LogoImg,
-  Grid,
-  Item,
 } from "./styled-components"
 import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles"
 
