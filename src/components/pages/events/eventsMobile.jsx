@@ -80,6 +80,61 @@ const MobileEvents = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
         
+<SectionContainer>
+          <InnerContainer theme={theme} displayBlock={true}>
+            <RightContainer>
+              <Grid cols={1}>
+                <Item href="http://www.google.com">
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic1}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
+                  <ItemImgCaption>CHANCERY LANE</ItemImgCaption>
+                  <BC3>Little Collins St, Melbourne</BC3>
+                </Item>
+                <Item href="http://www.google.com">
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic2}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
+                  <ItemImgCaption>Estelle</ItemImgCaption>
+                  <BC3>High St, Northcote</BC3>
+                </Item>
+                <Item href="http://www.google.com">
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic3}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
+                  <ItemImgCaption>Longrain</ItemImgCaption>
+                  <BC3>Little Bourke St, Melbourne </BC3>
+                </Item>
+
+                <Item href="http://www.google.com">
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic4}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
+                  <ItemImgCaption>Matilda</ItemImgCaption>
+                  <BC3>Domain Rd, South Yarra</BC3>
+                </Item>
+                <Item href="http://www.google.com">
+                  <FullImageContainer>
+                    <ImageView>
+                      <ImageDiv src={gridPic5}></ImageDiv>
+                    </ImageView>
+                  </FullImageContainer>
+                  <ItemImgCaption>Pastore</ItemImgCaption>
+                  <BC3>Dandenong Rd, Chadstone</BC3>
+                </Item>
+              </Grid>
+            </RightContainer>
+          </InnerContainer>
+        </SectionContainer>
+
       </Container>
       <Footer />
     </div>
