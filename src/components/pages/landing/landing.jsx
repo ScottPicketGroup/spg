@@ -15,13 +15,13 @@ import HomeImage from "../../../images/homeImage.png";
 
 
 
-import gridPic1 from "../../../images/home-venues/CL.jpg";
-import gridPic2 from "../../../images/home-venues/Estelle.jpg";
-import gridPic3 from "../../../images/home-venues/LG.jpg";
-import gridPic4 from "../../../images/home-venues/Matilda.jpg";
-import gridPic5 from "../../../images/home-venues/Pastore.jpg";
-import gridPic6 from "../../../images/home-venues/Longsong.jpg";
-import gridPic7 from "../../../images/home-venues/LeShoppe.jpg";
+import gridPic1 from "../../../images/gridPic8.png";
+import gridPic2 from "../../../images/gridPic8.png";
+import gridPic3 from "../../../images/gridPic8.png";
+import gridPic4 from "../../../images/gridPic8.png";
+import gridPic5 from "../../../images/gridPic8.png";
+import gridPic6 from "../../../images/gridPic8.png";
+import gridPic7 from "../../../images/gridPic8.png";
 import gridPic8 from "../../../images/gridPic8.png";
 
 import {
@@ -68,10 +68,12 @@ const Landing = ({ pageProps }) => {
               <BC1  theme={theme}>
               As one of Australia’s leading chefs and restaurateurs, Scott Pickett’s generous spirit and abundant personality are at the core of our establishments. He pairs his vast experience with his deep understanding of seasonality and respect for Australian growers and producers. Each Scott Pickett Group venue is a testament to the origins of the warm-hearted country boy with an obsessive dedication to excellence and passion for hospitality. 
               </BC1>
-              <Link to="/scott-pickett" />
+              <Link to="/scott-picket" style={{textDecoration: `none`}}>
+              
               <BC1 link={true} theme={theme}>
               Read more about Scott ‘Cheffo’ Pickett
               </BC1>
+              </Link>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
@@ -210,9 +212,11 @@ Soon to join the family will be ‘Smith Street Bistro’, a classic bistro with
               <BC1 theme={theme}>
               Stay up to date with the latest venue announcements, events, collaborations and more from the Scott Pickett Group: 
               </BC1>
+              <Link to="/whatson" style={{textDecoration: `none`}}>
               <BC1 link={true} theme={theme}>
                 Learn More
               </BC1>
+              </Link>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
