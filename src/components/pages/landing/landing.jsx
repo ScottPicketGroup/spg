@@ -15,13 +15,13 @@ import HomeImage from "../../../images/homeImage.png";
 
 
 
-import gridPic1 from "../../../images/gridPic8.png";
-import gridPic2 from "../../../images/gridPic8.png";
-import gridPic3 from "../../../images/gridPic8.png";
-import gridPic4 from "../../../images/gridPic8.png";
-import gridPic5 from "../../../images/gridPic8.png";
-import gridPic6 from "../../../images/gridPic8.png";
-import gridPic7 from "../../../images/gridPic8.png";
+import gridPic1 from "../../../images/home-venues/CL.jpg";
+import gridPic2 from "../../../images/home-venues/Estelle.jpg";
+import gridPic3 from "../../../images/home-venues/LG.jpg";
+import gridPic4 from "../../../images/home-venues/Matilda.jpg";
+import gridPic5 from "../../../images/home-venues/Pastore.jpg";
+import gridPic6 from "../../../images/home-venues/Longsong.jpg";
+import gridPic7 from "../../../images/home-venues/LeShoppe.jpg";
 import gridPic8 from "../../../images/gridPic8.png";
 
 import {
