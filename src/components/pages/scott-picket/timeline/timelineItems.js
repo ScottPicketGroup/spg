@@ -14,18 +14,16 @@ import timeline from "./timeline.json"
 import HoverImage from "./hoverImage"
 import HoverImage1 from "../hovers/hover1"
 const TimelineItems = () => {
-  const [image1, setImage1] = React.useState(
-   false
-  )
-  const [lastImage, setLastImage] = React.useState(false)
-  console.log(`timeline`, timeline)
   const theme = useTheme()
 const [display, setDisplay] = useState(0)
   return theme ? (
     <div>
 {timeline.map((item, i) => (
     <SectionContainer>
-      <TimeLineContainer>
+      <TimeLineContainer
+         onMouseOver={() => setDisplay(i +1)}
+         onMouseLeave={() => setDisplay(0)}
+      >
       
      
         <LeftContainer
@@ -33,12 +31,11 @@ const [display, setDisplay] = useState(0)
           justifyContent: `center `
         }}
         >
-          <HoverImage Image={`${item.image}`} display={image1} />
+          <HoverImage Image={`${item.image}`} display={display} id={i + 1}/>
         </LeftContainer>
         <RightContainer
-           onMouseOver={() => setDisplay(i +1)}
-           onMouseOut={() => setDisplay(0)}>
         >
+        
           <TimeLineGrid>
             <LeftGrid>
               <Header2>{item.year}</Header2>
@@ -56,19 +53,19 @@ const [display, setDisplay] = useState(0)
       <SectionContainer>
         <TimeLineContainer>
           <LeftContainer>
-            <HoverImage1 display={display} id={1} />
+            <HoverImage1  display={display} id={11} />
           </LeftContainer>
           <RightContainer>
             <TimeLineGrid
-              
+                onMouseOver={() => setDisplay(11)}
+                onMouseOut={() => setDisplay(0)}
             >
               <LeftGrid>
                 <Header2>2019</Header2>
                 <BC3>What a year! Estelle, Lupo, my newest publication ‘Marriage of Flavours’, the launch of new venture ‘Pastore’ & the move of Pickett’s Deli & Rotisserie to Melbourne Airport</BC3>
               </LeftGrid>
               <RightGrid 
-              onMouseOver={() => setDisplay(1)}
-              onMouseOut={() => setDisplay(0)}
+            
               >
                 <BC2>
                
@@ -99,7 +96,7 @@ const [display, setDisplay] = useState(0)
       <SectionContainer>
         <TimeLineContainer>
           <LeftContainer>
-            <HoverImage display={image1} />
+            <HoverImage  />
           </LeftContainer>
           <RightContainer>
             <TimeLineGrid
@@ -127,7 +124,7 @@ const [display, setDisplay] = useState(0)
       <SectionContainer>
         <TimeLineContainer>
           <LeftContainer>
-            <HoverImage1 display={image1} />
+            <HoverImage1  />
           </LeftContainer>
           <RightContainer>
             <TimeLineGrid
