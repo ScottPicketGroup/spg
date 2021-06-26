@@ -229,6 +229,9 @@ export const RightGrid = styled.div`
   padding: 0 0.5rem;
   display: inline;
   width: 62.5%;
+  :hover ${LeftGrid}{
+    opacity: 1;
+  }
 `;
 export const CookiesBanner = styled.div`
   position: fixed;
