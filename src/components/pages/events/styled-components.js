@@ -130,6 +130,7 @@ export const Grid = styled.div`
 export const Item = styled.a`
   padding: 0 0.5rem;
   display: block;
+  text-decoration: none;
 `;
 export const ItemImg = styled.div`
   min-height: 250px;

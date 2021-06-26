@@ -269,9 +269,9 @@ const MobileHome = ({ HomeImage, path }) => {
             expandIcon={expandIcon}
             onClick={() => handleOpenSubMenu("provider")}
           >
-            Provider
+            Providor
           </MenuItem>
-          <MenuItem theme={theme}>Shop</MenuItem>
+          {/* <MenuItem theme={theme}>Shop</MenuItem> */}
           <MenuItem
             theme={theme}
             bold={path && path.includes("/careers")}
