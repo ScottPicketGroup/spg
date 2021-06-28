@@ -10,10 +10,8 @@ export const items = [
      " heading": "Truffle Dinners",
       subHeading: "Truffle season is upon us.",
       content: [
-      "And its arguably the best season of the year.",
-      `"We’ve curated a number of exclusive events to celebrate the earthy, musky complexity of this season's truffles.`,
-      `Join us at Estelle, Matilda and Chancery Lane as we celebrate truffle season with three decadent truffle menus. 
-      `,
+      "And its arguably the best season of the year. We’ve curated a number of exclusive events to celebrate the earthy, musky complexity of this season's truffles.",
+      "<a href=http://www.blah.com>blah</a>",
     ],
       images: [truffle1, truffel2, truffel3],
       buttonText: "Book Now"

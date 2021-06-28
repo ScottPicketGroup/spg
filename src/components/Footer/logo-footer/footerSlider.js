@@ -186,7 +186,7 @@ export default class SimpleSlider extends Component {
             </a>
           </div>
           <div>
-          <a href="https://longrainmelbourne.com/" target="_blank">
+          <a href="https://longrainmelbourne.com/event/" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="71.607"

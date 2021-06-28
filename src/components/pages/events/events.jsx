@@ -1,5 +1,6 @@
 import React from "react"
-
+import { Link, graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components"
 import {
   Container,
@@ -32,31 +33,41 @@ import SliderFull from "./image-slider-full/Slider"
 
 const Events = ({ pageProps }) => {
   const theme = useTheme()
-
+  const data = useStaticQuery(graphql`
+  {
+    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "events-hero"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              
+              placeholder: BLURRED
+            
+            )
+          }
+        }
+      }
+    }
+  }`)
+  const image = getImage(data.allFile.edges[0].node)
   return theme ? (
     <div>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
-        <Home HomeImage={HomeImage} path={pageProps.path} />
+        <Home HomeImage={image} path={pageProps.path} />
 
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Header1 theme={theme}>Events</Header1>
+              <Header1 theme={theme}>In-venue private events </Header1>
               <BC1 theme={theme}>
-                The Scott Pickett Group is excited to launch our off-site
-                catering offer, ‘SP Events’. Debuting with our Longrain pop-up
-                at Sutton Grange Winery in March 2021, SP Events brings Scott
-                Pickett’s food to you – whatever your event may be. We are able
-                to offer our Estelle, Matilda, Longrain, Le Shoppe and ‘Scott’s
-                Greatest hits’ menus offsite for weddings, corporate events or
-                large-scale public events. Stay up to date with news from The
-                Scott Pickett group to be the first to know when our full offer
-                is live.
+              Parties of up to 8-10 guests can select from our regular menus and be seated in our main dining rooms, but for a more private soiree, each of our venues has private dining spaces to accommodate intimate dinners for 8 up to standing cocktail events of 250 guests. 
               </BC1>
-              <BC1 link theme={theme}>
-                Sign up to our email newsletter
+              <BC1>
+              Let us look after you as we help to bring your special event to life. From dedicated staff, bespoke menus, room dressing – the lot.
               </BC1>
+              
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
@@ -67,18 +78,9 @@ const Events = ({ pageProps }) => {
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Header1 theme={theme}>In-venue private events </Header1>
+              <Header1 theme={theme}>Our event spaces</Header1>
               <BC1 theme={theme}>
-                Parties of up to 8-10 guests can select from our regular menus
-                and be seated in our main dining rooms, but for a more private
-                soiree, each of our venues has private dining spaces to
-                accommodate intimate dinners for 8 up to standing cocktail
-                events of 250 guests.
-                <br />
-                <br />
-                Let us look after you as we help to bring your special event to
-                life. From dedicated staff, bespoke menus, room dressing – the
-                lot.
+              The links below will take you to specific event pages for each of our venues, or if you’re not sure which venue will be the best fit, fill out the expressions of interest form and one of our events team will be in touch.
               </BC1>
             </RightContainer>
           </InnerContainer>
@@ -93,7 +95,7 @@ const Events = ({ pageProps }) => {
                   <ImageDiv src={gridPic1}></ImageDiv>
                 </ImageView>
               </FullImageContainer>
-              <ItemImgCaption>CHANCERY LANE</ItemImgCaption>
+              <ItemImgCaption>Chancery Lane</ItemImgCaption>
               <BC3>Little Collins St, Melbourne</BC3>
             </RightContainerLink>
           </InnerContainer>

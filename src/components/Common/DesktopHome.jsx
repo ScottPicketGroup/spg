@@ -1,7 +1,8 @@
 import React from "react";
 
 import { useTheme } from "styled-components";
-import { SectionContainer } from "../../components/global/GlobalStyles";
+import { RightContainer, SectionContainer } from "../../components/global/GlobalStyles";
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Link } from "gatsby";
 
 import SideBar from "./SideBar";
@@ -14,7 +15,9 @@ const DesktopHome = ({ HomeImage, path }) => {
   return theme ? (
     <SectionContainer >
       <SideBar path={path}/>
-      <HeroImage HomeImage={HomeImage} />
+      <RightContainer>
+      <GatsbyImage image={HomeImage} alt="test" style/>
+      </RightContainer>
     </SectionContainer>
   ) : (
     <div></div>

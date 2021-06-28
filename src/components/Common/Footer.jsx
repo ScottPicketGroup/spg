@@ -140,7 +140,7 @@ const FooterComponent = () => {
                     to="/scott-picket"
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    Scott Picket
+                    Scott Pickett
                   </Link>
                 </MenuItem>
 
@@ -165,8 +165,8 @@ const FooterComponent = () => {
                   </Link>
                 </MenuItem>
                 <MenuItem theme={theme}>Gift Vouchers</MenuItem>
-                <MenuItem theme={theme}>Provider</MenuItem>
-                <MenuItem theme={theme}>Shop</MenuItem>
+                <MenuItem theme={theme}>Providoor</MenuItem>
+                {/* <MenuItem theme={theme}>Shop</MenuItem> */}
                 <MenuItem theme={theme}>
                   <Link
                     to="/careers"
@@ -182,24 +182,54 @@ const FooterComponent = () => {
               {" "}
               <Menu theme={theme}>
                 <MenuHeading theme={theme}>Venues</MenuHeading>
-                <MenuItem theme={theme}>Chancery Lane</MenuItem>
-                <MenuItem theme={theme}>Estelle</MenuItem>
-                <MenuItem theme={theme}>Longrain</MenuItem>
-                <MenuItem theme={theme}>Pastore</MenuItem>
+                <MenuItem theme={theme}>
+                  <a href="http://www.chancerylane.com.au" target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}
+                  >Chancery Lane </a></MenuItem>
+                <MenuItem theme={theme}>
+                  <a href="https://www.theestelle.com.au/" target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}
+                  >Estelle </a></MenuItem>
+               
+                <MenuItem theme={theme}>
+                  <a href="https://longrainmelbourne.com/" target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}
+                  >Longrain </a></MenuItem>
+                <MenuItem theme={theme}>
+                  <a href="https://matilda159.com/" target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}
+                  >Matilda </a></MenuItem>
+                <MenuItem theme={theme}>
+                  <a href="https://longrainmelbourne.com/event/" target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}
+                  >Longsong </a></MenuItem>
+                <MenuItem theme={theme}>
+                  <a href="http://www.leshoppe.com.au" target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}
+                  >Le Shoppe </a></MenuItem>
+                <MenuItem theme={theme}>
+                  <a href="https://www.spevents.com.au" target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}
+                  >SP Events </a></MenuItem>
+
               </Menu>
             </Item>
             <Item theme={theme}>
               {" "}
               <Menu theme={theme}>
                 <MenuHeading theme={theme}>Social Media</MenuHeading>
-                <MenuItem theme={theme}>Instagram</MenuItem>
-                <MenuItem theme={theme}>Facebook</MenuItem>
+                <MenuItem theme={theme}>
+                  <a href="http://www.instagram.com/scottpickettchef"  target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}
+                  >Instagram </a></MenuItem>
+               
+                
               </Menu>
             </Item>
             <Item theme={theme}>
               {" "}
               <Menu theme={theme}>
-                <MenuHeading theme={theme}>Contact Details</MenuHeading>
+                <MenuHeading theme={theme}>HEAD OFFICE</MenuHeading>
                 <MenuItem theme={theme}>
                 11/205 JOHNSTON ST,  <br/>
 FITZROY 3065<br/>
@@ -213,8 +243,7 @@ Australia
               <Menu theme={theme}>
                 <MenuHeading theme={theme}>Subscribe</MenuHeading>
                 <MenuItem theme={theme}>
-                  Sign up to our newletter for news, stories and invitations to
-                  the things we love to share and enjoy from Pickett & Co.{" "}
+                Sign up for updates from the Scott Pickett Group and to be the first to know about events, new venues, collaborations and more. 
                 </MenuItem>
                 <SubMenuHeading theme={theme}>EMAIL ADDRESS</SubMenuHeading>
 

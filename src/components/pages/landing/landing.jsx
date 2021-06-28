@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components"
 import {
   Container,
@@ -37,11 +39,32 @@ import Slider from "./image-slider/Slider"
 
 const Landing = ({ pageProps }) => {
   const theme = useTheme()
+  const data = useStaticQuery(graphql`
+  {
+    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "home-hero"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              
+              placeholder: BLURRED
+            
+            )
+          }
+        }
+      }
+    }
+  }`)
+  const image = getImage(data.allFile.edges[0].node)
+  console.log(data.allFile.edges[0].node.childImageSharp)
 
+  // const image = getImage(data.allFile.edges[0])
   return theme ? (
     <div style={{ background: `#f9f9f4` }}>
       <Container theme={theme}>
-        <Home HomeImage={HomeImage} path={pageProps.path} />
+      
+        <Home HomeImage={image} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
@@ -85,26 +108,20 @@ const Landing = ({ pageProps }) => {
               <Header1 theme={theme}>Venues</Header1>
               <BC1 theme={theme}>
                 Our developing list of Melbourne venues includes European-bistro
-                ‘Chancery Lane’, contemporary Australian ‘Matilda’, modern-Thai
-                ‘Longrain’, contemporary Australian ‘Estelle’, vibrant CBD bar
-                ‘Longsong’, European coffee-bar and provedore ‘Le Shoppe’,
-                Modern Italian ‘Pastore’, European deli ‘Pickett’s Deli’ and
-                offsite catering ‘SP Events’.
+              <i> Chancery Lane</i>, contemporary Australian <i>Matilda</i>, modern-Thai 
+                <i> Longrain</i>, contemporary Australian <i>Estelle</i>, vibrant CBD bar
+                <i>Longsong</i>, European coffee-bar and provedore <i>Le Shoppe</i>,
+                Modern Italian <i>Pastore</i>, European deli <i>Pickett’s Deli</i> and
+                offsite catering <i>SP Events</i>.
               </BC1>
               <BC1>
-                Soon to join the family will be ‘Smith Street Bistro’, a classic
+                Soon to join the family will be <i>Smith Street Bistro</i>, a classic
                 bistro with a North-side edge.
               </BC1>
 
               {/* <Header1> Our Event Spaces</Header1> */}
 
-              <BC1>
-                {" "}
-                The links below will take you to specific event pages for each
-                of our venues, or if you’re not sure which venue will be the
-                best fit, fill out the expressions of interest form and one of
-                our events team will be in touch.
-              </BC1>
+             
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
@@ -115,108 +132,123 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Grid cols={2}>
                 <Item link={true}>
-                  <ItemImgLink href="#">
+                  <ItemImgLink href='http://www.chancerylane.com.au ' target="_blank">
                     <FullImageContainer>
-                      <ImageView>
-                        <ImageDiv
-                          src={gridPic1}
-                          link={true}
-                          ratio="3/2"
-                        ></ImageDiv>
-                      </ImageView>
+                    <StaticImage 
+                 placeholder="blurred"
+                    src="../../../images/home-venues/CL.jpg" alt="Chancery Lane" />
                     </FullImageContainer>
-                    <Header2 style={{ marginTop: `2.25rem` }}>
+                    <Header2 style={{ marginTop: `1.25rem` }}>
                       Chancery Lane
                     </Header2>
                     <BC3 link={true}>Little Collins St, Melbourne</BC3>
                   </ItemImgLink>
                 </Item>
                 <Item link={true}>
-                  <ItemImgLink href="#">
+                  <ItemImgLink href='http://www.theestelle.com.au' target="_blank">
                     <FullImageContainer>
-                      <ImageView>
-                        <ImageDiv src={gridPic2} ratio="3/2"></ImageDiv>
-                      </ImageView>
+                    <StaticImage 
+                    placeholder="blurred"
+                    src="../../../images/home-venues/Estelle.jpg" alt="Chancery Lane" />
                     </FullImageContainer>
-                    <Header2 style={{ marginTop: `2.25rem` }}>Estelle</Header2>
+                    <Header2 style={{ marginTop: `1.25rem` }}>Estelle</Header2>
                     <BC3 link={true}>High St, Northcote</BC3>
                   </ItemImgLink>
                 </Item>
                 <Item link={true}>
                   {" "}
-                  <ItemImgLink href="#">
+                  <ItemImgLink href='http://www.longrainmelbourne.com' target="_blank">
                     <FullImageContainer>
-                      <ImageView>
-                        <ImageDiv src={gridPic3} ratio="3/2"></ImageDiv>
-                      </ImageView>
+                    <StaticImage 
+                    placeholder="blurred"
+                    src="../../../images/home-venues/LG.jpg" alt="Chancery Lane" />
                     </FullImageContainer>
-                    <Header2 style={{ marginTop: `2.25rem` }}>Longrain</Header2>
+                    <Header2 style={{ marginTop: `1.25rem` }}>Longrain</Header2>
                     <BC3 link={true}>Little Bourke St, Melbourne </BC3>
                   </ItemImgLink>
                 </Item>
 
                 <Item link={true}>
                   {" "}
-                  <ItemImgLink href="#">
+                  <ItemImgLink href='https://matilda159.com/' target="_blank">
                     <FullImageContainer>
-                      <ImageView>
-                        <ImageDiv src={gridPic4} ratio="3/2"></ImageDiv>
-                      </ImageView>
+                    <StaticImage 
+                    placeholder="blurred"
+                    src="../../../images/home-venues/Matilda.jpg" alt="Chancery Lane" />
                     </FullImageContainer>
-                    <Header2 style={{ marginTop: `2.25rem` }}>Matilda</Header2>
+                    <Header2 style={{ marginTop: `1.25rem` }}>Matilda</Header2>
                     <BC3 link={true}>Domain Rd, South Yarra</BC3>
                   </ItemImgLink>
                 </Item>
                 <Item link={true}>
                   {" "}
-                  <ItemImgLink href="#">
+                  <ItemImgLink href='http://www.pastorerestaurant.com.au' target="_blank">
                     <FullImageContainer>
-                      <ImageView>
-                        <ImageDiv src={gridPic5} ratio="3/2"></ImageDiv>
-                      </ImageView>
+                    <StaticImage 
+                    placeholder="blurred"
+                    src="../../../images/home-venues/Pastore.jpg" alt="Chancery Lane" />
                     </FullImageContainer>
-                    <Header2 style={{ marginTop: `2.25rem` }}>Pastore</Header2>
+                    <Header2 style={{ marginTop: `1.25rem` }}>Pastore</Header2>
                     <BC3 link={true}>Dandenong Rd, Chadstone</BC3>
                   </ItemImgLink>
                 </Item>
                 <Item link={true}>
                   {" "}
-                  <ItemImgLink href="#">
+                  <ItemImgLink href='http://www.longsong.com.au' target="_blank">
                     <FullImageContainer>
-                      <ImageView>
-                        <ImageDiv src={gridPic6} ratio="3/2"></ImageDiv>
-                      </ImageView>
+                    <StaticImage 
+                    placeholder="blurred"
+                    src="../../../images/home-venues/Longsong.jpg" alt="Chancery Lane" />
                     </FullImageContainer>
-                    <Header2 style={{ marginTop: `2.25rem` }}>Longsong</Header2>
+                    <Header2 style={{ marginTop: `1.25rem` }}>Longsong</Header2>
                     <BC3 link={true}>UPSTAIRS, Little Bourke St, Melbourne</BC3>
                   </ItemImgLink>
                 </Item>
                 <Item link={true}>
                   {" "}
-                  <ItemImgLink href="#">
+                  <ItemImgLink href='http://www.leshoppe.com.au' target="_blank">
                     <FullImageContainer>
-                      <ImageView>
-                        <ImageDiv src={gridPic7} ratio="3/2"></ImageDiv>
-                      </ImageView>
+                    <StaticImage 
+                    aspectRatio={3 / 2}
+                    placeholder="blurred"
+                    src="../../../images/home-venues/LeShoppe.jpg" alt="Chancery Lane" />
                     </FullImageContainer>
-                    <Header2 style={{ marginTop: `2.25rem` }}>
+                    <Header2 style={{ marginTop: `1.25rem` }}>
                       Le Shoppe
                     </Header2>
-                    <BC3 link={true}>Dandenong Rd, Chadstone</BC3>
+                    <BC3 link={true}>‘Little Collins St, Melbourne</BC3>
                   </ItemImgLink>
                 </Item>
                 <Item link={true}>
                   {" "}
-                  <ItemImgLink href="#">
+                  <ItemImgLink href='http://' target="_blank">
                     <FullImageContainer>
-                      <ImageView>
-                        <ImageDiv src={gridPic8} ratio="3/2"></ImageDiv>
-                      </ImageView>
+                    <StaticImage 
+                    aspectRatio={3 / 2}
+                    placeholder="blurred"
+                    layout="fullWidth"
+                    src="../../../images/home-venues/events.png" alt="Chancery Lane" />
                     </FullImageContainer>
-                    <Header2 style={{ marginTop: `2.25rem` }}>
+                    <Header2 style={{ marginTop: `1.25rem` }}>
                       SP Events
                     </Header2>
-                    <BC3 link={true}>AUSTRALIA</BC3>
+                    <BC3 link={true}>Victoria</BC3>
+                  </ItemImgLink>
+                </Item>
+                <Item link={true}>
+                  {" "}
+                  <ItemImgLink href='http://www.pickettsdeli.com' target="_blank">
+                    <FullImageContainer>
+                    <StaticImage 
+                    aspectRatio={3 / 2}
+                    placeholder="blurred"
+                    layout="fullWidth"
+                    src="../../../images/home-venues/deli.jpg" alt="Chancery Lane" />
+                    </FullImageContainer>
+                    <Header2 style={{ marginTop: `1.25rem` }}>
+                    Pickett’s Deli & Rotisserie
+                    </Header2>
+                    <BC3 link={true}>Terminal 3, Melbourne Airport </BC3>
                   </ItemImgLink>
                 </Item>
               </Grid>
@@ -250,3 +282,4 @@ const Landing = ({ pageProps }) => {
 }
 
 export default Landing
+

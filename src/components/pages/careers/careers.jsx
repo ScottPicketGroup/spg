@@ -1,8 +1,8 @@
-import React from "react";
-import { useTheme } from "styled-components";
-import { Container, SectionContainer } from "../../global/GlobalStyles";
-import HomeImage from "../../../images/carrers-hero.jpg";
-import Logo from "../../../images/logo.svg";
+import React from "react"
+import { useTheme } from "styled-components"
+import { Container, SectionContainer } from "../../global/GlobalStyles"
+import HomeImage from "../../../images/carrers-hero.jpg"
+import Logo from "../../../images/logo.svg"
 import {
   InnerContainer,
   RightContainer,
@@ -10,13 +10,13 @@ import {
   LogoImg,
   Button,
   PostContainer,
-} from "./styled-components";
-import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";
+} from "./styled-components"
+import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles"
 
-import Footer from "../../Common/Footer";
-import Home from "../../Common/DesktopHome";
+import Footer from "../../Common/Footer"
+import Home from "../../Common/DesktopHome"
 const Landing = ({ pageProps }) => {
-  const theme = useTheme();
+  const theme = useTheme()
 
   return theme ? (
     <div>
@@ -29,59 +29,67 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>Careers</Header1>
               <BC1 theme={theme}>
-              Want to take the next step in your career? 
+                Want to take the next step in your career?
               </BC1>
               <BC1 theme={theme}>
-              The Scott Pickett Group is one of Melbourne’s most respected hospitality groups, helmed by Chef Restaurateur Scott Pickett. Our award-winning Melbourne restaurants include Chancery Lane, Matilda, Longrain, Estelle and Pastore – and the list is growing. 
+                The Scott Pickett Group is one of Melbourne’s most respected
+                hospitality groups, helmed by Chef Restaurateur Scott Pickett.
+                Our award-winning Melbourne restaurants include Chancery Lane,
+                Matilda, Longrain, Estelle and Pastore – and the list is
+                growing.
               </BC1>
               <BC1 theme={theme}>
-              At the Scott Pickett Group, we’re serious about sharing our true passion for hospitality with our guests. We strive to make every guest’s visit a memorable experience. 
+                At the Scott Pickett Group, we’re serious about sharing our true
+                passion for hospitality with our guests. We strive to make every
+                guest’s visit a memorable experience.
               </BC1>
               <BC1 theme={theme}>
-              Our staff are one of our most valuable assets, and we are always looking out for like-minded people to help us achieve our vision. We recognise the importance of working towards our vision as one team, as diverse as our venues are. We work hard to make sure that every staff member lives by our Scott Pickett Group values, being Generous, Respectful, Grounded, Creative, Inclusive and Bold. 
+                Our staff are one of our most valuable assets, and we are always
+                looking out for like-minded people to help us achieve our
+                vision. We recognise the importance of working towards our
+                vision as one team, as diverse as our venues are. We work hard
+                to make sure that every staff member lives by our Scott Pickett
+                Group values, being Generous, Respectful, Grounded, Creative,
+                Inclusive and Bold.
               </BC1>
               <BC1 theme={theme}>
-              We are proud to offer a working environment where staff can learn and grow, with extensive career progression opportunities within our group and are always happy to hear from prospective team members. See our current roles below or send your CV to careers@scottpickettgroup.com.au for any roles which aren’t currently advertised. 
+                We are proud to offer a working environment where staff can
+                learn and grow, with extensive career progression opportunities
+                within our group and are always happy to hear from prospective
+                team members. See our current roles below or send your CV to
+                careers@scottpickettgroup.com.au for any roles which aren’t
+                currently advertised.
               </BC1>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
 
-        {/* <SectionContainer>
+        <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <PostContainer>
-                <Header2 theme={theme}>Waitress - FOH All Rounder</Header2>
-                <Header4 theme={theme}>Longrain melbourne</Header4>
-                <Header4 theme={theme}>10th April 2021</Header4>
+                <Header2 theme={theme}>Chef de Partie: </Header2>
+                <Header4 theme={theme}>CHANCERY LANE BISTRO </Header4>
+                <Header4 theme={theme}>26TH JUNE 2021</Header4>
                 <BC3 theme={theme}>
                   <BC3>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Morbi volutpat risus efficitur nulla aliquam suscipit. Nulla
-                    sed ullamcorper felis, a vulputate mi. Aenean enim leo,
-                    egestas vitae ultrices at, placerat ac lorem. Donec tortor
-                    augue, pulvinar et dictum vel, euismod id velit. Sed nec
-                    suscipit mauris. Ut sollicitudin rutrum eros at maximus.
-                    Duis vitae dui eu tellus dignissim commodo et in tortor.
-                    Praesent ac magna vulputate, fringilla odio et, vehicula
-                    lorem.
+                    We are seeking a passionate Chef de Partie and commis chef
+                    for Scott Pickett’s newest CBD restaurant, European bistro
+                    Chancery Lane.
                   </BC3>
-                  <li>- Casual, part-time & full-time positions available</li>
-                  <li>- Must have experience in Hospitality </li>
-                  <li>
-                    - Must be a passionate, friendly and reliable team player
-                  </li>
-                  <li>
-                    - Must thrive in a busy environment - Immediate start
-                    necessary
-                  </li>
                 </BC3>
               </PostContainer>
-              <Button>Apply</Button>
+              <Button>
+                <a href="https://www.seek.com.au/job/52699270?type=standard#searchRequestToken=011af1a2-e8fb-4bea-a982-f7ac39c7cdc5" target="_blank">
+                Apply
+                </a>
+                </Button>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
+
+        {/* 
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
@@ -143,7 +151,7 @@ const Landing = ({ pageProps }) => {
     </div>
   ) : (
     <div></div>
-  );
-};
+  )
+}
 
-export default Landing;
+export default Landing

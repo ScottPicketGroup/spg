@@ -16,7 +16,7 @@ import SliderFull from "./image-slider-full/Slider";
 
 const LeftAligned = ({ data }) => {
   const theme = useTheme();
-console.log(data.content[0])
+console.log(data.links)
   return theme ? (
     <Grid cols="2">
      <Item>
@@ -26,7 +26,7 @@ console.log(data.content[0])
         
       </Item>
       <Item>
-        <Header2 theme={theme}>{data.heading}</Header2>
+        <Header2 marginBottom="1rem"  theme={theme}>{data.heading}</Header2>
         <Header3 theme={theme}>{data.subHeading}</Header3>
  
         {
@@ -34,7 +34,15 @@ console.log(data.content[0])
             <BC3>{para}</BC3>
           ))
         }
-        <Button>{data.buttonText}</Button>
+       
+       { data.buttonLink ? (
+         <a href={data.buttonLink} target='_blank'>
+        <Button>
+          
+          {data.buttonText}</Button>
+          </a>
+       ) : null}
+        
       </Item>
     </Grid>
   ) : (

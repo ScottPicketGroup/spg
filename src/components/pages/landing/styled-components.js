@@ -98,13 +98,14 @@ export const MenuHeader = styled.div`
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
-  grid-gap: ${(props) => (props.theme.name === "Desktop" ? "6rem 0rem" : "3.5rem 0")};
+  grid-gap: ${(props) => (props.theme.name === "Desktop" ? "3.5rem 0rem" : "3.5rem 0")};
   align-items: center;
 `;
 
 export const Item = styled.div`
   padding: 0 0.5rem;
   display: block;
+  transition: opacity .2s ease-out;
   &:hover {
     opacity: ${(props) => (props.link ? 0.5 : 1)};
   }
@@ -121,6 +122,7 @@ export const ItemImg = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 2.25 rem;
+  transition: opacity .2s ease-out;
   &:hover {
     opacity: 0.25;
   }

@@ -2,8 +2,8 @@ import React from "react";
 import { useTheme } from "styled-components";
 import { Container, SectionContainer } from "../../global/GlobalStyles";
 import HomeImage from "../../../images/whats-on/whatsOnHero.jpg";
-
-
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { Link, graphql, useStaticQuery } from "gatsby"
 
 import {
   InnerContainer,
@@ -34,10 +34,12 @@ const whatsOnEvents = [
       subHeading: "Truffle season is upon us.",
       content: [
       "And its arguably the best season of the year.",
-      `"We’ve curated a number of exclusive events to celebrate the earthy, musky complexity of this season's truffles.`,
-      `Join us at Estelle, Matilda and Chancery Lane as we celebrate truffle season with three decadent truffle menus. 
-      `,
+      `We’ve curated a number of exclusive events to celebrate the earthy, musky complexity of this season's truffles.`,
+    
     ],
+      links: [
+        "Join us at Estelle, Matilda and Chancery Lane as we celebrate truffle season with three decadent truffle menus."
+      ],
       images: [truffle1, truffel2, truffel3],
       buttonText: "Book Now"
     },
@@ -48,23 +50,29 @@ const whatsOnEvents = [
       "Matilda is expanding its brunch offering with a brand-new menu – we’ll have options for whatever you’re feeling, a green smoothie while you walk the Tan, or a smoked marshmallow waffle smore and mimosa… New take-away and sit-down brunch menu launching late July."
       
     ],
-      image: matilda,
-      buttonText: "Follow Matilda"
-    },
-    {
-      heading: "Melbourne Food & Wine Festival – High Steaks at Chancery Lane ",
-      subHeading: "Long live the long lunch!",
-      content: [
-        "Revive the lost art of the long lunch at our venue rich in everything that makes the art of hospitality so deeply appealing. ",
-        `Scott Pickett and Chancery Lane Head Chef Rob Kabboord have designed a luxe menu that’s dangerously decadent – from the seafood hors d’oeuvres to the tartare of beef with potato and caviar, and of course the rib-eye with truffle sauce, served to share. `,
-        `Friday 20th and Friday 27th August.`,
-        `$183 four-courses with welcome drink `,
-        `$278 four-courses with welcome drink and matched premium wines   `
-        
+    links: [
+      "Estelle", 
+      "Matilda",
+      "and Chancery Lane"
     ],
-      image: highStakes,
-      buttonText: "Book Now"
+      image: matilda,
+      buttonText: "Follow Matilda",
+      buttonLink: "https://www.instagram.com/matilda159domain/"
     },
+    // {
+    //   heading: "Melbourne Food & Wine Festival – High Steaks at Chancery Lane ",
+    //   subHeading: "Long live the long lunch!",
+    //   content: [
+    //     "Revive the lost art of the long lunch at our venue rich in everything that makes the art of hospitality so deeply appealing. ",
+    //     `Scott Pickett and Chancery Lane Head Chef Rob Kabboord have designed a luxe menu that’s dangerously decadent – from the seafood hors d’oeuvres to the tartare of beef with potato and caviar, and of course the rib-eye with truffle sauce, served to share. `,
+    //     `Friday 20th and Friday 27th August.`,
+    //     `$183 four-courses with welcome drink `,
+    //     `$278 four-courses with welcome drink and matched premium wines   `
+        
+    // ],
+    //   image: highStakes,
+    //   buttonText: "Book Now"
+    // },
     {
       heading: "The Butcher, the Providore and the Chef",
       subHeading: "Join us for a four-course dinner at Matilda, celebrating the butcher, the providore and the chef.",
@@ -75,7 +83,8 @@ const whatsOnEvents = [
         `$125pp `,  
     ],
       image: butcher,
-      buttonText: "Book Now"
+      buttonText: "Book Now",
+      buttonLink: "https://www.sevenrooms.com/events/matilda"
     },
     {
       heading: "Women in Wine series ",
@@ -86,7 +95,8 @@ const whatsOnEvents = [
       
     ],
       image: women,
-      buttonText: "Follow Longsong"
+      buttonText: "BOOK NOW",
+      buttonLink: " https://www.sevenrooms.com/events/chancerylane"
     },
     {
       heading: "Longsong Bar relaunch ",
@@ -100,10 +110,11 @@ const whatsOnEvents = [
         
     ],
       image: longsong,
-      buttonText: "Book Now"
+      buttonText: "FOLLOW LONGSONG",
+      buttonLink: "https://www.instagram.com/longsongmelbourne/"
     },
     {
-      heading: "Pickett’s Altitude gin ",
+      heading: "Pickett’s Altitude Gin ",
       subHeading: "",
       content: [
         "We’re excited to have launched our latest batch of Pickett’s Gin this month. This time, the gin is flavoured by native botanicals like you’ll find in our restaurant menus, all foraged from 400+m above sea level. ",
@@ -120,11 +131,28 @@ const whatsOnEvents = [
   ]
 const Landing = ({ pageProps }) => {
   const theme = useTheme();
-
+  const data = useStaticQuery(graphql`
+  {
+    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "whats-on-hero"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              
+              placeholder: BLURRED
+            
+            )
+          }
+        }
+      }
+    }
+  }`)
+  const image = getImage(data.allFile.edges[0].node)
   return theme ? (
     <div>
       <Container theme={theme} style={{paddingBottom: `9rem`}}>
-        <Home HomeImage={HomeImage} path={pageProps.path} />
+        <Home HomeImage={image} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
@@ -139,6 +167,18 @@ Read on to hear what’s coming up at our Scott Pickett Group venues.
           </InnerContainer>
         </SectionContainer>
 
+
+      <SectionContainer>
+        <InnerContainer>
+          <LeftContainer></LeftContainer>
+          <RightContainer>
+
+               <StaticImage 
+                 placeholder="blurred"
+                    src="../../../images/whats-on-carousel/whats-on-full.jpg" alt="Waiter with drinks" />
+          </RightContainer>
+        </InnerContainer>
+      </SectionContainer>
         {whatsOnEvents &&
           whatsOnEvents.map((item, index) => {
             return (

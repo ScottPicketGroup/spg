@@ -91,8 +91,9 @@ export const Button = styled.button`
   background-color: ${(props) => props.theme.colors.body};
   border: ${(props) => `1px solid ${props.theme.colors.text}`};
   text-transform: uppercase;
+  transition: all .2s ease-out;
   &:hover {
-    background-color: ${(props) => `${props.theme.colors.body}`};
-    color: ${(props) => props.theme.colors.text};
+    background-color: #333333;
+    color: #F9F9F4;
   }
 `;

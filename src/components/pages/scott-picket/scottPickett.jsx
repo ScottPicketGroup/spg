@@ -15,7 +15,8 @@ import {
   QuotationContainer,
   Hat,
 } from "./styled-components"
-
+import { Link, graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import { BC1, Header1, Header2, Quotation, BC2 } from "../../global/fontStyles"
 import Footer from "../../Common/Footer"
 import Home from "../../Common/DesktopHome"
@@ -25,19 +26,37 @@ import SliderFull from "./image-slider-full/Slider"
 
 import { SliderContainer } from "./image-slider-full/slider-components"
 const Landing = ({ pageProps }) => {
+  const data = useStaticQuery(graphql`
+  {
+    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "scott-portrait"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              
+              placeholder: BLURRED
+            
+            )
+          }
+        }
+      }
+    }
+  }`)
+  const image = getImage(data.allFile.edges[0].node)
   const theme = useTheme()
 
   return theme ? (
     <div>
       <Container theme={theme}>
-        <Home HomeImage={HomeImage} path={pageProps.path} />
+        <Home HomeImage={image} path={pageProps.path} />
 
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Scott Pickett</Header1>
-              <BC1 theme={theme} marginBottom="6rem" marginBottom="6rem">
+              <BC1 theme={theme} marginBottom="3.5rem">
                 My love for great produce began early. As a kid on a farm in
                 Kangarilla, it taught me a lot about food and seasonality.
                 Knowing the growers and producers behind the food we ate gave me
@@ -52,7 +71,7 @@ const Landing = ({ pageProps }) => {
            <Slider/>
           </InnerContainer>
         </SectionContainer>
-              <BC1 theme={theme} marginBottom="6rem" marginBottom="6rem">
+              <BC1 theme={theme} marginBottom="3.5rem" >
                 Those years set the foundations of my values as a chef and
                 restaurateur today. My approach always puts food at the front.
                 It’s based on real cooking – with the greatest respect to the
@@ -60,7 +79,7 @@ const Landing = ({ pageProps }) => {
                 experiences, with incredible service. But the food is the hero.
 
                 </BC1>
-              <BC1 theme={theme} marginBottom="6rem" marginBottom="6rem">
+              <BC1 theme={theme} marginBottom="3.5rem" >
                 Now, as a restaurateur, I don’t spend as much time cooking as I
                 used to, but I have some gun Head Chefs to work with. Together,
                 we build on what makes each of the venues special, and try to
@@ -103,7 +122,7 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>Accolades</Header1>
               <BC1 theme={theme} marginBottom="6rem">
-              It’s been one hell of a career so far, yet I feel like I’m only just getting started. Some of the highlights are below:
+              I’m proud to have had recognition for my restaurants over the years:
               </BC1>
             </RightContainer>
           </InnerContainer>

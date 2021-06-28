@@ -208,7 +208,7 @@ const MobileHome = ({ HomeImage, path }) => {
             }}
           >
             <Link style={{ color: "inherit", textDecoration: "none" }}>
-              Scott Picket
+              Scott Pickett
             </Link>
           </MenuItem>
 
@@ -269,7 +269,7 @@ const MobileHome = ({ HomeImage, path }) => {
             expandIcon={expandIcon}
             onClick={() => handleOpenSubMenu("provider")}
           >
-            Providor
+            Providoor
           </MenuItem>
           {/* <MenuItem theme={theme}>Shop</MenuItem> */}
           <MenuItem

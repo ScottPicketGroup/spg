@@ -106,9 +106,11 @@ const SliderFull = ({ images }) => {
 
       <SliderContainer ref={el => (title = el)}>
         {activeImg === 0 ? (
-          <Image src={images[0]} alt="matilda" />
+          <Image src={images[0]} alt="matilda" style={{aspectRatio: `2/3`}}/>
         ) : activeImg === 1 ? (
-          <Image src={images[1]} alt="matilda" />
+          <Image src={images[1]} alt="matilda" 
+          style={{aspectRatio: `2/3`}}
+          />
         
         ) : null}
       </SliderContainer>

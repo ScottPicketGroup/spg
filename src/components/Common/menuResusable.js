@@ -77,7 +77,7 @@ const MenuResusable = () => {
                 }}
                 activeStyle={{ fontFamily: `UntitledSansMedium` }}
               >
-                Scott Picket
+                Scott Pickett
               </Link>
             </MenuItem>
           ) : null}
@@ -86,7 +86,7 @@ const MenuResusable = () => {
             theme={theme}
             onClick={() => handleOpenSubMenu("bookATable")}
           >
-            Book a table
+            Book a Table
           </MenuItem>
 
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("events")}>
@@ -105,12 +105,16 @@ const MenuResusable = () => {
           </MenuItem>
           <MenuItem
             theme={theme}
-            onClick={() => handleOpenSubMenu("giftVoucher")}
+           
           >
+            <a href="https://apps.giverapp.net/pickettandco/" target="_blank"
+            style={{textDecoration: `none`, color: `#333333`}}
+            >
             Gift Vouchers
+            </a>
           </MenuItem>
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Providor
+            Providoor
           </MenuItem>
           {/* <MenuItem theme={theme}>Shop</MenuItem> */}
           <MenuItem theme={theme}>

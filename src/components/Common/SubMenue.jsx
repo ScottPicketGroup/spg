@@ -146,7 +146,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
             theme={theme}
             onClick={() => handleOpenSubMenu("bookATable")}
           >
-            Book a table
+            Book a Table
           </MenuItem>
 
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("events")}>
