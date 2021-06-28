@@ -1,5 +1,6 @@
 import styled from "styled-components";
-
+import Img from 'gatsby-image'
+import { StaticImage } from "gatsby-plugin-image"
 export const Title = styled.h1`
   font-size: 1.5em;
   text-align: center;
@@ -87,6 +88,11 @@ export const ImageDiv = styled.div`
     opacity: ${(props) => (props.link ? 0.5 : 1)};
   }
 `;
+
+export const gImg = styled(StaticImage)`
+width: 100%;
+aspect-ratio: 4/3;
+`
 
 // export const ImageDiv = styled.img`
 //   height: 100%;

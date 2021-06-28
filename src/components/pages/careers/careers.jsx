@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "styled-components";
 import { Container, SectionContainer } from "../../global/GlobalStyles";
-import HomeImage from "../../../images/Screen Shot 2021-04-18 at 1.42.07 pm.png";
+import HomeImage from "../../../images/carrers-hero.jpg";
 import Logo from "../../../images/logo.svg";
 import {
   InnerContainer,

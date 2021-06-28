@@ -6,6 +6,7 @@ import {
   ImageView,
   ImageDiv,
   RightContainer,
+  gImg,
 } from "../../components/global/GlobalStyles";
 
 const HeroImage = ({ HomeImage }) => {
@@ -14,9 +15,11 @@ const HeroImage = ({ HomeImage }) => {
   return theme ? (
     <RightContainer>
       <ImageContainer>
-        <ImageView>
-          <ImageDiv src={HomeImage} />
-        </ImageView>
+       
+          
+            <gImg src={HomeImage}/>
+           
+        
       </ImageContainer>
     </RightContainer>
   ) : (
