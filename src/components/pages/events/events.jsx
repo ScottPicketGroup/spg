@@ -41,10 +41,10 @@ const Events = ({ pageProps }) => {
           id
           childImageSharp {
             gatsbyImageData(
-              
+              layout: FULL_WIDTH
               placeholder: BLURRED
-            
-            )
+              aspectRatio: 1.5
+              )
           }
         }
       }
@@ -103,11 +103,11 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
-              <RightContainerLink hover href="http://www.google.com" target="_blank">
+              <RightContainerLink hover href='http://www.theestelle.com.au' target="_blank">
               <FullImageContainer>
-                <ImageView>
-                  <ImageDiv src={gridPic2}></ImageDiv>
-                </ImageView>
+              <StaticImage 
+                    placeholder="blurred"
+                    src="../../../images/events-pdrs/Estelle.jpg" alt="Chancery Lane" />
               </FullImageContainer>
               <ItemImgCaption>Estelle</ItemImgCaption>
               <BC3>High St, Northcote</BC3>
@@ -117,11 +117,11 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
-              <RightContainerLink hover href="http://www.google.com" target="_blank">
+              <RightContainerLink hover href='http://www.longrainmelbourne.com' target="_blank">
               <FullImageContainer>
-                <ImageView>
-                  <ImageDiv src={gridPic3}></ImageDiv>
-                </ImageView>
+              <StaticImage 
+                    placeholder="blurred"
+                    src="../../../images/events-pdrs/longgrain.jpeg" alt="Chancery Lane" />
               </FullImageContainer>
               <ItemImgCaption>Longrain</ItemImgCaption>
               <BC3>Little Bourke St, Melbourne</BC3>
@@ -131,11 +131,13 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
-             <RightContainerLink hover href="http://www.google.com" target="_blank">
+             <RightContainerLink hover href='https://matilda159.com/' target="_blank">
               <FullImageContainer>
-                <ImageView>
-                  <ImageDiv src={gridPic4}></ImageDiv>
-                </ImageView>
+              <StaticImage 
+                    aspectRatio={3 / 2}
+                    placeholder="blurred"
+                    layout="fullWidth"
+                    src="../../../images/events-pdrs/flowers.jpg" alt="Matilda" />
               </FullImageContainer>
               <ItemImgCaption>Matilda</ItemImgCaption>
               <BC3>Domain Road, South Yarra</BC3>
@@ -145,17 +147,33 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
-             <RightContainerLink hover href="http://www.google.com" target="_blank">
+             <RightContainerLink hover href='http://www.pastorerestaurant.com.au' target="_blank">
               <FullImageContainer>
-                <ImageView>
-                  <ImageDiv src={gridPic5}></ImageDiv>
-                </ImageView>
+              <StaticImage 
+                    placeholder="blurred"
+                    src="../../../images/home-venues/Pastore.jpg" alt="Chancery Lane" />
               </FullImageContainer>
               <ItemImgCaption>Pastore</ItemImgCaption>
               <BC3>Dandenong Road, Chadstone</BC3>
             </RightContainerLink>
           </InnerContainer>
         </SectionContainer>
+        {/* <SectionContainer>
+          <InnerContainer>
+            <LeftContainer></LeftContainer>
+             <RightContainerLink hover href='http://www.pickettsdeli.com' target="_blank">
+              <FullImageContainer>
+              <StaticImage 
+                    aspectRatio={3 / 2}
+                    placeholder="blurred"
+                    layout="fullWidth"
+                    src="../../../images/home-venues/deli.jpg" alt="Pickett’s Deli & Rotisserie" />
+              </FullImageContainer>
+              <ItemImgCaption>Pickett’s Deli & Rotisserie</ItemImgCaption>
+              <BC3>Terminal 3, Melbourne Airport</BC3>
+            </RightContainerLink>
+          </InnerContainer>
+        </SectionContainer> */}
       </Container>
       <Footer />
     </div>

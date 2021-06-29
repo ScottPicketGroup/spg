@@ -2,7 +2,9 @@ import React from "react"
 import { useTheme } from "styled-components"
 import { Container, SectionContainer } from "../../global/GlobalStyles"
 import HomeImage from "../../../images/carrers-hero.jpg"
-import Logo from "../../../images/logo.svg"
+import { Link, graphql, useStaticQuery } from "gatsby"
+
+import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import {
   InnerContainer,
   RightContainer,
@@ -16,12 +18,29 @@ import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles"
 import Footer from "../../Common/Footer"
 import Home from "../../Common/DesktopHome"
 const Landing = ({ pageProps }) => {
+  const data = useStaticQuery(graphql`  {
+    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "careers-hero"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              aspectRatio: 1.5
+              )
+          }
+        }
+      }
+    }
+  }`)
+  const image = getImage(data.allFile.edges[0].node)
   const theme = useTheme()
 
   return theme ? (
     <div>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
-        <Home HomeImage={HomeImage} path={pageProps.path} />
+        <Home HomeImage={image} path={pageProps.path} />
 
         <SectionContainer>
           <InnerContainer>
@@ -81,7 +100,9 @@ const Landing = ({ pageProps }) => {
                 </BC3>
               </PostContainer>
               <Button>
-                <a href="https://www.seek.com.au/job/52699270?type=standard#searchRequestToken=011af1a2-e8fb-4bea-a982-f7ac39c7cdc5" target="_blank">
+                <a href="https://www.seek.com.au/job/52699270?type=standard#searchRequestToken=011af1a2-e8fb-4bea-a982-f7ac39c7cdc5" target="_blank"
+                style={{textDecoration: `none`, color: `#333333`}}
+                >
                 Apply
                 </a>
                 </Button>

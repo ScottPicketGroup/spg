@@ -34,10 +34,10 @@ const Landing = ({ pageProps }) => {
           id
           childImageSharp {
             gatsbyImageData(
-              
+              layout: FULL_WIDTH
               placeholder: BLURRED
-            
-            )
+              aspectRatio: 1.5
+              )
           }
         }
       }
@@ -311,10 +311,9 @@ const Landing = ({ pageProps }) => {
                   <BC2> 2016 The Australian Hot 50 Restaurants</BC2>
                   <BC2>
                     {" "}
-                    2016 Restaurant & Catering Awards For Excellence Victoria –
-                    Winner Best
+                    2016 Restaurant & Catering Awards For Excellence Victoria – Winner Best New Restaurant
                   </BC2>
-                  <BC2> New Restaurant</BC2>
+                 
                   <BC2>
                     {" "}
                     2016 Australian Financial Review Top 100 Restaurants –
@@ -342,7 +341,7 @@ const Landing = ({ pageProps }) => {
                   
                   <BC2>
                     {" "}
-                    2020 The Age GOod Food Guide 16/20
+                    2020 The Age Good Food Guide 16/20
                   </BC2>
                 </RightGrid>
               </TimeLineGrid>

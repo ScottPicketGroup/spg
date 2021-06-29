@@ -47,10 +47,10 @@ const Landing = ({ pageProps }) => {
           id
           childImageSharp {
             gatsbyImageData(
-              
+              layout: FULL_WIDTH
               placeholder: BLURRED
-            
-            )
+              aspectRatio: 1.5
+              )
           }
         }
       }

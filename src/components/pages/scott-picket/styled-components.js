@@ -273,7 +273,7 @@ display: flex;
 
 `
 export const Hat = styled.img`
-height: 1.2rem;
-margin-top: .1rem;
+height: 1.75rem;
+margin-bottom: -.55rem;
 padding-left: .2rem;
 `
