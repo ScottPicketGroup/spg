@@ -11,8 +11,8 @@ const LeftAligned = ({ data }) => {
   return theme ? (
     <Grid cols={theme.name === "Desktop" ? 2 : 1}>
       <Item>
-      <Header2 marginBottom="1rem"  theme={theme}>{data.heading}</Header2>
-        <Header3 theme={theme}>{data.subHeading}</Header3>
+      <Header2 marginBottom=".75rem"   theme={theme}>{data.heading}</Header2>
+        <Header3 marginBottom="1rem" theme={theme}>{data.subHeading}</Header3>
 
         {data.content.map(para => (
           <BC3>{para}</BC3>
