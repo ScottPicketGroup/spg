@@ -35,6 +35,7 @@ const MenuResusable = () => {
   useEffect(() => {
     window.onscroll = () => {
       if (window.pageYOffset > 50) setOpen(false);
+      
     };
   });
 

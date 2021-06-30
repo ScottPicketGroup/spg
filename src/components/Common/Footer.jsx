@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { useTheme } from "styled-components";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import LogoFooter from "../Footer/logo-footer/LogoFooter";
-
+import MenuBox from "../Common/Menue";
+import SubMenu from "./SubMenue";
 
 
 export const FooterContainer = styled.div`
@@ -69,6 +70,7 @@ export const MenuItem = styled.div`
   width: 100%;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   margin-bottom: 1rem;
+  cursor: pointer;
 `;
 export const SubMenuHeading = styled.div`
   width: 100%;
@@ -105,7 +107,20 @@ export const Button = styled.button`
     color: ${(props) => props.theme.colors.text};
   }
 `;
+
+
 const FooterComponent = () => {
+  const [open, setOpen] = useState(true);
+  const [showSubMenu, setShowSubMenu] = useState(false);
+  const [selectedMenu, setSelectedMenu] = useState(null);
+  const hideModalSubMenu = (arg) => {
+    setShowSubMenu(false);
+    setSelectedMenu(null);
+  };
+  const handleOpenSubMenu = (key) => {
+    setShowSubMenu(true);
+    setSelectedMenu(key);
+  };
   const theme = useTheme();
   return theme ? (
     <div>
@@ -143,15 +158,19 @@ const FooterComponent = () => {
                   </Link>
                 </MenuItem>
 
-                <MenuItem theme={theme}>Book a table</MenuItem>
+                <MenuItem theme={theme}
+                onClick={() => handleOpenSubMenu("bookATable")}
+                >Book a Table</MenuItem>
 
-                <MenuItem theme={theme}>
-                  <Link
-                    to="/events"
-                    style={{ color: "inherit", textDecoration: "none" }}
-                  >
+                <MenuItem theme={theme}
+                onClick={() => handleOpenSubMenu("events")}
+                >
+                  
+                    
+                  
+                  
                     Events
-                  </Link>
+                  
                 </MenuItem>
 
                 <MenuItem theme={theme}>
@@ -163,8 +182,15 @@ const FooterComponent = () => {
                     What's On
                   </Link>
                 </MenuItem>
-                <MenuItem theme={theme}>Gift Vouchers</MenuItem>
-                <MenuItem theme={theme}>Providoor</MenuItem>
+                <MenuItem theme={theme}
+                >
+                  <a href="https://apps.giverapp.net/pickettandco/" target="_blank"
+                  style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                  Gift Vouchers </a></MenuItem>
+                <MenuItem theme={theme}
+                onClick={() => handleOpenSubMenu("provider")}
+                >Providoor</MenuItem>
                 {/* <MenuItem theme={theme}>Shop</MenuItem> */}
                 <MenuItem theme={theme}>
                   <Link
@@ -257,6 +283,13 @@ Australia
           </Grid>
         </Footer>
       </FooterContainer>
+      <MenuBox show={showSubMenu} handleClose={hideModalSubMenu}>
+        <SubMenu
+          hideModal={hideModalSubMenu}
+          selectedMenu={selectedMenu}
+          handleOpenSubMenu={handleOpenSubMenu}
+        />
+      </MenuBox>
     </div>
   ) : (
     <div></div>
