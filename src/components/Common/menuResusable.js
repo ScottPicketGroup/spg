@@ -128,7 +128,14 @@ const MenuResusable = () => {
               Careers
             </Link>
           </MenuItem>
-          <MenuItem theme={theme}>Contact</MenuItem>
+          <MenuItem theme={theme}><Link
+              to="/contact"
+              style={{ color: "inherit", textDecoration: "none" }}
+              partiallyActive={true}
+              activeStyle={{ fontFamily: `UntitledSansMedium` }}
+            >
+              Contact
+            </Link></MenuItem>
         </MenuDropDownContainer>
       </Menu>
       <LogoImg src={logo} />

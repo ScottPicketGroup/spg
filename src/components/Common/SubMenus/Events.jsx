@@ -79,7 +79,7 @@ const BookATable = ({ hideModal }) => {
       <Menu theme={theme} inModal={true}>
         <Menu3Item onClick={() => handleRedirect("/sp-events")} theme={theme}>
           <Link style={{ color: "inherit", textDecoration: "none" }}>
-            SP Events(Catering)
+          SP Events – Offsite events and catering
           </Link>
         </Menu3Item>
         <Menu3Item onClick={() => handleRedirect("/events")} theme={theme}>

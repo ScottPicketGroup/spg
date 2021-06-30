@@ -11,29 +11,29 @@ export const Header1 = styled.h1`
 
 export const Header2 = styled.h2`
   font-size: ${(props) =>
-    props.theme.name === "Desktop" ? "1.59rem" : "1.5rem"};
+    props.theme.name === "Desktop" ? "1.9rem" : "1.5rem"};
 margin-top: ${(props) => (props.marginBottom ? props.marginBottom : 0)};
 margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : 0)};
   line-height: ${(props) =>
-    props.theme.name === "Desktop" ? "" : "1"};
+    props.theme.name === "Desktop" ? "1" : "1"};
   font-family: ${(props) => props.theme.fontFamily.Times};
  
   color: ${(props) => props.theme.colors.text};
 `;
 export const Header3 = styled.h3`
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "1rem" : "1rem")};
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "1.66rem" : "1rem")};
   line-height: ${(props) =>
     props.theme.name === "Desktop" ? "1.2" : "1.25"};
-  margin-bottom: 1rem;
+margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : 0)};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   
   color: ${(props) => props.theme.colors.text};
 `;
 export const Header4 = styled.h4`
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "1rem")};
+  font-size: ${(props) => (props.theme.name === "Desktop" ? "1rem" : "1rem")};
   line-height: ${(props) =>
     props.theme.name === "Desktop" ? "1.2" : "1.25"};
-  margin-bottom: 1.75rem;
+ margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : 0)};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   color: ${(props) => props.theme.colors.text};
   text-transform: uppercase;
@@ -62,7 +62,7 @@ export const BC1 = styled.p`
 export const BC2 = styled.p`
   font-size: ${(props) => (props.theme.name === "Desktop" ? "1.06rem" : "20px")};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-  line-height: font-size: ${(props) => (props.theme.name === "Desktop" ? "28pt" : "20pt")};;
+ font-size: ${(props) => (props.theme.name === "Desktop" ? "28pt" : "20pt")};;
   color: ${(props) => props.theme.colors.text};
   cursor: ${(props) => (props.link ? "pointer" : "text")};
   &:hover {
@@ -71,8 +71,8 @@ export const BC2 = styled.p`
   }
 `;
 export const BC3 = styled.p`
-  margin-top: 0.5rem;
-  font-size: ${(props) => (props.theme.name === "Desktop" ? ".88rem" : "1rem")};
+  margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : `.5rem`)};
+  font-size: ${(props) => (props.theme.name === "Desktop" ? ".95rem" : "1rem")};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   line-height: 1.22;
   color: ${(props) => props.theme.colors.text};

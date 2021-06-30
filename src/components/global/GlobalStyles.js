@@ -46,6 +46,10 @@ export const InnerContainer = styled.div`
   width: 100%;
 `;
 
+export const PostContainer = styled.div`
+width: 50%;
+`
+
 export const LogoImg = styled.img`
   position: fixed;
   z-index: 1;
@@ -102,3 +106,25 @@ aspect-ratio: 4/3;
 //     opacity: ${(props) => (props.link ? 0.5 : 1)};
 //   }
 // `;
+
+export const Button = styled.button`
+  color: ${(props) => props.theme.colors.text};
+  margin: 2.45rem 0;
+  padding: 0.5em 3.5rem;
+  background-color: ${(props) => props.theme.colors.body};
+  border: ${(props) => `1px solid ${props.theme.colors.text}`};
+  text-transform: uppercase;
+  transition: all .2s ease-out;
+  a {
+      color: ${(props) => props.theme.colors.text};
+      
+    }
+  &:hover {
+    background-color: #333333;
+    color: ${(props) => props.theme.colors.body};
+    a {
+      color: ${(props) => props.theme.colors.body};
+      
+    }
+  }
+`;

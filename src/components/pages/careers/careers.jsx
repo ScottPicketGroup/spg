@@ -9,10 +9,9 @@ import {
   InnerContainer,
   RightContainer,
   LeftContainer,
-  LogoImg,
   Button,
   PostContainer,
-} from "./styled-components"
+} from "../../global/GlobalStyles"
 import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles"
 
 import Footer from "../../Common/Footer"
@@ -46,7 +45,7 @@ const Landing = ({ pageProps }) => {
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Header1 theme={theme}>Careers</Header1>
+              <Header1 theme={theme} marginBottom="1rem">Careers</Header1>
               <BC1 theme={theme}>
                 Want to take the next step in your career?
               </BC1>
@@ -88,10 +87,10 @@ const Landing = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainer>
               <PostContainer>
-                <Header2 theme={theme}>Chef de Partie: </Header2>
-                <Header4 theme={theme}>CHANCERY LANE BISTRO </Header4>
-                <Header4 theme={theme}>26TH JUNE 2021</Header4>
-                <BC3 theme={theme}>
+                <Header2 theme={theme} marginBottom=".5rem">Chef de Partie: </Header2>
+                <Header4 theme={theme} >CHANCERY LANE BISTRO </Header4>
+                <Header4 theme={theme} marginBottom=".75rem">26TH JUNE 2021</Header4>
+                <BC3 theme={theme} marginBottom=".5rem">
                   <BC3>
                     We are seeking a passionate Chef de Partie and commis chef
                     for Scott Pickett’s newest CBD restaurant, European bistro
@@ -101,7 +100,32 @@ const Landing = ({ pageProps }) => {
               </PostContainer>
               <Button>
                 <a href="https://www.seek.com.au/job/52699270?type=standard#searchRequestToken=011af1a2-e8fb-4bea-a982-f7ac39c7cdc5" target="_blank"
-                style={{textDecoration: `none`, color: `#333333`}}
+                style={{textDecoration: `none`}}
+                >
+                Apply
+                </a>
+                </Button>
+            </RightContainer>
+          </InnerContainer>
+        </SectionContainer>
+
+        <SectionContainer>
+          <InnerContainer>
+            <LeftContainer></LeftContainer>
+            <RightContainer>
+              <PostContainer>
+                <Header2 theme={theme} marginBottom=".5rem"> Sous Chef  </Header2>
+                <Header4 theme={theme} >MATILDA 159 DOMAIN </Header4>
+                <Header4 theme={theme} marginBottom=".75rem">1st JUNE 2021</Header4>
+                <BC3 theme={theme} marginBottom=".5rem">
+                  <BC3>
+                  We are seeking a Breakfast Chef or Chef de Partie with breakfast experience for Scott Pickett’s awarded South Yarra restaurant, Matilda.
+                  </BC3>
+                </BC3>
+              </PostContainer>
+              <Button>
+                <a href="https://www.seek.com.au/job/52501010?type=standard#searchRequestToken=011af1a2-e8fb-4bea-a982-f7ac39c7cdc5" target="_blank"
+                style={{textDecoration: `none`,}}
                 >
                 Apply
                 </a>

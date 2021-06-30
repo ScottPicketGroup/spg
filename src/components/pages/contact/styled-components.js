@@ -95,7 +95,7 @@ export const Item = styled.div`
 `;
 
 export const PostContainer = styled.div`
-width: 50%;
+width: 75%;
 `
 
 
@@ -107,7 +107,7 @@ export const Button = styled.button`
   border: ${(props) => `1px solid ${props.theme.colors.text}`};
   text-transform: uppercase;
   &:hover {
-    background-color: ${(props) => `${props.theme.colors.text}`};
-    color: ${(props) => props.theme.colors.body};
+    background-color: ${(props) => `${props.theme.colors.body}`};
+    color: ${(props) => props.theme.colors.text};
   }
 `;
