@@ -20,7 +20,7 @@ console.log(data.links)
   return theme ? (
     <Grid cols="2">
      <Item>
-        {data.images ? (
+        {!data.image ? (
           <SliderFull images={data.images}/>
         ): <EventImage src={data.image} />}
         

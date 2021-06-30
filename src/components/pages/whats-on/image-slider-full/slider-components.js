@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import { GatsbyImage } from "gatsby-plugin-image"
 export const SliderContainer = styled.div`
 
 width: 100%;
@@ -51,4 +51,9 @@ margin-bottom: -12rem;
 @media screen and (min-width: 451px) {
     display: none;
 }
+`
+
+export const SliderImage = styled(GatsbyImage)`
+aspect-ratio: 2/3;
+display: ${props => props.activeImg === props.id ? 'block' : 'none'};
 `

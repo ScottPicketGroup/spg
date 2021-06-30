@@ -5,9 +5,9 @@ import { Button, Grid, Item } from "./styled-components";
 import { BC3, Header2, Header3 } from "../../global/fontStyles";
 import EventImage from "./eventImage";
 import SliderFull from './image-slider-full/Slider'
-const LeftAligned = ({ data }) => {
+const LeftAligned = ({ data, images }) => {
   const theme = useTheme();
-
+  // console.log(`data`, data, images)
   return theme ? (
     <Grid cols={theme.name === "Desktop" ? 2 : 1}>
       <Item>
@@ -47,10 +47,12 @@ const LeftAligned = ({ data }) => {
         
       </Item>
       <Item>
-        {data.images ? (
-          <SliderFull images={data.images}/>
-        ): <EventImage src={data.image} />}
+  
+        {
         
+        !data.image ? (
+          <SliderFull images={images}/>
+        ): <EventImage src={data.image} />}
       </Item>
     </Grid>
   ) : (

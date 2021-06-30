@@ -40,7 +40,6 @@ const whatsOnEvents = [
       links: [
         "Join us at Estelle, Matilda and Chancery Lane as we celebrate truffle season with three decadent truffle menus."
       ],
-      images: [truffle1, truffel2, truffel3],
       buttonText: "Book Now"
     },
     {
@@ -133,22 +132,32 @@ const Landing = ({ pageProps }) => {
   const theme = useTheme();
   const data = useStaticQuery(graphql`
   {
-    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "whats-on-hero"}}) {
+    allFile(
+      filter: {extension: {}, absolutePath: {regex: "/images/whats-on/truffles/"}}
+    ) {
       edges {
         node {
           id
           childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              aspectRatio: 1.5
-              )
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, aspectRatio: 1.5)
           }
         }
       }
     }
-  }`)
-  const image = getImage(data.allFile.edges[0].node)
+    file(name: {in: "whats-on-hero"}) {
+     id
+            childImageSharp {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                aspectRatio: 1.5
+                )
+            }
+    }
+  }
+  `)
+  const image = getImage(data.file)
+  const image1 = getImage(data.allFile.edges[0].node)
   return theme ? (
     <div>
       <Container theme={theme} style={{paddingBottom: `9rem`}}>
@@ -186,10 +195,11 @@ Read on to hear what’s coming up at our Scott Pickett Group venues.
                 <InnerContainer>
                   <LeftContainer></LeftContainer>
                   <RightContainer>
+                
                     {index % 2 === 0 ? (
-                      <RightAligned data={item} />
+                      <RightAligned data={item} images={data}/>
                     ) : (
-                      <LeftAligned data={item} />
+                      <LeftAligned data={item} images={data}/>
                     )}
                   </RightContainer>
                 </InnerContainer>

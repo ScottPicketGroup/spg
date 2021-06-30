@@ -1,36 +1,31 @@
-import React, { useRef, useState, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React, { useRef, useState } from "react"
+
+
 import { gsap } from "gsap"
 import { useSwipeable } from "react-swipeable"
+import { getImage } from "gatsby-plugin-image"
 import {
-  Image,
   Controls,
   SliderContainer,
   ControlsContainer,
   ControlButton,
   MobileControls,
+  SliderImage,
 } from "./slider-components"
 import NextIcon from "./control-elements/NextIcon"
 import PreviousIcon from "./control-elements/PreviousIcon"
 
-import img1 from "../../../../images/events-carousel/1.jpg"
-import img2 from "../../../../images/events-carousel/2.jpg"
 import { ImageCaption } from "../../../global/fontStyles"
 
-
 const SliderFull = ({ images }) => {
-
   const [imageNumber, setImageNumber] = useState(1)
   let title = useRef(null)
   const handlers = useSwipeable({
     onSwipedLeft: () => nextImage(),
     onSwipedRight: () => previousImage(),
   })
-  const [imagesArr, setImagesArr] = useState([])
+  const [imageCount] = useState(images.allFile.edges.length - 1)
   const [activeImg, setActiveImg] = useState(0)
-
-
 
   const nextImage = () => {
     gsap.fromTo(
@@ -56,7 +51,7 @@ const SliderFull = ({ images }) => {
     )
 
     setTimeout(() => {
-      if (activeImg < 1) {
+      if (activeImg < imageCount) {
         setActiveImg(activeImg + 1)
         setImageNumber(imageNumber + 1)
       } else {
@@ -93,26 +88,26 @@ const SliderFull = ({ images }) => {
         setActiveImg(activeImg - 1)
         setImageNumber(imageNumber - 1)
       } else {
-        setActiveImg(1)
-        setImageNumber(2)
+        setActiveImg(imageCount)
       }
     }, 200)
   }
 
-  let tiltRef = useRef()
+
+
   return (
     <div {...handlers}>
-
-
       <SliderContainer ref={el => (title = el)}>
-        {activeImg === 0 ? (
-          <Image src={images[0]} alt="matilda" style={{aspectRatio: `2/3`}}/>
-        ) : activeImg === 1 ? (
-          <Image src={images[1]} alt="matilda" 
-          style={{aspectRatio: `2/3`}}
-          />
-        
-        ) : null}
+        {images.allFile.edges.map((image, i) => (
+          <>
+            <SliderImage
+              image={getImage(image.node)}
+              alt="matilda"
+              id={i}
+              activeImg={activeImg}
+            />
+          </>
+        ))}
       </SliderContainer>
       <ControlsContainer>
         <Controls>
@@ -127,10 +122,8 @@ const SliderFull = ({ images }) => {
         </Controls>
       </ControlsContainer>
       <MobileControls>
-       <ImageCaption>
-       {imageNumber}/2
-       </ImageCaption>
-     </MobileControls>
+        <ImageCaption>{imageNumber}/2</ImageCaption>
+      </MobileControls>
     </div>
   )
 }
