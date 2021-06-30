@@ -40,7 +40,7 @@ export const Header4 = styled.h4`
 `;
 
 export const BC1 = styled.p`
-  margin-top: ${(props) => props.marginTop ? marginTop :
+  margin-top: ${(props) => 
     props.theme.name === "Desktop" ? "3.5rem" : "1.5rem"};
   margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : 0)};
   font-size: ${(props) =>
