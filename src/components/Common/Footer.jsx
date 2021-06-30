@@ -67,7 +67,6 @@ export const MenuHeading = styled.div`
 `;
 export const MenuItem = styled.div`
   width: 100%;
-  text-transform: capitalize;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   margin-bottom: 1rem;
 `;
@@ -100,7 +99,7 @@ export const Button = styled.button`
   text-transform: uppercase;
   width: 50%;
   font-size: .71rem;
-  transition: background-color 1s, color 1s;
+  transition: background-color .3s, color 1s;
   &:hover {
     background-color: ${(props) => `${props.theme.colors.body}`};
     color: ${(props) => props.theme.colors.text};

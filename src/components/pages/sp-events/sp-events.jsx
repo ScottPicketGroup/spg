@@ -19,7 +19,7 @@ import Home from "../../Common/DesktopHome";
 const Landing = ({ pageProps }) => {
   const data = useStaticQuery(graphql`
   {
-    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "events-hero"}}) {
+    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "sp-events-hero"}}) {
       edges {
         node {
           id

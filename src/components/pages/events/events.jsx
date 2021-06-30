@@ -107,7 +107,7 @@ const Events = ({ pageProps }) => {
               <FullImageContainer>
               <StaticImage 
                     placeholder="blurred"
-                    src="../../../images/events-pdrs/Estelle.jpg" alt="Chancery Lane" />
+                    src="../../../images/events-pdrs/estelle.jpg" alt="Chancery Lane" />
               </FullImageContainer>
               <ItemImgCaption>Estelle</ItemImgCaption>
               <BC3>High St, Northcote</BC3>
