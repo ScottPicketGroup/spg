@@ -1,32 +1,18 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import {getImage, StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components"
 import {
   Container,
   FullImageContainer,
-  ImageDiv,
-  ImageView,
   SectionContainer,
 } from "../../global/GlobalStyles"
-
-import HomeImage from "../../../images/homeImage.png"
-
-import gridPic1 from "../../../images/home-venues/CL.jpg"
-import gridPic2 from "../../../images/home-venues/Estelle.jpg"
-import gridPic3 from "../../../images/home-venues/LG.jpg"
-import gridPic4 from "../../../images/home-venues/Matilda.jpg"
-import gridPic5 from "../../../images/home-venues/Pastore.jpg"
-import gridPic6 from "../../../images/home-venues/Longsong.jpg"
-import gridPic7 from "../../../images/home-venues/LeShoppe.jpg"
-import gridPic8 from "../../../images/gridPic8.png"
 
 import {
   InnerContainer,
   RightContainer,
   LeftContainer,
-  LogoImg,
   Grid,
   Item,
   ItemImgLink,
@@ -35,31 +21,39 @@ import { BC1, Header1, BC3, Header2 } from "../../global/fontStyles"
 
 import Footer from "../../Common/Footer"
 import Home from "../../Common/DesktopHome"
-import Slider from "./image-slider/Slider"
+import Slider from "../../image-slider-full/Slider"
+
 
 const Landing = ({ pageProps }) => {
   const theme = useTheme()
   const data = useStaticQuery(graphql`
   {
-    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "home-hero"}}) {
+    allFile(
+      filter: {extension: {}, absolutePath: {regex: "/images/landing-carousel/"}}
+    ) {
       edges {
         node {
           id
           childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              aspectRatio: 1.5
-              )
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, aspectRatio: 1.5)
           }
         }
       }
     }
-  }`)
-  const image = getImage(data.allFile.edges[0].node)
-  console.log(data.allFile.edges[0].node.childImageSharp)
+    file(name: {in: "home-hero"}) {
+     id
+            childImageSharp {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                aspectRatio: 1.5
+                )
+            }
+    }
+  }
+  `)
+  const image = getImage(data.file)
 
-  // const image = getImage(data.allFile.edges[0])
   return theme ? (
     <div style={{ background: `#f9f9f4` }}>
       <Container theme={theme}>
@@ -90,7 +84,7 @@ const Landing = ({ pageProps }) => {
                 obsessive dedication to excellence and passion for hospitality. 
               </BC1>
               <Link to="/scott-picket" style={{ textDecoration: `none` }}>
-                <BC1 link={true} theme={theme}>
+                <BC1 link={true} theme={theme} marginBottom="6rem">
                   Read more about Scott ‘Cheffo’ Pickett
                 </BC1>
               </Link>
@@ -99,7 +93,7 @@ const Landing = ({ pageProps }) => {
         </SectionContainer>
       </Container>
 
-      <Slider />
+      <Slider images={data}/>
       <Container theme={theme}>
         <SectionContainer style={{ marginBottom: `2.25rem 0 9rem` }}>
           <InnerContainer>
@@ -119,7 +113,7 @@ const Landing = ({ pageProps }) => {
                 bistro with a North-side edge.
               </BC1>
 
-              {/* <Header1> Our Event Spaces</Header1> */}
+     
 
              
             </RightContainer>

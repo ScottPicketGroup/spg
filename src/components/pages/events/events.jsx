@@ -29,28 +29,38 @@ import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles"
 
 import Footer from "../../Common/Footer"
 import Home from "../../Common/DesktopHome"
-import SliderFull from "./image-slider-full/Slider"
+import Slidera from "../../image-slider-full/Slider"
+
 
 const Events = ({ pageProps }) => {
   const theme = useTheme()
   const data = useStaticQuery(graphql`
   {
-    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "events-hero"}}) {
+    allFile(
+      filter: {extension: {}, absolutePath: {regex: "/images/events-carousel/"}}
+    ) {
       edges {
         node {
           id
           childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              aspectRatio: 1.5
-              )
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, aspectRatio: 1.5)
           }
         }
       }
     }
-  }`)
-  const image = getImage(data.allFile.edges[0].node)
+    file(name: {in: "events-hero"}) {
+     id
+            childImageSharp {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                aspectRatio: 1.5
+                )
+            }
+    }
+  }
+  `)
+  const image = getImage(data.file)
   return theme ? (
     <div>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
@@ -72,7 +82,7 @@ const Events = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
       </Container>
-      <SliderFull />
+      <Slidera images={data}/>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <SectionContainer>
           <InnerContainer>

@@ -11,26 +11,27 @@ import {
   ControlButton,
   MobileControls
 } from "./slider-components"
-
 import NextIcon from "./control-elements/NextIcon"
 import PreviousIcon from "./control-elements/PreviousIcon"
 
-import img1 from "../../../../images/landing-carousel/matilda.jpg"
-import img2 from "../../../../images/landing-carousel/chancerylane.jpg"
-import img3 from "../../../../images/landing-carousel/estelle.jpg"
-import img4 from "../../../../images/landing-carousel/longgrain.jpg"
+import img1 from "../../../../images/sp-carousel/1.jpg"
+import img2 from "../../../../images/sp-carousel/2.jpg"
+import img3 from "../../../../images/sp-carousel/3.jpg"
+import img4 from "../../../../images/sp-carousel/4.jpg"
 import { ImageCaption } from "../../../global/fontStyles"
 
+
 const Slider = ({ images }) => {
-  
-  const [imageNumber, setImageNumber] = useState(1)
+const [imageNumber, setImageNumber] = useState(1)
+
   let title = useRef(null)
   const handlers = useSwipeable({
     onSwipedLeft: () => nextImage(),
     onSwipedRight: () => previousImage(),
   })
-
+  const [imagesArr, setImagesArr] = useState([])
   const [activeImg, setActiveImg] = useState(0)
+
 
 
   const nextImage = () => {
@@ -126,7 +127,7 @@ const Slider = ({ images }) => {
           </ControlButton>
         </Controls>
       </ControlsContainer>
-      <MobileControls>
+     <MobileControls>
        <ImageCaption>
        {imageNumber}/4
        </ImageCaption>

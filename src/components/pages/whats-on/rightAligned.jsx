@@ -24,7 +24,7 @@ const LeftAligned = ({ data, images }) => {
             <BC3>Join us at <a 
             style={{textDecoration: `underline`, color: `#333333`}}
             href="https://theestelle.com.au/truffle-dinners-2021/" target="_blank">Estelle,</a>&nbsp; 
-            <a 
+            <a link={true}
             style={{textDecoration: `underline`, color: `#333333`}}
             href="https://matilda159.com/truffle-dinners/ " target="_blank">Matilda </a>
              and      <a 

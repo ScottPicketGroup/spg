@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SliderContainer = styled.div`
-padding-top: 6.25rem;
+
 width: 100%;
 aspect-ratio: 4/3;
 background-color: #f9f9f4;
@@ -25,15 +25,14 @@ width: 100%;
 position: relative;
 display: flex;
 background-color: #f9f9f4;
-height: 10vh;
-@media screen and (max-width: 451px) {
+
+@media screen and (max-width: 450px) {
     display: none;
-}
+} 
 `
 export const Controls = styled.div`
 position: absolute;
 right: 0;
-padding-right: 81px;
 display: flex;
 
 `

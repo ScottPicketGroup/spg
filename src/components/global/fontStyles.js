@@ -86,6 +86,10 @@ export const BC3 = styled.p`
     color: ${(props) =>
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
   }
+  a {
+    &:hover {
+    color: ${props => props.theme.colors.hoverText}
+  }
 `;
 
 export const Quotation = styled.div`

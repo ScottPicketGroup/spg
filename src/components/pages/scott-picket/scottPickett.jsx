@@ -24,26 +24,34 @@ import Timeline from "./timeline/timeline"
 import Slider from "./image-slider/Slider"
 import SliderFull from "./image-slider-full/Slider"
 
-import { SliderContainer } from "./image-slider-full/slider-components"
 const Landing = ({ pageProps }) => {
   const data = useStaticQuery(graphql`
   {
-    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "scott-portrait"}}) {
+    allFile(
+      filter: {extension: {}, absolutePath: {regex: "/images/landing-carousel/"}}
+    ) {
       edges {
         node {
           id
           childImageSharp {
-            gatsbyImageData(
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-              aspectRatio: 1.5
-              )
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, aspectRatio: 1.5)
           }
         }
       }
     }
-  }`)
-  const image = getImage(data.allFile.edges[0].node)
+    file(name: {in: "scott-portrait"}) {
+     id
+            childImageSharp {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                aspectRatio: 1.5
+                )
+            }
+    }
+  }
+  `)
+  const image = getImage(data.file)
   const theme = useTheme()
 
   return theme ? (
