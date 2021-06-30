@@ -78,24 +78,35 @@ const Provider = ({ hideModal }) => {
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>
-        <Menu3Item onClick={() => handleRedirect("#")} theme={theme}>
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            Matilda{" "}
-          </Link>
+      <Menu3Item  theme={theme}>
+                 <a
+                   href="https://www.providoor.com.au/promo/matilda"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Matilida</a>
         </Menu3Item>
-        <Menu3Item onClick={() => handleRedirect("#")} theme={theme}>
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            Estelle{" "}
-          </Link>
+        <Menu3Item  theme={theme}>
+                 <a
+                   href="https://www.providoor.com.au/promo/longrain"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Longrain</a>
         </Menu3Item>
         <Menu3Item onClick={() => handleRedirect("#")} theme={theme}>
           <Link style={{ color: "inherit", textDecoration: "none" }}>
             Longrain{" "}
           </Link>
         </Menu3Item>
+        <Menu3Item  theme={theme}>
+                 <a
+                   href="https://www.providoor.com.au/promo/estelle"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Matilida</a>
+        </Menu3Item>
       </Menu>
 
-      {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
+      
       {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}
     </div>
   ) : (

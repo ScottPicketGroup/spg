@@ -78,68 +78,52 @@ const GiftVoucher = ({ hideModal }) => {
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>
-        <Menu3Item
-          onClick={() => {
-            handleRedirect("#");
-          }}
-          theme={theme}
-        >
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            SPG Vouchers
-          </Link>
+      <Menu3Item  theme={theme}>
+                 <a
+                   href="https://apps.giverapp.net/pickettandco/"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Scott Pickett Group</a>
         </Menu3Item>
-        <Menu3Item
-          onClick={() => {
-            handleRedirect("#");
-          }}
-          theme={theme}
-        >
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            CHANCERY LANE
-          </Link>
+        <Menu3Item  theme={theme}>
+                 <a
+                   href="https://apps.giverapp.net/chancerylane/product/digital-voucher/"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Chancery Lane</a>
         </Menu3Item>
-        <Menu3Item
-          onClick={() => {
-            handleRedirect("#");
-          }}
-          theme={theme}
-        >
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            Estelle{" "}
-          </Link>
+        <Menu3Item  theme={theme}>
+                 <a
+                   href=" https://theestelle.giverapp.net/"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Estelle</a>
         </Menu3Item>
 
-        <Menu3Item
-          onClick={() => {
-            handleRedirect("#");
-          }}
-          theme={theme}
-        >
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            Longrain{" "}
-          </Link>
+        <Menu3Item  theme={theme}>
+                 <a
+                   href="https://apps.giverapp.net/longrain/product/digital-voucher/"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Longrain</a>
         </Menu3Item>
-        <Menu3Item
-          onClick={() => {
-            handleRedirect("#");
-          }}
-          theme={theme}
-        >
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            Matilda{" "}
-          </Link>
+
+        <Menu3Item  theme={theme}>
+                 <a
+                   href="https://matilda159.giverapp.net/"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Matilda</a>
         </Menu3Item>
-        <Menu3Item
-          onClick={() => {
-            handleRedirect("#");
-          }}
-          theme={theme}
-        >
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            Pastore{" "}
-          </Link>
+
+        <Menu3Item  theme={theme}>
+                 <a
+                   href="https://pickettsdeli.giverapp.net/"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Pickett's Deli</a>
         </Menu3Item>
-        <Menu3Item
+        {/* <Menu3Item
           onClick={() => {
             handleRedirect("#");
           }}
@@ -158,7 +142,7 @@ const GiftVoucher = ({ hideModal }) => {
           <Link style={{ color: "inherit", textDecoration: "none" }}>
             Le Shoppe{" "}
           </Link>
-        </Menu3Item>
+        </Menu3Item> */}
       </Menu>
       {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
       {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}{" "}
