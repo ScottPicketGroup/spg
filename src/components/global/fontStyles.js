@@ -41,7 +41,7 @@ export const Header4 = styled.h4`
 
 export const BC1 = styled.p`
   margin-top: ${(props) => 
-    props.theme.name === "Desktop" ? "3.5rem" : "1.5rem"};
+    props.theme.name === "Desktop" ? "2.25rem" : "1.5rem"};
   margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : 0)};
   font-size: ${(props) =>
     props.theme.name === "Desktop" ? "1.59rem" : "1.25rem"};
