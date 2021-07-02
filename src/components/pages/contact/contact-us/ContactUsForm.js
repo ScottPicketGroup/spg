@@ -63,16 +63,12 @@ const ContactUsForm = () => {
   const handleSubmit = e => {
     e.preventDefault()
    const timestamp = Date.now()
-   checkForm()
+
    if((   inputs.fName 
     && inputs.sName 
     && inputs.email 
     && inputs.email.includes(".")) || inputs.email.includes("@"))   
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...inputs })
-    })
+  
       .then(
      
           setThankyou(true)
