@@ -12,8 +12,8 @@ export const ContactDetailsContainer = styled.div`
 display: flex;
 flex-direction: column;
 min-width: 100%;
-padding: 0]\
-|"`
+padding: 0;
+`
 export const ContactFormRow = styled.div`
 min-width: 100%;
 display: flex;
@@ -43,7 +43,7 @@ margin-bottom: 1.75rem;
 
 export const Label = styled.p`
 margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : `.5rem`)};
-font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "1rem")};
+font-size: ${(props) => (props.theme.name === "Desktop" ? "14pt" : "1rem")};
 font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
 line-height: 1.2;
 color: ${(props) => props.theme.colors.text};

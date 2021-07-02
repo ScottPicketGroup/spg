@@ -2,7 +2,7 @@ import React from "react"
 
 import { useTheme } from "styled-components"
 import { Container, SectionContainer } from "../../global/GlobalStyles"
-import HomeImage from "../../../images/scott-portrait.jpg"
+
 import hat from "./timeline/chef-hat.png"
 import {
   InnerContainer,
@@ -15,30 +15,20 @@ import {
   QuotationContainer,
   Hat,
 } from "./styled-components"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery } from "gatsby"
+import { getImage} from "gatsby-plugin-image"
 import { BC1, Header1, Header2, Quotation, BC2 } from "../../global/fontStyles"
 import Footer from "../../Common/Footer"
 import Home from "../../Common/DesktopHome"
 import Timeline from "./timeline/timeline"
-import Slider from "./image-slider/Slider"
-import SliderFull from "./image-slider-full/Slider"
+import SliderFull from "./sliders/sliderFull"
+import SliderRight from "./sliders/sliderRight"
 
 const Landing = ({ pageProps }) => {
   const data = useStaticQuery(graphql`
   {
-    allFile(
-      filter: {extension: {}, absolutePath: {regex: "/images/landing-carousel/"}}
-    ) {
-      edges {
-        node {
-          id
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, aspectRatio: 1.5)
-          }
-        }
-      }
-    }
+   
+    
     file(name: {in: "scott-portrait"}) {
      id
             childImageSharp {
@@ -53,7 +43,7 @@ const Landing = ({ pageProps }) => {
   `)
   const image = getImage(data.file)
   const theme = useTheme()
-
+console.log(data.allFile)
   return theme ? (
     <div>
       <Container theme={theme}>
@@ -72,14 +62,12 @@ const Landing = ({ pageProps }) => {
                 environment like that influenced me to become a chef. So did
                 growing up with my grandmother Audrey’s Sunday roasts.
               </BC1>
-              <SectionContainer >
-          <InnerContainer displayBlock="true" margin="0"
-          style={{marginTop: `0`, marginBottom: `5rem`}}
-          >
-           <Slider/>
-          </InnerContainer>
-        </SectionContainer>
-              <BC1 theme={theme} marginBottom="3.5rem" >
+             
+          
+           <SliderRight/>
+       
+       
+              <BC1 theme={theme} marginBottom="3.5rem" marginTop="9rem">
                 Those years set the foundations of my values as a chef and
                 restaurateur today. My approach always puts food at the front.
                 It’s based on real cooking – with the greatest respect to the
@@ -120,7 +108,7 @@ const Landing = ({ pageProps }) => {
         </SectionContainer>
 
 </Container>
-<SliderFull/>
+<SliderFull />
 <Container theme={theme} style={{ paddingBottom: `9rem` }}>
 
         <Timeline />

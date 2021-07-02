@@ -1,0 +1,28 @@
+import React from 'react'
+import {useStaticQuery, graphql} from 'gatsby'
+import styled from 'styled-components'
+import Slider from '../../../image-slider-full/Slider'
+const SliderFull = () => {
+    const data = useStaticQuery(graphql`
+    {
+      allFile(
+        filter: {extension: {}, absolutePath: {regex: "/images/sp-carousel/"}}
+      ) {
+        edges {
+          node {
+            id
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, aspectRatio: 1.5)
+            }
+          }
+        }
+      }
+    }
+    `)
+    console.log(`data`, data)
+    return (
+        <Slider images={data} />
+    )
+}
+
+export default SliderFull
