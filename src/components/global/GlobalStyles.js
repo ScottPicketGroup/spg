@@ -108,9 +108,11 @@ aspect-ratio: 4/3;
 // `;
 
 export const Button = styled.button`
+width: ${props => props.width ? props.width : ""};
   color: ${(props) => props.theme.colors.text};
   margin: 2.45rem 0;
-  padding: 0.5em 3.5rem;
+  padding: ${props => props.padding ? props.padding : "0.75em 3.5rem"};
+
   background-color: ${(props) => props.theme.colors.body};
   border: ${(props) => `1px solid ${props.theme.colors.text}`};
   text-transform: uppercase;

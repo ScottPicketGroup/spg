@@ -43,7 +43,7 @@ margin-bottom: 1.75rem;
 
 export const Label = styled.p`
 margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : `.5rem`)};
-font-size: ${(props) => (props.theme.name === "Desktop" ? "14pt" : "1rem")};
+font-size: ${(props) => (props.theme.name === "Desktop" ? "14 pt" : "1rem")};
 font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
 line-height: 1.2;
 color: ${(props) => props.theme.colors.text};
