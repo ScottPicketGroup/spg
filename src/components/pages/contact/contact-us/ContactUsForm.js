@@ -68,14 +68,13 @@ const ContactUsForm = () => {
     && inputs.sName 
     && inputs.email 
     && inputs.email.includes(".")) || inputs.email.includes("@"))   
-  
-      .then(
+   
      
           setThankyou(true)
      
 
-      )
-      .catch(error => alert(error));
+      
+     
     
       if ( inputs.newsletter === true && (inputs.email && inputs.email.includes(".")) || inputs.email.includes("@")) {
         var myHeaders = new Headers()
