@@ -14,7 +14,7 @@ const WhatsOn = (props) => {
       {theme.name === "Desktop" ? (
         <Landing pageProps={props} />
       ) : (
-        <MobileLanding pageProps={props} />
+        <div class=""></div>
       )}
     </div>
   ) : (

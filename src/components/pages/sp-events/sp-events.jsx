@@ -16,6 +16,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
 import Footer from "../../Common/Footer";
 import Home from "../../Common/DesktopHome";
+import ContactUsForm from "./contact-us/ContactUsForm";
 const Landing = ({ pageProps }) => {
   const data = useStaticQuery(graphql`
   {
@@ -52,13 +53,20 @@ const Landing = ({ pageProps }) => {
               </BC1>
            
                 <BC1 link={true} theme={theme}>
-                  Sign up to our email newsletter
+                  Complete the form below to find out more infomation
                 </BC1>
              
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
-
+<SectionContainer>
+  <InnerContainer>
+    <LeftContainer></LeftContainer>
+    <RightContainer>
+      <ContactUsForm/>
+    </RightContainer>
+  </InnerContainer>
+</SectionContainer>
         {/* <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
