@@ -63,7 +63,7 @@ const ContactUsForm = () => {
   const handleSubmit = e => {
     e.preventDefault()
    const timestamp = Date.now()
-   checkForm()
+
    if((   inputs.fName 
     && inputs.sName 
     && inputs.email 

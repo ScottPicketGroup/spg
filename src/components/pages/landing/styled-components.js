@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import {BC3} from "../../global/fontStyles"
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>
     props.top === true
@@ -71,18 +71,7 @@ export const BC1 = styled.p`
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
   }
 `;
-export const BC3 = styled.p`
-  margin-top: 0.75rem;
-  font-size: ${(props) => (props.theme.name === "Desktop" ? "20px" : "20px")};
-  font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
-  line-height: 1.2;
-  color: ${(props) => props.theme.colors.text};
-  cursor: ${(props) => (props.link ? "pointer" : "text")};
-  &:hover {
-    color: ${(props) =>
-      props.link ? props.theme.colors.hoverText : props.theme.colors.text};
-  }
-`;
+
 
 export const CloseBtn = styled.div`
   font-size: 16px;
@@ -100,19 +89,23 @@ export const Grid = styled.div`
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
   grid-gap: ${(props) => (props.theme.name === "Desktop" ? "3.5rem 0rem" : "3.5rem 0")};
   align-items: center;
+  align-items: start;
 `;
 
 export const Item = styled.div`
   padding: 0 0.5rem;
   display: block;
   transition: opacity .2s ease-out;
-  &:hover {
-    opacity: ${(props) => (props.link ? 0.5 : 1)};
-  }
+  
 `;
 
 export const ItemImgLink = styled.a`
   text-decoration: none;
+  font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
+  color: #333333;
+  &:hover {
+    opacity: ${(props) => (props.link ? 0.5 : 1)};
+  }
 `;
 export const ItemImg = styled.div`
   min-height: 250px;
@@ -154,7 +147,7 @@ export const Footer = styled.div`
 export const FooterLogoGrid = styled.div`
   display: flex;
   overflow-x: auto;
-  -ms-overflow-style: none;
+  -ms-overflow-style: none
   scrollbar-width: none;
 
   &::-webkit-scrollbar {
@@ -166,3 +159,19 @@ export const FooterLogoContainer = styled.div`
   padding: 1rem;
 `;
 export const FooterLogo = styled.img``;
+
+export const ItemExpandElement = styled(BC3)`
+font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
+`
+export const ItemInfoContainer = styled.div`
+margin-Top: ${(props) => (props.marginTop ? props.marginTop : `0`)};
+max-height: 1.3rem;
+overflow: hidden;
+transition: max-height 0.25s ease-out;
+width: 100%;
+transition: max-height .25s ease-in;
+:hover {
+  max-height: 500px;
+  transition: max-height 0.25s ease-in;
+}
+`

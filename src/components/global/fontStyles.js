@@ -71,6 +71,7 @@ export const BC2 = styled.p`
   }
 `;
 export const BC3 = styled.p`
+  margin-Top: ${(props) => (props.marginTop ? props.marginTop : `0`)};
   margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : `.5rem`)};
   font-size: ${(props) => (props.theme.name === "Desktop" ? "1.2rem" : "1rem")};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
