@@ -259,10 +259,9 @@ const MobileHome = ({ HomeImage, path }) => {
           </MenuItem>
           <MenuItem
             theme={theme}
-            expandIcon={expandIcon}
-            onClick={() => handleOpenSubMenu("giftVoucher")}
+            
           >
-            Gift Vouchers
+            <a href="http://www.google.com" target="_blank">Gift Vouchers</a>
           </MenuItem>
           <MenuItem
             theme={theme}

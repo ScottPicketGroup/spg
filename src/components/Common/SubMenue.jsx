@@ -170,9 +170,12 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           </MenuItem>
           <MenuItem
             theme={theme}
-            onClick={() => handleOpenSubMenu("giftVoucher")}
           >
+              <a href="https://apps.giverapp.net/pickettandco/" target="_blank"
+            style={{textDecoration: `none`, color: `inherit`}}
+            >
             Gift Vouchers
+            </a>
           </MenuItem>
 
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
@@ -206,8 +209,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           switch (selectedMenu) {
             case "bookATable":
               return <TableMenu hideModal={hideModal} />;
-            case "giftVoucher":
-              return <GiftVoucher hideModal={hideModal} />;
+            
             case "provider":
               return <Provider hideModal={hideModal} />;
             case "events":
