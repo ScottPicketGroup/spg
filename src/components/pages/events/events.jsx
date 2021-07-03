@@ -30,7 +30,7 @@ import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles"
 import Footer from "../../Common/Footer"
 import Home from "../../Common/DesktopHome"
 import Slidera from "../../image-slider-full/Slider"
-
+const captions = []
 
 const Events = ({ pageProps }) => {
   const theme = useTheme()
@@ -82,7 +82,7 @@ const Events = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
       </Container>
-      <Slidera images={data}/>
+      <Slidera images={data} captions={captions}/>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <SectionContainer>
           <InnerContainer>

@@ -2,11 +2,17 @@ import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 import styled from 'styled-components'
 import Slider from '../../../image-slider-full/Slider'
+const captions = [
+  "Lamb ribs: ‘Matilda 159 Domain’",
+  "Betel leaf: ‘Longrain Melbourne’ ",
+  "Spread with salmon in middle ‘Chancery Lane Bistro’",
+  "Salmon with orange sauce’: Estelle’ ",
+]
 const SliderFull = () => {
     const data = useStaticQuery(graphql`
     {
       allFile(
-        filter: {extension: {}, absolutePath: {regex: "/images/sp-full/"}}
+        filter: {extension: {}, absolutePath: {regex: "/images/sp-full-carousel/"}}
       ) {
         edges {
           node {
@@ -20,7 +26,7 @@ const SliderFull = () => {
     }
     `)
     return (
-        <Slider images={data} />
+        <Slider images={data} captions={captions}/>
     )
 }
 

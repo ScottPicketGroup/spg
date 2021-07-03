@@ -114,8 +114,9 @@ export const ItemImgCaption = styled.div`
 `;
 
 export const ImageCaption = styled.p`
+display: inline;
   font-size: ${(props) =>
-    props.theme.name === "Desktop" ? "7.71rem" : "12px"};
+    props.theme.name === "Desktop" ? "1rem" : "12px"};
   line-height: ${(props) =>
     props.theme.name === "Desktop" ? "1.25rem" : "1rem"};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};

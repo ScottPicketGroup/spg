@@ -123,7 +123,7 @@ console.log(captions)
       <ControlsContainer>
        
         
-        <Controls> 
+        <Controls right={true}> 
         <ImageCaption ref={el => (caption = el)}>{captions[imageNumber - 1]}</ImageCaption>
         <ControlButtonContainer>
           <ControlButton onClick={previousImage}>

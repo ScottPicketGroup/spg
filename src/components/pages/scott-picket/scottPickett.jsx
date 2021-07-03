@@ -25,6 +25,7 @@ import SliderFull from "./sliders/sliderFull"
 import SliderRight from "./sliders/sliderRight"
 
 const Landing = ({ pageProps }) => {
+  
   const data = useStaticQuery(graphql`
   {
    

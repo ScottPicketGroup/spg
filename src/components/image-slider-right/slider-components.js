@@ -26,13 +26,13 @@ display: flex;
 background-color: #f9f9f4;
 justify-content: flex-end;
 margin-top: 1.5rem;
-padding-right: 75px;
+
 @media screen and (max-width: 450px) {
     display: none;
 } 
 `
 export const Controls = styled.div`
-width: ${props => props.right ? '100%' : '64%'};
+width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;

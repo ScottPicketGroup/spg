@@ -1,8 +1,16 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
-import styled from 'styled-components'
-import Slider from '../../../image-slider-full/Slider'
+import Slider from '../../../image-slider-right/Slider'
+const captions = [
+  "caption eg 1",
+  "caption eg 2",
+  "caption eg 3",
+  "caption eg 4",
+  
+  
+]
 const SliderFull = () => {
+
     const data = useStaticQuery(graphql`
     {
       allFile(
@@ -19,9 +27,10 @@ const SliderFull = () => {
       }
     }
     `)
+    
     console.log(`data`, data)
     return (
-        <Slider images={data} />
+        <Slider images={data} captions={captions}/>
     )
 }
 
