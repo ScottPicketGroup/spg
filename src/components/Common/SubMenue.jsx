@@ -5,13 +5,10 @@ import { SectionContainer } from "../global/GlobalStyles";
 
 import { Link } from "gatsby";
 import styled from "styled-components";
-import LogoWhite from "../../images/logoWhite.svg";
-
-import fbIcon from "../../images/fb.png";
-import instaIcon from "../../images/insta.png";
+import logo from "../../images/logoWhite.svg";
 
 import { Menu, MenuHeading} from "../global/fontStyles";
-import {MenuItem} from './styled-components'
+import {MenuItem, LogoImg} from './styled-components'
 import TableMenu from "./SubMenus/BookTableMenu";
 import GiftVoucher from "./SubMenus/GiftVoucher";
 import Provider from "./SubMenus/Provider";
@@ -50,10 +47,7 @@ export const MenuBtn = styled.div`
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
   }
 `;
-export const LogoImg = styled.img`
-  display: inline;
-  width: ${(props) => props.theme.name === "Mobile" && "100px"};
-`;
+
 
 export const CloseBtn = styled.div`
   font-size: 16px;
@@ -203,6 +197,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           </MenuItem>
           <MenuItem theme={theme}>Contact</MenuItem>
         </Menu>
+        <LogoImg src={logo} style={{left: `3rem`}}/>
       </LeftContainer>
       <RightContainer style={{ marginTop: `54px` }}>
         {(() => {
@@ -219,6 +214,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           }
         })()}
       </RightContainer>
+     
     </SectionContainer>
   ) : (
     <div></div>

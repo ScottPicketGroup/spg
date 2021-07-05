@@ -25,7 +25,7 @@ import {
   Award,
   Hat,
 } from "./styled-components"
-import Footer from "../../Common/Footer"
+import Footer from "../../Common/Footer/Footer"
 import MobileHome from "../../Common/MobileHome"
 import {
   BC1,

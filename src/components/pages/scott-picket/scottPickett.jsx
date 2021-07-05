@@ -18,7 +18,7 @@ import {
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage} from "gatsby-plugin-image"
 import { BC1, Header1, Header2, Quotation, BC2 } from "../../global/fontStyles"
-import Footer from "../../Common/Footer"
+import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
 import Timeline from "./timeline/timeline"
 import SliderFull from "./sliders/sliderFull"

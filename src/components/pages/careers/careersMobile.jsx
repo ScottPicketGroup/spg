@@ -8,7 +8,7 @@ import HomeImage from "../../../images/carrers-hero.jpg";
 import { InnerContainer, RightContainer, Button } from "./styled-components";
 import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";
 
-import Footer from "../../Common/Footer";
+import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/MobileHome";
 const MobileLanding = ({ pageProps }) => {
   const theme = useTheme();

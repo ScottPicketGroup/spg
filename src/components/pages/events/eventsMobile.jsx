@@ -24,7 +24,7 @@ import {
   Item,
 } from "./styled-components";
 import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles";
-import Footer from "../../Common/Footer";
+import Footer from "../../Common/Footer/Footer";
 import MobileHome from "../../Common/MobileHome";
 import SliderFull from "./image-slider-full/Slider";
 

@@ -26,7 +26,7 @@ import {
   Item,
   ItemImgLink,
 } from "./styled-components";
-import Footer from "../../Common/Footer";
+import Footer from "../../Common/Footer/Footer";
 import MobileHome from "../../Common/MobileHome";
 import Slider from "./image-slider/Slider";
 

@@ -12,7 +12,7 @@ import {
 } from "./styled-components";
 import { BC1, Header1 } from "../../global/fontStyles";
 
-import Footer from "../../Common/Footer";
+import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/DesktopHome";
 
 import RightAligned from "./rightAligned";

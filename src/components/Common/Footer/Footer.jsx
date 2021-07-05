@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import { useTheme } from "styled-components";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import LogoFooter from "../Footer/logo-footer/LogoFooter";
-import MenuBox from "../Common/Menue";
-import SubMenu from "./SubMenue";
+import LogoFooter from "../../Footer/logo-footer/LogoFooter";
+import MenuBox from "../Menue";
+import SubMenu from "../SubMenue";
 
 
 export const FooterContainer = styled.div`

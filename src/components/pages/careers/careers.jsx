@@ -14,7 +14,7 @@ import {
 } from "../../global/GlobalStyles"
 import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles"
 
-import Footer from "../../Common/Footer"
+import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
 const Landing = ({ pageProps }) => {
   const data = useStaticQuery(graphql`  {

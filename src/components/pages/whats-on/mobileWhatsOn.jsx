@@ -26,7 +26,7 @@ import {
 
 import { BC1, Header1, BC3, Header2, Header3 } from "../../global/fontStyles";
 
-import Footer from "../../Common/Footer";
+import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/MobileHome";
 import RightAligned from "./rightAligned";
 const whatsOnEvents = [

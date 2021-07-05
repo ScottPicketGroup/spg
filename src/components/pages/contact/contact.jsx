@@ -10,7 +10,7 @@ import {
 import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import Footer from "../../Common/Footer"
+import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
 import ContactUsForm from "./contact-us/ContactUsForm"
 const Landing = ({ pageProps }) => {
