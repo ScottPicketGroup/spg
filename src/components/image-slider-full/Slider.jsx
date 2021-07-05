@@ -101,46 +101,49 @@ const SliderFull = ({ images, captions }) => {
 
 console.log(captions)
 
-  return (
-    <div {...handlers}
+return images ? (
+  <div {...handlers}
     
-    style={{
-      background: `#f9f9f4`
-    }}>
-      <SliderContainer ref={el => (title = el)}>
-        {images.allFile.edges.map((image, i) => (
-          <>
-            <SliderImage
-              image={getImage(image.node)}
-              alt="matilda"
-              id={i}
-              activeImg={activeImg}
-            />
-          </>
-        ))}
-      </SliderContainer>
+  style={{
+    background: `#f9f9f4`
+  }}>
+    
+    <SliderContainer ref={el => (title = el)}>
+      {images && images.allFile.edges.map((image, i) => (
+        <>
+          <SliderImage
+            image={getImage(image.node)}
+            alt="matilda"
+            id={i}
+            activeImg={activeImg}
+          />
+        </>
+      ))}
+    </SliderContainer>
+   
+    <ControlsContainer>
      
-      <ControlsContainer>
-       
-        
-        <Controls> 
-        <ImageCaption ref={el => (caption = el)}>{captions[imageNumber - 1]}</ImageCaption>
-        <ControlButtonContainer>
-          <ControlButton onClick={previousImage}>
-            <PreviousIcon />
-          </ControlButton>
-          <ControlButton onClick={nextImage}>
-            <NextIcon />
-          </ControlButton>
-          </ControlButtonContainer>
-        </Controls>
-        
-      </ControlsContainer>
-      <MobileControls>
-        <ImageCaption>{imageNumber}/2</ImageCaption>
-      </MobileControls>
-    </div>
-  )
+      
+      <Controls> 
+      <ImageCaption ref={el => (caption = el)}>{captions[imageNumber - 1]}</ImageCaption>
+      <ControlButtonContainer>
+        <ControlButton onClick={previousImage}>
+          <PreviousIcon />
+        </ControlButton>
+        <ControlButton onClick={nextImage}>
+          <NextIcon />
+        </ControlButton>
+        </ControlButtonContainer>
+      </Controls>
+      
+    </ControlsContainer>
+    <MobileControls>
+      <ImageCaption>{imageNumber}/2</ImageCaption>
+    </MobileControls>
+  </div>
+) : (
+  <div></div>
+);
 }
 
 export default SliderFull

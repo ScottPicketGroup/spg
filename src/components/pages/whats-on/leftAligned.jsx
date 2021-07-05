@@ -14,13 +14,13 @@ import { BC3, BC2, Header2, Header3 } from "../../global/fontStyles";
 import EventImage from "./eventImage";
 import SliderFull from "./image-slider-full/Slider";
 
-const LeftAligned = ({ data }) => {
+const LeftAligned = ({ data, images }) => {
   const theme = useTheme();
 console.log(data.links)
   return theme ? (
     <Grid cols="2">
      <Item>
-        {!data.image ? (
+        {images && !data.image ? (
           <SliderFull images={data.images}/>
         ): <EventImage src={data.image} />}
         

@@ -49,7 +49,7 @@ const LeftAligned = ({ data, images }) => {
       <Item>
   
         {
-        
+       images &&
         !data.image ? (
           <SliderFull images={images}/>
         ): <EventImage src={data.image} />}

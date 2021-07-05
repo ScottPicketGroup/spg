@@ -188,7 +188,7 @@ Read on to hear what’s coming up at our Scott Pickett Group venues.
           </RightContainer>
         </InnerContainer>
       </SectionContainer>
-        {whatsOnEvents &&
+        {whatsOnEvents && 
           whatsOnEvents.map((item, index) => {
             return (
               <SectionContainer key={index}>

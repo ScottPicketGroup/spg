@@ -95,37 +95,39 @@ const SliderFull = ({ images }) => {
 
 
 
-  return (
+  return images ? (
     <div {...handlers}>
-      <SliderContainer ref={el => (title = el)}>
-        {images.allFile.edges.map((image, i) => (
-          <>
-            <SliderImage
-              image={getImage(image.node)}
-              alt="matilda"
-              id={i}
-              activeImg={activeImg}
-            />
-          </>
-        ))}
-      </SliderContainer>
-      <ControlsContainer>
-        <Controls>
-          <ControlButton onClick={previousImage}>
-            {" "}
-            <PreviousIcon />
-          </ControlButton>
-          <ControlButton onClick={nextImage}>
-            {" "}
-            <NextIcon />
-          </ControlButton>
-        </Controls>
-      </ControlsContainer>
-      <MobileControls>
-        <ImageCaption>{imageNumber}/2</ImageCaption>
-      </MobileControls>
-    </div>
-  )
+<SliderContainer ref={el => (title = el)}>
+  {images.allFile.edges.map((image, i) => (
+    <>
+      <SliderImage
+        image={getImage(image.node)}
+        alt="matilda"
+        id={i}
+        activeImg={activeImg}
+      />
+    </>
+  ))}
+</SliderContainer>
+<ControlsContainer>
+  <Controls>
+    <ControlButton onClick={previousImage}>
+      {" "}
+      <PreviousIcon />
+    </ControlButton>
+    <ControlButton onClick={nextImage}>
+      {" "}
+      <NextIcon />
+    </ControlButton>
+  </Controls>
+</ControlsContainer>
+<MobileControls>
+  <ImageCaption>{imageNumber}/2</ImageCaption>
+</MobileControls>
+</div>
+  ) : (
+    <div></div>
+  );
 }
 
 export default SliderFull
