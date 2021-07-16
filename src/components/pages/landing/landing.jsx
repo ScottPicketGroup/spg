@@ -113,7 +113,7 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>Venues</Header1>
              
-{* <BC1 theme={theme}>
+{/* <BC1 theme={theme}>
                 Our developing list of Melbourne venues includes European-bistro
                 <i> Chancery Lane</i>, contemporary Australian <i>Matilda</i>,
                 modern-Thai
@@ -126,7 +126,7 @@ const Landing = ({ pageProps }) => {
               <BC1>
                 Soon to join the family will be <i>Smith Street Bistro</i>, a
                 classic bistro with a North-side edge.
-              </BC1> *}
+  </BC1> */}
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
