@@ -54,14 +54,14 @@ console.log(data.allFile)
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Header1 theme={theme}>Scott Pickett</Header1>
+              <Header1 theme={theme}>Scott here, but you can call me 'Chefo'</Header1>
               <BC1 theme={theme} marginBottom="3.5rem">
-                My love for great produce began early. As a kid on a farm in
+                "My love for great produce began early. As a kid on a farm in
                 Kangarilla, it taught me a lot about food and seasonality.
                 Knowing the growers and producers behind the food we ate gave me
                 a respect for them that I’ve never lost. That connection with an
                 environment like that influenced me to become a chef. So did
-                growing up with my grandmother Audrey’s Sunday roasts.
+                growing up with my grandmother Audrey’s Sunday roasts."
               </BC1>
              
           
@@ -69,21 +69,21 @@ console.log(data.allFile)
        
        
               <BC1 theme={theme} marginBottom="3.5rem" marginTop="9rem">
-                Those years set the foundations of my values as a chef and
+                "Those years set the foundations of my values as a chef and
                 restaurateur today. My approach always puts food at the front.
                 It’s based on real cooking – with the greatest respect to the
                 produce. I want you to have incredible food and wine
-                experiences, with incredible service. But the food is the hero.
+                experiences, with incredible service. But the food is the hero."
 
                 </BC1>
               <BC1 theme={theme} marginBottom="3.5rem" >
-                Now, as a restaurateur, I don’t spend as much time cooking as I
+                "Now, as a restaurateur, I don’t spend as much time cooking as I
                 used to, but I have some gun Head Chefs to work with. Together,
                 we build on what makes each of the venues special, and try to
                 impart on you our understanding of seasonality and our respect
                 for Australian growers and producers. It’s a journey that’s
                 still going. Can’t wait to share with you what we’ve got planned
-                next.
+                next."
               </BC1>
             </RightContainer>
           </InnerContainer>
@@ -99,7 +99,7 @@ console.log(data.allFile)
                 paddingBottom: `9rem`
               }}
               >
-                “ Those years set the foundations of my values as a chef and
+                “Those years set the foundations of my values as a chef and
                 restaurateur today. My approach always puts food at the front.
                 It’s based on real cooking – with the greatest respect to the
                 produce.”
@@ -243,9 +243,12 @@ console.log(data.allFile)
             <RightContainer>
               <TimeLineGrid>
                 <LeftGrid>
-                  <Header2>Estelle Bistro</Header2>
+                  <Header2>Estelle</Header2>
                 </LeftGrid>
                 <RightGrid>
+                <BC2> 2020 Age Good Food Guide – <Hat src={hat} alt="chef hat" />
+
+</BC2>
                   <BC2> 2018 Delicious Top 100 Restaurants</BC2>
                   <BC2> 2018 Gault & Millau Guide – 15/20</BC2> 
                   <BC2> 2017 Gourmet Traveller Restaurant Guide</BC2>

@@ -173,7 +173,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           </MenuItem>
 
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
-            Providor
+            Providoor
           </MenuItem>
 
           {/* <MenuItem theme={theme}>Shop</MenuItem> */}

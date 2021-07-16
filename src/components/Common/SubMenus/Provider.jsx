@@ -83,7 +83,7 @@ const Provider = ({ hideModal }) => {
                    href="https://www.providoor.com.au/promo/matilda"
                    target="_blank"
                    style={{ textDecoration: `none`, color: `inherit` }}
-                 >Matilida</a>
+                 >Matilda</a>
         </Menu3Item>
         <Menu3Item  theme={theme}>
                  <a
@@ -92,17 +92,13 @@ const Provider = ({ hideModal }) => {
                    style={{ textDecoration: `none`, color: `inherit` }}
                  >Longrain</a>
         </Menu3Item>
-        <Menu3Item onClick={() => handleRedirect("#")} theme={theme}>
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            Longrain{" "}
-          </Link>
-        </Menu3Item>
+       
         <Menu3Item  theme={theme}>
                  <a
                    href="https://www.providoor.com.au/promo/estelle"
                    target="_blank"
                    style={{ textDecoration: `none`, color: `inherit` }}
-                 >Matilida</a>
+                 >Estelle</a>
         </Menu3Item>
       </Menu>
 

@@ -66,22 +66,21 @@ const MenuResusable = () => {
               AdaptedREM
             </Link>
           </MenuItem> */}
-          {location.pathname === "/" ||
-          location.pathname === "/scott-picket" ? (
+         
             <MenuItem theme={theme}>
               <Link
                 to="/scott-picket"
                 style={{
                   color: "inherit",
                   textDecoration: "none",
-                  paddingLeft: ".75rem",
+                  
                 }}
                 activeStyle={{ fontFamily: `UntitledSansMedium` }}
               >
                 Scott Pickett
               </Link>
             </MenuItem>
-          ) : null}
+
 
           <MenuItem
             theme={theme}

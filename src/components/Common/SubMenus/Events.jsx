@@ -42,7 +42,6 @@ export const RightContainer = styled.div`
 `;
 export const MenuBtn = styled.div`
   font-size: 16px;
-  text-transform: uppercase;
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
   cursor: ${(props) => (props.link ? "pointer" : "text")};
@@ -78,7 +77,7 @@ const BookATable = ({ hideModal }) => {
     <div>
       <Menu theme={theme} inModal={true}>
         <Menu3Item onClick={() => handleRedirect("/sp-events")} theme={theme}>
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
+          <Link style={{ color: "inherit", textDecoration: "none", textTransform: "none" }}>
           SP Events – Offsite events and catering
           </Link>
         </Menu3Item>

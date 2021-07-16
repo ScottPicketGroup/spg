@@ -35,30 +35,37 @@ const captions = []
 const Events = ({ pageProps }) => {
   const theme = useTheme()
   const data = useStaticQuery(graphql`
-  {
-    allFile(
-      filter: {extension: {}, absolutePath: {regex: "/images/events-carousel/"}}
-    ) {
-      edges {
-        node {
-          id
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, aspectRatio: 1.5)
-          }
+    {
+      allFile(
+        filter: {
+          extension: {}
+          absolutePath: { regex: "/images/events-carousel/" }
         }
-      }
-    }
-    file(name: {in: "events-hero"}) {
-     id
+      ) {
+        edges {
+          node {
+            id
             childImageSharp {
               gatsbyImageData(
                 layout: FULL_WIDTH
                 placeholder: BLURRED
                 aspectRatio: 1.5
-                )
+              )
             }
+          }
+        }
+      }
+      file(name: { in: "events-hero" }) {
+        id
+        childImageSharp {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            aspectRatio: 1.5
+          )
+        }
+      }
     }
-  }
   `)
   const image = getImage(data.file)
   return theme ? (
@@ -71,18 +78,20 @@ const Events = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>In-venue private events </Header1>
-              <BC1 theme={theme}>
+              {/* <BC1 theme={theme}>
               Parties of up to 8-10 guests can select from our regular menus and be seated in our main dining rooms, but for a more private soiree, each of our venues has private dining spaces to accommodate intimate dinners for 8 up to standing cocktail events of 250 guests. 
-              </BC1>
+              </BC1> */}
               <BC1>
-              Let us look after you as we help to bring your special event to life. From dedicated staff, bespoke menus, room dressing – the lot.
+                Let us look after you as we help to bring your special event to
+                life. From intimate dinners of 8–10 guests to extravagant
+                cocktail soirées of 200... We offer dedicated staff, bespoke
+                menus, room dressing – the whole package.
               </BC1>
-              
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
       </Container>
-      <Slidera images={data} captions={captions}/>
+      <Slidera images={data} captions={captions} />
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <SectionContainer>
           <InnerContainer>
@@ -90,7 +99,10 @@ const Events = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>Our event spaces</Header1>
               <BC1 theme={theme}>
-              The links below will take you to specific event pages for each of our venues, or if you’re not sure which venue will be the best fit, fill out the expressions of interest form and one of our events team will be in touch.
+                Visit the links below to learn more about the private spaces at
+                each of our venues. If you’re not sure which venue will be the
+                best fit, fill out the enquiry form and one of our events team
+                will be in touch.
               </BC1>
             </RightContainer>
           </InnerContainer>
@@ -99,7 +111,11 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
-            <RightContainerLink hover href="http://www.google.com" target="_blank">
+            <RightContainerLink
+              hover
+              href="http://www.google.com"
+              target="_blank"
+            >
               <FullImageContainer>
                 <ImageView>
                   <ImageDiv src={gridPic1}></ImageDiv>
@@ -113,11 +129,17 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
-              <RightContainerLink hover href='http://www.theestelle.com.au' target="_blank">
+            <RightContainerLink
+              hover
+              href="http://www.theestelle.com.au"
+              target="_blank"
+            >
               <FullImageContainer>
-              <StaticImage 
-                    placeholder="blurred"
-                    src="../../../images/events-pdrs/estelle-flowers.jpg" alt="Chancery Lane" />
+                <StaticImage
+                  placeholder="blurred"
+                  src="../../../images/events-pdrs/estelle-flowers.jpg"
+                  alt="Chancery Lane"
+                />
               </FullImageContainer>
               <ItemImgCaption>Estelle</ItemImgCaption>
               <BC3>High St, Northcote</BC3>
@@ -127,11 +149,17 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
-              <RightContainerLink hover href='http://www.longrainmelbourne.com' target="_blank">
+            <RightContainerLink
+              hover
+              href="http://www.longrainmelbourne.com"
+              target="_blank"
+            >
               <FullImageContainer>
-              <StaticImage 
-                    placeholder="blurred"
-                    src="../../../images/events-pdrs/longgrain.jpeg" alt="Chancery Lane" />
+                <StaticImage
+                  placeholder="blurred"
+                  src="../../../images/events-pdrs/longgrain.jpeg"
+                  alt="Chancery Lane"
+                />
               </FullImageContainer>
               <ItemImgCaption>Longrain</ItemImgCaption>
               <BC3>Little Bourke St, Melbourne</BC3>
@@ -141,13 +169,19 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
-             <RightContainerLink hover href='https://matilda159.com/' target="_blank">
+            <RightContainerLink
+              hover
+              href="https://matilda159.com/"
+              target="_blank"
+            >
               <FullImageContainer>
-              <StaticImage 
-                    aspectRatio={3 / 2}
-                    placeholder="blurred"
-                    layout="fullWidth"
-                    src="../../../images/events-pdrs/flowers.jpg" alt="Matilda" />
+                <StaticImage
+                  aspectRatio={3 / 2}
+                  placeholder="blurred"
+                  layout="fullWidth"
+                  src="../../../images/events-pdrs/flowers.jpg"
+                  alt="Matilda"
+                />
               </FullImageContainer>
               <ItemImgCaption>Matilda</ItemImgCaption>
               <BC3>Domain Road, South Yarra</BC3>
@@ -157,11 +191,17 @@ const Events = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
-             <RightContainerLink hover href='http://www.pastorerestaurant.com.au' target="_blank">
+            <RightContainerLink
+              hover
+              href="http://www.pastorerestaurant.com.au"
+              target="_blank"
+            >
               <FullImageContainer>
-              <StaticImage 
-                    placeholder="blurred"
-                    src="../../../images/home-venues/Pastore.jpg" alt="Chancery Lane" />
+                <StaticImage
+                  placeholder="blurred"
+                  src="../../../images/home-venues/Pastore.jpg"
+                  alt="Chancery Lane"
+                />
               </FullImageContainer>
               <ItemImgCaption>Pastore</ItemImgCaption>
               <BC3>Dandenong Road, Chadstone</BC3>
