@@ -78,14 +78,13 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>Scott Pickett Group</Header1>
               <BC1 theme={theme}>
-                Welcome to the Scott Pickett Group. We are proud to operate a
-                growing list of award-winning Melbourne restaurants and
-                establishments. Our restaurants are diverse in fare and
-                experience; from punchy Thai flavours at Longrain to precise
-                European technique at Chancery Lane, yet all of our venues have
-                one thing in common—all are fuelled by our passion for great
-                food and great hospitality. Unsurprisingly, our mission is ‘For
-                every guest to experience our true passion for hospitality.’
+                Welcome to the Scott Pickett Group. We are proud to operate a growing list of award-
+                winning Melbourne restaurants and establishments. Our restaurants are diverse in fare and
+                experience; from precise European technique at Chancery Lane to punchy Thai flavours at
+                Longrain, yet all our venues have one thing in common—all are fuelled by our passion for
+                great food and great hospitality. Unsurprisingly, our mission is ‘For every guest to experience
+                our true passion for hospitality.’
+                
               </BC1>
               <BC1 theme={theme}>
                 As one of Australia’s leading chefs and restaurateurs, Scott
@@ -98,7 +97,7 @@ const Landing = ({ pageProps }) => {
               </BC1>
               <Link to="/scott-picket" style={{ textDecoration: `none` }}>
                 <BC1 link={true} theme={theme} marginBottom="6rem">
-                  Read more about Scott ‘Cheffo’ Pickett
+                  Read more about Scott Pickett
                 </BC1>
               </Link>
             </RightContainer>
@@ -113,7 +112,8 @@ const Landing = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme}>Venues</Header1>
-              <BC1 theme={theme}>
+             
+{* <BC1 theme={theme}>
                 Our developing list of Melbourne venues includes European-bistro
                 <i> Chancery Lane</i>, contemporary Australian <i>Matilda</i>,
                 modern-Thai
@@ -126,7 +126,7 @@ const Landing = ({ pageProps }) => {
               <BC1>
                 Soon to join the family will be <i>Smith Street Bistro</i>, a
                 classic bistro with a North-side edge.
-              </BC1>
+              </BC1> *}
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
