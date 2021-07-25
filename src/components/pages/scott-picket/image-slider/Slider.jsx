@@ -17,7 +17,6 @@ import PreviousIcon from "./control-elements/PreviousIcon"
 import img1 from "../../../../images/sp-carousel/1.jpg"
 import img2 from "../../../../images/sp-carousel/2.jpg"
 import img3 from "../../../../images/sp-carousel/3.jpg"
-import img4 from "../../../../images/sp-carousel/4.jpg"
 import { ImageCaption } from "../../../global/fontStyles"
 
 
@@ -111,9 +110,7 @@ const [imageNumber, setImageNumber] = useState(1)
           <Image src={img2} alt="matilda" />
         ) : activeImg === 2 ? (
           <Image src={img3} alt="matilda" />
-        ) : activeImg === 3 ? (
-          <Image src={img4} alt="matilda" />
-        ) : null}
+        )  : null}
       </SliderContainer>
       <ControlsContainer>
         <Controls>

@@ -161,7 +161,15 @@ export const FooterLogoContainer = styled.div`
 export const FooterLogo = styled.img``;
 
 export const ItemExpandElement = styled(BC3)`
-font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
+margin-top: 0;  
+font-size: 87%;
+padding-left: .05rem;
+opacity: .9;
+transition: all .2 ease-in-out;
+:hover {
+  opacity: 1;
+  font-size: 90%;
+}
 `
 export const ItemInfoContainer = styled.div`
 margin-Top: ${(props) => (props.marginTop ? props.marginTop : `0`)};

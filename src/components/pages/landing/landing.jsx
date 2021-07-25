@@ -23,7 +23,8 @@ import { BC1, Header1, BC3, Header2 } from "../../global/fontStyles"
 
 import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
-import Slider from "../../image-slider-full/Slider"
+import SliderFull from "../../image-slider-full/Slider"
+
 const captions = [
   "Lamb ribs: ‘Matilda 159 Domain’",
   "Betel leaf: ‘Longrain Melbourne’ ",
@@ -79,13 +80,13 @@ const Landing = ({ pageProps }) => {
               <Header1 theme={theme}>Scott Pickett Group</Header1>
               <BC1 theme={theme}>
                 Welcome to the Scott Pickett Group. We are proud to operate a
-                growing list of award-winning Melbourne restaurants and
+                growing list of award- winning Melbourne restaurants and
                 establishments. Our restaurants are diverse in fare and
-                experience; from punchy Thai flavours at Longrain to precise
-                European technique at Chancery Lane, yet all of our venues have
-                one thing in common—all are fuelled by our passion for great
-                food and great hospitality. Unsurprisingly, our mission is ‘For
-                every guest to experience our true passion for hospitality.’
+                experience; from precise European technique at Chancery Lane to
+                punchy Thai flavours at Longrain, yet all our venues have one
+                thing in common—all are fuelled by our passion for great food
+                and great hospitality. Unsurprisingly, our mission is ‘For every
+                guest to experience our true passion for hospitality.’
               </BC1>
               <BC1 theme={theme}>
                 As one of Australia’s leading chefs and restaurateurs, Scott
@@ -98,7 +99,7 @@ const Landing = ({ pageProps }) => {
               </BC1>
               <Link to="/scott-picket" style={{ textDecoration: `none` }}>
                 <BC1 link={true} theme={theme} marginBottom="6rem">
-                  Read more about Scott ‘Cheffo’ Pickett
+                  Read more about Scott Pickett –&gt;
                 </BC1>
               </Link>
             </RightContainer>
@@ -106,8 +107,8 @@ const Landing = ({ pageProps }) => {
         </SectionContainer>
       </Container>
 
-      <Slider images={data} captions={captions} />
-      
+      <SliderFull images={data} captions={captions} />
+
       <Container theme={theme}>
         <SectionContainer style={{ marginBottom: `2.25rem 0 9rem` }}>
           <InnerContainer>
@@ -153,21 +154,25 @@ const Landing = ({ pageProps }) => {
                     <Header2 style={{ marginTop: `1.25rem` }}>
                       Chancery Lane
                     </Header2>
-                    <BC3 link={true}>Little Collins St, Melbourne</BC3>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                      Little Collins St, Melbourne
+                    </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery} marginTop="1rem">
-                    <ItemExpandElement>Find Out More</ItemExpandElement>
+                  <ItemInfoContainer open={chancery}>
+                    <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
                       Housed in the historic Normanby Chambers building,
                       Chancery Lane is Scott Pickett’s classic bistro with an
                       edge. No detail has been spared when it comes to the menu,
                       drinks list, service and design. <br />
-                       The interior echoes a decadent, bygone era, the menu sees
+                      <br />
+                      The interior echoes a decadent, bygone era, the menu sees
                       a list of classic dishes with a modern touch, using the
                       finest, seasonal, local ingredients and varying European
                       techniques. Open all day, Chancery Lane invites everyone,
                       whether you’re stopping for a glass of wine or an
                       indulgent seafood platter and full-course fare. <br />
+                      <br />
                       Chancery Lane opened its doors on 16th December 2020.
                     </BC3>
                     <ItemImgLink
@@ -180,7 +185,6 @@ const Landing = ({ pageProps }) => {
                   </ItemInfoContainer>
                 </Item>
 
-                
                 <Item>
                   {" "}
                   <ItemImgLink
@@ -199,10 +203,12 @@ const Landing = ({ pageProps }) => {
                     <Header2 style={{ marginTop: `1.25rem` }}>
                       Le Shoppe
                     </Header2>
-                    <BC3 link={true}>‘Little Collins St, Melbourne</BC3>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                      Little Collins St, Melbourne
+                    </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery} marginTop="1rem">
-                    <ItemExpandElement>Find Out More</ItemExpandElement>
+                  <ItemInfoContainer open={chancery}>
+                    <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
                       Le Shoppe is Scott Pickett’s European-inspired coffee bar
                       and provedore, located on Little Collins St, Melbourne.
@@ -214,7 +220,6 @@ const Landing = ({ pageProps }) => {
                       options and ‘lunchboxes’ under $20, Le Shoppe provides CBD
                       businesses with quality European-inspired catering for any
                       occasion. 
-                      <br />
                       <br />
                       Le Shoppe á Nuit offers pre-dinner aperitives and a wine
                       or cocktail, served authentic deli-style in a glass
@@ -244,10 +249,12 @@ const Landing = ({ pageProps }) => {
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Matilda</Header2>
-                    <BC3 link={true}>Domain Rd, South Yarra</BC3>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                      Domain Rd, South Yarra
+                    </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery} marginTop="1rem">
-                    <ItemExpandElement>Find Out More</ItemExpandElement>
+                  <ItemInfoContainer open={chancery}>
+                    <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
                       Matilda is a visual and sensory journey. The kitchen
                       is fuelled by open fire and hot coals, delivering
@@ -269,7 +276,7 @@ const Landing = ({ pageProps }) => {
                     </ItemImgLink>
                   </ItemInfoContainer>
                 </Item>
-                
+
                 <Item>
                   <ItemImgLink
                     href="http://www.theestelle.com.au"
@@ -284,10 +291,12 @@ const Landing = ({ pageProps }) => {
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Estelle</Header2>
-                    <BC3 link={true}>High St, Northcote</BC3>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                      High St, Northcote
+                    </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery} marginTop="1rem">
-                    <ItemExpandElement>Find Out More</ItemExpandElement>
+                  <ItemInfoContainer open={chancery}>
+                    <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
                       Whether stopping by for a glass of wine and a share plate,
                       or a full tasting menu, guests can find home in this
@@ -324,10 +333,12 @@ const Landing = ({ pageProps }) => {
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Longrain</Header2>
-                    <BC3 link={true}>Little Bourke St, Melbourne </BC3>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                      Little Bourke St, Melbourne{" "}
+                    </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery} marginTop="1rem">
-                    <ItemExpandElement>Find Out More</ItemExpandElement>
+                  <ItemInfoContainer open={chancery}>
+                    <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
                       Scott Pickett’s Longrain is a Melbourne dining
                       institution. Located in an expansive heritage building on
@@ -351,7 +362,6 @@ const Landing = ({ pageProps }) => {
                   </ItemInfoContainer>
                 </Item>
 
-                
                 <Item>
                   {" "}
                   <ItemImgLink
@@ -367,10 +377,12 @@ const Landing = ({ pageProps }) => {
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Longsong</Header2>
-                    <BC3 link={true}>UPSTAIRS, Little Bourke St, Melbourne</BC3>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                      Upstairs, Little Bourke St, Melbourne
+                    </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery} marginTop="1rem">
-                    <ItemExpandElement>Find Out More</ItemExpandElement>
+                  <ItemInfoContainer open={chancery}>
+                    <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
                       Longsong is a Thai-inspired cocktail bar that artfully
                       mixes Bangkok and Melbourne, the high and the low. Housed
@@ -390,7 +402,7 @@ const Landing = ({ pageProps }) => {
                     </ItemImgLink>
                   </ItemInfoContainer>
                 </Item>
-           
+
                 <Item>
                   {" "}
                   <ItemImgLink
@@ -406,19 +418,22 @@ const Landing = ({ pageProps }) => {
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Pastore</Header2>
-                    <BC3 link={true}>Dandenong Rd, Chadstone</BC3>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                      Dandenong Rd, Chadstone
+                    </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery} marginTop="1rem">
-                    <ItemExpandElement>Find Out More</ItemExpandElement>
+                  <ItemInfoContainer open={chancery}>
+                    <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Incidunt ullam totam, libero error distinctio nihil
-                      perferendis quod. Minus vero placeat debitis veritatis
-                      laboriosam temporibus possimus, laborum maiores adipisci
-                      tempora facere. Quos deleniti reiciendis animi incidunt
-                      doloribus nihil quis et est, sed asperiores harum fugiat
-                      nisi atque, aut iure itaque totam expedita accusantium.
-                      Cum, facilis sunt earum ad unde ipsa ratione?
+                      Pastore is an Italian-inspired all-day dining venue
+                      welcoming guests for all occasions. Located at Hotel
+                      Chadstone Melbourne MGallery by Sofitel, Pastore—the
+                      Italian word for ‘shepherd’—honours the area’s heritage
+                      once rich with pasture and orchards. From small plates to
+                      full tasting experiences, the menu draws focus on
+                      woodfire-fuelled cooking and handmade pasta; showcasing
+                      Italian cuisine through contemporary Australian
+                      references.
                     </BC3>
                     <ItemImgLink
                       href="http://www.pastorerestaurant.com.au"
@@ -429,7 +444,7 @@ const Landing = ({ pageProps }) => {
                     </ItemImgLink>
                   </ItemInfoContainer>
                 </Item>
-                
+
                 <Item>
                   {" "}
                   <ItemImgLink
@@ -449,20 +464,14 @@ const Landing = ({ pageProps }) => {
                     <Header2 style={{ marginTop: `1.25rem` }}>
                       Pickett’s Deli & Rotisserie
                     </Header2>
-                    <BC3 link={true}>Terminal 3, Melbourne Airport </BC3>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                      Terminal 3, Melbourne Airport{" "}
+                    </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery} marginTop="1rem">
-                    <ItemExpandElement>Find Out More</ItemExpandElement>
+                  <ItemInfoContainer open={chancery}>
+                    <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui hic, quas sunt facilis nisi, modi commodi deserunt
-                      impedit architecto at voluptate deleniti molestiae
-                      mollitia vitae veritatis reprehenderit excepturi?
-                      Quisquam, beatae. Nulla totam velit veritatis iste dolor
-                      quisquam cumque officia voluptas porro voluptate, aut
-                      corporis. Et nostrum perspiciatis exercitationem ratione
-                      recusandae neque nihil expedita vitae, illo cupiditate
-                      voluptates ab aliquid sit?
+                    Pastore is an Italian-inspired all-day dining venue welcoming guests for all occasions. Located at Hotel Chadstone Melbourne MGallery by Sofitel, Pastore—the Italian word for ‘shepherd’—honours the area’s heritage once rich with pasture and orchards. From small plates to full tasting experiences, the menu draws focus on woodfire-fuelled cooking and handmade pasta; showcasing Italian cuisine through contemporary Australian references.
                     </BC3>
                     <ItemImgLink
                       href="http://www.pickettsdeli.com"
@@ -481,27 +490,30 @@ const Landing = ({ pageProps }) => {
                         aspectRatio={3 / 2}
                         placeholder="blurred"
                         layout="fullWidth"
-                        src="../../../images/events-hero.jpg"
+                        src="../../../images/heros/sp-events-hero.jpg"
                         alt="Chancery Lane"
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>
                       SP Events
                     </Header2>
-                    <BC3 link={true}>Victoria</BC3>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                      {" "}
+                      Victoria
+                    </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery} marginTop="1rem">
-                    <ItemExpandElement>Find Out More</ItemExpandElement>
+                  <ItemInfoContainer>
+                    <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Qui hic, quas sunt facilis nisi, modi commodi deserunt
-                      impedit architecto at voluptate deleniti molestiae
-                      mollitia vitae veritatis reprehenderit excepturi?
-                      Quisquam, beatae. Nulla totam velit veritatis iste dolor
-                      quisquam cumque officia voluptas porro voluptate, aut
-                      corporis. Et nostrum perspiciatis exercitationem ratione
-                      recusandae neque nihil expedita vitae, illo cupiditate
-                      voluptates ab aliquid sit?
+                      SP Events is Scott Pickett’s off-site catering business.
+                      We bring any event to life, from an intimate home soirée
+                      to large-scale public events like the Australian Open. We
+                      offer a range of special menus from each of our
+                      restaurants so that the style of cuisine can perfectly
+                      match the theme of our clients’ events. For client’s who
+                      simply can’t decide, we offer ‘Scott Pickett’s Greatest
+                      Hits’, a bespoke offer of Scott’s favourite dishes from
+                      across the group.
                     </BC3>
                     <ItemImgLink href="http://" target="_blank" link={true}>
                       Visit SP Events

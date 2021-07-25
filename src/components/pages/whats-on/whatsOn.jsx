@@ -46,7 +46,7 @@ const whatsOnEvents = [
       heading: "Brunches at Matilda ",
       subHeading: "Sunday brunch is getting a makeover.",
       content: [
-      "Matilda is expanding its brunch offering with a brand-new menu – we’ll have options for whatever you’re feeling, a green smoothie while you walk the Tan, or a smoked marshmallow waffle smore and mimosa… New take-away and sit-down brunch menu launching late July."
+      "Matilda is expanding its brunch offering with a brand-new menu – we’ll have options for whatever you’re feeling, a green smoothie while you walk the Tan, or a smoked marshmallow waffle smore and breakfast martini… New take-away and sit-down brunch menu launching late July."
       
     ],
     links: [
@@ -72,19 +72,19 @@ const whatsOnEvents = [
     //   image: highStakes,
     //   buttonText: "Book Now"
     // },
-    {
-      heading: "The Butcher, the Providore and the Chef",
-      subHeading: "Join us for a four-course dinner at Matilda, celebrating the butcher, the providore and the chef.",
-      content: [
-        "The exclusive menu takes you through a journey of provenance from farm to table. Mark Foletta, ‘the providore’ is well respected in Melbourne for his quality, sustainable produce, farmed in Benalla. ‘The chef’ Aleksis Kalnins has designed a special menu showcasing the best of Mark’s winter seasonal produce, along with the best of our house dry-aged duck, beef and kangaroo from ‘the butcher’.",
-        `Scott Pickett and Chancery Lane Head Chef Rob Kabboord have designed a luxe menu that’s dangerously decadent – from the seafood hors d’oeuvres to the tartare of beef with potato and caviar, and of course the rib-eye with truffle sauce, served to share. `,
-        `7:00pm Thursday 22nd July`,
-        `$125pp `,  
-    ],
-      image: butcher,
-      buttonText: "Book Now",
-      buttonLink: "https://www.sevenrooms.com/events/matilda"
-    },
+    // {
+    //   heading: "The Butcher, the Providore and the Chef",
+    //   subHeading: "Join us for a four-course dinner at Matilda, celebrating the butcher, the providore and the chef.",
+    //   content: [
+    //     "The exclusive menu takes you through a journey of provenance from farm to table. Mark Foletta, ‘the providore’ is well respected in Melbourne for his quality, sustainable produce, farmed in Benalla. ‘The chef’ Aleksis Kalnins has designed a special menu showcasing the best of Mark’s winter seasonal produce, along with the best of our house dry-aged duck, beef and kangaroo from ‘the butcher’.",
+    //     `Scott Pickett and Chancery Lane Head Chef Rob Kabboord have designed a luxe menu that’s dangerously decadent – from the seafood hors d’oeuvres to the tartare of beef with potato and caviar, and of course the rib-eye with truffle sauce, served to share. `,
+    //     `7:00pm Thursday 22nd July`,
+    //     `$125pp `,  
+    // ],
+    //   image: butcher,
+    //   buttonText: "Book Now",
+    //   buttonLink: "https://www.sevenrooms.com/events/matilda"
+    // },
     {
       heading: "Women in Wine series ",
       subHeading: "First event with Mel Chester of Sutton Grange ",
@@ -168,8 +168,9 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>What's On</Header1>
               <BC1 theme={theme}>
-              Six restaurants + two bars + two delis + one events company + more in the pipeline = plenty of things to keep us busy and you entertained.
-Read on to hear what’s coming up at our Scott Pickett Group venues. 
+              Five restaurants, three bars, two delis, one events company and more in the
+pipeline gives us plenty of things to keep us busy and you entertained.
+Read on to hear what’s coming up at our Scott Pickett Group venues.
 
               </BC1>
             </RightContainer>

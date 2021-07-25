@@ -10,7 +10,11 @@ const captions = [
   
 ]
 const SliderFull = () => {
-
+  const captions = [
+    "Opening night at Chancery Lane",
+    "Estelle's 10th Birthday",
+    "Estelle's 10th Birthday"
+  ]
     const data = useStaticQuery(graphql`
     {
       allFile(

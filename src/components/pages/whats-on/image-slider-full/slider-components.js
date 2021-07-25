@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import { GatsbyImage } from "gatsby-plugin-image"
+
 export const SliderContainer = styled.div`
 
 width: 100%;
+aspect-ratio: 4/3;
 background-color: #f9f9f4;
 
 z-index: 100;
@@ -16,7 +17,7 @@ width: 100%;
 
 export const Image = styled.img`
 width: 100%;
-
+aspect-ratio: 4/3;
 `
 
 export const ControlsContainer = styled.div`
@@ -31,8 +32,11 @@ background-color: #f9f9f4;
 export const Controls = styled.div`
 position: absolute;
 right: 0;
+padding-right: 81px;
 display: flex;
-
+@media screen and (max-width: 450px) {
+    display: none;
+} 
 `
 
 export const ControlButton = styled.div`
@@ -51,9 +55,4 @@ margin-bottom: -12rem;
 @media screen and (min-width: 451px) {
     display: none;
 }
-`
-
-export const SliderImage = styled(GatsbyImage)`
-aspect-ratio: 2/3;
-display: ${props => props.activeImg === props.id ? 'block' : 'none'};
 `

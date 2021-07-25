@@ -50,38 +50,32 @@ const Landing = ({ pageProps }) => {
                 Want to take the next step in your career?
               </BC1>
               <BC1 theme={theme}  >
-                The Scott Pickett Group is one of Melbourne’s most respected
-                hospitality groups, helmed by Chef Restaurateur Scott Pickett.
-                Our award-winning Melbourne restaurants include Chancery Lane,
-                Matilda, Longrain, Estelle and Pastore – and the list is
-                growing.
+              At the Scott Pickett Group, we’re serious about sharing our true passion for
+hospitality with our guests. We strive to make every guest’s visit a memorable
+experience.
               </BC1>
               <BC1 theme={theme} >
-                At the Scott Pickett Group, we’re serious about sharing our true
-                passion for hospitality with our guests. We strive to make every
-                guest’s visit a memorable experience.
+              Our staff are our most valuable asset, and we are always looking out for like-
+minded people to help us achieve our vision. We recognise the importance of
+working towards our vision as one team, as diverse as our venues are. We
+work hard to make sure that every staff member lives by our Scott Pickett
+Group values, being Generous, Respectful, Grounded, Creative, Inclusive
+and Bold.
               </BC1>
               <BC1 theme={theme} >
-                Our staff are one of our most valuable assets, and we are always
-                looking out for like-minded people to help us achieve our
-                vision. We recognise the importance of working towards our
-                vision as one team, as diverse as our venues are. We work hard
-                to make sure that every staff member lives by our Scott Pickett
-                Group values, being Generous, Respectful, Grounded, Creative,
-                Inclusive and Bold.
+              We are proud to offer a working environment where staff can learn and grow, with
+extensive career progression opportunities within our group and are always happy
+to hear from prospective team members. See our current roles below or send
+your CV to careers@scottpickettgroup.com.au for any roles which aren’t
+currently advertised.
               </BC1>
               <BC1 theme={theme} >
-                We are proud to offer a working environment where staff can
-                learn and grow, with extensive career progression opportunities
-                within our group and are always happy to hear from prospective
-                team members. See our current roles below or send your CV to
-                careers@scottpickettgroup.com.au for any roles which aren’t
-                currently advertised.
+              Current roles to come
               </BC1>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
-
+{/* 
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
@@ -132,7 +126,7 @@ const Landing = ({ pageProps }) => {
                 </Button>
             </RightContainer>
           </InnerContainer>
-        </SectionContainer>
+        </SectionContainer> */}
 
         {/* 
         <SectionContainer>

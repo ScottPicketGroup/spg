@@ -51,7 +51,7 @@ export const RightContainerLink = styled.a`
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
     :hover {
-      opacity: ${props => props.hover ? `25%` : `0`};
+      opacity: ${props => props.hover ? `75%` : `0`};
     }
 `;
 export const FullContainer = styled.div`

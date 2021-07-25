@@ -83,7 +83,7 @@ const BookATable = ({ hideModal }) => {
         </Menu3Item>
         <Menu3Item onClick={() => handleRedirect("/events")} theme={theme}>
           <Link style={{ color: "inherit", textDecoration: "none", textTransform: "none" }}>
-          In-venue private events
+          Private dining at our restaurants
           </Link>
         </Menu3Item>
       </Menu>

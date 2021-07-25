@@ -10,14 +10,8 @@ import {
   ImageView,
 } from "../../global/GlobalStyles"
 
-import HomeImage from "../../../images/events-hero.jpg"
 
 import gridPic1 from "../../../images/events-pdrs/CL.jpg"
-import gridPic2 from "../../../images/events-pdrs/estelle.jpg"
-import gridPic3 from "../../../images/events-pdrs/longgrain.jpeg"
-import gridPic4 from "../../../images/Screen Shot -4.png"
-import gridPic5 from "../../../images/events-pdrs/pastore.png"
-import gridPic6 from "../../../images/events-pdrs/pastore.png"
 
 import {
   InnerContainer,
@@ -30,7 +24,7 @@ import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles"
 import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
 import Slidera from "../../image-slider-full/Slider"
-const captions = []
+const captions = ["Oscar’s and The Harrison private dining rooms at Matilda", "Enclosed courtyard at Estelle"]
 
 const Events = ({ pageProps }) => {
   const theme = useTheme()
@@ -77,7 +71,7 @@ const Events = ({ pageProps }) => {
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Header1 theme={theme}>In-venue private events </Header1>
+              <Header1 theme={theme}>Private dining at our restaurants </Header1>
               {/* <BC1 theme={theme}>
               Parties of up to 8-10 guests can select from our regular menus and be seated in our main dining rooms, but for a more private soiree, each of our venues has private dining spaces to accommodate intimate dinners for 8 up to standing cocktail events of 250 guests. 
               </BC1> */}
@@ -137,7 +131,7 @@ const Events = ({ pageProps }) => {
               <FullImageContainer>
                 <StaticImage
                   placeholder="blurred"
-                  src="../../../images/events-pdrs/estelle-flowers.jpg"
+                  src="../../../images/events-pdrs/estelle-pdr.jpg"
                   alt="Chancery Lane"
                 />
               </FullImageContainer>
@@ -188,7 +182,7 @@ const Events = ({ pageProps }) => {
             </RightContainerLink>
           </InnerContainer>
         </SectionContainer>
-        <SectionContainer>
+        {/* <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainerLink
@@ -207,7 +201,7 @@ const Events = ({ pageProps }) => {
               <BC3>Dandenong Road, Chadstone</BC3>
             </RightContainerLink>
           </InnerContainer>
-        </SectionContainer>
+        </SectionContainer> */}
         {/* <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
