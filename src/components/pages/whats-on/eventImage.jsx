@@ -9,9 +9,10 @@ import {
 
 const EventImage = ({ src }) => {
   const theme = useTheme();
-
+console.log(src)
   return theme ? (
     <EventImageContainer>
+    
       <EventImageView>
         <EventImageDiv src={src} />
       </EventImageView>

@@ -1,37 +1,31 @@
-import React, { useRef, useState, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React, { useRef, useState } from "react"
+
+
 import { gsap } from "gsap"
 import { useSwipeable } from "react-swipeable"
+import { getImage } from "gatsby-plugin-image"
 import {
-  Image,
   Controls,
   SliderContainer,
   ControlsContainer,
   ControlButton,
   MobileControls,
+  SliderImage,
 } from "./slider-components"
 import NextIcon from "./control-elements/NextIcon"
 import PreviousIcon from "./control-elements/PreviousIcon"
 
-import img1 from "../../../../images/sp-full/1.jpg"
-import img2 from "../../../../images/sp-full/2.jpg"
-import img3 from "../../../../images/sp-full/3.png"
 import { ImageCaption } from "../../../global/fontStyles"
 
 const SliderFull = ({ images }) => {
   const [imageNumber, setImageNumber] = useState(1)
-
   let title = useRef(null)
   const handlers = useSwipeable({
     onSwipedLeft: () => nextImage(),
     onSwipedRight: () => previousImage(),
   })
-  const [imagesArr, setImagesArr] = useState([])
+  const [imageCount] = useState(images.allFile.edges.length - 1)
   const [activeImg, setActiveImg] = useState(0)
-
-
-  console.log(`imagesArr`, imagesArr)
 
   const nextImage = () => {
     gsap.fromTo(
@@ -57,7 +51,7 @@ const SliderFull = ({ images }) => {
     )
 
     setTimeout(() => {
-      if (activeImg < 2) {
+      if (activeImg < imageCount) {
         setActiveImg(activeImg + 1)
         setImageNumber(imageNumber + 1)
       } else {
@@ -92,49 +86,48 @@ const SliderFull = ({ images }) => {
     setTimeout(() => {
       if (activeImg > 0) {
         setActiveImg(activeImg - 1)
-        setImageNumber(imageNumber + 1)
+        setImageNumber(imageNumber - 1)
       } else {
-        setActiveImg(2)
-        setImageNumber(3)
+        setActiveImg(imageCount)
       }
     }, 200)
   }
 
-  let tiltRef = useRef()
 
-  return (
-    <div {...handlers}
-    
-    >
-      <SliderContainer ref={el => (title = el)}>
-        {activeImg === 0 ? (
-          <Image src={img1} alt="matilda" />
-        ) : activeImg === 1 ? (
-          <Image src={img2} alt="matilda" />
-        ) : activeImg === 2 ? (
-          <Image src={img3} alt="matilda" />
-      
-        ) : null}
-      </SliderContainer>
-      <ControlsContainer>
-        <Controls>
-          <ControlButton onClick={previousImage}>
-            {" "}
-            <PreviousIcon />
-          </ControlButton>
-          <ControlButton onClick={nextImage}>
-            {" "}
-            <NextIcon />
-          </ControlButton>
-        </Controls>
-      </ControlsContainer>
-      <MobileControls>
-       <ImageCaption>
-       {imageNumber}/3
-       </ImageCaption>
-     </MobileControls>
-    </div>
-  )
+
+  return images ? (
+    <div {...handlers}>
+<SliderContainer ref={el => (title = el)}>
+  {images.allFile.edges.map((image, i) => (
+    <>
+      <SliderImage
+        image={getImage(image.node)}
+        alt="matilda"
+        id={i}
+        activeImg={activeImg}
+      />
+    </>
+  ))}
+</SliderContainer>
+<ControlsContainer>
+  <Controls>
+    <ControlButton onClick={previousImage}>
+      {" "}
+      <PreviousIcon />
+    </ControlButton>
+    <ControlButton onClick={nextImage}>
+      {" "}
+      <NextIcon />
+    </ControlButton>
+  </Controls>
+</ControlsContainer>
+<MobileControls>
+  <ImageCaption>{imageNumber}/2</ImageCaption>
+</MobileControls>
+</div>
+  ) : (
+    <div></div>
+  );
 }
 
 export default SliderFull

@@ -7,7 +7,7 @@ import EventImage from "./eventImage";
 import SliderFull from './image-slider-full/Slider'
 const LeftAligned = ({ data, images }) => {
   const theme = useTheme();
-  // console.log(`data`, data, images)
+  console.log(`data`, data, images)
   return theme ? (
     <Grid cols={theme.name === "Desktop" ? 2 : 1}>
       <Item>

@@ -110,7 +110,7 @@ const [imageNumber, setImageNumber] = useState(1)
           <Image src={img2} alt="matilda" />
         ) : activeImg === 2 ? (
           <Image src={img3} alt="matilda" />
-        ) : null}
+        ) :  null}
       </SliderContainer>
       <ControlsContainer>
         <Controls>
