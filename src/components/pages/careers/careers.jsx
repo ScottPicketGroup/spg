@@ -69,31 +69,26 @@ to hear from prospective team members. See our current roles below or send
 your CV to careers@scottpickettgroup.com.au for any roles which aren’t
 currently advertised.
               </BC1>
-              <BC1 theme={theme} >
-              Current roles to come
-              </BC1>
+              
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
-{/* 
+
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <PostContainer>
-                <Header2 theme={theme} marginBottom=".5rem">Chef de Partie: </Header2>
-                <Header4 theme={theme} >CHANCERY LANE BISTRO </Header4>
-                <Header4 theme={theme} marginBottom=".75rem">26TH JUNE 2021</Header4>
+                <Header2 theme={theme} marginBottom=".5rem">Chefs of all Grades</Header2>
+                <Header4 theme={theme} >ALL RESTAURANTS</Header4>
                 <BC3 theme={theme} marginBottom=".5rem">
                   <BC3>
-                    We are seeking a passionate Chef de Partie and commis chef
-                    for Scott Pickett’s newest CBD restaurant, European bistro
-                    Chancery Lane.
+                  The Scott Pickett group has some exciting opportunities for chefs of all grades to work with one of Melbourne's most prestigious and fast-growing hospitality groups.
                   </BC3>
                 </BC3>
               </PostContainer>
               <Button>
-                <a href="https://www.seek.com.au/job/52699270?type=standard#searchRequestToken=011af1a2-e8fb-4bea-a982-f7ac39c7cdc5" target="_blank"
+                <a href=" https://www.seek.com.au/job/53168482?type=standard#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e" target="_blank"
                 style={{textDecoration: `none`}}
                 >
                 Apply
@@ -109,16 +104,15 @@ currently advertised.
             <RightContainer>
               <PostContainer>
                 <Header2 theme={theme} marginBottom=".5rem"> Sous Chef  </Header2>
-                <Header4 theme={theme} >MATILDA 159 DOMAIN </Header4>
-                <Header4 theme={theme} marginBottom=".75rem">1st JUNE 2021</Header4>
+                <Header4 theme={theme} >NEW RESTAURANT OPENING SOON</Header4>
                 <BC3 theme={theme} marginBottom=".5rem">
                   <BC3>
-                  We are seeking a Breakfast Chef or Chef de Partie with breakfast experience for Scott Pickett’s awarded South Yarra restaurant, Matilda.
+                  Exciting sous chef role to become available at new French Bistro. 
                   </BC3>
                 </BC3>
               </PostContainer>
               <Button>
-                <a href="https://www.seek.com.au/job/52501010?type=standard#searchRequestToken=011af1a2-e8fb-4bea-a982-f7ac39c7cdc5" target="_blank"
+                <a href=" https://www.seek.com.au/job/52878653?type=standard#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e" target="_blank"
                 style={{textDecoration: `none`,}}
                 >
                 Apply
@@ -126,43 +120,79 @@ currently advertised.
                 </Button>
             </RightContainer>
           </InnerContainer>
-        </SectionContainer> */}
-
-        {/* 
+        </SectionContainer> 
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <PostContainer>
-                <Header2 theme={theme}>Sous Chef</Header2>
-                <Header4 theme={theme}>Matilda melbourne</Header4>
-                <Header4 theme={theme}>10th April 2021</Header4>
+                <Header2 theme={theme}>Head Chef</Header2>
+                <Header4 theme={theme}>ESTELLE</Header4>
+                
                 <BC3 theme={theme}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                  volutpat risus efficitur nulla aliquam suscipit. Nulla sed
-                  ullamcorper felis, a vulputate mi. Aenean enim leo, egestas
-                  vitae ultrices at, placerat ac lorem. Donec tortor augue,
-                  pulvinar et dictum vel, euismod id velit. Sed nec suscipit
-                  mauris. Ut sollicitudin rutrum eros at maximus. Duis vitae dui
-                  eu tellus dignissim commodo et in tortor. Praesent ac magna
-                  vulputate, fringilla odio et, vehicula lorem.
+                This is a rare opportunity to add your chapter to the long life of Estelle. We are looking for an industry leader, a head chef above the rest.
                 </BC3>
-                <BC3>
-                  <li>- Casual, part-time & full-time positions available</li>
-                  <li>- Must have experience in Hospitality </li>
-                  <li>
-                    - Must be a passionate, friendly and reliable team player
-                  </li>
-                  <li>
-                    - Must thrive in a busy environment - Immediate start
-                    necessary
-                  </li>
-                </BC3>
-              </PostContainer>
-              <Button>Apply</Button>
+                </PostContainer>
+                <Button>
+                <a href="https://www.seek.com.au/job/52866344?type=standard#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e" target="_blank"
+                style={{textDecoration: `none`,}}
+                >
+                Apply
+                </a>
+                </Button>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
+       
+        <SectionContainer>
+          <InnerContainer>
+            <LeftContainer></LeftContainer>
+            <RightContainer>
+              <PostContainer>
+                <Header2 theme={theme}>Production Kitchen/Events Driver - Casual</Header2>
+                <Header4 theme={theme}>SP EVENTS</Header4>
+                
+                <BC3 theme={theme}>
+                Join our Scott Pickett Events team in this casual position assisting with events across our restaurant brands. 
+                </BC3>
+               
+                <Button>
+                <a href="https://www.seek.com.au/job/52971927?type=standard#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e" target="_blank"
+                style={{textDecoration: `none`,}}
+                >
+                Apply
+                </a>
+                </Button>
+                </PostContainer>
+            </RightContainer>
+          </InnerContainer>
+        </SectionContainer>
+
+        <SectionContainer>
+          <InnerContainer>
+            <LeftContainer></LeftContainer>
+            <RightContainer>
+              <PostContainer>
+                <Header2 theme={theme}>Floor Staff & Baristas</Header2>
+                <Header4 theme={theme}>MATILDA 159</Header4>
+                
+                <BC3 theme={theme}>
+                Scott Pickett's hatted Southside restaurant, Matilda 159 is looking to expand the front of house team with floor staff and baristas to help launch our new brunch offering.
+                </BC3>
+               
+                <Button>
+                <a href="https://www.seek.com.au/job/52766323?type=standout#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e" target="_blank"
+                style={{textDecoration: `none`,}}
+                >
+                Apply
+                </a>
+                </Button>
+                </PostContainer>
+            </RightContainer>
+          </InnerContainer>
+        </SectionContainer>
+        {/* 
+        
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>

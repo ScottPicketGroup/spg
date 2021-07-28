@@ -99,7 +99,7 @@ const Landing = ({ pageProps }) => {
               </BC1>
               <Link to="/scott-picket" style={{ textDecoration: `none` }}>
                 <BC1 link={true} theme={theme} marginBottom="6rem">
-                  Read more about Scott Pickett –&gt;
+                  Read more about Scott Pickett 
                 </BC1>
               </Link>
             </RightContainer>
@@ -211,7 +211,8 @@ const Landing = ({ pageProps }) => {
                     <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
                       Le Shoppe is Scott Pickett’s European-inspired coffee bar
-                      and provedore, located on Little Collins St, Melbourne.
+                      and provedore, located on Little Collins St, Melbourne.{" "}
+                      <br /> <br />
                       Adjoining Chancery Lane Bistro, Le Shoppe is proud to
                       continue Melbourne's legacy of historic grocers and corner
                       stores. Guests visit Le Shoppe weekdays for morning
@@ -220,7 +221,7 @@ const Landing = ({ pageProps }) => {
                       options and ‘lunchboxes’ under $20, Le Shoppe provides CBD
                       businesses with quality European-inspired catering for any
                       occasion. 
-                      <br />
+                      <br /> <br />
                       Le Shoppe á Nuit offers pre-dinner aperitives and a wine
                       or cocktail, served authentic deli-style in a glass
                       tumbler, santé!
@@ -259,13 +260,16 @@ const Landing = ({ pageProps }) => {
                       Matilda is a visual and sensory journey. The kitchen
                       is fuelled by open fire and hot coals, delivering
                       contemporary Australian food, strong design and a feeling
-                      of comfort and warmth. Pertinently situated opposite the
-                      Royal Botanical Gardens and named after Scott Pickett’s
-                      daughter, the restaurant celebrates the connection between
-                      people, food and nature. Stylish yet relaxed, Matilda is a
-                      place where guests can visit often and be guaranteed the
-                      finest local meat and produce, cooked exceptionally well
-                      over live flames and open grills. 
+                      of comfort and warmth.  <br /> <br />
+                      Pertinently situated opposite the Royal Botanical Gardens
+                      and named after Scott Pickett’s daughter, the restaurant
+                      celebrates the connection between people, food and
+                      nature. 
+                      <br /> <br />
+                      Stylish yet relaxed, Matilda is a place where guests can
+                      visit often and be guaranteed the finest local meat and
+                      produce, cooked exceptionally well over live flames and
+                      open grills. 
                     </BC3>
                     <ItemImgLink
                       href="https://matilda159.com/"
@@ -300,14 +304,15 @@ const Landing = ({ pageProps }) => {
                     <BC3>
                       Whether stopping by for a glass of wine and a share plate,
                       or a full tasting menu, guests can find home in this
-                      all-encompassing venue. Pickett opened his first
-                      restaurant, Estelle Bistro to critical acclaim in 2011. In
-                      2019, Pickett combined his adjoining Northcote
-                      neighbourhood icons Estelle Bistro and ESP (Estelle by
-                      Scott Pickett) into ‘Estelle’, offering contemporary
-                      Australian dining to suit all occasions. The venue now
-                      includes a wine bar, two upstairs private dining spaces
-                      and a covered courtyard.
+                      all-encompassing venue.
+                      <br /> <br />
+                      Pickett opened his first restaurant, Estelle Bistro to
+                      critical acclaim in 2011. In 2019, Pickett combined his
+                      adjoining Northcote neighbourhood icons Estelle Bistro and
+                      ESP (Estelle by Scott Pickett) into ‘Estelle’, offering
+                      contemporary Australian dining to suit all occasions. The
+                      venue now includes a wine bar, two upstairs private dining
+                      spaces and a covered courtyard.
                     </BC3>
                     <ItemImgLink
                       href="http://www.theestelle.com.au"
@@ -471,7 +476,16 @@ const Landing = ({ pageProps }) => {
                   <ItemInfoContainer open={chancery}>
                     <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
-                    Pastore is an Italian-inspired all-day dining venue welcoming guests for all occasions. Located at Hotel Chadstone Melbourne MGallery by Sofitel, Pastore—the Italian word for ‘shepherd’—honours the area’s heritage once rich with pasture and orchards. From small plates to full tasting experiences, the menu draws focus on woodfire-fuelled cooking and handmade pasta; showcasing Italian cuisine through contemporary Australian references.
+                      Pickett’s Deli & Rotisserie has found a new home in
+                      Terminal 3 of Melbourne Airport. Originally opening at
+                      Queen Vic market, a new era of the deli introduces true,
+                      quality Melbourne food to travellers. Guests can take a
+                      seat at the communal table or cosy booth and watch the
+                      rotisserie turn, enjoying a selection of snacks and dishes
+                      showcasing Victorian produce at its best. The all-day
+                      eatery serves as the ideal pit-stop for an early morning
+                      coffee, breakfast, eat in or takeaway lunch or dinner,
+                      also offering cocktails and wines by the glass.
                     </BC3>
                     <ItemImgLink
                       href="http://www.pickettsdeli.com"

@@ -102,7 +102,6 @@ const whatsOnEvents = [
       subHeading: "Launching soon – Longsong Bar  ",
       content: [
         "We’ve been busy re-developing our expansive bar and events space above Longrain – sibling venue Longsong. Longsong is a vibrant mix of Bangkok and Melbourne – the high and the low. ",
-        `Guests will be treated to a showcase of Mel and Hannah’s favourite Sutton Grange wines, each matched with a special course by Chancery Lane Head Chef, Rob Kabboord.`,
         `Wednesday 11th August`,
         `$175pp `,
         
@@ -116,15 +115,16 @@ const whatsOnEvents = [
       heading: "Pickett’s Altitude Gin ",
       subHeading: "",
       content: [
-        "We’re excited to have launched our latest batch of Pickett’s Gin this month. This time, the gin is flavoured by native botanicals like you’ll find in our restaurant menus, all foraged from 400+m above sea level. ",
-        `Pickett’s Altitude Gin is flowing at all of our venues, and is available to purchase at Le Shoppe by Chancery Lane, or online soon! `,
-        `We are hosting an educational and interactive gin tasting event with the gin at Matilda in August, follow us on Instagram @matilda159domain to learn when the offer is live.`,
+        "We’re excited to have launched our latest batch of Pickett’s Gin this month. This time, the gin is flavoured by native botanicals like you’ll find in our restaurant menus, all foraged from 400+m above sea level.",
+        `Pickett’s Altitude Gin is flowing at all of our venues, and is available to purchase at Le Shoppe by Chancery Lane, or online soon!`,
+        `We are hosting an educational and interactive gin tasting event with the gin at Matilda on the 24th of August, we would love for you to come along!`,
       
         
         
     ],
       image: gin,
-      buttonText: "Book Now"
+      buttonText: "Book tickets",
+      buttonLink: "https://matilda159.com/mfwf-the-forager-the-distiller-and-the-chef/"
     }
     
   ]
