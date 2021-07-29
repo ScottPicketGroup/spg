@@ -117,22 +117,21 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
             </Link>
           </MenuItem>
           {location.pathname === "/" ||
-          location.pathname === "/scott-picket" ? (
+          location.pathname === "/scott-pickett" ? (
             <MenuItem
               theme={theme}
               onClick={() => {
-                handleRedirect("/scott-picket");
+                handleRedirect("/scott-pickett");
               }}
             >
               <Link
                 style={{
                   color: "inherit",
                   textDecoration: "none",
-                  paddingLeft: ".75rem",
                 }}
                 activeStyle={{ fontFamily: `UntitledSansMedium` }}
               >
-                Scott Picket
+                Scott Pickett
               </Link>
             </MenuItem>
           ) : null}

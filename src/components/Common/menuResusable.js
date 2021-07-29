@@ -69,7 +69,7 @@ const MenuResusable = () => {
          
             <MenuItem theme={theme}>
               <Link
-                to="/scott-picket"
+                to="/scott-pickett"
                 style={{
                   color: "inherit",
                   textDecoration: "none",
