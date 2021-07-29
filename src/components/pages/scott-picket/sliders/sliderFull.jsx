@@ -3,8 +3,8 @@ import {useStaticQuery, graphql} from 'gatsby'
 import styled from 'styled-components'
 import Slider from '../../../image-slider-full/Slider'
 const captions = [
-  "‘Estelle kitchen’",
-  "‘Matilda 159 Domain kitchen’"
+  "Estelle kitchen",
+  "Matilda 159 Domain kitchen"
 ]
 const SliderFull = () => {
     const data = useStaticQuery(graphql`

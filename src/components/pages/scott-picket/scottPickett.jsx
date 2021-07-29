@@ -73,11 +73,11 @@ console.log(data.allFile)
                 restaurateur today. My approach always puts food at the front.
                 It’s based on real cooking – with the greatest respect to the
                 produce. I want you to have incredible food and wine
-                experiences, with incredible service. But the food is the hero."
+                experiences, with incredible service. But the food is the hero.
 
                 </BC1>
               <BC1 theme={theme} marginBottom="3.5rem" >
-                "Now, as a restaurateur, I don’t spend as much time cooking as I
+                Now, as a restaurateur, I don’t spend as much time cooking as I
                 used to, but I have some gun Head Chefs to work with. Together,
                 we build on what makes each of the venues special, and try to
                 impart on you our understanding of seasonality and our respect
@@ -117,7 +117,9 @@ console.log(data.allFile)
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Header1 theme={theme}>Accolades</Header1>
+              <Header1 theme={theme}
+              style={{paddingBottom: `3rem`}}
+              >Accolades</Header1>
              
             </RightContainer>
           </InnerContainer>

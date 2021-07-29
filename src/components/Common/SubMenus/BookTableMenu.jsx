@@ -83,7 +83,16 @@ const BookATable = ({ hideModal }) => {
                    href="https://www.sevenrooms.com/landing/matilda"
                    target="_blank"
                    style={{ textDecoration: `none`, color: `inherit` }}
-                 >Matilida</a>
+                 >Matilda</a>
+        </Menu3Item>
+        <Menu3Item
+               theme={theme}
+               >
+                 <a
+                   href=" https://www.thefork.com.au/make-booking/pastore-restaurant?mode=Widget&referrerUrl=http://https://www.accorhotels.com/gb/hotel-B2U8-hotel-chadstone-melbourne-opening-november-2019/index.shtml"
+                   target="_blank"
+                   style={{ textDecoration: `none`, color: `inherit` }}
+                 >Pastore</a>
         </Menu3Item>
         {/* <Menu3Item
           onClick={() => {

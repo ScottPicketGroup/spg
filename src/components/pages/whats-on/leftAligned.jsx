@@ -31,7 +31,7 @@ console.log(data.links)
  
         {
           data.content.map(para => (
-            <BC3>{para}</BC3>
+            <BC3 light >{para}</BC3>
           ))
         }
        

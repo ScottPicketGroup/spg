@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react"
 import { useTheme } from "styled-components"
 import { SectionContainer } from "../../../global/GlobalStyles"
 import { BC3, Header2, BC2 } from "../../../global/fontStyles"
-import { TweenLite, Power3 } from "gsap"
 import {
   TimeLineContainer,
   TimeLineGrid,
@@ -12,14 +11,11 @@ import {
   LeftContainer,
 } from "../styled-components"
 import timeline from "./timeline.json"
-import HoverImage from "./hoverImage"
 import HoverImage1 from "../hovers/hover1"
 const TimelineItems = () => {
-  let imgContainer = useRef(null)
   const theme = useTheme()
   const [display, setDisplay] = useState(0)
   const fadeOut = () => {
-    console.log("ext")
     setDisplay(0)
   }
 

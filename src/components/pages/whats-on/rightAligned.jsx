@@ -15,13 +15,13 @@ const LeftAligned = ({ data, images }) => {
         <Header3 marginBottom="1rem" theme={theme}>{data.subHeading}</Header3>
 
         {data.content.map(para => (
-          <BC3>{para}</BC3>
+          <BC3 light>{para}</BC3>
         ))}
 
 
          {
           data.links ? (
-            <BC3>Join us at <a 
+            <BC3 light>Join us at <a 
             style={{textDecoration: `underline`, color: `#333333`}}
             href="https://theestelle.com.au/truffle-dinners-2021/" target="_blank">Estelle,</a>&nbsp; 
             <a link={true}

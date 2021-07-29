@@ -49,11 +49,11 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>SP Events </Header1>
               <BC1 theme={theme}>
-              The Scott Pickett Group is excited to launch our off-site catering offer, ‘SP Events’. Debuting with our Longrain pop-up at Sutton Grange Winery in March 2021, SP Events brings Scott Pickett’s food to you – whatever your event may be. We are able to offer our Estelle, Matilda, Longrain, Le Shoppe and ‘Scott’s Greatest hits’ menus offsite for weddings, corporate events or large-scale public events. Stay up to date with news from The Scott Pickett group to be the first to know when our full offer is live. 
+              The Scott Pickett Group is excited to launch our off-site catering offer, ‘SP Events’. Debuting with our Longrain pop-up at Sutton Grange Winery in March 2021, SP Events brings Scott Pickett’s food to you, whatever your event may be. We offer Estelle, Matilda, Longrain, Le Shoppe and ‘Scott’s Greatest Hits’ menus offsite for weddings, parties, corporate events or large-scale public events. 
               </BC1>
            
                 <BC1 theme={theme}>
-                  Complete the form below to find out more infomation
+                Stay up to date with news from the Scott Pickett group to be the first to know when our full offer is live.
                 </BC1>
              
             </RightContainer>

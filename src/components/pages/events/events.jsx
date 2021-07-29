@@ -107,7 +107,7 @@ const Events = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainerLink
               hover
-              href="http://www.google.com"
+              href="https://chancerylane.com.au/private-events/"
               target="_blank"
             >
               <FullImageContainer>
@@ -125,7 +125,7 @@ const Events = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainerLink
               hover
-              href="http://www.theestelle.com.au"
+              href="https://www.theestelle.com.au/private-dining-events/"
               target="_blank"
             >
               <FullImageContainer>
@@ -145,7 +145,7 @@ const Events = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainerLink
               hover
-              href="http://www.longrainmelbourne.com"
+              href=" http://longrainmelbourne.com/event/"
               target="_blank"
             >
               <FullImageContainer>
@@ -155,7 +155,7 @@ const Events = ({ pageProps }) => {
                   alt="Chancery Lane"
                 />
               </FullImageContainer>
-              <ItemImgCaption>Longrain</ItemImgCaption>
+              <ItemImgCaption>Longrain & Longsong</ItemImgCaption>
               <BC3>Little Bourke St, Melbourne</BC3>
             </RightContainerLink>
           </InnerContainer>
@@ -165,7 +165,7 @@ const Events = ({ pageProps }) => {
             <LeftContainer></LeftContainer>
             <RightContainerLink
               hover
-              href="https://matilda159.com/"
+              href="https://matilda159.com/private-dining-events/"
               target="_blank"
             >
               <FullImageContainer>

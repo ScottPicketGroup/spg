@@ -26,10 +26,10 @@ import Home from "../../Common/DesktopHome"
 import SliderFull from "../../image-slider-full/Slider"
 
 const captions = [
-  "Lamb ribs: ‘Matilda 159 Domain’",
-  "Betel leaf: ‘Longrain Melbourne’ ",
-  "Spread with salmon in middle ‘Chancery Lane Bistro’",
-  "Salmon with orange sauce: ‘Estelle’ ",
+  "Matilda 159 Domain",
+  "Longrain Melbourne",
+  "Chancery Lane Bistro",
+  "Estelle",
 ]
 const Landing = ({ pageProps }) => {
   const [chancery, setChancery] = useState(false)

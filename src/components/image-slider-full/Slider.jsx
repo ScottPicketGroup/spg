@@ -99,7 +99,7 @@ const SliderFull = ({ images, captions }) => {
     }, 200)
   }
 
-console.log(captions)
+
 
 return images ? (
   <div {...handlers}

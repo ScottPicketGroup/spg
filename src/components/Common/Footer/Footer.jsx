@@ -200,7 +200,12 @@ const FooterComponent = () => {
                     Careers
                   </Link>
                 </MenuItem>
-                <MenuItem theme={theme}>Contact</MenuItem>
+                <MenuItem theme={theme}> <Link
+                    to="/contact"
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    Careers
+                  </Link></MenuItem>
               </Menu>
             </Item>
             <Item theme={theme}>
