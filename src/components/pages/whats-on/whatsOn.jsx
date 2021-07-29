@@ -10,7 +10,7 @@ import {
   RightContainer,
   LeftContainer,
 } from "./styled-components";
-import { BC1, Header1 } from "../../global/fontStyles";
+import { BC1, Header1, ImageCaption } from "../../global/fontStyles";
 
 import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/DesktopHome";
@@ -45,6 +45,7 @@ const whatsOnEvents = [
     {
       heading: "Brunches at Matilda ",
       subHeading: "Sunday brunch is getting a makeover.",
+      
       content: [
       "Matilda is expanding its brunch offering with a brand-new menu – we’ll have options for whatever you’re feeling, a green smoothie while you walk the Tan, or a smoked marshmallow waffle smore and breakfast martini… New take-away and sit-down brunch menu launching late July."
       
@@ -133,7 +134,7 @@ const Landing = ({ pageProps }) => {
   const data = useStaticQuery(graphql`
   {
     allFile(
-      filter: {extension: {}, absolutePath: {regex: "/images/whats-on/truffles/"}}
+      filter: {extension: {}, absolutePath: {regex: "/images/whats-on/truffels-2/"}}
     ) {
       edges {
         node {
@@ -148,9 +149,8 @@ const Landing = ({ pageProps }) => {
      id
             childImageSharp {
               gatsbyImageData(
-                layout: FULL_WIDTH
                 placeholder: BLURRED
-                aspectRatio: 1.5
+                
                 )
             }
     }
@@ -186,6 +186,14 @@ Read on to hear what’s coming up at our Scott Pickett Group venues.
                <StaticImage 
                  placeholder="blurred"
                     src="../../../images/whats-on-carousel/whats-on-full.jpg" alt="Waiter with drinks" />
+                       
+       
+        
+      
+       <ImageCaption
+       marginTop="1.5rem"
+       >Women in Wine Dinner at Chancery Lane</ImageCaption>
+       
           </RightContainer>
         </InnerContainer>
       </SectionContainer>

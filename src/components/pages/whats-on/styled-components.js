@@ -86,7 +86,7 @@ export const EventImageDiv = styled.div`
 
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.text};
-  margin: 2.45rem 0;
+  margin: 2.62rem 0;
   padding: 0.5em 3.5rem;
   background-color: ${(props) => props.theme.colors.body};
   border: ${(props) => `1px solid ${props.theme.colors.text}`};

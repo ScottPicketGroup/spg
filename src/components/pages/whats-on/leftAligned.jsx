@@ -16,17 +16,17 @@ import SliderFull from "./image-slider-full/Slider";
 
 const LeftAligned = ({ data, images }) => {
   const theme = useTheme();
-console.log(data.links)
+  console.log(data)
   return theme ? (
     <Grid cols="2">
      <Item>
         {images && !data.image ? (
           <SliderFull images={data.images}/>
-        ): <EventImage src={data.image} />}
+        ): <EventImage src={data.image} imageCaption={data.imageCaption}/>}
         
       </Item>
       <Item>
-        <Header2 marginBottom=".75rem" marginTop="-5rem"  theme={theme}>{data.heading}</Header2>
+        <Header2 marginBottom="1rem" marginTop="-5rem"  theme={theme}>{data.heading}</Header2>
         <Header3 marginBottom="1rem" theme={theme}>{data.subHeading}</Header3>
  
         {

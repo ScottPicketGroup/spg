@@ -114,13 +114,15 @@ export const ItemImgCaption = styled.div`
 `;
 
 export const ImageCaption = styled.p`
-display: inline;
+/* display: inline; */
   font-size: ${(props) =>
     props.theme.name === "Desktop" ? "1rem" : "12px"};
   line-height: ${(props) =>
     props.theme.name === "Desktop" ? "1.25rem" : "1rem"};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansLight};
   color: ${(props) => props.theme.colors.text};
+  margin-top: ${(props) =>
+    props.marginTop ? props.marginTop: "0"};
 `;
 
 export const Menu = styled.div`

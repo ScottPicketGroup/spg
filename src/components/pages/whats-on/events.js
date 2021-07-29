@@ -24,6 +24,7 @@ export const items = [
       
     ],
       image: matilda,
+      
       buttonText: "Book Now"
     },
     {

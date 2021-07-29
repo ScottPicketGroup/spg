@@ -99,14 +99,14 @@ const SliderFull = ({ images }) => {
     <div {...handlers}>
 <SliderContainer ref={el => (title = el)}>
   {images.allFile.edges.map((image, i) => (
-    <>
+ 
       <SliderImage
         image={getImage(image.node)}
         alt="matilda"
         id={i}
         activeImg={activeImg}
       />
-    </>
+   
   ))}
 </SliderContainer>
 <ControlsContainer>

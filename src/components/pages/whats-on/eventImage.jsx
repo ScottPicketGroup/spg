@@ -1,5 +1,6 @@
 import React from "react";
 import { useTheme } from "styled-components";
+import { ImageCaption } from "../../global/fontStyles";
 
 import {
   EventImageView,
@@ -7,7 +8,7 @@ import {
   EventImageDiv,
 } from "./styled-components";
 
-const EventImage = ({ src }) => {
+const EventImage = ({ src, imageCaption}) => {
   const theme = useTheme();
 console.log(src)
   return theme ? (
@@ -16,6 +17,13 @@ console.log(src)
       <EventImageView>
         <EventImageDiv src={src} />
       </EventImageView>
+      {/* {
+        imageCaption ? (
+          <ImageCaption>hallo</ImageCaption>
+        ) : (
+          <div className=""></div>
+        )
+      } */}
     </EventImageContainer>
   ) : (
     <div></div>
