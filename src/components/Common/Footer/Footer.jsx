@@ -204,7 +204,7 @@ const FooterComponent = () => {
                     to="/contact"
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    Careers
+                    Contact
                   </Link></MenuItem>
               </Menu>
             </Item>
