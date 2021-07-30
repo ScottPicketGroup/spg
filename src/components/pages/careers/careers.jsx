@@ -1,10 +1,11 @@
 import React from "react"
 import { useTheme } from "styled-components"
 import { Container, SectionContainer } from "../../global/GlobalStyles"
-import HomeImage from "../../../images/carrers-hero.jpg"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import { getImage} from "gatsby-plugin-image"
 
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import {careers} from './careersList'
+
 import {
   InnerContainer,
   RightContainer,
@@ -74,36 +75,40 @@ currently advertised.
           </InnerContainer>
         </SectionContainer>
 
-        <SectionContainer>
-          <InnerContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <PostContainer>
-                <Header2 theme={theme} marginBottom=".5rem">Chefs of all Grades</Header2>
-                <Header4 theme={theme} >ALL RESTAURANTS</Header4>
-                <BC3 theme={theme} marginBottom=".5rem">
-                  <BC3>
-                  The Scott Pickett group has some exciting opportunities for chefs of all grades to work with one of Melbourne's most prestigious and fast-growing hospitality groups.
-                  </BC3>
-                </BC3>
-              </PostContainer>
-              <Button>
-                <a href=" https://www.seek.com.au/job/53168482?type=standard#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e" target="_blank"
-                style={{textDecoration: `none`}}
-                >
-                Apply
-                </a>
-                </Button>
-            </RightContainer>
-          </InnerContainer>
-        </SectionContainer>
+    {careers && careers.map(career => (
+ <SectionContainer>
+ <InnerContainer>
+   <LeftContainer></LeftContainer>
+   <RightContainer>
+     <PostContainer>
+       <Header2 theme={theme} marginBottom=".75rem">{career.title}</Header2>
+       <Header4 theme={theme} marginBottom="1.25rem">{career.venue}</Header4>
+       <BC3 theme={theme} marginBottom=".5rem" light>
+         
+         {career.description}
+         </BC3>
+   
+     </PostContainer>
+     <Button>
+       <a href={`${career.link}`} target="_blank" rel="noreferrer"
+       style={{textDecoration: `none`}}
+       >
+       Apply
+       </a>
+       </Button>
+   </RightContainer>
+ </InnerContainer>
+</SectionContainer>
+    ))}
 
+       
+{/* 
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <PostContainer>
-                <Header2 theme={theme} marginBottom=".5rem"> Sous Chef  </Header2>
+                <Header2 theme={theme} marginBottom="1rem"> Sous Chef  </Header2>
                 <Header4 theme={theme} >NEW RESTAURANT OPENING SOON</Header4>
                 <BC3 theme={theme} marginBottom=".5rem">
                   <BC3>
@@ -130,7 +135,7 @@ currently advertised.
                 <Header4 theme={theme}>ESTELLE</Header4>
                 
                 <BC3 theme={theme}>
-                This is a rare opportunity to add your chapter to the long life of Estelle. We are looking for an industry leader, a head chef above the rest.
+                
                 </BC3>
                 </PostContainer>
                 <Button>
@@ -190,7 +195,7 @@ currently advertised.
                 </PostContainer>
             </RightContainer>
           </InnerContainer>
-        </SectionContainer>
+        </SectionContainer> */}
         {/* 
         
         <SectionContainer>
