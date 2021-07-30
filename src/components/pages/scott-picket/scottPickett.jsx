@@ -23,6 +23,7 @@ import Home from "../../Common/DesktopHome"
 import Timeline from "./timeline/timeline"
 import SliderFull from "./sliders/sliderFull"
 import SliderRight from "./sliders/sliderRight"
+import Publications from "./publications/Publications"
 
 const Landing = ({ pageProps }) => {
 
@@ -338,7 +339,7 @@ console.log(data.allFile)
           </TimeLineContainer>
         </SectionContainer>
 
-
+<Publications />
         {/* <CookiesBanner theme={theme}>
           this website uses cookies to ensure you get the best experience on our
           website learn more

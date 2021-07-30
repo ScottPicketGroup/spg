@@ -16,6 +16,8 @@ export const Container = styled.div`
 export const SectionContainer = styled.div`
   width: 100%;
   display: flex;
+  margin-top: ${props => props.marginTop ? props.marginTop : 0};
+  margin-bottom: ${props => props.marginBottom ? props.marginBottom : 0};
 `;
 
 export const LeftContainer = styled.div`
