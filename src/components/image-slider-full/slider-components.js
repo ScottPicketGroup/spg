@@ -23,7 +23,6 @@ export const ControlsContainer = styled.div`
 width: 100%;
 position: relative;
 display: flex;
-background-color: #f9f9f4;
 justify-content: flex-end;
 margin-top: 1.5rem;
 padding-right: 75px;
