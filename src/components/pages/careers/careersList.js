@@ -12,10 +12,10 @@ export const careers = [
         link: " https://www.seek.com.au/job/52878653?type=standard#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e"
     },
     {
-        title: "Head Chef",
-        venue: "ESTELLE",
-        description: "This is a rare opportunity to add your chapter to the long life of Estelle. We are looking for an industry leader, a head chef above the rest.",
-        link: "https://www.seek.com.au/job/52866344?type=standard#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e"
+        title: "Chef de Partie",
+        venue: "Matilda",
+        description: "Scott Pickett’s hatted Southside restaurant, Matilda 159 is looking for a Chef de Partie to lead the grill section. If this role interest you, please follow the link below to apply. ",
+        link: "https://www.seek.com.au/job/52866344?type=standard#searchRequestToken=c66f52bd-8742-4b06-b4da-ee300c883dee"
     },
     {
         title: "Production Kitchen/Events Driver - Casual",
@@ -24,10 +24,10 @@ export const careers = [
         link: "https://www.seek.com.au/job/52971927?type=standard#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e"
     },
     {
-        title: "Floor Staff & Baristas",
-        venue: "MATILDA 159",
-        description: "Scott Pickett's hatted Southside restaurant, Matilda 159 is looking to expand the front of house team with floor staff and baristas to help launch our new brunch offering.",
-        link: "https://www.seek.com.au/job/52766323?type=standout#searchRequestToken=8b01ae7c-f3d1-4636-8cf8-53d23087281e"
+        title: "Front of House Professionals",
+        venue: "Estelle",
+        description: "Scott Pickett’s first establishment Estelle is looking for front of house & bar professionals for casual positions. Please click the link below to apply.",
+        link: "https://www.seek.com.au/job/53209227?type=standout#searchRequestToken=9968ba36-a335-4d97-a624-e5cb4e6fc3b3"
     },
 
 ]
