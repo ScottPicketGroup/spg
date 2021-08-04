@@ -3,18 +3,50 @@ import { getImage, StaticImage } from "gatsby-plugin-image"
 import { Header1, Header2, Header3, BC3 } from "../../../global/fontStyles"
 import {
   SectionContainer,
+  InnerContainer,
   RightContainer,
   LeftContainer,
 } from "../../../global/GlobalStyles"
 
 import { LeftGrid, RightGrid, TimeLineGrid } from "./styled-components"
+
+import LeftAligned from "./leftAligned"
+import RightAligned from "./rightAligned"
 const Publications = () => {
   return (
       <>
+      
     <SectionContainer marginTop="9rem">
       <LeftContainer />
       <RightContainer>
-        <Header1
+      <Header1
+          style={{
+            borderBottom: `1px solid rgba(51, 51, 51, 25%)`,
+            paddingBottom: `5.75rem`,
+          }}
+        >
+          Publications
+        </Header1>
+        <SectionContainer>
+          <InnerContainer>
+           
+       
+              <LeftAligned />
+           
+          </InnerContainer>
+      
+        </SectionContainer>
+        <SectionContainer>
+         
+          <InnerContainer>
+           
+       
+          
+              <RightAligned />
+          </InnerContainer>
+        </SectionContainer>
+        
+        {/* <Header1
           style={{
             borderBottom: `1px solid rgba(51, 51, 51, 25%)`,
             paddingBottom: `5.75rem`,
@@ -87,8 +119,10 @@ opening more, and the pleasures and challenges of competition
              objectFit="cover"
            />
          </RightGrid>
-       </TimeLineGrid>
+       </TimeLineGrid> */}
      </RightContainer>
+
+     
    </SectionContainer>
    </>
   )

@@ -67,7 +67,7 @@ const Landing = ({ pageProps }) => {
               </BC1>
               <BC1 theme={theme}>
                 Our staff are our most valuable asset, and we are always looking
-                out for like- minded people to help us achieve our vision. We
+                out for like-minded people to help us achieve our vision. We
                 recognise the importance of working towards our vision as one
                 team, as diverse as our venues are. We work hard to make sure
                 that every staff member lives by our Scott Pickett Group values,

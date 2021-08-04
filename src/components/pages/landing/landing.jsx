@@ -80,13 +80,13 @@ const Landing = ({ pageProps }) => {
               <Header1 theme={theme}>Scott Pickett Group</Header1>
               <BC1 theme={theme}>
                 Welcome to the Scott Pickett Group. We are proud to operate a
-                growing list of award- winning Melbourne restaurants and
+                growing list of award-winning Melbourne restaurants and
                 establishments. Our restaurants are diverse in fare and
                 experience; from precise European technique at Chancery Lane to
-                punchy Thai flavours at Longrain, yet all our venues have one
-                thing in common—all are fuelled by our passion for great food
-                and great hospitality. Unsurprisingly, our mission is ‘For every
-                guest to experience our true passion for hospitality.’
+                punchy Thai flavours at Longrain, yet all have one thing in
+                common: all are fuelled by our passion for great food and great
+                hospitality. Unsurprisingly, our mission is ‘For every guest to
+                experience our true passion for hospitality.’
               </BC1>
               <BC1 theme={theme}>
                 As one of Australia’s leading chefs and restaurateurs, Scott
@@ -99,7 +99,7 @@ const Landing = ({ pageProps }) => {
               </BC1>
               <Link to="/scott-picket" style={{ textDecoration: `none` }}>
                 <BC1 link={true} theme={theme} marginBottom="6rem">
-                  Read more about Scott Pickett 
+                  Read more about Scott Pickett
                 </BC1>
               </Link>
             </RightContainer>
@@ -155,7 +155,7 @@ const Landing = ({ pageProps }) => {
                       Chancery Lane
                     </Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                      Little Collins St, Melbourne
+                    430 Little Collins St, Melbourne
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
@@ -204,7 +204,7 @@ const Landing = ({ pageProps }) => {
                       Le Shoppe
                     </Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                      Little Collins St, Melbourne
+                    Suite 1, 430 Little Collins St, Melbourne
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
@@ -251,7 +251,7 @@ const Landing = ({ pageProps }) => {
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Matilda</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                      Domain Rd, South Yarra
+                    159 Domain Rd, South Yarra
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
@@ -261,7 +261,7 @@ const Landing = ({ pageProps }) => {
                       is fuelled by open fire and hot coals, delivering
                       contemporary Australian food, strong design and a feeling
                       of comfort and warmth.  <br /> <br />
-                      Pertinently situated opposite the Royal Botanical Gardens
+                      Situated opposite the Royal Botanical Gardens
                       and named after Scott Pickett’s daughter, the restaurant
                       celebrates the connection between people, food and
                       nature. 
@@ -296,23 +296,17 @@ const Landing = ({ pageProps }) => {
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Estelle</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                      High St, Northcote
+                    243-245 High St, Northcote
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
                     <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
-                      Whether stopping by for a glass of wine and a share plate,
-                      or a full tasting menu, guests can find home in this
-                      all-encompassing venue.
+                    Estelle is a venue designed to suit all occasions. Whether stopping by for a glass of wine and a share plate or a full tasting experience, guests can find home in the all-encompassing venue.
                       <br /> <br />
-                      Pickett opened his first restaurant, Estelle Bistro to
-                      critical acclaim in 2011. In 2019, Pickett combined his
-                      adjoining Northcote neighbourhood icons Estelle Bistro and
-                      ESP (Estelle by Scott Pickett) into ‘Estelle’, offering
-                      contemporary Australian dining to suit all occasions. The
-                      venue now includes a wine bar, two upstairs private dining
-                      spaces and a covered courtyard.
+                      The contemporary Australian menu reflects Pickett's commitment to classic bistro dishes with a touch of innovation and refined technique. His respect for seasonal produce is evident.
+                      <br /> <br />
+                      Estelle's brick walls and recycled timber finishings create a warm and welcoming atmosphere. With large windows separating the dining room and the wine bar, Estelle provides a verdant and open space for lunches, dinners and private functions.
                     </BC3>
                     <ItemImgLink
                       href="http://www.theestelle.com.au"
@@ -339,7 +333,7 @@ const Landing = ({ pageProps }) => {
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Longrain</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                      Little Bourke St, Melbourne{" "}
+                    44 Little Bourke St, Melbourne
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
@@ -424,7 +418,7 @@ const Landing = ({ pageProps }) => {
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Pastore</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                      Dandenong Rd, Chadstone
+                    1341 Dandenong Rd, Chadstone
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
@@ -470,13 +464,13 @@ const Landing = ({ pageProps }) => {
                       Pickett’s Deli & Rotisserie
                     </Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                      Terminal 3, Melbourne Airport{" "}
+                    Terminal 3, Melbourne Airport
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
                     <ItemExpandElement>Read More</ItemExpandElement>
                     <BC3>
-                      Pickett’s Deli & Rotisserie has found a new home in
+                      Pickett’s Deli & Rotisserie has found a home in
                       Terminal 3 of Melbourne Airport. Originally opening at
                       Queen Vic market, a new era of the deli introduces true,
                       quality Melbourne food to travellers. Guests can take a

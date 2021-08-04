@@ -194,9 +194,7 @@ const TimelineItems = () => {
                   Crispin) as Lupo, a relaxed, contemporary Italian style
                   restaurant. August saw the launch of my new book – Marriage of
                   Flavours. In November, I opened the doors to Pastore at Hotel
-                  Chadstone. But I wasn’t done yet! In December I moved my Queen
-                  Vic market concept to terminal three, opening Pickett’s Deli
-                  &amp; Rotisserie at Melbourne Airport.
+                  Chadstone. But I wasn’t done yet! In December my deli at Queen Victoria Market moved to Terminal Three of Melbourne Airport.
                 </BC2>
               </RightGrid>
             </TimeLineGrid>
@@ -213,23 +211,17 @@ const TimelineItems = () => {
               <LeftGrid>
                 <Header2>2020</Header2>
                 <BC3>
-                  Longrain &amp; Longong, Chancery Lane and our production
-                  kitchen.
+                Longrain, production kitchen and Chancery Lane
                 </BC3>
               </LeftGrid>
               <RightGrid
               >
                 <BC2>
-                  When COVID struck the city down, the opportunity arose to
-                  purchase Longrain and Longsong. I couldn’t pass it up. I am so
-                  proud to continue the legacy of the Melbourne institution.
+                When COVID struck the world down, the opportunity arose to purchase Longrain and Longsong. I couldn’t pass it up. I am so proud to continue the legacy of the Melbourne institution.
                   <br /> <br />
-                  On 16 th December we opened Chancery Lane, European bistro
-                  with an edge. As if I wasn’t busy enough with Longrain and
-                  opening Chancery Lane, I also purchased a large warehouse out
-                  the back of Estelle where we spent months converting it into a
-                  production kitchen for our off-site catering business in the
-                  works, SP Events.
+                  I also purchased a large warehouse behind Estelle, now housing the production kitchen for my SP Events business.
+                  <br /> <br />
+                  In December, I opened Chancery Lane—European bistro with an edge—in the historic Normanby Chambers building on Little Collins st. 
                 </BC2>
               </RightGrid>
             </TimeLineGrid>
@@ -248,18 +240,12 @@ const TimelineItems = () => {
               <LeftGrid>
                 <Header2>2021</Header2>
                 <BC3>
-                  SP Events, Le Shoppe by Chancery Lane, Matilda’s evolution and
-                  Smith Street Bistro… coming soon
+                SP Events, Le Shoppe by Chancery Lane, Matilda’s evolution and Smith Street Bistrot… coming soon.
                 </BC3>
               </LeftGrid>
               <RightGrid>
                 <BC2>
-                  In June, three days before lockdown 4.0, I opened Le Shoppe, a
-                  sibling to Chancery lane. Coffee-bar and provedore by day, and
-                  intimate aperitivo bar by night. Smith Street Bistro in our
-                  former Lupo site will be launching towards the end of this
-                  year and I can’t wait! It’ll be a relaxed bistro with a focus
-                  on comfort food, great drinks and a social atmosphere.
+                In June, I opened Le Shoppe, a sibling to Chancery Lane, coffee-bar and provedore by day and intimate aperitivo bar by night. Smith Street Bistrot in my former Saint Crispin site will be launching towards the end of this year and I can’t wait! It’ll be a relaxed bistro with a focus on comfort food, great drinks and a social atmosphere.
                   <br /> <br />
                   As they say, there’s no rest for the wicked… Stay tuned…
                 </BC2>

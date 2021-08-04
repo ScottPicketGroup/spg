@@ -52,13 +52,11 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>Contact </Header1>
               <BC1 theme={theme}>
-                Please fill out the form below for all Scott Pickett Group
-                enquiries, we’d love to hear from you.
+              Please fill out the form below for all Scott Pickett Group enquiries, we’d love to hear from you.
               </BC1>
 
-              <BC1 link={true} theme={theme}>
-                If your enquiry relates to a specific Scott Pickett Group venue,
-                please see the website for details.
+              <BC1 theme={theme}>
+              If your enquiry relates to a specific Scott Pickett Group venue, please see the venue's website for details.
               </BC1>
             </RightContainer>
           </InnerContainer>

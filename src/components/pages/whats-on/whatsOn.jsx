@@ -78,7 +78,7 @@ const whatsOnEvents = [
     subHeading: "First event with Mel Chester of Sutton Grange ",
     content: [
       "Join us at Chancery Lane on Wednesday 11th August as we celebrate female wine makers and females in wine. Chancery Lane’s Sommelier, Hannah Day, partners with local winemaker Mel Chester of Sutton Grange for a three-course dinner, MC’d by influential wine writer Jeni Port. The dinner celebrates Mel and Hannah’s love for alternate varieties and passion for locally produced wine.",
-      `We can’t give too much away just yet, only that you’re going to want to be here when we launch! `,
+      `Guests will be treated to a showcase of Mel and Hannah’s favourite Sutton Grange wines, each matched with a special course by Chancery Lane Head Chef, Rob Kabboord.`,
     ],
     image: women,
     buttonText: "BOOK NOW",
@@ -89,6 +89,7 @@ const whatsOnEvents = [
     subHeading: "Launching soon – Longsong Bar  ",
     content: [
       "We’ve been busy re-developing our expansive bar and events space above Longrain – sibling venue Longsong. Longsong is a vibrant mix of Bangkok and Melbourne – the high and the low. ",
+      "We can’t give too much away just yet, only that you’re going to want to be here when we launch!",
       `Wednesday 11th August`,
       `$175pp `,
     ],
@@ -162,7 +163,7 @@ const Landing = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
 
-        <SectionContainer>
+        {/* <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
@@ -177,7 +178,7 @@ const Landing = ({ pageProps }) => {
               </ImageCaption>
             </RightContainer>
           </InnerContainer>
-        </SectionContainer>
+        </SectionContainer> */}
         {whatsOnEvents &&
           whatsOnEvents.map((item, index) => {
             return (
