@@ -15,7 +15,19 @@ const LeftAligned = ({ data, images }) => {
         <Header3 marginBottom="1rem" theme={theme}>{data.subHeading}</Header3>
 
         {data.content.map(para => (
-          <BC3 light>{para}</BC3>
+          <BC3 light>
+           <pre
+           style={{
+             fontFamily: `inherit`,
+             overflowX: `auto`,		
+            whiteSpace: `pre-wrap`
+           }}
+           >
+           {para}
+           </pre>
+           
+          
+            </BC3>
         ))}
 
 

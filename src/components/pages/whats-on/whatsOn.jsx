@@ -79,6 +79,7 @@ const whatsOnEvents = [
     content: [
       "Join us at Chancery Lane on Wednesday 11th August as we celebrate female wine makers and females in wine. Chancery Lane’s Sommelier, Hannah Day, partners with local winemaker Mel Chester of Sutton Grange for a three-course dinner, MC’d by influential wine writer Jeni Port. The dinner celebrates Mel and Hannah’s love for alternate varieties and passion for locally produced wine.",
       `Guests will be treated to a showcase of Mel and Hannah’s favourite Sutton Grange wines, each matched with a special course by Chancery Lane Head Chef, Rob Kabboord.`,
+      "Wednesday 11th August \n $175pp"
     ],
     image: women,
     buttonText: "BOOK NOW",
