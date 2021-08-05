@@ -264,7 +264,10 @@ const FooterComponent = () => {
                   style={{textDecoration: `none`, color: `white`}}
                   >Instagram </a></MenuItem>
                
-                
+               <MenuItem theme={theme}>
+                  <a href="https://www.linkedin.com/company/scottpickettgroup/about/"  target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}
+                  >LinkedIn </a></MenuItem>
               </Menu>
             </Item>
             <Item theme={theme}>

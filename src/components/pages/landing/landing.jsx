@@ -98,9 +98,9 @@ const Landing = ({ pageProps }) => {
                 obsessive dedication to excellence and passion for hospitality. 
               </BC1>
               <Link to="/scott-picket" style={{ textDecoration: `none` }}>
-                <BC1 link={true} theme={theme} marginBottom="6rem">
-                  Read more about Scott Pickett
-                </BC1>
+                
+                <Link to="/scott-pickett" style={{textDecoration: `none`}}><BC1 link={true} theme={theme} marginBottom="6rem">Read more about Scott Pickett</BC1></Link>
+                
               </Link>
             </RightContainer>
           </InnerContainer>
@@ -377,7 +377,7 @@ const Landing = ({ pageProps }) => {
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Longsong</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                      Upstairs, Little Bourke St, Melbourne
+                    Level 1, 44 Little Bourke St, Melbourne
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>

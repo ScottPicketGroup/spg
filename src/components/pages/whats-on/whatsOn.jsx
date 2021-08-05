@@ -90,8 +90,7 @@ const whatsOnEvents = [
     content: [
       "We’ve been busy re-developing our expansive bar and events space above Longrain – sibling venue Longsong. Longsong is a vibrant mix of Bangkok and Melbourne – the high and the low. ",
       "We can’t give too much away just yet, only that you’re going to want to be here when we launch!",
-      `Wednesday 11th August`,
-      `$175pp `,
+    
     ],
     image: longsong,
     buttonText: "FOLLOW LONGSONG",

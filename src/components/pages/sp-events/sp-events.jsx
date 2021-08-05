@@ -49,7 +49,7 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>SP Events </Header1>
               <BC1 theme={theme}>
-              SP Events is Scott Pickett’s off-site catering business, bringing any event to life; from an intimate home soirée to large-scale public events like the Australian Open and Grand Prix. SP Events offers a range of menus from the Scott Pickett Group restaurants, with the style of cuisine matching the theme of any event. For clients who simply can’t decide, SP Events offers ‘Scott Pickett’s Greatest Hits’, a bespoke offer of Scott’s favourite dishes from across his establishments.
+              SP Events is Scott Pickett’s off-site catering business, bringing any event to life; from an intimate home soirée to large-scale public events like the Australian Open and the Grand Prix. SP Events offers a range of menus from the Scott Pickett Group restaurants, with the style of cuisine matching the theme of any event. For clients who simply can’t decide, SP Events offers ‘Scott Pickett’s Greatest Hits’, a bespoke offer of Scott’s favourite dishes from across his establishments.
               </BC1>
            
                 <BC1 theme={theme}>
