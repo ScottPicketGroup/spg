@@ -1527,6 +1527,9 @@ height: auto;
 animation-duration: 15s;
 animation-iteration-count: infinite;
 animation-timing-function: linear;
+svg, path, g {
+  fill: #f9f9f4;
+}
  
   /* @media screen and (max-width: 450px) {
     .slick-list {
@@ -1554,6 +1557,9 @@ animation-timing-function: linear;
 export const Logo = styled.div`
 fill: #f9f9f4;
 margin-right: 6rem;
+svg  {
+  fill: #f9f9f4;
+}
 `
 
 
