@@ -24,6 +24,7 @@ export default class SimpleSlider extends Component {
             width="247.831"
             height="27.568"
             viewBox="0 0 247.831 27.568"
+            fill="#f9f9f4"
           >
             <path
               id="Path_10482"
@@ -766,6 +767,7 @@ export default class SimpleSlider extends Component {
             width="247.831"
             height="27.568"
             viewBox="0 0 247.831 27.568"
+            fill="#f9f9f4"
           >
             <path
               id="Path_10482"
@@ -1516,8 +1518,8 @@ const Logos = styled.div`
 display: flex;
 width: 3940px;
 align-items: center;
-
-  margin: 0 auto;
+height: auto;
+  margin: 2.15rem 0 ;
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -1551,7 +1553,7 @@ animation-timing-function: linear;
 ` 
 export const Logo = styled.div`
 fill: #f9f9f4;
-margin-right: 3rem;
+margin-right: 6rem;
 `
 
 

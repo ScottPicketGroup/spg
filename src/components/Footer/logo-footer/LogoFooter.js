@@ -57,7 +57,7 @@ export const LogoFooterContainer = styled.div`
   position: relative;
   z-index: 1;
   overflow-x: hidden;
-  height: 84px;
+ 
   padding: 1rem 0;
   margin-left: -1rem;
 
