@@ -49,7 +49,9 @@ const Landing = ({ pageProps }) => {
             <RightContainer>
               <Header1 theme={theme}>SP Events </Header1>
               <BC1 theme={theme}>
-              SP Events is Scott Pickett’s off-site catering business, bringing any event to life; from an intimate home soirée to large-scale public events like the Australian Open and the Grand Prix. SP Events offers a range of menus from the Scott Pickett Group restaurants, with the style of cuisine matching the theme of any event. For clients who simply can’t decide, SP Events offers ‘Scott Pickett’s Greatest Hits’, a bespoke offer of Scott’s favourite dishes from across his establishments.
+              The Scott Pickett Group is excited to launch our off-site catering offer, ‘SP Events’. Debuting with our Longrain pop-up at Sutton Grange Winery in March 2021, SP Events brings Scott Pickett’s food to you, whatever your event may be. We offer Estelle, Matilda, Longrain, Le Shoppe and ‘Scott’s Greatest Hits’ menus offsite for weddings, parties, corporate events or large-scale public events.
+
+Stay up to date with news from the Scott Pickett group to be the first to know when our full offer is live.
               </BC1>
            
                 <BC1 theme={theme}>
