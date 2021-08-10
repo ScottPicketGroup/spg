@@ -18,7 +18,7 @@ import TableMenu from "../SubMenus/BookTableMenu";
 import GiftVoucher from "../SubMenus/GiftVoucher";
 import Provider from "../SubMenus/Provider";
 import Events from "../SubMenus/Events";
-import footerLogo from "../../../images/Group 6228.png";
+import footerLogo from "../../../images/insta-white.png";
 const FooterComponent = ({path}) => {
 
   const [show, setShow] = useState(false);
@@ -136,6 +136,7 @@ const FooterComponent = ({path}) => {
                     style={{ color: "inherit", textDecoration: "none" }}
                   >
                     Contact
+
                   </Link></MenuItem>
               </Menu>
             </Item>

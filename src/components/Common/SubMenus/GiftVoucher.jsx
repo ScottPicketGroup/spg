@@ -144,7 +144,7 @@ const GiftVoucher = ({ hideModal }) => {
           </Link>
         </Menu3Item> */}
       </Menu>
-      {theme.name === "Mobile" && <FooterLogo src={fbIcon} />}
+      
       {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}{" "}
     </div>
   ) : (
