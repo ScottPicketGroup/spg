@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Header1 = styled.h1`
+margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : "")};
   font-size: ${(props) =>
     props.theme.name === "Desktop" ? "2.84rem" : "1.75rem"};
   font-family: ${(props) => props.theme.fontFamily.Times};

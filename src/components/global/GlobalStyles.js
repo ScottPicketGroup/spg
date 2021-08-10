@@ -38,11 +38,13 @@ export const TextContainer = styled.div`
 
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>
+  props.marginTop ? props.marginTop
+  :
     props.top === true
       ? "1rem"
       : props.theme.name === "Desktop"
       ? "6rem"
-      : "3.5rem"};
+      : "6rem"};
   display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
 
   width: 100%;

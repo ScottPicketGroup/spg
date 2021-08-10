@@ -178,8 +178,16 @@ overflow: hidden;
 transition: max-height 0.25s ease-out;
 width: 100%;
 transition: max-height .25s ease-in;
-:hover {
+@media (min-width: 451px) {
+  :hover {
   max-height: 500px;
   transition: max-height 0.25s ease-in;
+}
+}
+@media (max-width: 450px) {
+  margin-top: .25rem;
+  font-size: 1rem;
+  max-height: ${props => props.open ? '500px' : '1.3rem'};
+  transition: max-height 0.25s ease-in-out;
 }
 `
