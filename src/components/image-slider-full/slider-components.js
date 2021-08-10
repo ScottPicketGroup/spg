@@ -53,8 +53,9 @@ cursor: pointer;
 
 export const MobileControls = styled.div`
 padding: 1rem 18px 0 18px;
-float: right;
-margin-bottom: -12rem;
+display: flex;
+justify-content: space-between;
+
 @media screen and (min-width: 451px) {
     display: none;
 }

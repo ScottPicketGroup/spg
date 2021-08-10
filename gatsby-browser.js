@@ -69,7 +69,7 @@ const App = ({ element }) => {
 
   return (
     <ThemeProvider
-      theme={width < 1200 ? Theme.theme.mobile : Theme.theme.desktop}
+      theme={width < 500 ? Theme.theme.mobile : Theme.theme.desktop}
     >
       <GlobalFonts />
       {element}

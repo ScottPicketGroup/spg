@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
-import {Link} from 'gatsby'
+import { Link, graphql, useStaticQuery } from "gatsby"
+
+import { getImage, StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components";
 import {
   Container,
@@ -29,8 +31,49 @@ import {
 import Footer from "../../Common/Footer/Footer";
 import MobileHome from "../../Common/MobileHome";
 import Slider from "./image-slider/Slider";
+import SliderFull from "../../image-slider-full/Slider"
+
+const captions = [
+  "Matilda 159 Domain",
+  "Longrain Melbourne",
+  "Chancery Lane Bistro",
+  "Estelle",
+]
 
 const MobileLanding = ({ pageProps }) => {
+  const data = useStaticQuery(graphql`
+  {
+    allFile(
+      filter: {
+        extension: {}
+        absolutePath: { regex: "/images/landing-carousel/" }
+      }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              aspectRatio: 1.5
+            )
+          }
+        }
+      }
+    }
+    file(name: { in: "home-hero" }) {
+      id
+      childImageSharp {
+        gatsbyImageData(
+          layout: FULL_WIDTH
+          placeholder: BLURRED
+          aspectRatio: 1.5
+        )
+      }
+    }
+  }
+`)
 
   const theme = useTheme();
 
@@ -46,21 +89,32 @@ const MobileLanding = ({ pageProps }) => {
           <InnerContainer theme={theme} displayBlock={true}>
             <Header1 theme={theme}>Scott Pickett Group</Header1>
             <BC1 theme={theme}>
-              Welcome to the Scott Pickett Group. We are proud to operate a growing list of award-winning Melbourne restaurants and establishments. Our restaurants are diverse in fare and experience; from punchy Thai flavours at Longrain to precise European technique at Chancery Lane, yet all of our venues have one thing in common—all are fuelled by our passion for great food and great hospitality. Unsurprisingly, our mission is ‘For every guest to experience our true passion for hospitality.’
+            Welcome to the Scott Pickett Group. We are proud to operate a
+                growing list of award-winning Melbourne restaurants and
+                establishments. Our restaurants are diverse in fare and
+                experience; from precise European technique at Chancery Lane to
+                punchy Thai flavours at Longrain, yet all have one thing in
+                common: all are fuelled by our passion for great food and great
+                hospitality. Unsurprisingly, our mission is ‘For every guest to
+                experience our true passion for hospitality.’
               </BC1>
               <BC1  theme={theme}>
-              As one of Australia’s leading chefs and restaurateurs, Scott Pickett’s generous spirit and abundant personality are at the core of our establishments. He pairs his vast experience with his deep understanding of seasonality and respect for Australian growers and producers. Each Scott Pickett Group venue is a testament to the origins of the warm-hearted country boy with an obsessive dedication to excellence and passion for hospitality. 
+              As one of Australia’s leading chefs and restaurateurs, Scott
+                Pickett’s generous spirit and abundant personality are at the
+                core of our establishments. He pairs his vast experience with
+                his deep understanding of seasonality and respect for Australian
+                growers and producers. Each Scott Pickett Group venue is a
+                testament to the origins of the warm-hearted country boy with an
+                obsessive dedication to excellence and passion for hospitality.
               </BC1>
-              <Link to="/scott-pickett" />
-              <BC1 link={true} theme={theme}>
-              Read more about Scott ‘Cheffo’ Pickett
-              </BC1>
+            
+              <Link to="/scott-pickett" style={{textDecoration: `none`}}><BC1 link={true} theme={theme}>Read more about Scott Pickett</BC1></Link>
           </InnerContainer>
         </SectionContainer>
         </Container>
       
 
-      <Slider/>
+        <SliderFull images={data} captions={captions} />
       <Container theme={theme} style={{paddingBottom: `9rem`}}>
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
