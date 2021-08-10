@@ -5,13 +5,10 @@ import { useTheme } from "styled-components"
 import {
   Container,
   SectionContainer,
-  FullImageContainer,
-  ImageDiv,
-  ImageView,
+  FullImageContainer
 } from "../../global/GlobalStyles"
 
 
-import gridPic1 from "../../../images/events-pdrs/CL.jpg"
 
 import {
   InnerContainer,

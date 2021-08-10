@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage, StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components";
@@ -6,18 +6,9 @@ import {
   Container,
   SectionContainer,
   FullImageContainer,
-  ImageDiv,
-  ImageView,
 } from "../../global/GlobalStyles";
 
-import HomeImage from "../../../images/Screen Shot -1@2x.png";
-
-import gridPic1 from "../../../images/events-pdrs/CL.jpg"
-import gridPic2 from "../../../images/events-pdrs/estelle.jpg"
-import gridPic3 from "../../../images/events-pdrs/longgrain.jpeg"
-import gridPic4 from "../../../images/Screen Shot -4.png"
-import gridPic5 from "../../../images/events-pdrs/pastore.png"
-
+import HomeImage from "../../../images/heros/events-hero.jpg";
 import {
   InnerContainer,
   RightContainer,

@@ -123,7 +123,7 @@ const SliderFull = ({ images }) => {
   </Controls>
 </ControlsContainer>
 <MobileControls>
-  <ImageCaption>{imageNumber}/2</ImageCaption>
+  <ImageCaption>{imageNumber}/{images.allFile.edges.length}</ImageCaption>
 </MobileControls>
 </div>
   ) : (

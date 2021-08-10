@@ -3,7 +3,7 @@ import React from "react";
 import { useTheme } from "styled-components";
 import { Container, SectionContainer, PostContainer,} from "../../global/GlobalStyles";
 
-import HomeImage from "../../../images/carrers-hero.jpg";
+import HomeImage from "../../../images/heros/careers-hero.jpg";
 
 import { InnerContainer, RightContainer, Button } from "./styled-components";
 import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";

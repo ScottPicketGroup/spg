@@ -155,24 +155,8 @@ const MobileHome = ({ HomeImage, path }) => {
 
           <MenuItem
             theme={theme}
-            expandIcon={
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="7.823"
-                height="14.231"
-                viewBox="0 0 7.823 14.231"
-              >
-                <path
-                  id="Path_11818"
-                  data-name="Path 11818"
-                  d="M-1211.2,6896l6.762,6.762-6.762,6.762"
-                  transform="translate(1211.552 -6895.646)"
-                  fill="none"
-                  stroke="#befbf2"
-                  stroke-width="2"
-                />
-              </svg>
-            }
+            expandIcon={expandIcon}
+            
             onClick={() => handleOpenSubMenu("bookATable")}
           >
             Book a table
@@ -200,10 +184,10 @@ const MobileHome = ({ HomeImage, path }) => {
           </MenuItem>
           <MenuItem
             theme={theme}
-            
+            style={{color: "white !important"}}
           >
           <a href="https://apps.giverapp.net/pickettandco/" target="_blank"
-            style={{textDecoration: `none`, color: `#fffff`}}
+            style={{textDecoration: `none`, color: `inherit` }}
             >
             Gift Vouchers
             </a>
@@ -344,7 +328,7 @@ export const MenuBtn = styled.div`
   color: ${(props) => props.theme.colors.text};
   font-family: ${(props) => props.theme.fontFamily.UntitledSansMedium};
   cursor: ${(props) => (props.link ? "pointer" : "text")};
-
+  margin-top: .35rem;
   &:hover {
     color: ${(props) =>
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};

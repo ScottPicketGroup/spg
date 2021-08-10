@@ -11,6 +11,9 @@ import { getImage} from "gatsby-plugin-image"
 import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/MobileHome";
 import ContactUsForm from "./contact-us/ContactUsForm";
+
+import image from '../../../images/heros/sp-events-hero.jpg'
+
 const Landing = ({ pageProps }) => {
   const data = useStaticQuery(graphql`
   {
@@ -29,13 +32,14 @@ const Landing = ({ pageProps }) => {
       }
     }
   }`)
-  const image = getImage(data.allFile.edges[0].node)
+  const image1 = getImage(data.allFile.edges[0].node)
   const theme = useTheme();
 
   return theme ? (
     <div>
+       <Home HomeImage={image} path={pageProps.path} />
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
-        <Home HomeImage={image} path={pageProps.path} />
+       
 
         <SectionContainer>
           <InnerContainer>
