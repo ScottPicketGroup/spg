@@ -305,7 +305,7 @@ Australia
         <Menu theme={theme}>
           <MenuItem
             theme={theme}
-            bold={path && path === "/"}
+            // bold={path && path === "/"}
             onClick={() => {
               handleRedirect("/");
             }}
@@ -316,7 +316,7 @@ Australia
           </MenuItem>
           <MenuItem
             theme={theme}
-            bold={path && path.includes("/scott-pickett")}
+            // bold={path && path.includes("/scott-pickett")}
             onClick={() => {
               handleRedirect("/scott-pickett");
             }}
@@ -354,7 +354,7 @@ Australia
 
           <MenuItem
             theme={theme}
-            bold={path && path.includes("/events")}
+            // bold={path && path.includes("/events")}
             expandIcon={expandIcon}
             onClick={() => handleOpenSubMenu("events")}
             style={{ color: "#fffff", textDecoration: "none", fontSize: "24px" }}
@@ -363,7 +363,7 @@ Australia
           </MenuItem>
           <MenuItem
             theme={theme}
-            bold={path && path.includes("/whatson")}
+            // bold={path && path.includes("/whatson")}
             onClick={() => {
               handleRedirect("/whatson");
             }}
@@ -395,7 +395,7 @@ Australia
           {/* <MenuItem theme={theme}>Shop</MenuItem> */}
           <MenuItem
             theme={theme}
-            bold={path && path.includes("/careers")}
+            // bold={path && path.includes("/careers")}
             onClick={() => {
               handleRedirect("/careers");
             }}
@@ -408,7 +408,7 @@ Australia
           <MenuItem 
           theme={theme}
           style={{ color: "#fffff", textDecoration: "none", fontSize: "24px" }}
-          bold={path && path.includes("/contact")}
+          // bold={path && path.includes("/contact")}
           onClick={() => {
             handleRedirect("/contact");
           }}
