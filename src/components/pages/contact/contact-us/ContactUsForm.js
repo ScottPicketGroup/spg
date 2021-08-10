@@ -13,7 +13,9 @@ import {
   Label
 } from "./contact-components"
 import CheckBox from "./CheckBox"
-const ContactUsForm = () => {
+const ContactUsForm = ({formName}) => {
+
+  console.log(formName)
   const [error, setError] = useState({
     fName: false
   })
@@ -70,7 +72,18 @@ const ContactUsForm = () => {
     && inputs.email.includes(".")) || inputs.email.includes("@"))   
    
      
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...inputs })
+    })
+      .then(
+     
           setThankyou(true)
+     
+
+      )
+      .catch(error => alert(error));
      
 
       
