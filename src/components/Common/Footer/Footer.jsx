@@ -375,7 +375,7 @@ Australia
             
           >
             <a href="https://apps.giverapp.net/pickettandco/" target="_blank"
-            style={{textDecoration: `none`, color: `#fffff !important`}}
+             style={{ color: "inherit", textDecoration: "none" }}
             >
             Gift Vouchers
             </a>
