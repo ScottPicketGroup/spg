@@ -1,17 +1,16 @@
-import React, { useState } from "react"
+import React from "react"
 import { useTheme } from "styled-components"
 import { SectionContainer } from "../../../global/GlobalStyles"
-import { BC2, Header2 } from "../../../global/fontStyles"
+import { BC2, Header2, Header3 } from "../../../global/fontStyles"
 import {
   TimeLineContainer,
 } from "../styled-components"
 import timeline from "./timeline.json"
 import Intro from "./mobileIntro"
-import HoverImage from "./hoverImage"
+
 const MobileTimelineItems = () => {
-  const [image1, setImage1] = React.useState(false)
-  const [lastImage, setLastImage] = React.useState(false)
-  console.log(`timeline`, timeline)
+
+  
   const theme = useTheme()
 
   return theme ? (
@@ -23,9 +22,9 @@ const MobileTimelineItems = () => {
       />
       {timeline.map((item, i) => (
         <SectionContainer>
-          <TimeLineContainer>
-            <Header2>{item.year}</Header2>
-            <BC2 style={{ marginBottom: `1.5rem` }}>{item.phase}</BC2>
+          <TimeLineContainer theme={theme}>
+            <Header2 marginBottom="1rem">{item.year}</Header2>
+            <Header3 marginBottom="1.5rem">{item.phase}</Header3>
             <BC2>{item.qoute}</BC2>
           </TimeLineContainer>
         </SectionContainer>

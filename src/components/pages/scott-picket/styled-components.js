@@ -192,11 +192,13 @@ export const Divider = styled.hr`
   opacity: 0.2;
 `;
 export const TimeLineContainer = styled.div`
+border-top: ${(props) => (props.theme.name === "Mobile" ? "1px solid rgba(51%,51%,51%, 25%)" : "")};
   margin-top: ${(props) => (props.theme.name === "Mobile" ? "1.5rem" : "2.25rem")};
   display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
   flex-direction: ${(props) => (props.theme.name === "Mobile" ? "column" : "")};;
   width: 100%;
-  padding: ${(props) => (props.theme.name === "Mobile" ? "1.5rem 0" : "0")};
+  padding: ${(props) => (props.theme.name === "Mobile" ? "1.5rem 0 0 0" : "0")};
+  
 `;
 export const TimeLineIMGContainer = styled.div`
   display: flex;

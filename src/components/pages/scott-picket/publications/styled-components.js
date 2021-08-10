@@ -1,4 +1,8 @@
 import styled from "styled-components";
+import { Header1 } from "../../../global/fontStyles";
+
+
+
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>
     props.top === true
@@ -11,15 +15,28 @@ export const InnerContainer = styled.div`
   width: 100%;
 `;
 export const LeftContainer = styled.div`
-  display: inline;
+ 
   width: 33%;
+  @media (max-width: 450px) {
+    width: 0%;
+  }
 `;
 export const RightContainer = styled.div`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
   width: 66%;
+  @media (max-width: 450px) {
+    width: 100%;
+
+  }
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
 `;
+
+export const PublicationsHeader = styled(Header1)`
+border-bottom: 1px solid rgba(51, 51, 51, 25%); 
+padding-bottom: ${props => (props.theme.name === "Desktop" ? "5rem" : "1.5rem")}
+           
+`
 export const FullContainer = styled.div`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
   width: 58%;
@@ -47,6 +64,11 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
   grid-gap: ${(props) => (props.device === "Mobile" ? "6rem 1rem" : "1.5rem 3.25rem")};
+
+  @media (max-width: 450px) {
+    grid-template-columns: ${(props) => `repeat(1, 1fr)`};
+  }
+
 `;
 
 export const Item = styled.div`

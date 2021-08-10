@@ -1,32 +1,31 @@
 import React from "react"
+import { useTheme } from "styled-components"
 import { getImage, StaticImage } from "gatsby-plugin-image"
 import { Header1, Header2, Header3, BC3 } from "../../../global/fontStyles"
 import {
   SectionContainer,
   InnerContainer,
-  RightContainer,
-  LeftContainer,
+ 
 } from "../../../global/GlobalStyles"
 
-import { LeftGrid, RightGrid, TimeLineGrid } from "./styled-components"
+import { RightContainer,
+  LeftContainer, PublicationsHeader} from "./styled-components"
 
 import LeftAligned from "./leftAligned"
 import RightAligned from "./rightAligned"
 const Publications = () => {
-  return (
+
+  const theme = useTheme()
+  return theme ? (
       <>
       
-    <SectionContainer marginTop="9rem">
-      <LeftContainer />
-      <RightContainer>
-      <Header1
-          style={{
-            borderBottom: `1px solid rgba(51, 51, 51, 25%)`,
-            paddingBottom: `5.75rem`,
-          }}
+    <SectionContainer marginTop="9rem" theme={theme}>
+      <LeftContainer theme={theme} />
+      <RightContainer theme={theme} >
+      <PublicationsHeader theme={theme}
         >
           Publications
-        </Header1>
+        </PublicationsHeader>
         <SectionContainer>
           <InnerContainer>
            
@@ -125,7 +124,10 @@ opening more, and the pleasures and challenges of competition
      
    </SectionContainer>
    </>
-  )
+  
+   ) : (
+     <div></div>
+   )
 }
 
 export default Publications

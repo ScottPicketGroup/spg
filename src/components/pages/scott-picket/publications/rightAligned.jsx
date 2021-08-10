@@ -15,7 +15,7 @@ import PublicationImage from "./publicationImage";
 import spBook from '../../../../images/publications/sp-book.jpg'
 const LeftAligned = ({ data, images }) => {
   const theme = useTheme();
-  console.log(`data`, data, images)
+  
   return theme ? (
     <Grid cols="2">
     

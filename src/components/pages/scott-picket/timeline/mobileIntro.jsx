@@ -25,9 +25,9 @@ const Intro = () => {
                 <InnerContainer>
                     <LeftContainer></LeftContainer>
                     <RightContainer>
-                        <Header1 theme={theme}>Timeline</Header1>
-                        <BC1 theme={theme} marginBottom="3.5rem">
-                        “My grandmother, Audrey, used to cook a Sunday roast, usually lamb. That’s my first lasting recollection of food. It was cooked for hours until it was falling apart. Grandmother Audrey Masterson is an important part of my story.”
+                        <Header1 theme={theme} marginTop="1.5rem">Timeline</Header1>
+                        <BC1 theme={theme} marginBottom="3.5rem" >
+                        It’s been one hell of a career so far, yet I feel like I’m only just getting started. Some of the highlights are below:
          </BC1>
                     </RightContainer>
                 </InnerContainer>

@@ -36,11 +36,12 @@ import {
   BC2,
 } from "../../global/fontStyles"
 import Home from "../../Common/MobileHome"
-import SliderFull from "./image-slider-full/Slider"
+import SliderFirstMobile from "./sliders/sliderFirstMobile"
 import Slider from "./image-slider/Slider"
-
+import SliderFull from "./sliders/sliderFull"
 import Timeline from "./timeline/timeline"
 import MobileTimelineItems from "./timeline/mobileTimelineItems"
+import Publications from "./publications/Publications"
 const MobileLanding = ({ pageProps }) => {
   const theme = useTheme()
 
@@ -52,14 +53,14 @@ const MobileLanding = ({ pageProps }) => {
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
-              <Header1 theme={theme}>Scott Pickett</Header1>
+            <Header1 theme={theme}>Scott here, but you can call me 'Chefo'</Header1>
               <BC1 theme={theme} marginBottom="6rem" marginBottom="6rem">
-                My love for great produce began early. As a kid on a farm in
+              "My love for great produce began early. As a kid on a farm in
                 Kangarilla, it taught me a lot about food and seasonality.
                 Knowing the growers and producers behind the food we ate gave me
                 a respect for them that I’ve never lost. That connection with an
                 environment like that influenced me to become a chef. So did
-                growing up with my grandmother Audrey’s Sunday roasts.
+                growing up with my grandmother Audrey’s Sunday roasts."
               </BC1>
               <SectionContainer>
                 <InnerContainer
@@ -72,26 +73,30 @@ const MobileLanding = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
       </Container>
-      <Slider />
+
+
+
+      <SliderFirstMobile />
+      
       <Container>
         <SectionContainer>
           <InnerContainer marginTop="6rem">
             <RightContainer>
               <BC1 theme={theme} marginBottom="3rem" marginBottom="6rem">
-                Those years set the foundations of my values as a chef and
+              "Those years set the foundations of my values as a chef and
                 restaurateur today. My approach always puts food at the front.
                 It’s based on real cooking – with the greatest respect to the
                 produce. I want you to have incredible food and wine
                 experiences, with incredible service. But the food is the hero.
               </BC1>
               <BC1 theme={theme} marginBottom="6rem" marginBottom="6rem">
-                Now, as a restaurateur, I don’t spend as much time cooking as I
+              Now, as a restaurateur, I don’t spend as much time cooking as I
                 used to, but I have some gun Head Chefs to work with. Together,
                 we build on what makes each of the venues special, and try to
                 impart on you our understanding of seasonality and our respect
                 for Australian growers and producers. It’s a journey that’s
                 still going. Can’t wait to share with you what we’ve got planned
-                next.
+                next."
               </BC1>
             </RightContainer>
           </InnerContainer>
@@ -106,7 +111,7 @@ const MobileLanding = ({ pageProps }) => {
                   width: `100%`,
                 }}
               >
-                “ Those years set the foundations of my values as a chef and
+               “Those years set the foundations of my values as a chef and
                 restaurateur today. My approach always puts food at the front.
                 It’s based on real cooking – with the greatest respect to the
                 produce.”
@@ -115,7 +120,11 @@ const MobileLanding = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
       </Container>
+      
       <SliderFull />
+      
+      
+      
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <SectionContainer>
           <MobileTimelineItems />
@@ -124,26 +133,47 @@ const MobileLanding = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
             <Header1 theme={theme}>Accolades</Header1>
-            <BC1 theme={theme} marginBottom="6rem">
-              It’s been one hell of a career so far, yet I feel like I’m only
-              just getting started. Some of the highlights are below:
+            <BC1 theme={theme} marginBottom=".5rem" marginTop="0">
+            
             </BC1>
           </InnerContainer>
         </SectionContainer>
-
         <SectionContainer>
           <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
                 <Item>
-                  <Header2>Matilda 159 Domain</Header2>
+                  <Header2 marginBottom="1.5rem">Chancery Lane</Header2>
+                </Item>
+                <Item>
+             
+                  <Award>
+                    <BC2 style={{ marginRight: `1rem` }}> 2020 </BC2>
+                  
+                    <BC2>
+                  
+                  The Age Good Food Guide - 16/20
+               </BC2>
+                  </Award>
+
+                </Item>
+              </Grid>
+            </RightContainer>
+          </TimeLineContainer>
+        </SectionContainer>
+        <SectionContainer>
+          <TimeLineContainer>
+            <LeftContainer></LeftContainer>
+            <RightContainer>
+              <Grid cols={1}>
+                <Item>
+                  <Header2 marginBottom="1.5rem">Matilda 159 Domain</Header2>
                 </Item>
                 <Item>
                   <Award>
-                    <BC2 style={{ marginRight: `1rem` }}>2020 </BC2>
-                    <BC2>
-                      Age Good Food Guide -
+                    <BC2 style={{ marginRight: `.8rem`, marginTop: '.15rem' }}>2020 </BC2>
+                    <BC2>Age Good Food Guide -
                       <Hat src={hat} alt="chef hat" />
                     </BC2>
                   </Award>
@@ -164,7 +194,7 @@ const MobileLanding = ({ pageProps }) => {
                   </Award>
 
                   <Award>
-                    <BC2 style={{ marginRight: `1rem` }}>2019 </BC2>
+                    <BC2 style={{ marginRight: `1rem`, marginTop: '.15rem' }}>2019 </BC2>
 
                     <BC2>
                       Age Good Food Guide –
@@ -206,178 +236,18 @@ const MobileLanding = ({ pageProps }) => {
             <RightContainer>
               <Grid cols={1}>
            
-                  <Header2>Estelle</Header2>
+                  <Header2 marginBottom="1.5rem">Estelle</Header2>
           
 
                 <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2020 </BC2>
+                  <BC2 style={{ marginRight: `.8rem`, marginTop: '.15rem' }}>2020 </BC2>
                   <BC2>
                     {" "}
                     Age Good Food Guide –
                     <Hat src={hat} alt="chef hat" />
                   </BC2>
                 </Award>
-              </Grid>
-            </RightContainer>
-          </TimeLineContainer>
-        </SectionContainer>
-        
-        <SectionContainer>
-          <TimeLineContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <Grid cols={1}>
-               
-                  <Header2>Saint Crispin</Header2>
-              
                 <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2019 </BC2>
-                  <BC2>
-                    {" "}
-                    Age Good Food Guide –
-                    <Hat src={hat} alt="chef hat" />
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2018 </BC2>
-                  <BC2>
-                    {" "}
-                    Age Good Food Guide –
-                    <Hat src={hat} alt="chef hat" />
-                    <Hat src={hat} alt="chef hat" />
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2018 </BC2>
-                  <BC2> Gault & Millau Guide – 14.5/20</BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2017 </BC2>
-                  <BC2>
-                    {" "}
-                    Age Good Food Guide –
-                    <Hat src={hat} alt="chef hat" />
-                    <Hat src={hat} alt="chef hat" />
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2017 </BC2>
-                  <BC2>
-                    {" "}
-                    Australian Financial Review Top 100 Restaurants – Ranked #95
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2016 </BC2>
-                  <BC2>
-                    {" "}
-                    Age Good Food Guide –
-                    <Hat src={hat} alt="chef hat" />
-                    <Hat src={hat} alt="chef hat" />
-                  </BC2>
-                </Award>
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2017 </BC2>
-                  <BC2>
-                    {" "}
-                    Australian Financial Review Top 100 Restaurants – Ranked #44
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2016 </BC2>
-                  <BC2>Delicious Top 100 Restaurants</BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2015 </BC2>
-                  <BC2>
-                    {" "}
-                    Age Good Food Guide –
-                    <Hat src={hat} alt="chef hat" />
-                    <Hat src={hat} alt="chef hat" />
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2015 </BC2>
-                  <BC2>
-                    Age Good Food Guide – Nominated for Restaurant of the Year
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2015 </BC2>
-                  <BC2>
-                    Australian Financial Review Top 100 Restaurants –Ranked #20
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2015 </BC2>
-                  <BC2>
-                    Gourmet Traveller Restaurant Guide Top 100 – Ranked #92
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
-                  <BC2>
-                    {" "}
-                    Age Good Food Guide –
-                    <Hat src={hat} alt="chef hat" />
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
-                  <BC2>
-                    Age Good Food Guide – Winner New Restaurant of the Year
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
-                  <BC2>The Australian Hot 100 Restaurants</BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
-                  <BC2>TimeOut – Winner Best New Restaurants</BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
-                  <BC2>
-                    2014 Gourmet Traveller Wine List of the Year Awards
-                    –Finalist Best New Wine List
-                  </BC2>
-                </Award>
-
-                <Award>
-                  <BC2 style={{ marginRight: `1rem` }}>2013 </BC2>
-                  <BC2>The Australian Hot 50 Restaurants</BC2>
-                </Award>
-              </Grid>
-            </RightContainer>
-          </TimeLineContainer>
-        </SectionContainer>
-
-        <SectionContainer>
-          <TimeLineContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <Grid cols={1}>
-                <Item>
-                  <Header2>Estelle Bistro</Header2>
-                </Item>
-                <Item>
-                  <Award>
                     <BC2 style={{ marginRight: `1rem` }}>2018 </BC2>
                     <BC2>Delicious Top 100 Restaurants</BC2>
                   </Award>
@@ -412,7 +282,7 @@ const MobileLanding = ({ pageProps }) => {
                   </Award>
 
                   <Award>
-                    <BC2 style={{ marginRight: `1rem` }}>2015 </BC2>
+                    <BC2 style={{ marginRight: `.9rem`, marginTop: '.15rem' }}>2015 </BC2>
                     <BC2>
                       {" "}
                       Age Good Food Guide –
@@ -421,7 +291,7 @@ const MobileLanding = ({ pageProps }) => {
                   </Award>
 
                   <Award>
-                    <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
+                    <BC2 style={{ marginRight: `.9rem`, marginTop: '.15rem' }}>2014 </BC2>
                     <BC2>
                       {" "}
                       Age Good Food Guide –
@@ -439,7 +309,7 @@ const MobileLanding = ({ pageProps }) => {
                   </Award>
 
                   <Award>
-                    <BC2 style={{ marginRight: `1rem` }}>2013 </BC2>
+                    <BC2 style={{ marginRight: `.9rem`, marginTop: '.15rem' }}>2013 </BC2>
                     <BC2>
                       {" "}
                       Age Good Food Guide –
@@ -455,18 +325,18 @@ const MobileLanding = ({ pageProps }) => {
                       Pelham
                     </BC2>
                   </Award>
-                </Item>
               </Grid>
             </RightContainer>
           </TimeLineContainer>
         </SectionContainer>
+        
         <SectionContainer>
           <TimeLineContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
                 <Item>
-                  <Header2>Estelle By Scott Pickett (ESP)</Header2>
+                  <Header2 marginBottom="1.5rem">Estelle By Scott Pickett (ESP)</Header2>
                 </Item>
                 <Item>
                   <Award>
@@ -501,7 +371,7 @@ const MobileLanding = ({ pageProps }) => {
                   </Award>
 
                   <Award>
-                    <BC2 style={{ marginRight: `1rem` }}>2017 </BC2>
+                    <BC2 style={{ marginRight: `1rem`, marginTop: '.15rem' }}>2017 </BC2>
                     <BC2>
                       {" "}
                       Age Good Food Guide –
@@ -544,30 +414,161 @@ const MobileLanding = ({ pageProps }) => {
           </TimeLineContainer>
         </SectionContainer>
 
+
         <SectionContainer>
-          <TimeLineContainer>
+          <TimeLineContainer
+          style={{
+            borderBottom: `1px solid rgba(51%,51%,51%, 25%)`,
+            paddingBottom: `1.5rem`
+
+          }}
+          >
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Grid cols={1}>
-                <Item>
-                  <Header2>Chancery Lane</Header2>
-                </Item>
-                <Item>
-             
-                  <Award>
-                    <BC2 style={{ marginRight: `1rem` }}> 2020 </BC2>
-                  
-                    <BC2>
-                  
-                  The Age Good Food Guide - 16/20
-               </BC2>
-                  </Award>
+               
+                  <Header2 marginBottom="1.5rem">Saint Crispin</Header2>
+              
+                <Award>
+                  <BC2 style={{ marginRight: `1rem`, marginTop: '.15rem' }}>2019 </BC2>
+                  <BC2>
+                    {" "}
+                    Age Good Food Guide –
+                    <Hat src={hat} alt="chef hat" />
+                  </BC2>
+                </Award>
 
-                </Item>
+                <Award>
+                  <BC2 style={{ marginRight: `1rem`, marginTop: '.15rem' }}>2018 </BC2>
+                  <BC2>
+                    {" "}
+                    Age Good Food Guide –
+                    <Hat src={hat} alt="chef hat" />
+                    <Hat src={hat} alt="chef hat" />
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2018 </BC2>
+                  <BC2> Gault & Millau Guide – 14.5/20</BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem`, marginTop: '.15rem' }}>2017 </BC2>
+                  <BC2>
+                    {" "}
+                    Age Good Food Guide –
+                    <Hat src={hat} alt="chef hat" />
+                    <Hat src={hat} alt="chef hat" />
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2017 </BC2>
+                  <BC2>
+                    {" "}
+                    Australian Financial Review Top 100 Restaurants – Ranked #95
+                  </BC2>
+                </Award>
+
+                
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2017 </BC2>
+                  <BC2>
+                    {" "}
+                    Australian Financial Review Top 100 Restaurants – Ranked #44
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2016 </BC2>
+                  <BC2>Delicious Top 100 Restaurants</BC2>
+                </Award>
+                <Award>
+                  <BC2 style={{ marginRight: `1rem`, marginTop: '.15rem' }}>2016 </BC2>
+                  <BC2>
+                    {" "}
+                    Age Good Food Guide –
+                    <Hat src={hat} alt="chef hat" />
+                    <Hat src={hat} alt="chef hat" />
+                  </BC2>
+                </Award>
+                <Award>
+                  <BC2 style={{ marginRight: `1rem`, marginTop: '.15rem' }}>2015 </BC2>
+                  <BC2>
+                    {" "}
+                    Age Good Food Guide –
+                    <Hat src={hat} alt="chef hat" />
+                    <Hat src={hat} alt="chef hat" />
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2015 </BC2>
+                  <BC2>
+                    Age Good Food Guide – Nominated for Restaurant of the Year
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2015 </BC2>
+                  <BC2>
+                    Australian Financial Review Top 100 Restaurants –Ranked #20
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2015 </BC2>
+                  <BC2>
+                    Gourmet Traveller Restaurant Guide Top 100 – Ranked #92
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem`, marginTop: '.15rem' }}>2014 </BC2>
+                  <BC2>
+                    
+                    Age Good Food Guide –
+                    <Hat src={hat} alt="chef hat" />
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
+                  <BC2>Age Good Food Guide – Winner New Restaurant of the Year
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
+                  <BC2>The Australian Hot 100 Restaurants</BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
+                  <BC2>TimeOut – Winner Best New Restaurants</BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2014 </BC2>
+                  <BC2>
+                    2014 Gourmet Traveller Wine List of the Year Awards
+                    –Finalist Best New Wine List
+                  </BC2>
+                </Award>
+
+                <Award>
+                  <BC2 style={{ marginRight: `1rem` }}>2013 </BC2>
+                  <BC2>The Australian Hot 50 Restaurants</BC2>
+                </Award>
               </Grid>
             </RightContainer>
           </TimeLineContainer>
         </SectionContainer>
+
+   
+        <Publications />
+        
         {/* <CookiesBanner theme={theme}>
           this website uses cookies to ensure you get the best experience on our
           website learn more
