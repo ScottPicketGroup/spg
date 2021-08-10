@@ -374,7 +374,11 @@ Australia
             theme={theme}
             
           >
-            <a href="http://www.google.com" target="_blank">Gift Vouchers</a>
+            <a href="https://apps.giverapp.net/pickettandco/" target="_blank"
+            style={{textDecoration: `none`, color: `#fffff !important`}}
+            >
+            Gift Vouchers
+            </a>
           </MenuItem>
           <MenuItem
             theme={theme}
