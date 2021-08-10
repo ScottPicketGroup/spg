@@ -52,6 +52,9 @@ export const InnerContainer = styled.div`
 
 export const PostContainer = styled.div`
 width: 50%;
+@media (max-width: 450px) {
+  width: 100%;
+}
 `
 
 export const LogoImg = styled.img`

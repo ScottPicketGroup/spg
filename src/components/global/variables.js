@@ -23,6 +23,7 @@ export default {
       name: "Mobile",
       colors: {
         body: "#f9f9f4",
+
         text: "#333333",
         hoverText: "#80333333",
       },

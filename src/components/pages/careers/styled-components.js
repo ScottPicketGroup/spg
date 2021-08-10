@@ -101,11 +101,14 @@ width: 50%;
 
 export const Button = styled.button`
   color: ${(props) => props.theme.colors.text};
-  margin: 2.45rem 0 ;
+  margin: ${(props) => props.theme.name === "Mobile" ? "1.5rem 0": "2.62rem"};
   padding: 0.5em 3.5rem;
   background-color: ${(props) => props.theme.colors.body};
   border: ${(props) => `1px solid ${props.theme.colors.text}`};
   text-transform: uppercase;
+  a {
+    
+  }
   &:hover {
     background-color: ${(props) => `${props.theme.colors.text}`};
     color: ${(props) => props.theme.colors.body};

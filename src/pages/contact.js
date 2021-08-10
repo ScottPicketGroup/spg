@@ -3,7 +3,7 @@ import Seo from "../components/seo";
 import { useTheme } from "styled-components";
 
 import Landing from "../components/pages/contact/contact";
-import MobileLanding from "../components/pages/whats-on/mobileWhatsOn";
+import MobileLanding from "../components/pages/contact/contactMobile";
 
 const WhatsOn = (props) => {
   const theme = useTheme();
@@ -14,7 +14,7 @@ const WhatsOn = (props) => {
       {theme.name === "Desktop" ? (
         <Landing pageProps={props} />
       ) : (
-        <div class=""></div>
+        <MobileLanding pageProps={props}/>
       )}
     </div>
   ) : (

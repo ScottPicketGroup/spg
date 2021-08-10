@@ -194,7 +194,10 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
               Careers
             </Link>
           </MenuItem>
-          <MenuItem theme={theme}>Contact</MenuItem>
+          <MenuItem  theme={theme}
+            onClick={() => {
+              handleRedirect("/contact");
+            }}>Contact</MenuItem>
         </Menu>
         <LogoImg src={logo} style={{left: `3rem`}}/>
       </LeftContainer>

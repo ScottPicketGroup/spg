@@ -202,9 +202,9 @@ const MobileHome = ({ HomeImage, path }) => {
           </MenuItem>
           <MenuItem
             theme={theme}
-            bold={path && path.includes("/scott-picket")}
+            bold={path && path.includes("/scott-pickett")}
             onClick={() => {
-              handleRedirect("/scott-picket");
+              handleRedirect("/scott-pickett");
             }}
           >
             <Link style={{ color: "inherit", textDecoration: "none" }}>
@@ -283,7 +283,13 @@ const MobileHome = ({ HomeImage, path }) => {
               Careers
             </Link>
           </MenuItem>
-          <MenuItem theme={theme}>Contact</MenuItem>
+          <MenuItem 
+          theme={theme}
+          bold={path && path.includes("/contact")}
+          onClick={() => {
+            handleRedirect("/contact");
+          }}
+          >Contact</MenuItem>
         </Menu>
         <FooterLogo src={footerLogo} />
       </MenuBox>
