@@ -310,7 +310,7 @@ Australia
               handleRedirect("/");
             }}
           >
-            <Link style={{ color: "inherit", textDecoration: "none" }}>
+            <Link style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
               Home
             </Link>
           </MenuItem>
@@ -321,13 +321,14 @@ Australia
               handleRedirect("/scott-pickett");
             }}
           >
-            <Link style={{ color: "inherit", textDecoration: "none" }}>
+            <Link style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
               Scott Pickett
             </Link>
           </MenuItem>
 
           <MenuItem
             theme={theme}
+            style={{ color: "#fffff", textDecoration: "none", fontSize: "24px" }}
             expandIcon={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -356,6 +357,7 @@ Australia
             bold={path && path.includes("/events")}
             expandIcon={expandIcon}
             onClick={() => handleOpenSubMenu("events")}
+            style={{ color: "#fffff", textDecoration: "none", fontSize: "24px" }}
           >
             Events
           </MenuItem>
@@ -365,9 +367,10 @@ Australia
             onClick={() => {
               handleRedirect("/whatson");
             }}
+            
           >
             {" "}
-            <Link style={{ color: "inherit", textDecoration: "none" }}>
+            <Link style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
               What's On
             </Link>
           </MenuItem>
@@ -376,7 +379,7 @@ Australia
             
           >
             <a href="https://apps.giverapp.net/pickettandco/" target="_blank"
-             style={{ color: "inherit", textDecoration: "none" }}
+             style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}
             >
             Gift Vouchers
             </a>
@@ -385,6 +388,7 @@ Australia
             theme={theme}
             expandIcon={expandIcon}
             onClick={() => handleOpenSubMenu("provider")}
+            style={{ color: "#fffff", textDecoration: "none", fontSize: "24px" }}
           >
             Providoor
           </MenuItem>
@@ -397,12 +401,13 @@ Australia
             }}
           >
             {" "}
-            <Link style={{ color: "inherit", textDecoration: "none" }}>
+            <Link style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
               Careers
             </Link>
           </MenuItem>
           <MenuItem 
           theme={theme}
+          style={{ color: "#fffff", textDecoration: "none", fontSize: "24px" }}
           bold={path && path.includes("/contact")}
           onClick={() => {
             handleRedirect("/contact");
