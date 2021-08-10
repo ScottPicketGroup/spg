@@ -40,7 +40,7 @@ export default class SimpleSlider extends Component {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="96.534"
-            height="44.959"
+            height="34.959"
             viewBox="0 0 96.534 44.959"
           >
             <g
@@ -187,7 +187,7 @@ export default class SimpleSlider extends Component {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="71.607"
-          height="44.959"
+          height="34.959"
           viewBox="0 0 71.607 44.959"
         >
           <g
@@ -783,7 +783,7 @@ export default class SimpleSlider extends Component {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="96.534"
-            height="44.959"
+            height="34.959"
             viewBox="0 0 96.534 44.959"
           >
             <g
@@ -930,7 +930,7 @@ export default class SimpleSlider extends Component {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="71.607"
-          height="44.959"
+          height="34.959"
           viewBox="0 0 71.607 44.959"
         >
           <g
@@ -1510,16 +1510,16 @@ export default class SimpleSlider extends Component {
 }
 const moveSlideshow = keyframes`
 100% { 
-  transform: translateX(-1520px);  
+  transform: translateX(-1695px);  
 }
 `
 
 const Logos = styled.div`
 display: flex;
-width: 3940px;
+width: 4800px;
 align-items: center;
 height: auto;
-  margin: 2.15rem 0 ;
+  margin: 1.25rem 0 ;
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -1556,7 +1556,7 @@ svg, path, g {
 ` 
 export const Logo = styled.div`
 fill: #f9f9f4;
-margin-right: 6rem;
+margin-right: 70px;
 svg  {
   fill: #f9f9f4;
 }

@@ -30,7 +30,6 @@ import gridPic6 from "../../../images/home-venues/Longsong.jpg"
 import gridPic7 from "../../../images/home-venues/LeShoppe.jpg"
 import gridPic8 from "../../../images/gridPic8.png"
 
-
 import Footer from "../../Common/Footer/Footer"
 import MobileHome from "../../Common/MobileHome"
 import Slider from "./image-slider/Slider"
@@ -78,7 +77,7 @@ const MobileLanding = ({ pageProps }) => {
       }
     }
   `)
-console.log(chancery)
+  console.log(chancery)
   const theme = useTheme()
 
   return theme ? (
@@ -122,12 +121,12 @@ console.log(chancery)
 
       <SliderFull images={data} captions={captions} />
 
-
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
-       
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
-          <Header1 theme={theme} marginBottom="3.5rem !important">Venues</Header1>
+            <Header1 theme={theme} marginBottom="3.5rem !important">
+              Venues
+            </Header1>
             <RightContainer>
               <Grid cols={1}>
                 <Item>
@@ -148,11 +147,13 @@ console.log(chancery)
                       Chancery Lane
                     </Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                    430 Little Collins St, Melbourne
+                      430 Little Collins St, Melbourne
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>Read More</ItemExpandElement>
+                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                      Read More
+                    </ItemExpandElement>
                     <BC3>
                       Housed in the historic Normanby Chambers building,
                       Chancery Lane is Scott Pickett’s classic bistro with an
@@ -196,11 +197,13 @@ console.log(chancery)
                       Le Shoppe
                     </Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                    Suite 1, 430 Little Collins St, Melbourne
+                      Suite 1, 430 Little Collins St, Melbourne
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>Read More</ItemExpandElement>
+                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                      Read More
+                    </ItemExpandElement>
                     <BC3>
                       Le Shoppe is Scott Pickett’s European-inspired coffee bar
                       and provedore, located on Little Collins St, Melbourne.{" "}
@@ -243,20 +246,21 @@ console.log(chancery)
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Matilda</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                    159 Domain Rd, South Yarra
+                      159 Domain Rd, South Yarra
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>Read More</ItemExpandElement>
+                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                      Read More
+                    </ItemExpandElement>
                     <BC3>
                       Matilda is a visual and sensory journey. The kitchen
                       is fuelled by open fire and hot coals, delivering
                       contemporary Australian food, strong design and a feeling
                       of comfort and warmth.  <br /> <br />
-                      Situated opposite the Royal Botanical Gardens
-                      and named after Scott Pickett’s daughter, the restaurant
-                      celebrates the connection between people, food and
-                      nature. 
+                      Situated opposite the Royal Botanical Gardens and named
+                      after Scott Pickett’s daughter, the restaurant celebrates
+                      the connection between people, food and nature. 
                       <br /> <br />
                       Stylish yet relaxed, Matilda is a place where guests can
                       visit often and be guaranteed the finest local meat and
@@ -288,17 +292,29 @@ console.log(chancery)
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Estelle</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                    243-245 High St, Northcote
+                      243-245 High St, Northcote
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>Read More</ItemExpandElement>
+                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                      Read More
+                    </ItemExpandElement>
                     <BC3>
-                    Estelle is a venue designed to suit all occasions. Whether stopping by for a glass of wine and a share plate or a full tasting experience, guests can find home in the all-encompassing venue.
+                      Estelle is a venue designed to suit all occasions. Whether
+                      stopping by for a glass of wine and a share plate or a
+                      full tasting experience, guests can find home in the
+                      all-encompassing venue.
                       <br /> <br />
-                      The contemporary Australian menu reflects Pickett's commitment to classic bistro dishes with a touch of innovation and refined technique. His respect for seasonal produce is evident.
+                      The contemporary Australian menu reflects Pickett's
+                      commitment to classic bistro dishes with a touch of
+                      innovation and refined technique. His respect for seasonal
+                      produce is evident.
                       <br /> <br />
-                      Estelle's brick walls and recycled timber finishings create a warm and welcoming atmosphere. With large windows separating the dining room and the wine bar, Estelle provides a verdant and open space for lunches, dinners and private functions.
+                      Estelle's brick walls and recycled timber finishings
+                      create a warm and welcoming atmosphere. With large windows
+                      separating the dining room and the wine bar, Estelle
+                      provides a verdant and open space for lunches, dinners and
+                      private functions.
                     </BC3>
                     <ItemImgLink
                       href="http://www.theestelle.com.au"
@@ -325,11 +341,13 @@ console.log(chancery)
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Longrain</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                    44 Little Bourke St, Melbourne
+                      44 Little Bourke St, Melbourne
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>Read More</ItemExpandElement>
+                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                      Read More
+                    </ItemExpandElement>
                     <BC3>
                       Scott Pickett’s Longrain is a Melbourne dining
                       institution. Located in an expansive heritage building on
@@ -369,11 +387,13 @@ console.log(chancery)
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Longsong</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                    Level 1, 44 Little Bourke St, Melbourne
+                      Level 1, 44 Little Bourke St, Melbourne
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>Read More</ItemExpandElement>
+                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                      Read More
+                    </ItemExpandElement>
                     <BC3>
                       Longsong is a Thai-inspired cocktail bar that artfully
                       mixes Bangkok and Melbourne, the high and the low. Housed
@@ -410,11 +430,13 @@ console.log(chancery)
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Pastore</Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                    1341 Dandenong Rd, Chadstone
+                      1341 Dandenong Rd, Chadstone
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>Read More</ItemExpandElement>
+                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                      Read More
+                    </ItemExpandElement>
                     <BC3>
                       Pastore is an Italian-inspired all-day dining venue
                       welcoming guests for all occasions. Located at Hotel
@@ -456,22 +478,24 @@ console.log(chancery)
                       Pickett’s Deli & Rotisserie
                     </Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                    Terminal 3, Melbourne Airport
+                      Terminal 3, Melbourne Airport
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>Read More</ItemExpandElement>
+                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                      Read More
+                    </ItemExpandElement>
                     <BC3>
-                      Pickett’s Deli & Rotisserie has found a home in
-                      Terminal 3 of Melbourne Airport. Originally opening at
-                      Queen Vic market, a new era of the deli introduces true,
-                      quality Melbourne food to travellers. Guests can take a
-                      seat at the communal table or cosy booth and watch the
-                      rotisserie turn, enjoying a selection of snacks and dishes
-                      showcasing Victorian produce at its best. The all-day
-                      eatery serves as the ideal pit-stop for an early morning
-                      coffee, breakfast, eat in or takeaway lunch or dinner,
-                      also offering cocktails and wines by the glass.
+                      Pickett’s Deli & Rotisserie has found a home in Terminal 3
+                      of Melbourne Airport. Originally opening at Queen Vic
+                      market, a new era of the deli introduces true, quality
+                      Melbourne food to travellers. Guests can take a seat at
+                      the communal table or cosy booth and watch the rotisserie
+                      turn, enjoying a selection of snacks and dishes showcasing
+                      Victorian produce at its best. The all-day eatery serves
+                      as the ideal pit-stop for an early morning coffee,
+                      breakfast, eat in or takeaway lunch or dinner, also
+                      offering cocktails and wines by the glass.
                     </BC3>
                     <ItemImgLink
                       href="http://www.pickettsdeli.com"
@@ -503,17 +527,19 @@ console.log(chancery)
                     </BC3>
                   </ItemImgLink>
                   <ItemInfoContainer>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>Read More</ItemExpandElement>
+                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                      Read More
+                    </ItemExpandElement>
                     <BC3>
-                      SP Events is Scott Pickett’s off-site catering business.
-                      We bring any event to life, from an intimate home soirée
-                      to large-scale public events like the Australian Open. We
-                      offer a range of special menus from each of our
-                      restaurants so that the style of cuisine can perfectly
-                      match the theme of our clients’ events. For client’s who
-                      simply can’t decide, we offer ‘Scott Pickett’s Greatest
+                      SP Events is Scott Pickett’s off-site catering business,
+                      bringing any event to life; from an intimate home soirée
+                      to large-scale public events like the Australian Open and
+                      Grand Prix. SP Events offers a range of menus from the
+                      Scott Pickett Group restaurants, with the style of cuisine
+                      matching the theme of any event. For clients who simply
+                      can’t decide, SP Events offers ‘Scott Pickett’s Greatest
                       Hits’, a bespoke offer of Scott’s favourite dishes from
-                      across the group.
+                      across his establishments.
                     </BC3>
                     <ItemImgLink href="http://" target="_blank" link={true}>
                       Visit SP Events
@@ -529,14 +555,14 @@ console.log(chancery)
           <InnerContainer theme={theme} displayBlock={true}>
             <Header1 theme={theme}>What's On</Header1>
             <BC1 theme={theme}>
-                Stay up to date with the latest venue announcements, events,
-                collaborations and more from the Scott Pickett Group.
-              </BC1>
+              Stay up to date with the latest venue announcements, events,
+              collaborations and more from the Scott Pickett Group.
+            </BC1>
             <Link to="/whatson" style={{ textDecoration: `none` }}>
-                <BC1 link={true} theme={theme}>
-                  Learn More
-                </BC1>
-              </Link>
+              <BC1 link={true} theme={theme}>
+                Learn More
+              </BC1>
+            </Link>
           </InnerContainer>
         </SectionContainer>
       </Container>
