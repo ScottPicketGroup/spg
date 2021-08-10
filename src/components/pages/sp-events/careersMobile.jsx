@@ -1,101 +1,158 @@
 import React from "react";
-
 import { useTheme } from "styled-components";
 import { Container, SectionContainer } from "../../global/GlobalStyles";
 
-import HomeImage from "../../../images/carrers-hero.jpg";
-
-import { InnerContainer, RightContainer, Button } from "./styled-components";
-import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";
-
+import {
+  InnerContainer,
+} from "./styled-components";
+import { BC1, Header1} from "../../global/fontStyles";
+import { graphql, useStaticQuery } from "gatsby"
+import { getImage} from "gatsby-plugin-image"
 import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/MobileHome";
-const MobileLanding = ({ pageProps }) => {
+import ContactUsForm from "./contact-us/ContactUsForm";
+const Landing = ({ pageProps }) => {
+  const data = useStaticQuery(graphql`
+  {
+    allFile(filter: {extension: {}, absolutePath: {}, name: {in: "sp-events-hero"}}) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              aspectRatio: 1.5
+              )
+          }
+        }
+      }
+    }
+  }`)
+  const image = getImage(data.allFile.edges[0].node)
   const theme = useTheme();
 
   return theme ? (
     <div>
-       <Home HomeImage={HomeImage} path={pageProps.path} />
-      <Container theme={theme} style={{paddingBottom: `6rem`}}>
-       
+      <Container theme={theme} style={{ paddingBottom: `9rem` }}>
+        <Home HomeImage={image} path={pageProps.path} />
+
         <SectionContainer>
-          <InnerContainer theme={theme} displayBlock={true}>
-            <Header1 theme={theme}>Careers</Header1>
-            <BC1 theme={theme}>
-              Want to take the next step in your career? 
-              </BC1>
+          <InnerContainer>
+          
+              <Header1 theme={theme}>SP Events </Header1>
               <BC1 theme={theme}>
-              The Scott Pickett Group is one of Melbourne’s most respected hospitality groups, helmed by Chef Restaurateur Scott Pickett. Our award-winning Melbourne restaurants include Chancery Lane, Matilda, Longrain, Estelle and Pastore – and the list is growing. 
+              The Scott Pickett Group is excited to launch our off-site catering offer, ‘SP Events’. Debuting with our Longrain pop-up at Sutton Grange Winery in March 2021, SP Events brings Scott Pickett’s food to you, whatever your event may be. We offer Estelle, Matilda, Longrain, Le Shoppe and ‘Scott’s Greatest Hits’ menus offsite for weddings, parties, corporate events or large-scale public events.
+
+Stay up to date with news from the Scott Pickett group to be the first to know when our full offer is live.
               </BC1>
-              <BC1 theme={theme}>
-              At the Scott Pickett Group, we’re serious about sharing our true passion for hospitality with our guests. We strive to make every guest’s visit a memorable experience. 
-              </BC1>
-              <BC1 theme={theme}>
-              Our staff are one of our most valuable assets, and we are always looking out for like-minded people to help us achieve our vision. We recognise the importance of working towards our vision as one team, as diverse as our venues are. We work hard to make sure that every staff member lives by our Scott Pickett Group values, being Generous, Respectful, Grounded, Creative, Inclusive and Bold. 
-              </BC1>
-              <BC1 theme={theme}>
-              We are proud to offer a working environment where staff can learn and grow, with extensive career progression opportunities within our group and are always happy to hear from prospective team members. See our current roles below or send your CV to careers@scottpickettgroup.com.au for any roles which aren’t currently advertised. 
-              </BC1>
+           
+                <BC1 theme={theme}>
+                Stay up to date with news from the Scott Pickett group to be the first to know when our full offer is live.
+                </BC1>
+           
           </InnerContainer>
         </SectionContainer>
-{/* 
-        <SectionContainer>
-          <InnerContainer theme={theme} displayBlock={true}>
+<SectionContainer>
+  <InnerContainer>
+   
+ 
+      <ContactUsForm/>
+   
+  </InnerContainer>
+</SectionContainer>
+        {/* <SectionContainer>
+          <InnerContainer>
+            <LeftContainer></LeftContainer>
             <RightContainer>
-              <Header2 theme={theme}>Waitress - FOH All Rounder</Header2>
-              <Header4 theme={theme}>Longrain melbourne</Header4>
-              <Header4 theme={theme}>10th April 2021</Header4>
-              <BC3 theme={theme}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                volutpat risus efficitur nulla aliquam suscipit. Nulla sed
-                ullamcorper felis, a vulputate mi. Aenean enim leo, egestas
-                vitae ultrices at, placerat ac lorem. Donec tortor augue,
-                pulvinar et dictum vel, euismod id velit. Sed nec suscipit
-                mauris. Ut sollicitudin rutrum eros at maximus. Duis vitae dui
-                eu tellus dignissim commodo et in tortor. Praesent ac magna
-                vulputate, fringilla odio et, vehicula lorem.
+              <PostContainer>
+                <Header2 theme={theme}>Waitress - FOH All Rounder</Header2>
+                <Header4 theme={theme}>Longrain melbourne</Header4>
+                <Header4 theme={theme}>10th April 2021</Header4>
+                <BC3 theme={theme}>
+                  <BC3>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi volutpat risus efficitur nulla aliquam suscipit. Nulla
+                    sed ullamcorper felis, a vulputate mi. Aenean enim leo,
+                    egestas vitae ultrices at, placerat ac lorem. Donec tortor
+                    augue, pulvinar et dictum vel, euismod id velit. Sed nec
+                    suscipit mauris. Ut sollicitudin rutrum eros at maximus.
+                    Duis vitae dui eu tellus dignissim commodo et in tortor.
+                    Praesent ac magna vulputate, fringilla odio et, vehicula
+                    lorem.
+                  </BC3>
+                  <li>- Casual, part-time & full-time positions available</li>
+                  <li>- Must have experience in Hospitality </li>
+                  <li>
+                    - Must be a passionate, friendly and reliable team player
+                  </li>
+                  <li>
+                    - Must thrive in a busy environment - Immediate start
+                    necessary
+                  </li>
                 </BC3>
-                <BC3>
-                <li>- Casual, part-time & full-time positions available</li>
-                <li>- Must have experience in Hospitality </li>
-                <li>- Must be a passionate, friendly and reliable team player
-                </li>
-                <li>- Must thrive in a busy environment - Immediate start necessary
-                </li>
-              </BC3>
+              </PostContainer>
               <Button>Apply</Button>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
         <SectionContainer>
-          <InnerContainer theme={theme} displayBlock={true}>
+          <InnerContainer>
+            <LeftContainer></LeftContainer>
             <RightContainer>
-              <Header2 theme={theme}>Sous Chef</Header2>
-              <Header4 theme={theme}>Matilda melbourne</Header4>
-              <Header4 theme={theme}>10th April 2021</Header4>
-              <BC3 theme={theme}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                volutpat risus efficitur nulla aliquam suscipit. Nulla sed
-                ullamcorper felis, a vulputate mi. Aenean enim leo, egestas
-                vitae ultrices at, placerat ac lorem. Donec tortor augue,
-                pulvinar et dictum vel, euismod id velit. Sed nec suscipit
-                mauris. Ut sollicitudin rutrum eros at maximus. Duis vitae dui
-                eu tellus dignissim commodo et in tortor. Praesent ac magna
-                vulputate, fringilla odio et, vehicula lorem.
+              <PostContainer>
+                <Header2 theme={theme}>Sous Chef</Header2>
+                <Header4 theme={theme}>Matilda melbourne</Header4>
+                <Header4 theme={theme}>10th April 2021</Header4>
+                <BC3 theme={theme}>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                  volutpat risus efficitur nulla aliquam suscipit. Nulla sed
+                  ullamcorper felis, a vulputate mi. Aenean enim leo, egestas
+                  vitae ultrices at, placerat ac lorem. Donec tortor augue,
+                  pulvinar et dictum vel, euismod id velit. Sed nec suscipit
+                  mauris. Ut sollicitudin rutrum eros at maximus. Duis vitae dui
+                  eu tellus dignissim commodo et in tortor. Praesent ac magna
+                  vulputate, fringilla odio et, vehicula lorem.
                 </BC3>
                 <BC3>
-                <li>- Casual, part-time & full-time positions available</li>
-                <li>- Must have experience in Hospitality </li>
-                <li>- Must be a passionate, friendly and reliable team player
+                  <li>- Casual, part-time & full-time positions available</li>
+                  <li>- Must have experience in Hospitality </li>
+                  <li>
+                    - Must be a passionate, friendly and reliable team player
+                  </li>
+                  <li>
+                    - Must thrive in a busy environment - Immediate start
+                    necessary
+                  </li>
+                </BC3>
+              </PostContainer>
+              <Button>Apply</Button>
+            </RightContainer>
+          </InnerContainer>
+        </SectionContainer>
+        <SectionContainer>
+          <InnerContainer>
+            <LeftContainer></LeftContainer>
+            <RightContainer>
+              <Header2 theme={theme}>BAR SUPERVISOR</Header2>
+              <Header4 theme={theme}>Longrain melbourne</Header4>
+              <Header4 theme={theme}>10th April 2021</Header4>
+              <BC3 theme={theme}>
+                <li> Casual, part-time & full-time positions available</li>
+                <li> Must have experience in Hospitality </li>
+                <li>
+                  {" "}
+                  Must be a passionate, friendly and reliable team player
                 </li>
-                <li>- Must thrive in a busy environment - Immediate start necessary
-                </li>
+                <li> Must thrive in a busy environment</li>
+                <li> Immediate start necessary</li>
               </BC3>
               <Button>Apply</Button>
             </RightContainer>
           </InnerContainer>
         </SectionContainer> */}
       </Container>
+
       <Footer />
     </div>
   ) : (
@@ -103,4 +160,4 @@ const MobileLanding = ({ pageProps }) => {
   );
 };
 
-export default MobileLanding;
+export default Landing;

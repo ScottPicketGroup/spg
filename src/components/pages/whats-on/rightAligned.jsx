@@ -11,15 +11,15 @@ const LeftAligned = ({ data, images }) => {
   return theme ? (
     <Grid cols={theme.name === "Desktop" ? 2 : 1}>
       <Item>
-      <Header2 marginBottom=".75rem"   theme={theme}>{data.heading}</Header2>
-        <Header3 marginBottom="1rem" theme={theme}>{data.subHeading}</Header3>
+      <Header2 marginBottom="1rem"  theme={theme}>{data.heading}</Header2>
+        <Header3 marginBottom={theme.name === "Mobile" ? "1.5rem" : "1rem"} theme={theme}>{data.subHeading}</Header3>
 
         {data.content.map(para => (
           <BC3 light>
            <pre
            style={{
              fontFamily: `inherit`,
-             overflowX: `auto`,		
+             overflow: `hidden`,		
             whiteSpace: `pre-wrap`
            }}
            >

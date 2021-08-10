@@ -116,7 +116,8 @@ width: ${props => props.width ? props.width : ""};
   color: ${(props) => props.theme.colors.text};
   margin: 2.45rem 0;
   padding: ${props => props.padding ? props.padding : "0.75em 3.5rem"};
-
+  display: flex;
+  justify-content: center;
   background-color: ${(props) => props.theme.colors.body};
   border: ${(props) => `1px solid ${props.theme.colors.text}`};
   text-transform: uppercase;

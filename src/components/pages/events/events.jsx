@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery } from "gatsby"
+import { getImage, StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components"
 import {
   Container,
@@ -111,9 +111,11 @@ const Events = ({ pageProps }) => {
               target="_blank"
             >
               <FullImageContainer>
-                <ImageView>
-                  <ImageDiv src={gridPic1}></ImageDiv>
-                </ImageView>
+              <StaticImage
+                  placeholder="blurred"
+                  src="../../../images/events-pdrs/CL.jpg"
+                  alt="Chancery Lane"
+                />
               </FullImageContainer>
               <ItemImgCaption>Chancery Lane</ItemImgCaption>
               <BC3>Little Collins St, Melbourne</BC3>
@@ -132,7 +134,7 @@ const Events = ({ pageProps }) => {
                 <StaticImage
                   placeholder="blurred"
                   src="../../../images/events-pdrs/estelle-pdr.jpg"
-                  alt="Chancery Lane"
+                  alt="Estelle"
                 />
               </FullImageContainer>
               <ItemImgCaption>Estelle</ItemImgCaption>
@@ -152,7 +154,7 @@ const Events = ({ pageProps }) => {
                 <StaticImage
                   placeholder="blurred"
                   src="../../../images/events-pdrs/longgrain.jpeg"
-                  alt="Chancery Lane"
+                  alt="Longrain"
                 />
               </FullImageContainer>
               <ItemImgCaption>Longrain & Longsong</ItemImgCaption>

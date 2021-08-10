@@ -27,7 +27,7 @@ const LeftAligned = ({ data, images }) => {
       </Item>
       <Item>
         <Header2 marginBottom="1rem" marginTop="-5rem"  theme={theme}>{data.heading}</Header2>
-        <Header3 marginBottom="1rem" theme={theme}>{data.subHeading}</Header3>
+        <Header3 marginBottom={theme.name === "Mobile" ? "1.5rem" : "1rem"}  theme={theme}>{data.subHeading}</Header3>
  
         {
           data.content.map(para => (

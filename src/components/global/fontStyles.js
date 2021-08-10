@@ -112,7 +112,9 @@ export const Quotation = styled.div`
 `
 
 export const ItemImgCaption = styled.div`
-  margin-top: ${props =>
+margin-bottom: ${props =>
+    props.theme.name === "Desktop" ? "" : "1rem"};
+margin-top: ${props =>
     props.theme.name === "Desktop" ? "2.25rem" : "1.5rem"};
   font-size: ${props => (props.theme.name === "Desktop" ? "36px" : "20px")};
   font-family: ${props => props.theme.fontFamily.Times};

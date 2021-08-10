@@ -19,6 +19,7 @@ import { ImageCaption } from "../../../global/fontStyles"
 
 const SliderFull = ({ images }) => {
   const [imageNumber, setImageNumber] = useState(1)
+ 
   let title = useRef(null)
   const handlers = useSwipeable({
     onSwipedLeft: () => nextImage(),

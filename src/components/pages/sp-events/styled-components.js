@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const InnerContainer = styled.div`
   margin-top: 6rem;
-  display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
-
+  display: flex;
+  flex-direction: ${(props) => (props.theme.name === "Mobile" ? "column" : "")};
   width: 100%;
 `;
 export const LeftContainer = styled.div`

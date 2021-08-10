@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { graphql, useStaticQuery } from "gatsby"
+import { getImage, StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components";
 import {
   Container,
@@ -26,9 +27,46 @@ import {
 import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles";
 import Footer from "../../Common/Footer/Footer";
 import MobileHome from "../../Common/MobileHome";
-import SliderFull from "./image-slider-full/Slider";
+import Slidera from "../../image-slider-full/Slider"
+
+const captions = ["Oscar’s and The Harrison private dining rooms at Matilda", "Enclosed courtyard at Estelle"]
 
 const MobileEvents = ({ pageProps }) => {
+
+  const data = useStaticQuery(graphql`
+    {
+      allFile(
+        filter: {
+          extension: {}
+          absolutePath: { regex: "/images/events-carousel/" }
+        }
+      ) {
+        edges {
+          node {
+            id
+            childImageSharp {
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                aspectRatio: 1.5
+              )
+            }
+          }
+        }
+      }
+      file(name: { in: "events-hero" }) {
+        id
+        childImageSharp {
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            aspectRatio: 1.5
+          )
+        }
+      }
+    }
+  `)
+  const image = getImage(data.file)
   const theme = useTheme();
 
   return theme ? (
@@ -37,44 +75,31 @@ const MobileEvents = ({ pageProps }) => {
       <Container theme={theme} style={{ paddingBottom: `6rem` }}>
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
-            <Header1 theme={theme}>Events</Header1>
+            <Header1 theme={theme}>Private dining at our restaurants</Header1>
             <BC1 theme={theme}>
-                The Scott Pickett Group is excited to launch our off-site
-                catering offer, ‘SP Events’. Debuting with our Longrain pop-up
-                at Sutton Grange Winery in March 2021, SP Events brings Scott
-                Pickett’s food to you – whatever your event may be. We are able
-                to offer our Estelle, Matilda, Longrain, Le Shoppe and ‘Scott’s
-                Greatest hits’ menus offsite for weddings, corporate events or
-                large-scale public events. Stay up to date with news from The
-                Scott Pickett group to be the first to know when our full offer
-                is live.
+            Let us look after you as we help to bring your special event to
+                life. From intimate dinners of 8–10 guests to extravagant
+                cocktail soirées of 200... We offer dedicated staff, bespoke
+                menus, room dressing – the whole package.
               </BC1>
-              <BC1 link theme={theme}>
-                Sign up to our email newsletter
-              </BC1>
+           
           </InnerContainer>
         </SectionContainer>
 
         </Container>
-      <SliderFull />
+        <Slidera images={data} captions={captions} />
       
       <Container theme={theme} style={{ paddingBottom: `6rem` }}>
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>
            
-          <Header1 theme={theme}>In-venue  </Header1>
-          <Header1 theme={theme}> Private events </Header1>
-              <BC1 theme={theme}>
-                Parties of up to 8-10 guests can select from our regular menus
-                and be seated in our main dining rooms, but for a more private
-                soiree, each of our venues has private dining spaces to
-                accommodate intimate dinners for 8 up to standing cocktail
-                events of 250 guests.
-                <br />
-                <br />
-                Let us look after you as we help to bring your special event to
-                life. From dedicated staff, bespoke menus, room dressing – the
-                lot.
+          
+          <Header1 theme={theme}>Our Event Spaces </Header1>
+          <BC1 theme={theme}>
+                Visit the links below to learn more about the private spaces at
+                each of our venues. If you’re not sure which venue will be the
+                best fit, fill out the enquiry form and one of our events team
+                will be in touch.
               </BC1>
           
           </InnerContainer>
@@ -84,52 +109,63 @@ const MobileEvents = ({ pageProps }) => {
           <InnerContainer theme={theme} displayBlock={true}>
             <RightContainer>
               <Grid cols={1}>
-                <Item href="http://www.google.com">
+                <Item 
+                hover
+                href="https://chancerylane.com.au/private-events/"
+                target="_blank"
+                >
                   <FullImageContainer>
-                    <ImageView>
-                      <ImageDiv src={gridPic1}></ImageDiv>
-                    </ImageView>
+                  <StaticImage
+                  placeholder="blurred"
+                  src="../../../images/events-pdrs/CL.jpg"
+                  alt="Chancery Lane"
+                />
                   </FullImageContainer>
-                  <ItemImgCaption>CHANCERY LANE</ItemImgCaption>
+                  <ItemImgCaption theme={theme} >CHANCERY LANE</ItemImgCaption>
                   <BC3>Little Collins St, Melbourne</BC3>
                 </Item>
-                <Item href="http://www.google.com">
+                <Item  hover
+              href="https://www.theestelle.com.au/private-dining-events/"
+              target="_blank">
                   <FullImageContainer>
-                    <ImageView>
-                      <ImageDiv src={gridPic2}></ImageDiv>
-                    </ImageView>
+                  <StaticImage
+                  placeholder="blurred"
+                  src="../../../images/events-pdrs/estelle-pdr.jpg"
+                  alt="Estelle"
+                />
                   </FullImageContainer>
                   <ItemImgCaption>Estelle</ItemImgCaption>
                   <BC3>High St, Northcote</BC3>
                 </Item>
-                <Item href="http://www.google.com">
+                <Item    hover
+              href=" http://longrainmelbourne.com/event/"
+              target="_blank">
                   <FullImageContainer>
-                    <ImageView>
-                      <ImageDiv src={gridPic3}></ImageDiv>
-                    </ImageView>
+                  <StaticImage
+                  placeholder="blurred"
+                  src="../../../images/events-pdrs/longgrain.jpeg"
+                  alt="Longrain"
+                />
                   </FullImageContainer>
-                  <ItemImgCaption>Longrain</ItemImgCaption>
+                  <ItemImgCaption>Longrain & Longsong</ItemImgCaption>
                   <BC3>Little Bourke St, Melbourne </BC3>
                 </Item>
 
-                <Item href="http://www.google.com">
+                <Item href="https://matilda159.com/private-dining-events/"
+              target="_blank">
                   <FullImageContainer>
-                    <ImageView>
-                      <ImageDiv src={gridPic4}></ImageDiv>
-                    </ImageView>
+                  <StaticImage
+                  aspectRatio={3 / 2}
+                  placeholder="blurred"
+                  layout="fullWidth"
+                  src="../../../images/events-pdrs/flowers.jpg"
+                  alt="Matilda"
+                />
                   </FullImageContainer>
                   <ItemImgCaption>Matilda</ItemImgCaption>
                   <BC3>Domain Rd, South Yarra</BC3>
                 </Item>
-                <Item href="http://www.google.com">
-                  <FullImageContainer>
-                    <ImageView>
-                      <ImageDiv src={gridPic5}></ImageDiv>
-                    </ImageView>
-                  </FullImageContainer>
-                  <ItemImgCaption>Pastore</ItemImgCaption>
-                  <BC3>Dandenong Rd, Chadstone</BC3>
-                </Item>
+                
               </Grid>
             </RightContainer>
           </InnerContainer>
