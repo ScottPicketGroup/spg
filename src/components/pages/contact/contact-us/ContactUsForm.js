@@ -204,7 +204,7 @@ const ContactUsForm = () => {
        <Label bc2 style={{width: `90%`}}>I would like to receive communications about Scott Pickett Group services, events and matters of relevant interest.</Label>
    </TixboxContainer>
    <SignUpSubmit onClick={handleSubmit} err={error.email} type="submit">
-   SUBMIT
+   Eat a fat oe
  </SignUpSubmit> 
  </ContactDetailsContainer>
 
