@@ -37,7 +37,7 @@ const captions = [
 const MobileLanding = ({ pageProps }) => {
   const [chancery, setChancery] = useState(false)
 
-  const [, setChancery] = useState(false)
+
   
   const data = useStaticQuery(graphql`
     {
