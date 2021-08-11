@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BC3 } from '../../global/fontStyles'
-const Test = ({content}) => {
+const ContentContainer = ({content}) => {
 
     const options = {
         renderNode: {
@@ -22,4 +22,4 @@ const Test = ({content}) => {
     )
 }
 
-export default Test
+export default ContentContainer

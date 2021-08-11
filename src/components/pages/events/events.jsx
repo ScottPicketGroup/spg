@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
 import { getImage, StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components"
 import {
@@ -92,7 +92,7 @@ const Events = ({ pageProps }) => {
               <BC1 theme={theme}>
                 Visit the links below to learn more about the private spaces at
                 each of our venues. If you’re not sure which venue will be the
-                best fit, fill out the enquiry form and one of our events team
+                best fit, fill out the <Link to="/contact" style={{color: `inherit`, textDecoration: `underline`}}>enquiry form </Link> and one of our events team
                 will be in touch.
               </BC1>
             </RightContainer>

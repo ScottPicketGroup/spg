@@ -68,7 +68,7 @@ const Landing = ({ pageProps }) => {
     }
   `)
   const image = getImage(data.file)
-  console.log(`open`, chancery)
+  console.log(image)
   return theme ? (
     <div>
       <Container theme={theme}>

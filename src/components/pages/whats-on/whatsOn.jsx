@@ -1,8 +1,8 @@
 import React from "react"
 import { useTheme } from "styled-components"
 import { Container, SectionContainer } from "../../global/GlobalStyles"
-
-import { graphql, useStaticQuery, getImage } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { graphql, useStaticQuery} from "gatsby"
 
 import {
   InnerContainer,
@@ -41,19 +41,23 @@ const Landing = ({ pageProps }) => {
       file(name: { in: "whats-on-hero" }) {
         id
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            aspectRatio: 1.5
+          )
         }
       }
     }
   `)
  
  const events = data.allContentfulSpgWhatsOnEvent.edges
-
+ const image = getImage(data.file)
 
   return theme ? (
     <div>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
-        {/* <Home HomeImage={image} path={pageProps.path} /> */}
+      <Home HomeImage={image} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
