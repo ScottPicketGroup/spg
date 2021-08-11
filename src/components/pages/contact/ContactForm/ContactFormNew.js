@@ -39,6 +39,7 @@ const encode = (data) => {
       body: encode({ "form-name": "contact", ...inputs })
     })
       .then(() => alert("Success!"))
+      .then(()=> console.log('hello'))
       .catch(error => alert(error));
 
     e.preventDefault();
