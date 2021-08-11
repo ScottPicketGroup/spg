@@ -56,7 +56,11 @@ const ContactUsForm = ({formName}) => {
     : setError(error => ({ ...error, message: false}) )
   }
 
-
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
   
   const handleSubmit = e => {
     e.preventDefault()
@@ -66,11 +70,7 @@ const ContactUsForm = ({formName}) => {
     && inputs.sName 
     && inputs.email 
     && inputs.email.includes(".")) || inputs.email.includes("@"))   
-    const encode = (data) => {
-      return Object.keys(data)
-          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-          .join("&");
-    }
+   
      
     fetch("/", {
       method: "POST",
