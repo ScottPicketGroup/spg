@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 
-import { getImage, StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components"
 import {
   Container,
@@ -21,18 +21,10 @@ import {
 } from "./styled-components"
 import { BC1, Header1, BC3, Header2 } from "../../global/fontStyles"
 import HomeImage from "../../../images/homeImage.png"
-import gridPic1 from "../../../images/home-venues/CL.jpg"
-import gridPic2 from "../../../images/home-venues/Estelle.jpg"
-import gridPic3 from "../../../images/home-venues/LG.jpg"
-import gridPic4 from "../../../images/home-venues/Matilda.jpg"
-import gridPic5 from "../../../images/home-venues/Pastore.jpg"
-import gridPic6 from "../../../images/home-venues/Longsong.jpg"
-import gridPic7 from "../../../images/home-venues/LeShoppe.jpg"
-import gridPic8 from "../../../images/gridPic8.png"
+
 
 import Footer from "../../Common/Footer/Footer"
 import MobileHome from "../../Common/MobileHome"
-import Slider from "./image-slider/Slider"
 import SliderFull from "../../image-slider-full/Slider"
 
 const captions = [
@@ -44,6 +36,9 @@ const captions = [
 
 const MobileLanding = ({ pageProps }) => {
   const [chancery, setChancery] = useState(false)
+
+  const [, setChancery] = useState(false)
+  
   const data = useStaticQuery(graphql`
     {
       allFile(
