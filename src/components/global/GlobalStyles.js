@@ -11,6 +11,10 @@ export const Container = styled.div`
     props.theme.name === "Desktop" ? "0 3.84rem" : "0 1.12rem"};
   font-size: ${(props) => props.theme.fontSize};
   background-color: #f9f9f4;
+  @media (prefers-colour-scheme: dark) {
+    background-color: #f9f9f4;
+    color: #333333;
+  }
 `;
 
 export const SectionContainer = styled.div`

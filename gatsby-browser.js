@@ -25,13 +25,14 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  background: blue;
 }
 body { margin: 0}
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
-
+  
   }
     @font-face {
         font-family: 'UntitledSansLight';
