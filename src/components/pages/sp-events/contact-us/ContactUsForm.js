@@ -126,7 +126,7 @@ const ContactUsForm = () => {
  >
 
 <input type="hidden" name="bot-field" />
-<input type="hidden" name="form-name" value="contact" />
+<input type="hidden" name="form-name" value="sp-events" />
 
  <ContactDetailsContainer>
      <ContactFormRow>
