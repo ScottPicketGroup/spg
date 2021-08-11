@@ -56,81 +56,90 @@ const ContactUsForm = ({formName}) => {
     : setError(error => ({ ...error, message: false}) )
   }
 
-  const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
+ 
   
-  const handleSubmit = e => {
-    e.preventDefault()
-   const timestamp = Date.now()
+  // const handleSubmit = e => {
+  //   e.preventDefault()
+  //  const timestamp = Date.now()
 
-   if((   inputs.fName 
-    && inputs.sName 
-    && inputs.email 
-    && inputs.email.includes(".")) || inputs.email.includes("@"))   
+  //  if((   inputs.fName 
+  //   && inputs.sName 
+  //   && inputs.email 
+  //   && inputs.email.includes(".")) || inputs.email.includes("@"))   
    
      
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": contact, ...inputs })
-    })
-      .then(
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({ "form-name": contact, ...inputs })
+  //   })
+  //     .then(
      
-          setThankyou(true)
+  //         setThankyou(true)
      
 
-      )
-      .catch(error => alert(error));
+  //     )
+  //     .catch(error => alert(error));
      
 
       
      
     
-      if ( inputs.newsletter === true && (inputs.email && inputs.email.includes(".")) || inputs.email.includes("@")) {
-        var myHeaders = new Headers()
-        myHeaders.append(
-          "Authorization",
-          "Bearer 25183d2e-1266-4207-a9d3-a5d9422d94b0"
-        )
-        myHeaders.append("Timestamp", {timestamp})
-        myHeaders.append("Content-Type", "application/json")
+  //     if ( inputs.newsletter === true && (inputs.email && inputs.email.includes(".")) || inputs.email.includes("@")) {
+  //       var myHeaders = new Headers()
+  //       myHeaders.append(
+  //         "Authorization",
+  //         "Bearer 25183d2e-1266-4207-a9d3-a5d9422d94b0"
+  //       )
+  //       myHeaders.append("Timestamp", {timestamp})
+  //       myHeaders.append("Content-Type", "application/json")
   
-        var raw = JSON.stringify({
-          data: {
-            email: inputs.email,
-          },
-        })
+  //       var raw = JSON.stringify({
+  //         data: {
+  //           email: inputs.email,
+  //         },
+  //       })
   
-        var requestOptions = {
-          method: "POST",
-          headers: myHeaders,
-          body: raw,
-          redirect: "follow",
-        }
+  //       var requestOptions = {
+  //         method: "POST",
+  //         headers: myHeaders,
+  //         body: raw,
+  //         redirect: "follow",
+  //       }
   
-        fetch("https://api.sproutsend.com/contacts?", requestOptions)
-          .then(response => response.json())
-          .then(result => console.log('result', result))
+  //       fetch("https://api.sproutsend.com/contacts?", requestOptions)
+  //         .then(response => response.json())
+  //         .then(result => console.log('result', result))
        
   
-          .catch(error => console.log("error", error))
-      } 
+  //         .catch(error => console.log("error", error))
+  //     } 
 
      
       
+  // }
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+  const handleSubmit = () => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...inputs })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
   }
   return (
     <ContactUsFormContainer>
         {!thankyou ? (
             <>
  <SignUp 
- name="contact" 
- method="post" 
- data-netlify="true" 
- data-netlify-honeypot="bot-field" 
+ name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" 
  >
 
 <input type="hidden" name="bot-field" />
