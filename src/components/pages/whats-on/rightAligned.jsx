@@ -14,7 +14,7 @@ const LeftAligned = ({ data, images }) => {
       <Header2 marginBottom="1rem"  theme={theme}>{data.heading}</Header2>
         <Header3 marginBottom={theme.name === "Mobile" ? "1.5rem" : "1rem"} theme={theme}>{data.subHeading}</Header3>
 
-        {data.content.map(para => (
+        {/* {data.content.map(para => (
           <BC3 light>
            <pre
            style={{
@@ -56,15 +56,10 @@ const LeftAligned = ({ data, images }) => {
           {data.buttonText}</Button>
           </a>
        ) : null}
-        
+         */}
       </Item>
       <Item>
-  
-        {
-       images &&
-        !data.image ? (
-          <SliderFull images={images}/>
-        ): <EventImage src={data.image} />}
+      <SliderFull images={data.node.images}/>
       </Item>
     </Grid>
   ) : (

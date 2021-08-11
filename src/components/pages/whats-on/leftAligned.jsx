@@ -1,6 +1,6 @@
 import React from "react";
 import { useTheme } from "styled-components";
-
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 import {
   Button,
   Grid,
@@ -14,19 +14,18 @@ import { BC3, BC2, Header2, Header3 } from "../../global/fontStyles";
 import EventImage from "./eventImage";
 import SliderFull from "./image-slider-full/Slider";
 
-const LeftAligned = ({ data, images }) => {
+const LeftAligned = ({ data }) => {
   const theme = useTheme();
-  console.log(data)
+  
   return theme ? (
     <Grid cols="2">
      <Item>
-        {images && !data.image ? (
-          <SliderFull images={data.images}/>
-        ): <EventImage src={data.image} imageCaption={data.imageCaption}/>}
+     <SliderFull images={data.node.images}/>
+     
         
       </Item>
       <Item>
-        <Header2 marginBottom="1rem" marginTop="-5rem"  theme={theme}>{data.heading}</Header2>
+        {/* <Header2 marginBottom="1rem" marginTop="-5rem"  theme={theme}>{data.heading}</Header2>
         <Header3 marginBottom={theme.name === "Mobile" ? "1.5rem" : "1rem"}  theme={theme}>{data.subHeading}</Header3>
  
         {
@@ -41,7 +40,7 @@ const LeftAligned = ({ data, images }) => {
           
           {data.buttonText}</Button>
           </a>
-       ) : null}
+       ) : null} */}
         
       </Item>
     </Grid>

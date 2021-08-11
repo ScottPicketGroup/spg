@@ -19,13 +19,13 @@ import { ImageCaption } from "../../../global/fontStyles"
 
 const SliderFull = ({ images }) => {
   const [imageNumber, setImageNumber] = useState(1)
- 
+ console.log(images)
   let title = useRef(null)
   const handlers = useSwipeable({
     onSwipedLeft: () => nextImage(),
     onSwipedRight: () => previousImage(),
   })
-  const [imageCount] = useState(images.allFile.edges.length - 1)
+  const [imageCount] = useState(images.length - 1)
   const [activeImg, setActiveImg] = useState(0)
 
   const nextImage = () => {
@@ -99,10 +99,10 @@ const SliderFull = ({ images }) => {
   return images ? (
     <div {...handlers}>
 <SliderContainer ref={el => (title = el)}>
-  {images.allFile.edges.map((image, i) => (
+  {images.map((image, i) => (
  
       <SliderImage
-        image={getImage(image.node)}
+        image={getImage(image)}
         alt="matilda"
         id={i}
         activeImg={activeImg}
@@ -110,7 +110,8 @@ const SliderFull = ({ images }) => {
    
   ))}
 </SliderContainer>
-<ControlsContainer>
+{images.length > 1 ? (
+  <ControlsContainer>
   <Controls>
     <ControlButton onClick={previousImage}>
       {" "}
@@ -122,8 +123,9 @@ const SliderFull = ({ images }) => {
     </ControlButton>
   </Controls>
 </ControlsContainer>
+) : null}
 <MobileControls>
-  <ImageCaption>{imageNumber}/{images.allFile.edges.length}</ImageCaption>
+  <ImageCaption>{imageNumber}/{images.length}</ImageCaption>
 </MobileControls>
 </div>
   ) : (
