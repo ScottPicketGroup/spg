@@ -120,7 +120,7 @@ console.log(e.form)
         {!thankyou ? (
             <>
  <SignUp 
- name="contact" 
+ name="cont" 
  method="post" 
  data-netlify="true" 
  data-netlify-honeypot="bot-field" 

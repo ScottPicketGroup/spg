@@ -4797,7 +4797,7 @@ export default class SimpleSlider extends Component {
 }
 const moveSlideshow = keyframes`
 100% { 
-  transform: translateX(-1920px);  
+  transform: translateX(-2000px);  
 }
 `
 
