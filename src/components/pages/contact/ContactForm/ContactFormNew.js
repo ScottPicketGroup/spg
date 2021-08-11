@@ -47,7 +47,7 @@ const encode = (data) => {
   const handleChange = e => setInputs({ [e.target.name]: e.target.value });
   console.log(inputs)
   return (
-<form onSubmit={handleSubmit} name="contact" netlify>
+<form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" submit={handleSubmit}>
           <p>
             <label>
               Your Name: <input type="text" name="name" value={inputs.name} onChange={handleChange} />
