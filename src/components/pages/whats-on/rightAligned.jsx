@@ -13,10 +13,12 @@ import { BC3, BC2, Header2, Header3 } from "../../global/fontStyles";
 
 import EventImage from "./eventImage";
 import SliderFull from "./image-slider-full/Slider";
+import Content from "./Content";
+import Test from "./test";
 
 const RightAligned = ({ data }) => {
   const theme = useTheme();
-  console.log(data.node)
+  
 
   const {Heading, subHeading, content, eventLink, linkLabel} = data.node
   return theme  ? (
@@ -27,11 +29,7 @@ const RightAligned = ({ data }) => {
         <Header2 marginBottom="1rem" marginTop="-5rem"  theme={theme}>{Heading}</Header2>
         <Header3 marginBottom={theme.name === "Mobile" ? "1.5rem" : "1rem"}  theme={theme}>{subHeading}</Header3>
  
-        {/* {
-          data.content.map(para => (
-            <BC3 light >{para}</BC3>
-          ))
-        } */}
+        <Test content={content} />
        
        { eventLink? (
          <a href={eventLink} target='_blank'>

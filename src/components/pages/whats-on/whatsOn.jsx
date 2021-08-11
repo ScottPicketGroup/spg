@@ -49,7 +49,6 @@ const Landing = ({ pageProps }) => {
  
  const events = data.allContentfulSpgWhatsOnEvent.edges
 
-console.log(events[0].node)
 
   return theme ? (
     <div>

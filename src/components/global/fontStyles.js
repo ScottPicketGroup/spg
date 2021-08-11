@@ -95,6 +95,7 @@ export const BC3 = styled.p`
       props.link ? props.theme.colors.hoverText : props.theme.colors.text};
   }
   a {
+    color: inherit;
     &:hover {
     color: ${props => props.theme.colors.hoverText}
   }

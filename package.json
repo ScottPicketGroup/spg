@@ -6,6 +6,9 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.14.2",
+    "@contentful/rich-text-react-renderer": "^15.1.0",
+    "@contentful/rich-text-types": "^15.1.0",
+    "@graphcms/rich-text-react-renderer": "^0.2.0",
     "gatsby": "^3.4.1",
     "gatsby-image": "^3.6.0",
     "gatsby-plugin-gatsby-cloud": "^2.4.1",
