@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 const InstaIcon = () => {
   return (
+<a href="http://www.instagram.com/scottpickettchef"  target="_blank"
+                  style={{textDecoration: `none`, color: `white`}}>
     <svg
       id="CL_LS_IG_Static"
       xmlns="http://www.w3.org/2000/svg"
@@ -32,6 +34,7 @@ const InstaIcon = () => {
         />
       </g>
     </svg>
+    </a>
   )
 }
 
