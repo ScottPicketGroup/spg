@@ -111,6 +111,7 @@ const SliderFull = ({ images }) => {
   ))}
 </SliderContainer>
 {images.length > 1 ? (
+  <>
   <ControlsContainer>
   <Controls>
     <ControlButton onClick={previousImage}>
@@ -123,10 +124,12 @@ const SliderFull = ({ images }) => {
     </ControlButton>
   </Controls>
 </ControlsContainer>
-) : null}
 <MobileControls>
   <ImageCaption>{imageNumber}/{images.length}</ImageCaption>
 </MobileControls>
+</>
+) : null}
+
 </div>
   ) : (
     <div></div>
