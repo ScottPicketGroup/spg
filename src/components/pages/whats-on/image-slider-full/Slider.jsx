@@ -90,6 +90,7 @@ const SliderFull = ({ images }) => {
         setImageNumber(imageNumber - 1)
       } else {
         setActiveImg(imageCount)
+        setImageNumber(imageCount + 1)
       }
     }, 200)
   }

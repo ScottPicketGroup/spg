@@ -67,7 +67,7 @@ const Landing = ({ pageProps }) => {
           <InnerContainer marginTop="3.5rem">
             <LeftContainer></LeftContainer>
             <RightContainer>
-             <ContactFormNew/>
+             <ContactUsForm/>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>

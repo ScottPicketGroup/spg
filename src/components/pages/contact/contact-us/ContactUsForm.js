@@ -1,14 +1,17 @@
-import { number } from "prop-types"
+
 import React, { useState } from "react"
-import styled from "styled-components"
-
-
+import { Button } from "../../../global/GlobalStyles"
 import {
+  ContactUsFormContainer,
+  TixboxContainer,
+  ContactDetailsContainer,
+  ContactFormRow,
+  InputContainer,
   SignUp,
   Input,
-  SignUpSubmit,
   InputMessage,
-} from "./subscript-components"
+  Label
+} from "./contact-components"
 import CheckBox from "./CheckBox"
 const ContactUsForm = () => {
   const [error, setError] = useState({
@@ -26,6 +29,11 @@ const ContactUsForm = () => {
 
   const [form, setForm] = useState(true)
   const [thankyou, setThankyou] = useState(false)
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
   const handleChange = e => {
     setInputs(inputs => ({ ...inputs, [e.target.name]: e.target.value }))
     
@@ -50,15 +58,12 @@ const ContactUsForm = () => {
     : setError(error => ({ ...error, message: false}) )
   }
 
-  const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
+
   
   const handleSubmit = e => {
+    e.preventDefault()
    const timestamp = Date.now()
-   checkForm()
+
    if((   inputs.fName 
     && inputs.sName 
     && inputs.email 
@@ -106,7 +111,7 @@ const ContactUsForm = () => {
           .catch(error => console.log("error", error))
       } 
 
-      e.preventDefault()
+     
       
   }
   return (
@@ -190,9 +195,9 @@ const ContactUsForm = () => {
        scroll="disable"
      />
      {inputs.message.length >=1 ? (
-      <p  style={{ marginTop: `1rem`, fontSize: `1rem`}}>
+      <Label  style={{ marginTop: `1rem`, fontSize: `1rem`}}>
      {1000 - inputs.message.length} characters remaining
-    </p>
+    </Label>
      ): error.message ? (<span></span>) : null}
   
    </InputContainer>
@@ -203,9 +208,9 @@ const ContactUsForm = () => {
     </div>
        <Label bc2 style={{width: `90%`}}>I would like to receive communications about Scott Pickett Group services, events and matters of relevant interest.</Label>
    </TixboxContainer>
-   <SignUpSubmit onClick={handleSubmit} err={error.email} type="submit">
-   Eat a fat oe
- </SignUpSubmit> 
+   <Button onClick={handleSubmit} err={error.email} type="submit" width="25%" padding=".75rem 3.5rem">
+   SUBMIT
+ </Button> 
  </ContactDetailsContainer>
 
 
@@ -229,50 +234,3 @@ const ContactUsForm = () => {
 
 export default ContactUsForm
 
-export const ContactUsFormContainer = styled.div`
-  width: 58%;
-  margin-bottom: 6.75rem;
-  @media screen and (max-width: 800px) {
-    width: 100%;
-  }
-`
-
-export const ContactDetailsContainer = styled.div`
- display: flex;
- flex-direction: column;
-  min-width: 100%;
-  padding: 0;
-`
-export const ContactFormRow = styled.div`
-min-width: 100%;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-margin-bottom: 2.25rem;
-@media screen and (max-width: 450px) {
-margin-bottom: 0;
-}
-`
-export const InputContainer = styled.div`
-  min-width: 48%;
- background: transperant;
-  @media screen and (max-width: 800px) {
-    width: 100%;
-    margin-bottom: 1.25rem;
-  }
-`
-export const TixboxContainer = styled.div`
-display: flex;
-justify-content: space-between;
-margin-top: 2.25rem;
-margin-bottom: 1.75rem;
-`
-
-
-
-export const Label = styled.p `
-font-size: ${props => props.thankyou ? '1.5rem' : `1.25rem`};
-@media screen and (max-width: 450px) {
-  font-size: ${props => props.thankyou ? '1rem' : `1.25rem`};
-}
-`
