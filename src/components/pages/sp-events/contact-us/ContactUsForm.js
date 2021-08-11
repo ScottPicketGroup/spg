@@ -61,6 +61,7 @@ const ContactUsForm = () => {
 
   
   const handleSubmit = e => {
+
     e.preventDefault()
    const timestamp = Date.now()
 
@@ -110,7 +111,7 @@ const ContactUsForm = () => {
   
           .catch(error => console.log("error", error))
       } 
-
+console.log(e.form)
      
       
   }
