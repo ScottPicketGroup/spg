@@ -31,11 +31,7 @@ const ContactUsForm = ({formName}) => {
 
   const [form, setForm] = useState(true)
   const [thankyou, setThankyou] = useState(false)
-  const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
-  }
+  
   const handleChange = e => {
     setInputs(inputs => ({ ...inputs, [e.target.name]: e.target.value }))
     
@@ -70,12 +66,16 @@ const ContactUsForm = ({formName}) => {
     && inputs.sName 
     && inputs.email 
     && inputs.email.includes(".")) || inputs.email.includes("@"))   
-   
+    const encode = (data) => {
+      return Object.keys(data)
+          .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+          .join("&");
+    }
      
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": formName, ...inputs })
+      body: encode({ "form-name": contact, ...inputs })
     })
       .then(
      
@@ -127,7 +127,7 @@ const ContactUsForm = ({formName}) => {
         {!thankyou ? (
             <>
  <SignUp 
- name={formName} 
+ name="contact" 
  method="post" 
  data-netlify="true" 
  data-netlify-honeypot="bot-field" 
