@@ -40,12 +40,12 @@ const encode = (data) => {
     })
       .then(() => alert("Success!"))
       .then(()=> console.log('hello'))
-      .catch(error => alert(error));
+      .catch(error => alert(error, 'i am the error'));
 
     e.preventDefault();
   };
 
-  const handleChange = e => setInputs({ [e.target.name]: e.target.value });
+  const handleChange = e => setInputs(inputs => ({ ...inputs, [e.target.name]: e.target.value }));
   console.log(inputs)
   return (
 <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" submit={handleSubmit} netlify>
