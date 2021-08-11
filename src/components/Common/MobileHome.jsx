@@ -21,6 +21,7 @@ import GiftVoucher from "./SubMenus/GiftVoucher";
 import Provider from "./SubMenus/Provider";
 import Events from "./SubMenus/Events";
 import footerLogo from "../../images/insta-white.png";
+import InstaIcon from "../../images/social-icons/InstaLogo";
 
 const MobileHome = ({ HomeImage, path }) => {
   const theme = useTheme();
@@ -159,7 +160,7 @@ const MobileHome = ({ HomeImage, path }) => {
             
             onClick={() => handleOpenSubMenu("bookATable")}
           >
-            Book a table
+            Book a Table
           </MenuItem>
 
           <MenuItem
@@ -220,7 +221,8 @@ const MobileHome = ({ HomeImage, path }) => {
           }}
           >Contact</MenuItem>
         </Menu>
-        <FooterLogo src={footerLogo} />
+       
+      <InstaIcon/>
       </MenuBox>
 
       <MenuBox show={showSubMenu} handleClose={hideModalSubMenu}>

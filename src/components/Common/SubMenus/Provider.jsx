@@ -1,20 +1,15 @@
 import React from "react";
 
 import { useTheme } from "styled-components";
-import {
-  SectionContainer,
-  ImageContainer,
-  ImageView,
-  ImageDiv,
-} from "../../global/GlobalStyles";
 
-import { Link } from "gatsby";
+
+
 import styled from "styled-components";
 import { globalHistory } from "@reach/router";
 import { Menu, MenuHeading, Menu3Item } from "../../global/fontStyles";
+import InstaIcon from "../../../images/social-icons/InstaLogo";
 
-import fbIcon from "../../../images/fb.png";
-import instaIcon from "../../../images/insta.png";
+
 
 export const FooterLogo = styled.img`
   margin-top: 3rem;
@@ -103,7 +98,7 @@ const Provider = ({ hideModal }) => {
       </Menu>
 
       
-      {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}
+      {theme.name === "Mobile" && <InstaIcon />}
     </div>
   ) : (
     <div></div>

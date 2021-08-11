@@ -1,20 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { useTheme } from "styled-components";
-import {
-  SectionContainer,
-  ImageContainer,
-  ImageView,
-  ImageDiv,
-} from "../../global/GlobalStyles";
+import styled, { useTheme } from "styled-components";
 
-import { Link } from "gatsby";
-import styled from "styled-components";
+
+
+import { Menu,Menu3Item } from "../../global/fontStyles";
 import { globalHistory } from "@reach/router";
-
-import { Menu, MenuHeading, Menu3Item } from "../../global/fontStyles";
-import fbIcon from "../../../images/fb.png";
-import instaIcon from "../../../images/insta.png";
+import InstaIcon from "../../../images/social-icons/InstaLogo";
 
 export const FooterLogo = styled.img`
   margin-top: 3rem;
@@ -145,7 +137,7 @@ const GiftVoucher = ({ hideModal }) => {
         </Menu3Item> */}
       </Menu>
       
-      {theme.name === "Mobile" && <FooterLogo src={instaIcon} />}{" "}
+      {theme.name === "Mobile" && <InstaIcon />}
     </div>
   ) : (
     <div></div>
