@@ -27,6 +27,10 @@ html {
   box-sizing: border-box;
   background-color: #f9f9f4;
     color: #333333;
+    @media (prefers-colour-scheme: dark) {
+    background-color: #f9f9f4;
+    color: #333333;
+  }
 }
 body { margin: 0}
 *, *:before, *:after {
@@ -35,6 +39,10 @@ body { margin: 0}
   box-sizing: inherit;
   background-color: #f9f9f4;
     color: #333333;
+    @media (prefers-colour-scheme: dark) {
+    background-color: #f9f9f4;
+    color: #333333;
+  }
   }
     @font-face {
         font-family: 'UntitledSansLight';
