@@ -17,26 +17,29 @@ import SliderFull from "./image-slider-full/Slider";
 const RightAligned = ({ data }) => {
   const theme = useTheme();
   console.log(data.node)
+
+  const {Heading, subHeading, content, eventLink, linkLabel} = data.node
   return theme  ? (
     <Grid cols="2">
      
       <Item>
-        {/* <Header2 marginBottom="1rem" marginTop="-5rem"  theme={theme}>{data.heading}</Header2>
-        <Header3 marginBottom={theme.name === "Mobile" ? "1.5rem" : "1rem"}  theme={theme}>{data.subHeading}</Header3>
+   
+        <Header2 marginBottom="1rem" marginTop="-5rem"  theme={theme}>{Heading}</Header2>
+        <Header3 marginBottom={theme.name === "Mobile" ? "1.5rem" : "1rem"}  theme={theme}>{subHeading}</Header3>
  
-        {
+        {/* {
           data.content.map(para => (
             <BC3 light >{para}</BC3>
           ))
-        }
+        } */}
        
-       { data.buttonLink ? (
-         <a href={data.buttonLink} target='_blank'>
+       { eventLink? (
+         <a href={eventLink} target='_blank'>
         <Button>
           
-          {data.buttonText}</Button>
+          {linkLabel}</Button>
           </a>
-       ) : null} */}
+       ) : null}
         
       </Item>
       <Item>

@@ -47,6 +47,9 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
   grid-gap: ${(props) => (props.device === "Mobile" ? "6rem 1rem" : "1.5rem 3.25rem")};
+  @media (max-width: 450px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Item = styled.div`
