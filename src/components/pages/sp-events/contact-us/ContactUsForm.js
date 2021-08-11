@@ -72,7 +72,7 @@ const ContactUsForm = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...inputs })
+      body: encode({ "form-name": "cont", ...inputs })
     })
       .then(
      
@@ -127,7 +127,7 @@ console.log(e.form)
  >
 
 <input type="hidden" name="bot-field" />
-<input type="hidden" name="form-name" value="contact" />
+<input type="hidden" name="form-name" value="cont" />
 
  <ContactDetailsContainer>
      <ContactFormRow>
