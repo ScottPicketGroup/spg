@@ -16,7 +16,7 @@ import SliderFull from "./image-slider-full/Slider";
 
 const LeftAligned = ({ data }) => {
   const theme = useTheme();
-  
+  console.log(data.node.images)
   return theme ? (
     <Grid cols="2">
      <Item>

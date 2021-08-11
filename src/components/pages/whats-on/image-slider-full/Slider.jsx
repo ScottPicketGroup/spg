@@ -99,7 +99,7 @@ const SliderFull = ({ images }) => {
   return images ? (
     <div {...handlers}>
 <SliderContainer ref={el => (title = el)}>
-  {images.map((image, i) => (
+  {images && images.map((image, i) => (
  
       <SliderImage
         image={getImage(image)}

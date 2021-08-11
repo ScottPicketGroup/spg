@@ -22,7 +22,7 @@ const Landing = ({ pageProps }) => {
   const theme = useTheme()
   const data = useStaticQuery(graphql`
     {
-      allContentfulSpgWhatsOnEvent {
+      allContentfulSpgWhatsOnEvent(sort: {fields: createdAt, order: ASC}){
         edges {
           node {
             eventLink
@@ -49,7 +49,7 @@ const Landing = ({ pageProps }) => {
  
  const events = data.allContentfulSpgWhatsOnEvent.edges
 
-
+console.log(events[0].node)
 
   return theme ? (
     <div>
