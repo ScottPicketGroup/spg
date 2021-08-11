@@ -9,7 +9,8 @@ import ContactUsForm from "../components/pages/contact/contact-us/ContactUsForm"
 const SecondPage = () => (
   <Layout>
     <Seo title="Page two" />
-   <ContactUsForm/>
+ 
+   
   </Layout>
 )
 
