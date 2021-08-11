@@ -541,7 +541,7 @@ export default class SimpleSlider extends Component {
       </Logo>
       <Logo>
         <a href="https://www.pickettsdeli.com/" target="_blank">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60.487" height="62.674" viewBox="0 0 60.487 62.674">
+        <svg xmlns="http://www.w3.org/2000/svg"  width="60.487" height="62.674" viewBox="0 0 60.487 62.674">
   <defs>
     <clipPath id="clip-path">
       <path id="Path_10597" data-name="Path 10597" d="M519.774,168.148a.7.7,0,0,0,.324-.629.38.38,0,0,0-.151-.262l-.574.03a.561.561,0,0,1,.074-.761c.413-.363,1.154.137,1.134.666A1.131,1.131,0,0,1,519.774,168.148Z" transform="translate(-519.254 -166.404)" fill="#f9f9f4"/>

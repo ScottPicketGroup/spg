@@ -13,7 +13,7 @@ import { getImage } from "gatsby-plugin-image"
 import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
 import ContactUsForm from "./contact-us/ContactUsForm"
-import ContactFormNew from "./ContactForm/ContactFormNew"
+
 const Landing = ({ pageProps }) => {
   const data = useStaticQuery(graphql`
     {
