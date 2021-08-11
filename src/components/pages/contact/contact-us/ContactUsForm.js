@@ -1,21 +1,16 @@
-
+import { number } from "prop-types"
 import React, { useState } from "react"
-import { Button } from "../../../global/GlobalStyles"
+import styled from "styled-components"
+
+
 import {
-  ContactUsFormContainer,
-  TixboxContainer,
-  ContactDetailsContainer,
-  ContactFormRow,
-  InputContainer,
   SignUp,
   Input,
+  SignUpSubmit,
   InputMessage,
-  Label
-} from "./contact-components"
+} from "./subscript-components"
 import CheckBox from "./CheckBox"
-const ContactUsForm = ({formName}) => {
-
-  console.log(formName)
+const ContactUsForm = () => {
   const [error, setError] = useState({
     fName: false
   })
@@ -31,7 +26,6 @@ const ContactUsForm = ({formName}) => {
 
   const [form, setForm] = useState(true)
   const [thankyou, setThankyou] = useState(false)
-  
   const handleChange = e => {
     setInputs(inputs => ({ ...inputs, [e.target.name]: e.target.value }))
     
@@ -56,92 +50,75 @@ const ContactUsForm = ({formName}) => {
     : setError(error => ({ ...error, message: false}) )
   }
 
- 
-  
-  // const handleSubmit = e => {
-  //   e.preventDefault()
-  //  const timestamp = Date.now()
-
-  //  if((   inputs.fName 
-  //   && inputs.sName 
-  //   && inputs.email 
-  //   && inputs.email.includes(".")) || inputs.email.includes("@"))   
-   
-     
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({ "form-name": contact, ...inputs })
-  //   })
-  //     .then(
-     
-  //         setThankyou(true)
-     
-
-  //     )
-  //     .catch(error => alert(error));
-     
-
-      
-     
-    
-  //     if ( inputs.newsletter === true && (inputs.email && inputs.email.includes(".")) || inputs.email.includes("@")) {
-  //       var myHeaders = new Headers()
-  //       myHeaders.append(
-  //         "Authorization",
-  //         "Bearer 25183d2e-1266-4207-a9d3-a5d9422d94b0"
-  //       )
-  //       myHeaders.append("Timestamp", {timestamp})
-  //       myHeaders.append("Content-Type", "application/json")
-  
-  //       var raw = JSON.stringify({
-  //         data: {
-  //           email: inputs.email,
-  //         },
-  //       })
-  
-  //       var requestOptions = {
-  //         method: "POST",
-  //         headers: myHeaders,
-  //         body: raw,
-  //         redirect: "follow",
-  //       }
-  
-  //       fetch("https://api.sproutsend.com/contacts?", requestOptions)
-  //         .then(response => response.json())
-  //         .then(result => console.log('result', result))
-       
-  
-  //         .catch(error => console.log("error", error))
-  //     } 
-
-     
-      
-  // }
   const encode = (data) => {
     return Object.keys(data)
         .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
         .join("&");
   }
-  const handleSubmit = (e) => {
+  
+  const handleSubmit = e => {
+   const timestamp = Date.now()
+   checkForm()
+   if((   inputs.fName 
+    && inputs.sName 
+    && inputs.email 
+    && inputs.email.includes(".")) || inputs.email.includes("@"))   
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...inputs })
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .then(
+     
+          setThankyou(true)
+     
 
-    e.preventDefault();
+      )
+      .catch(error => alert(error));
+    
+      if ( inputs.newsletter === true && (inputs.email && inputs.email.includes(".")) || inputs.email.includes("@")) {
+        var myHeaders = new Headers()
+        myHeaders.append(
+          "Authorization",
+          "Bearer 25183d2e-1266-4207-a9d3-a5d9422d94b0"
+        )
+        myHeaders.append("Timestamp", {timestamp})
+        myHeaders.append("Content-Type", "application/json")
+  
+        var raw = JSON.stringify({
+          data: {
+            email: inputs.email,
+          },
+        })
+  
+        var requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        }
+  
+        fetch("https://api.sproutsend.com/contacts?", requestOptions)
+          .then(response => response.json())
+          .then(result => console.log('result', result))
+       
+  
+          .catch(error => console.log("error", error))
+      } 
+
+      e.preventDefault()
+      
   }
   return (
     <ContactUsFormContainer>
         {!thankyou ? (
             <>
  <SignUp 
- name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" netlify
+ name="contact" 
+ method="post" 
+ data-netlify="true" 
+ data-netlify-honeypot="bot-field" 
  >
-   <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
 
 <input type="hidden" name="bot-field" />
 <input type="hidden" name="form-name" value="contact" />
@@ -213,9 +190,9 @@ const ContactUsForm = ({formName}) => {
        scroll="disable"
      />
      {inputs.message.length >=1 ? (
-      <Label  style={{ marginTop: `1rem`, fontSize: `1rem`}}>
+      <p  style={{ marginTop: `1rem`, fontSize: `1rem`}}>
      {1000 - inputs.message.length} characters remaining
-    </Label>
+    </p>
      ): error.message ? (<span></span>) : null}
   
    </InputContainer>
@@ -226,13 +203,12 @@ const ContactUsForm = ({formName}) => {
     </div>
        <Label bc2 style={{width: `90%`}}>I would like to receive communications about Scott Pickett Group services, events and matters of relevant interest.</Label>
    </TixboxContainer>
-   
-   <Button onClick={handleSubmit} err={error.email} type="submit" width="25%" padding=".75rem 3.5rem">
+   <SignUpSubmit onClick={handleSubmit} err={error.email} type="submit">
    SUBMIT
- </Button> 
+ </SignUpSubmit> 
  </ContactDetailsContainer>
 
- </form>
+
 
 </SignUp>
 
@@ -253,3 +229,50 @@ const ContactUsForm = ({formName}) => {
 
 export default ContactUsForm
 
+export const ContactUsFormContainer = styled.div`
+  width: 58%;
+  margin-bottom: 6.75rem;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+`
+
+export const ContactDetailsContainer = styled.div`
+ display: flex;
+ flex-direction: column;
+  min-width: 100%;
+  padding: 0;
+`
+export const ContactFormRow = styled.div`
+min-width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-bottom: 2.25rem;
+@media screen and (max-width: 450px) {
+margin-bottom: 0;
+}
+`
+export const InputContainer = styled.div`
+  min-width: 48%;
+ background: transperant;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    margin-bottom: 1.25rem;
+  }
+`
+export const TixboxContainer = styled.div`
+display: flex;
+justify-content: space-between;
+margin-top: 2.25rem;
+margin-bottom: 1.75rem;
+`
+
+
+
+export const Label = styled.p `
+font-size: ${props => props.thankyou ? '1.5rem' : `1.25rem`};
+@media screen and (max-width: 450px) {
+  font-size: ${props => props.thankyou ? '1rem' : `1.25rem`};
+}
+`
