@@ -70,7 +70,7 @@ const Landing = ({ pageProps }) => {
   const image = getImage(data.file)
   console.log(`open`, chancery)
   return theme ? (
-    <div style={{ background: `#f9f9f4` }}>
+    <div>
       <Container theme={theme}>
         <Home HomeImage={image} path={pageProps.path} />
         <SectionContainer>
