@@ -1,126 +1,115 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React from 'react'
+import { navigate } from 'gatsby-link'
 
 
-import {
-  SignUp,
-  Input,
-  SignUpSubmit,
-  InputMessage,
-} from "./subscript-components"
-import CheckBox from "./CheckBox"
-const ContactFormNew = () => {
-  const [error, setError] = useState({
-    fName: false
-  })
+function encode(data) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
 
-
-  const [form, setForm] = useState(true)
-  const [thankyou, setThankyou] = useState(false)
-
-
-const encode = (data) => {
-    return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-        .join("&");
+export default class Index extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { isValidated: false }
   }
- 
-  const [inputs, setInputs] = useState({
-    name: "",
-    email: "",
-    message: "",
-  })
-  
- 
-  const handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...inputs })
+
+  handleChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const form = e.target
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...this.state,
+      }),
     })
-      .then(() => alert("Success!"))
-      .then(()=> console.log('hello'))
-      .catch(error => console.log(error, 'i am the error'));
-      
-
-    e.preventDefault();
-  };
-
-  const handleChange = e => setInputs(inputs => ({ ...inputs, [e.target.name]: e.target.value }));
-  console.log(inputs)
-  return (
-<form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-<input type="hidden" name="form-name" value="contact" />
-          <p>
-            <label>
-              Your Name: <input type="text" name="name" value={inputs.name} onChange={handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email: <input type="email" name="email" value={inputs.email} onChange={handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message: <textarea name="message" value={inputs.message} onChange={handleChange} />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
-
-
-  )
-}
-
-export default ContactFormNew
-
-export const ContactUsFormContainer = styled.div`
-  width: 58%;
-  margin-bottom: 6.75rem;
-  @media screen and (max-width: 800px) {
-    width: 100%;
+    .then(() => alert('success'))
+      .catch((error) => alert(error))
   }
-`
 
-export const ContactDetailsContainer = styled.div`
- display: flex;
- flex-direction: column;
-  min-width: 100%;
-  padding: 0;
-`
-export const ContactFormRow = styled.div`
-min-width: 100%;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-margin-bottom: 2.25rem;
-@media screen and (max-width: 450px) {
-margin-bottom: 0;
-}
-`
-export const InputContainer = styled.div`
-  min-width: 48%;
- background: transperant;
-  @media screen and (max-width: 800px) {
-    width: 100%;
-    margin-bottom: 1.25rem;
+  render() {
+    return (
+
+        <section className="section">
+          <div className="container">
+            <div className="content">
+              <h1>Contact</h1>
+              <form
+                name="contact"
+                method="post"
+                action="/contact/thanks/"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={this.handleSubmit}
+              >
+                {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                <input type="hidden" name="form-name" value="contact" />
+                <div hidden>
+                  <label>
+                    Don’t fill this out:{' '}
+                    <input name="bot-field" onChange={this.handleChange} />
+                  </label>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'name'}>
+                    Your name
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'text'}
+                      name={'name'}
+                      onChange={this.handleChange}
+                      id={'name'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'email'}>
+                    Email
+                  </label>
+                  <div className="control">
+                    <input
+                      className="input"
+                      type={'email'}
+                      name={'email'}
+                      onChange={this.handleChange}
+                      id={'email'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <label className="label" htmlFor={'message'}>
+                    Message
+                  </label>
+                  <div className="control">
+                    <textarea
+                      className="textarea"
+                      name={'message'}
+                      onChange={this.handleChange}
+                      id={'message'}
+                      required={true}
+                    />
+                  </div>
+                </div>
+                <div className="field">
+                  <button className="button is-link" type="submit">
+                    Send
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+ 
+    )
   }
-`
-export const TixboxContainer = styled.div`
-display: flex;
-justify-content: space-between;
-margin-top: 2.25rem;
-margin-bottom: 1.75rem;
-`
-
-
-
-export const Label = styled.p `
-font-size: ${props => props.thankyou ? '1.5rem' : `1.25rem`};
-@media screen and (max-width: 450px) {
-  font-size: ${props => props.thankyou ? '1rem' : `1.25rem`};
 }
-`
