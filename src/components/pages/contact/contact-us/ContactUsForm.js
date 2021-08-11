@@ -141,6 +141,7 @@ const ContactUsForm = ({formName}) => {
  <SignUp 
  name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" netlify
  >
+   <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" netlify>
 
 <input type="hidden" name="bot-field" />
 <input type="hidden" name="form-name" value="contact" />
@@ -225,12 +226,13 @@ const ContactUsForm = ({formName}) => {
     </div>
        <Label bc2 style={{width: `90%`}}>I would like to receive communications about Scott Pickett Group services, events and matters of relevant interest.</Label>
    </TixboxContainer>
+   
    <Button onClick={handleSubmit} err={error.email} type="submit" width="25%" padding=".75rem 3.5rem">
    SUBMIT
  </Button> 
  </ContactDetailsContainer>
 
-
+ </form>
 
 </SignUp>
 
