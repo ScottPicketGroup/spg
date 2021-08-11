@@ -139,7 +139,7 @@ const ContactUsForm = ({formName}) => {
         {!thankyou ? (
             <>
  <SignUp 
- name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" 
+ name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" netlify
  >
 
 <input type="hidden" name="bot-field" />
