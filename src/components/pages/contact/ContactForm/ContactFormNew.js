@@ -8,7 +8,7 @@ function encode(data) {
     .join('&')
 }
 
-export default class Index extends React.Component {
+export default class FormNew extends React.Component {
   constructor(props) {
     super(props)
     this.state = { isValidated: false }
@@ -29,6 +29,7 @@ export default class Index extends React.Component {
         ...this.state,
       }),
     })
+    .then(() => console.log(e.target))
     .then(() => alert('success'))
       .catch((error) => alert(error))
   }
@@ -41,7 +42,7 @@ export default class Index extends React.Component {
             <div className="content">
               <h1>Contact</h1>
               <form
-                name="contact"
+                name="contact-new"
                 method="post"
                 action="/contact/thanks/"
                 data-netlify="true"
