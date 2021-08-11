@@ -71,7 +71,7 @@ const ContactUsForm = () => {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "sp-events", ...inputs })
+      body: encode({ "form-name": "spevents", ...inputs })
     })
       .then(
      
@@ -119,14 +119,14 @@ const ContactUsForm = () => {
         {!thankyou ? (
             <>
  <SignUp 
- name="sp-events" 
+ name="spevents" 
  method="post" 
  data-netlify="true" 
  data-netlify-honeypot="bot-field" 
  >
 
 <input type="hidden" name="bot-field" />
-<input type="hidden" name="form-name" value="sp-events" />
+<input type="hidden" name="form-name" value="spevents" />
 
  <ContactDetailsContainer>
      <ContactFormRow>
