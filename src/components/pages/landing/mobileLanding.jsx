@@ -503,7 +503,7 @@ const MobileLanding = ({ pageProps }) => {
                 </Item>
                 <Item>
                   {" "}
-                  <ItemImgLink href="http://" target="_blank" link={true}>
+                  <ItemImgLink href="http://www.spevents.com.au" target="_blank" link={true}>
                     <FullImageContainer>
                       <StaticImage
                         aspectRatio={3 / 2}
@@ -521,12 +521,12 @@ const MobileLanding = ({ pageProps }) => {
                       Victoria
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer>
+                  <ItemInfoContainer open={chancery}>
                     <ItemExpandElement onClick={() => setChancery(!chancery)}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
-                      SP Events is Scott Pickett’s off-site catering business,
+                    SP Events is Scott Pickett’s off-site catering business,
                       bringing any event to life; from an intimate home soirée
                       to large-scale public events like the Australian Open and
                       Grand Prix. SP Events offers a range of menus from the
@@ -536,10 +536,16 @@ const MobileLanding = ({ pageProps }) => {
                       Hits’, a bespoke offer of Scott’s favourite dishes from
                       across his establishments.
                     </BC3>
-                    <ItemImgLink href="http://www.spevents.com.au" target="_blank" link={true}>
-                      Visit SP Events
+                    <ItemImgLink
+                      href="http://www.spevents.com.au"
+                      target="_blank"
+                      link={true}
+                    >
+                       Visit SP Events
                     </ItemImgLink>
                   </ItemInfoContainer>
+
+                  
                 </Item>
               </Grid>
             </RightContainer>

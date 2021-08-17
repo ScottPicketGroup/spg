@@ -503,7 +503,7 @@ const Landing = ({ pageProps }) => {
                 </Item>
                 <Item>
                   {" "}
-                  <ItemImgLink href="http://" target="_blank" link={true}>
+                  <ItemImgLink href="http://www.spevents.com.au" target="_blank" link={true}>
                     <FullImageContainer>
                       <StaticImage
                         aspectRatio={3 / 2}
