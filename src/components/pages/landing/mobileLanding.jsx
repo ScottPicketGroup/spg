@@ -35,7 +35,7 @@ const captions = [
 ]
 
 const MobileLanding = ({ pageProps }) => {
-  const [chancery, setChancery] = useState(false)
+  const [active, setActive] = useState("")
 
 
   
@@ -72,8 +72,15 @@ const MobileLanding = ({ pageProps }) => {
       }
     }
   `)
-  console.log(chancery)
+ 
   const theme = useTheme()
+
+  const handleExpand = (el) => {
+    console.log(active)
+    if(active === "") setActive(el) 
+    else if (active === el ) setActive("")
+    else if (active !== el) setActive(el)
+  }
 
   return theme ? (
     <div>
@@ -145,8 +152,8 @@ const MobileLanding = ({ pageProps }) => {
                       430 Little Collins St, Melbourne
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                  <ItemInfoContainer element="chancery" active={active}>
+                    <ItemExpandElement onClick={() => handleExpand("chancery")}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
@@ -195,8 +202,8 @@ const MobileLanding = ({ pageProps }) => {
                       Suite 1, 430 Little Collins St, Melbourne
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                  <ItemInfoContainer element="leshoppe" active={active}>
+                  <ItemExpandElement onClick={() => handleExpand("leshoppe")}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
@@ -244,8 +251,8 @@ const MobileLanding = ({ pageProps }) => {
                       159 Domain Rd, South Yarra
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                  <ItemInfoContainer element="matilda" active={active}>
+                  <ItemExpandElement onClick={() => handleExpand("matilda")}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
@@ -290,8 +297,8 @@ const MobileLanding = ({ pageProps }) => {
                       243-245 High St, Northcote
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                  <ItemInfoContainer element="estelle" active={active}>
+                  <ItemExpandElement onClick={() => handleExpand("estelle")}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
@@ -339,8 +346,8 @@ const MobileLanding = ({ pageProps }) => {
                       44 Little Bourke St, Melbourne
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                  <ItemInfoContainer element="longrain" active={active}>
+                  <ItemExpandElement onClick={() => handleExpand("longrain")}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
@@ -385,8 +392,8 @@ const MobileLanding = ({ pageProps }) => {
                       Level 1, 44 Little Bourke St, Melbourne
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                  <ItemInfoContainer element="longsong" active={active}>
+                  <ItemExpandElement onClick={() => handleExpand("longsong")}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
@@ -428,8 +435,8 @@ const MobileLanding = ({ pageProps }) => {
                       1341 Dandenong Rd, Chadstone
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                  <ItemInfoContainer element="pastore" active={active}>
+                    <ItemExpandElement onClick={() => handleExpand("pastore")}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
@@ -476,8 +483,8 @@ const MobileLanding = ({ pageProps }) => {
                       Terminal 3, Melbourne Airport
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                  <ItemInfoContainer element="deli" active={active}>
+                    <ItemExpandElement onClick={() => handleExpand("deli")}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
@@ -521,8 +528,8 @@ const MobileLanding = ({ pageProps }) => {
                       Victoria
                     </BC3>
                   </ItemImgLink>
-                  <ItemInfoContainer open={chancery}>
-                    <ItemExpandElement onClick={() => setChancery(!chancery)}>
+                  <ItemInfoContainer element="events" active={active}>
+                    <ItemExpandElement onClick={() => handleExpand("events")}>
                       Read More
                     </ItemExpandElement>
                     <BC3>
