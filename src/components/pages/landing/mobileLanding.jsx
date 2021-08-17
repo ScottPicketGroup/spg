@@ -536,7 +536,7 @@ const MobileLanding = ({ pageProps }) => {
                       Hits’, a bespoke offer of Scott’s favourite dishes from
                       across his establishments.
                     </BC3>
-                    <ItemImgLink href="http://" target="_blank" link={true}>
+                    <ItemImgLink href="http://www.spevents.com.au" target="_blank" link={true}>
                       Visit SP Events
                     </ItemImgLink>
                   </ItemInfoContainer>
