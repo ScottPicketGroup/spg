@@ -517,7 +517,7 @@ const MobileLanding = ({ pageProps }) => {
                         placeholder="blurred"
                         layout="fullWidth"
                         src="../../../images/heros/sp-events-hero.jpg"
-                        alt="Chancery Lane"
+                        alt="Sp Events"
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>

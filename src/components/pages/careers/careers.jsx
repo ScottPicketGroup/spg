@@ -4,7 +4,7 @@ import { Container, SectionContainer } from "../../global/GlobalStyles"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
 
-import { careers } from "./careersList"
+
 
 import {
   InnerContainer,
@@ -40,8 +40,22 @@ const Landing = ({ pageProps }) => {
           }
         }
       }
+      allContentfulSpgJobPostings {
+        edges {
+          node {
+            jobDescription {
+              jobDescription
+            }
+            title
+            restaurantName
+            jobPostingLink
+          }
+        }
+      }
     }
   `)
+  const careers = data.allContentfulSpgJobPostings.edges
+  
   const image = getImage(data.allFile.edges[0].node)
   const theme = useTheme()
 
@@ -94,18 +108,18 @@ const Landing = ({ pageProps }) => {
                 <RightContainer>
                   <PostContainer>
                     <Header2 theme={theme} marginBottom=".75rem">
-                      {career.title}
+                      {career.node.title}
                     </Header2>
                     <Header4 theme={theme} marginBottom="1.25rem">
-                      {career.venue}
+                      {career.node.restaurantName}
                     </Header4>
                     <BC3 theme={theme} marginBottom=".5rem" light>
-                      {career.description}
+                      {career.node.jobDescription.jobDescription}
                     </BC3>
                   </PostContainer>
                   <Button>
                     <a
-                      href={`${career.link}`}
+                      href={`${career.node.jobPostingLink}`}
                       target="_blank"
                       rel="noreferrer"
                       style={{ textDecoration: `none` }}

@@ -1,18 +1,37 @@
 import React from "react";
-
+import { graphql, useStaticQuery } from "gatsby"
 import { useTheme } from "styled-components";
-import { Container, SectionContainer, PostContainer,} from "../../global/GlobalStyles";
+
+import { Container, SectionContainer, PostContainer} from "../../global/GlobalStyles";
 
 import HomeImage from "../../../images/heros/careers-hero.jpg";
 
-import { InnerContainer, RightContainer, Button } from "./styled-components";
+import { InnerContainer, Button } from "./styled-components";
 import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";
 
 import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/MobileHome";
 
-import { careers } from "./careersList"
 const MobileLanding = ({ pageProps }) => {
+
+  const data = useStaticQuery(graphql`
+  {
+
+    allContentfulSpgJobPostings {
+      edges {
+        node {
+          jobDescription {
+            jobDescription
+          }
+          title
+          restaurantName
+          jobPostingLink
+        }
+      }
+    }
+  }
+`)
+const careers = data.allContentfulSpgJobPostings.edges
   const theme = useTheme();
 
   return theme ? (
@@ -52,63 +71,7 @@ const MobileLanding = ({ pageProps }) => {
               </BC1>
           </InnerContainer>
         </SectionContainer>
-{/* 
-        <SectionContainer>
-          <InnerContainer theme={theme} displayBlock={true}>
-            <RightContainer>
-              <Header2 theme={theme}>Waitress - FOH All Rounder</Header2>
-              <Header4 theme={theme}>Longrain melbourne</Header4>
-              <Header4 theme={theme}>10th April 2021</Header4>
-              <BC3 theme={theme}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                volutpat risus efficitur nulla aliquam suscipit. Nulla sed
-                ullamcorper felis, a vulputate mi. Aenean enim leo, egestas
-                vitae ultrices at, placerat ac lorem. Donec tortor augue,
-                pulvinar et dictum vel, euismod id velit. Sed nec suscipit
-                mauris. Ut sollicitudin rutrum eros at maximus. Duis vitae dui
-                eu tellus dignissim commodo et in tortor. Praesent ac magna
-                vulputate, fringilla odio et, vehicula lorem.
-                </BC3>
-                <BC3>
-                <li>- Casual, part-time & full-time positions available</li>
-                <li>- Must have experience in Hospitality </li>
-                <li>- Must be a passionate, friendly and reliable team player
-                </li>
-                <li>- Must thrive in a busy environment - Immediate start necessary
-                </li>
-              </BC3>
-              <Button>Apply</Button>
-            </RightContainer>
-          </InnerContainer>
-        </SectionContainer>
-        <SectionContainer>
-          <InnerContainer theme={theme} displayBlock={true}>
-            <RightContainer>
-              <Header2 theme={theme}>Sous Chef</Header2>
-              <Header4 theme={theme}>Matilda melbourne</Header4>
-              <Header4 theme={theme}>10th April 2021</Header4>
-              <BC3 theme={theme}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-                volutpat risus efficitur nulla aliquam suscipit. Nulla sed
-                ullamcorper felis, a vulputate mi. Aenean enim leo, egestas
-                vitae ultrices at, placerat ac lorem. Donec tortor augue,
-                pulvinar et dictum vel, euismod id velit. Sed nec suscipit
-                mauris. Ut sollicitudin rutrum eros at maximus. Duis vitae dui
-                eu tellus dignissim commodo et in tortor. Praesent ac magna
-                vulputate, fringilla odio et, vehicula lorem.
-                </BC3>
-                <BC3>
-                <li>- Casual, part-time & full-time positions available</li>
-                <li>- Must have experience in Hospitality </li>
-                <li>- Must be a passionate, friendly and reliable team player
-                </li>
-                <li>- Must thrive in a busy environment - Immediate start necessary
-                </li>
-              </BC3>
-              <Button>Apply</Button>
-            </RightContainer>
-          </InnerContainer>
-        </SectionContainer> */}
+
         {careers &&
           careers.map(career => (
             <SectionContainer>
@@ -116,17 +79,17 @@ const MobileLanding = ({ pageProps }) => {
                 
                   <PostContainer>
                     <Header2 theme={theme} marginBottom={theme.name === "Mobile" ? "1rem" : ".75rem"} >
-                      {career.title}
+                    {career.node.title}
                     </Header2>
                     <Header4 theme={theme} marginBottom={theme.name === "Mobile" ? "1.5rem" : "1.25rem"} >
-                      {career.venue}
+                    {career.node.restaurantName}
                     </Header4>
                     <BC3 theme={theme} marginBottom=".5rem" light>
-                      {career.description}
+                    {career.node.jobDescription.jobDescription}
                     </BC3>
                     <Button>
                     <a
-                      href={`${career.link}`}
+                       href={`${career.node.jobPostingLink}`}
                       target="_blank"
                       rel="noreferrer"
                       style={{ textDecoration: `none`, color: `inherit` }}
@@ -135,7 +98,7 @@ const MobileLanding = ({ pageProps }) => {
                     </a>
                   </Button>
                   </PostContainer>
-                 
+                                  
                
               </InnerContainer>
             </SectionContainer>
