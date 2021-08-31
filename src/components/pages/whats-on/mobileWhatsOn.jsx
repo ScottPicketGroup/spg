@@ -32,7 +32,7 @@ const MobileLanding = ({ pageProps }) => {
               raw
             }
             images {
-                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, aspectRatio: .526)
+                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, aspectRatio: .562)
             }
             subHeading
             linkLabel
