@@ -31,7 +31,7 @@ const Landing = ({ pageProps }) => {
               raw
             }
             images {
-              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH)
+              gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, aspectRatio: 1.77)
             }
             subHeading
             linkLabel
