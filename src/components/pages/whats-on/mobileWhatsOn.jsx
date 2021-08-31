@@ -42,7 +42,11 @@ const MobileLanding = ({ pageProps }) => {
       file(name: { in: "whats-on-hero" }) {
         id
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED)
+         gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            aspectRatio: 1.5
+          )
         }
       }
     }
