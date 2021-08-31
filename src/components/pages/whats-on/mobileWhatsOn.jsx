@@ -2,7 +2,7 @@ import React from "react"
 import { useTheme } from "styled-components"
 import { Container, SectionContainer } from "../../global/GlobalStyles"
 
-import { graphql, useStaticQuery, getImage } from "gatsby"
+import { graphql, useStaticQuery} from "gatsby"
 
 import HomeImage from "../../../images/whats-on/whatsOnHero.jpg";
 
@@ -32,7 +32,12 @@ const MobileLanding = ({ pageProps }) => {
               raw
             }
             images {
-                gatsbyImageData(placeholder: BLURRED, layout: FULL_WIDTH, aspectRatio: .562)
+              gatsbyImageData(
+                layout: FULL_WIDTH
+                placeholder: BLURRED
+                aspectRatio: 0.562
+              )
+              
             }
             subHeading
             linkLabel
@@ -42,7 +47,7 @@ const MobileLanding = ({ pageProps }) => {
       file(name: { in: "whats-on-hero" }) {
         id
         childImageSharp {
-         gatsbyImageData(
+          gatsbyImageData(
             layout: FULL_WIDTH
             placeholder: BLURRED
             aspectRatio: 1.5
