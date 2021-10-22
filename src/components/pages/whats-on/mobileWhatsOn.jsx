@@ -22,28 +22,26 @@ import RightAligned from "./rightAligned";
 const MobileLanding = ({ pageProps }) => {
   const theme = useTheme();
   const data = useStaticQuery(graphql`
-    {
-      allContentfulSpgWhatsOnEvent(sort: {fields: createdAt, order: ASC}){
-        edges {
-          node {
-            eventLink
+  {
+    allContentfulWhatsOnPageContent {
+      edges {
+        node {
+          whatsOnEvents {
             Heading
+            eventLink
             content {
               raw
             }
             images {
-              gatsbyImageData(
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                aspectRatio: 0.562
-              )
-              
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+              title
             }
             subHeading
             linkLabel
           }
         }
       }
+    }
       file(name: { in: "whats-on-hero" }) {
         id
         childImageSharp {
@@ -56,7 +54,7 @@ const MobileLanding = ({ pageProps }) => {
       }
     }
   `)
-  const events = data.allContentfulSpgWhatsOnEvent.edges
+  const events = data.allContentfulWhatsOnPageContent.edges[0].node.whatsOnEvents
   return theme ? (
     <div>
       <Home HomeImage={HomeImage} path={pageProps.path} />

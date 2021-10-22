@@ -40,25 +40,27 @@ const Landing = ({ pageProps }) => {
           }
         }
       }
-      allContentfulSpgJobPostings {
+      allContentfulJobsPostingPageContent {
         edges {
           node {
-            jobDescription {
-              jobDescription
+            jobPosts {
+              title
+              restaurantName
+              jobPostingLink
+              jobDescription {
+                jobDescription
+              }
             }
-            title
-            restaurantName
-            jobPostingLink
           }
         }
       }
     }
   `)
-  const careers = data.allContentfulSpgJobPostings.edges
+  const careers = data.allContentfulJobsPostingPageContent.edges[0].node.jobPosts
   
   const image = getImage(data.allFile.edges[0].node)
   const theme = useTheme()
-
+console.log(careers)
   return theme ? (
     <div>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
@@ -108,18 +110,18 @@ const Landing = ({ pageProps }) => {
                 <RightContainer>
                   <PostContainer>
                     <Header2 theme={theme} marginBottom=".75rem">
-                      {career.node.title}
+                      {career.title}
                     </Header2>
                     <Header4 theme={theme} marginBottom="1.25rem">
-                      {career.node.restaurantName}
+                      {career.restaurantName}
                     </Header4>
                     <BC3 theme={theme} marginBottom=".5rem" light>
-                      {career.node.jobDescription.jobDescription}
+                      {career.jobDescription.jobDescription}
                     </BC3>
                   </PostContainer>
                   <Button>
                     <a
-                      href={`${career.node.jobPostingLink}`}
+                      href={`${career.jobPostingLink}`}
                       target="_blank"
                       rel="noreferrer"
                       style={{ textDecoration: `none` }}
