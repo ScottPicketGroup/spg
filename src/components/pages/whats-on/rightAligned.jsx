@@ -8,8 +8,8 @@ import ContentContainer from "./ContentContainer"
 
 const RightAligned = ({ data }) => {
   const theme = useTheme()
-
-  const { Heading, subHeading, content, eventLink, linkLabel } = data.node
+console.log(data)
+  const { Heading, subHeading, content, eventLink, linkLabel } = data
   return theme ? (
     <Grid cols="2">
       <Item>
@@ -23,7 +23,7 @@ const RightAligned = ({ data }) => {
           {subHeading}
         </Header3>
 
-        <ContentContainer content={content} />
+       {data.content &&  <ContentContainer content={content} />}
 
         {eventLink ? (
           <a href={eventLink} target="_blank">
@@ -31,7 +31,7 @@ const RightAligned = ({ data }) => {
           </a>
         ) : null}
       </Item>
-      <Item>{data.node ? <SliderFull images={data.node.images} /> : null}</Item>
+      <Item>{data ? <SliderFull images={data.images} /> : null}</Item>
     </Grid>
   ) : (
     <div></div>

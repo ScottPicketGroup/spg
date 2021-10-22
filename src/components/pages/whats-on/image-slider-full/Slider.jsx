@@ -25,7 +25,7 @@ const SliderFull = ({ images }) => {
     onSwipedLeft: () => nextImage(),
     onSwipedRight: () => previousImage(),
   })
-  const [imageCount] = useState(images.length - 1)
+  const [imageCount] = useState(images && images.length - 1)
   const [activeImg, setActiveImg] = useState(0)
 
   const nextImage = () => {

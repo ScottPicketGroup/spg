@@ -2,14 +2,14 @@ import React from "react"
 import { useTheme } from "styled-components"
 import { Container, SectionContainer } from "../../global/GlobalStyles"
 import { getImage } from "gatsby-plugin-image"
-import { graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 
 import {
   InnerContainer,
   RightContainer,
   LeftContainer,
 } from "./styled-components"
-import { BC1, Header1} from "../../global/fontStyles"
+import { BC1, Header1 } from "../../global/fontStyles"
 
 import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
@@ -17,31 +17,30 @@ import Home from "../../Common/DesktopHome"
 import RightAligned from "./rightAligned"
 import LeftAligned from "./leftAligned"
 
-
 const Landing = ({ pageProps }) => {
   const theme = useTheme()
   const data = useStaticQuery(graphql`
     {
-      allContentfulSpgWhatsOnEvent(sort: {fields: createdAt, order: ASC}){
+      allContentfulWhatsOnPageContent {
         edges {
           node {
-            eventLink
-            Heading
-            content {
-              raw
+            whatsOnEvents {
+              Heading
+              eventLink
+              content {
+                raw
+              }
+              images {
+                gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
+                title
+              }
+              subHeading
+              linkLabel
             }
-            images {
-              gatsbyImageData(
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                aspectRatio: 0.562
-              )
-            }
-            subHeading
-            linkLabel
           }
         }
       }
+
       file(name: { in: "whats-on-hero" }) {
         id
         childImageSharp {
@@ -54,14 +53,14 @@ const Landing = ({ pageProps }) => {
       }
     }
   `)
- 
- const events = data.allContentfulSpgWhatsOnEvent.edges
- const image = getImage(data.file)
 
+  const events = data.allContentfulWhatsOnPageContent.edges[0].node.whatsOnEvents
+  const image = getImage(data.file)
+console.log(events)
   return theme ? (
     <div>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
-      <Home HomeImage={image} path={pageProps.path} />
+        <Home HomeImage={image} path={pageProps.path} />
         <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>
@@ -77,22 +76,6 @@ const Landing = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
 
-        {/* <SectionContainer>
-          <InnerContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <StaticImage
-                placeholder="blurred"
-                src="../../../images/whats-on-carousel/whats-on-full.jpg"
-                alt="Waiter with drinks"
-              />
-
-              <ImageCaption marginTop="1.5rem">
-                Women in Wine Dinner at Chancery Lane
-              </ImageCaption>
-            </RightContainer>
-          </InnerContainer>
-        </SectionContainer> */}
         {events &&
           events.map((item, index) => {
             return (
@@ -110,23 +93,6 @@ const Landing = ({ pageProps }) => {
               </SectionContainer>
             )
           })}
-
-        {/* <SectionContainer>
-          <InnerContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <LeftAligned />
-            </RightContainer>
-          </InnerContainer>
-        </SectionContainer>
-        <SectionContainer>
-          <InnerContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <RightAligned />
-            </RightContainer>
-          </InnerContainer>
-        </SectionContainer> */}
       </Container>
 
       <Footer />
