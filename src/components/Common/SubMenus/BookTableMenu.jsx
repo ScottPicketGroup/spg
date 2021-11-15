@@ -39,8 +39,7 @@ const BookATable = ({ hideModal }) => {
           theme={theme}
         >
           <a
-            href="https://www.sevenrooms.com/landing/chancerylane?_ga=2.116185679.893556211.1624336511-2029271887.1616714684&_gac=1.158798408.1621900158.Cj0KCQjwna2FBhDPARIsACAEc_XbWEp1kOKJC9B0Fh535zSxeXI2gepv3_hGx6XJPBGLDtY2-0TEBg8aAvvyEALw_wcB
-"
+            href="https://www.sevenrooms.com/reservations/chancerylane?venues=chancerylane,longrainmelbourne,matilda,estelle"
             target="_blank"
             style={{ textDecoration: `none`, color: `inherit` }}
           >
@@ -54,7 +53,7 @@ const BookATable = ({ hideModal }) => {
           theme={theme}
         >
           <a
-            href="https://www.sevenrooms.com/landing/estelle"
+            href="https://www.sevenrooms.com/reservations/estelle?venues=estelle,matilda,longrainmelbourne,chancerylane"
             target="_blank"
             style={{ textDecoration: `none`, color: `inherit` }}
           >
@@ -65,7 +64,7 @@ const BookATable = ({ hideModal }) => {
           theme={theme}
         >
           <a
-            href="https://www.sevenrooms.com/landing/longrainmelbourne?_ga=2.139077232.2103104190.1624431956-564500719.1605505484"
+            href="https://www.sevenrooms.com/reservations/longrainmelbourne?venues=longrainmelbourne,chancerylane,matilda,estelle"
             target="_blank"
             style={{ textDecoration: `none`, color: `inherit` }}
           >Longrain</a>
@@ -74,7 +73,7 @@ const BookATable = ({ hideModal }) => {
                theme={theme}
                >
                  <a
-                   href="https://www.sevenrooms.com/landing/matilda"
+                   href="https://www.sevenrooms.com/reservations/matilda?venues=matilda,longrainmelbourne,chancerylane,estelle"
                    target="_blank"
                    style={{ textDecoration: `none`, color: `inherit` }}
                  >Matilda</a>
