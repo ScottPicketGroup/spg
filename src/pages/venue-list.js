@@ -43,7 +43,7 @@ const SecondPage = ({ data }) => {
 export default SecondPage
 
 export const logosAndUrlsData = graphql`
-  query logosAndUrlsDataQuery {
+  query logosInfo {
     contentfulVenueIconAndUrl {
       id
       logo_splash_page {
