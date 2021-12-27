@@ -6,7 +6,7 @@ import { useTheme } from "styled-components"
 import { BC1, BC2, Header1, Header2 } from "../components/global/fontStyles"
 import logo from '../images/logo.svg'
 const SecondPage = ({ data }) => {
-  const logos = data.contentfulVenueIconAndUrl.logo_splash_page[0].logosList
+  const logos = data.allContentfulLogoSplashPage.edges[0].node.logosList
   console.log(logos)
   const theme = useTheme()
 
@@ -43,20 +43,21 @@ const SecondPage = ({ data }) => {
 export default SecondPage
 
 export const logosAndUrlsData = graphql`
-  query logosInfo {
-    contentfulVenueIconAndUrl {
-      id
-      logo_splash_page {
+query logosInfo {
+  allContentfulLogoSplashPage {
+    edges {
+      node {
         logosList {
-          logo {
-            title
-            gatsbyImageData(placeholder: BLURRED)
-          }
           url
+          logo {
+            gatsbyImageData
+            title
+          }
         }
       }
     }
   }
+}
 `
 
 export const PageWrapper = styled.div`
