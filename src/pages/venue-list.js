@@ -103,7 +103,7 @@ export const LogoWrapper = styled.a`
   align-items: center;
   img {
     min-height: 1.25rem;
-    max-height: 5rem;
+    max-height: 4rem;
   }
   @media (max-width: 600px) {
    margin: 2rem 2.5rem;
