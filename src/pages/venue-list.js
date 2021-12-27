@@ -108,6 +108,9 @@ export const LogoWrapper = styled.a`
   @media (max-width: 600px) {
    margin: 2rem 2.5rem;
    padding: .5rem;
+   img {
+     max-height: 3rem;
+   }
    :last-child {
      margin-bottom: 3rem;
    }
