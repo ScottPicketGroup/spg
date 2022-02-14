@@ -180,7 +180,7 @@ width: 100%;
 transition: max-height .25s ease-in;
 @media (min-width: 451px) {
   :hover {
-  max-height: 500px;
+  max-height: 550px;
   transition: max-height 0.25s ease-in;
 }
 }
