@@ -181,6 +181,29 @@ const Events = ({ pageProps }) => {
             </RightContainerLink>
           </InnerContainer>
         </SectionContainer>
+
+        <SectionContainer>
+          <InnerContainer>
+            <LeftContainer></LeftContainer>
+            <RightContainerLink
+              hover
+              href="https://smithstbistrot.com.au/private-dining"
+              target="_blank"
+            >
+              <FullImageContainer>
+                <StaticImage
+                  aspectRatio={3 / 2}
+                  placeholder="blurred"
+                  layout="fullWidth"
+                  src="../../../images/events-pdrs/SSB.jpg"
+                  alt="Smith Street Bistro"
+                />
+              </FullImageContainer>
+              <ItemImgCaption>Smith Street Bistro</ItemImgCaption>
+              <BC3>Smith St, Collingwood</BC3>
+            </RightContainerLink>
+          </InnerContainer>
+        </SectionContainer>
         {/* <SectionContainer>
           <InnerContainer>
             <LeftContainer></LeftContainer>

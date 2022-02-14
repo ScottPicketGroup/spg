@@ -156,6 +156,21 @@ const MobileEvents = ({ pageProps }) => {
                   <ItemImgCaption>Matilda</ItemImgCaption>
                   <BC3>Domain Rd, South Yarra</BC3>
                 </Item>
+
+                <Item href="https://smithstbistrot.com.au/private-dining"
+              target="_blank">
+                  <FullImageContainer>
+                  <StaticImage
+                  aspectRatio={3 / 2}
+                  placeholder="blurred"
+                  layout="fullWidth"
+                  src="../../../images/events-pdrs/SSB.jpg"
+                  alt="Smith Street Bistro"
+                />
+                  </FullImageContainer>
+                  <ItemImgCaption>Smith Street Bistro</ItemImgCaption>
+                  <BC3>Smith Street, Collingwood</BC3>
+                </Item>
                 
               </Grid>
             </RightContainer>

@@ -188,7 +188,7 @@ const Landing = ({ pageProps }) => {
                 </Item>
 
                 <Item>
-                  {" "}
+                
                   <ItemImgLink
                     href="http://www.leshoppe.com.au"
                     target="_blank"
@@ -238,7 +238,7 @@ const Landing = ({ pageProps }) => {
                   </ItemInfoContainer>
                 </Item>
                 <Item>
-                  {" "}
+                
                   <ItemImgLink
                     href="https://matilda159.com/"
                     target="_blank"
@@ -329,7 +329,7 @@ const Landing = ({ pageProps }) => {
                   </ItemInfoContainer>
                 </Item>
                 <Item>
-                  {" "}
+                
                   <ItemImgLink
                     href="http://www.longrainmelbourne.com"
                     target="_blank"
@@ -373,7 +373,7 @@ const Landing = ({ pageProps }) => {
                 </Item>
 
                 <Item>
-                  {" "}
+                
                   <ItemImgLink
                     href="http://www.longsong.com.au"
                     target="_blank"
@@ -382,8 +382,8 @@ const Landing = ({ pageProps }) => {
                     <FullImageContainer>
                       <StaticImage
                         placeholder="blurred"
-                        src="../../../images/home-venues/Longsong.jpg"
-                        alt="Longsong"
+                        src="../../../images/home-venues/longsong.jpg"
+                        alt="Smith Street Bistro"
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Longsong</Header2>
@@ -413,8 +413,47 @@ const Landing = ({ pageProps }) => {
                   </ItemInfoContainer>
                 </Item>
 
+
+
                 <Item>
-                  {" "}
+                  <ItemImgLink
+                    href="https://smithstbistrot.com.au/"
+                    target="_blank"
+                    link={true}
+                  >
+                    <FullImageContainer>
+                      <StaticImage
+                        placeholder="blurred"
+                        src="../../../images/home-venues/SSB.jpg"
+                        alt="Longsong"
+                      />
+                    </FullImageContainer>
+                    <Header2 style={{ marginTop: `1.25rem` }}>Smith St Bistrot</Header2>
+                    <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                    300 Smith St, Collingwood
+                    </BC3>
+                  </ItemImgLink>
+                  <ItemInfoContainer open={chancery}>
+                    <ItemExpandElement>Read More</ItemExpandElement>
+                    <BC3>
+                    Smith St Bistrot is Scott Pickett’s take on a classic French bistrot with influence from Melbourne’s eclectic inner-north. 
+                    Interiors with immense detail celebrate the 1888 heritage building’s history with the sentiment of a ‘20s Parisienne bistrot.<br/><br/>
+                    Smith St Bistrot is a drinks-led restaurant where locals can drop by several times a week for drinks that turn into dinner, or a casual ‘menu du jour’
+                     meal like the ‘SSB Wagyu cheeseburger, or veal schnitzel Holstein. The wine list hosts a mix of significant French houses and local, minimal intervention wines. The French-leaning cocktail list will have guests wanting to try every single one.
+                    </BC3>
+                    <ItemImgLink
+                      href="https://smithstbistrot.com.au/"
+                      target="_blank"
+                      link={true}
+                    >
+                      Visit Smith St Bistrot
+                    </ItemImgLink>
+                  </ItemInfoContainer>
+                </Item>
+                
+
+                <Item>
+                
                   <ItemImgLink
                     href="http://www.pastorerestaurant.com.au"
                     target="_blank"
@@ -456,7 +495,7 @@ const Landing = ({ pageProps }) => {
                 </Item>
 
                 <Item>
-                  {" "}
+                
                   <ItemImgLink
                     href="http://www.pickettsdeli.com"
                     target="_blank"
@@ -502,7 +541,7 @@ const Landing = ({ pageProps }) => {
                   </ItemInfoContainer>
                 </Item>
                 <Item>
-                  {" "}
+                
                   <ItemImgLink href="http://www.spevents.com.au" target="_blank" link={true}>
                     <FullImageContainer>
                       <StaticImage
@@ -517,7 +556,7 @@ const Landing = ({ pageProps }) => {
                       SP Events
                     </Header2>
                     <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
-                      {" "}
+                    
                       Victoria
                     </BC3>
                   </ItemImgLink>
@@ -563,10 +602,10 @@ const Landing = ({ pageProps }) => {
         </SectionContainer>
       </Container>
       <Footer />
-    </div>
+    </div >
   ) : (
-    <div></div>
-  )
+  <div></div>
+)
 }
 
 export default Landing
