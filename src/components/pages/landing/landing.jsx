@@ -382,7 +382,7 @@ const Landing = ({ pageProps }) => {
                     <FullImageContainer>
                       <StaticImage
                         placeholder="blurred"
-                        src="../../../images/home-venues/longsong.jpg"
+                        src="../../../images/home-venues/Longsong.jpg"
                         alt="Smith Street Bistro"
                       />
                     </FullImageContainer>
@@ -425,7 +425,7 @@ const Landing = ({ pageProps }) => {
                       <StaticImage
                         placeholder="blurred"
                         src="../../../images/home-venues/SSB.jpg"
-                        alt="Longsong"
+                        alt="Smith Street Bistro"
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Smith St Bistrot</Header2>

@@ -25,7 +25,7 @@ const Venues = () => {
   }
      
     `)
-console.log(`data.allFile.edges.map(data)`, data.allFile.edges.map((item, i) => {console.log(i, item)}))
+
 const [open, setOpen] = useState({})
 const [images, setImages] = useState(data.allFile.edges)
 
