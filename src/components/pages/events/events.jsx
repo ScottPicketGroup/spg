@@ -199,7 +199,7 @@ const Events = ({ pageProps }) => {
                   alt="Smith Street Bistro"
                 />
               </FullImageContainer>
-              <ItemImgCaption>Smith Street Bistro</ItemImgCaption>
+              <ItemImgCaption>Smith Street Bistrot</ItemImgCaption>
               <BC3>Smith St, Collingwood</BC3>
             </RightContainerLink>
           </InnerContainer>

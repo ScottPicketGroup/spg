@@ -168,7 +168,7 @@ const MobileEvents = ({ pageProps }) => {
                   alt="Smith Street Bistro"
                 />
                   </FullImageContainer>
-                  <ItemImgCaption>Smith Street Bistro</ItemImgCaption>
+                  <ItemImgCaption>Smith Street Bistrot</ItemImgCaption>
                   <BC3>Smith Street, Collingwood</BC3>
                 </Item>
                 

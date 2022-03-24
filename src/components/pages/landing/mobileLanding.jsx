@@ -452,7 +452,7 @@ const MobileLanding = ({ pageProps }) => {
                       target="_blank"
                       link={true}
                     >
-                      Visit Smith Street Bistro
+                      Visit Smith Street Bistrot
                     </ItemImgLink>
                   </ItemInfoContainer>
                 </Item>

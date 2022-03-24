@@ -28,7 +28,7 @@ import SliderFull from "../../image-slider-full/Slider"
 const captions = [
   "Matilda 159 Domain",
   "Longrain Melbourne",
-  "Chancery Lane Bistrot",
+  "Chancery Lane Bistro",
   "Estelle",
 ]
 const Landing = ({ pageProps }) => {
@@ -383,7 +383,7 @@ const Landing = ({ pageProps }) => {
                       <StaticImage
                         placeholder="blurred"
                         src="../../../images/home-venues/Longsong.jpg"
-                        alt="Smith Street Bistro"
+                        alt="Longsong"
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Longsong</Header2>
@@ -425,7 +425,7 @@ const Landing = ({ pageProps }) => {
                       <StaticImage
                         placeholder="blurred"
                         src="../../../images/home-venues/SSB.jpg"
-                        alt="Smith Street Bistro"
+                        alt="Smith Street Bistrot"
                       />
                     </FullImageContainer>
                     <Header2 style={{ marginTop: `1.25rem` }}>Smith St Bistrot</Header2>
