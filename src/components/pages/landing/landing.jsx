@@ -28,7 +28,7 @@ import SliderFull from "../../image-slider-full/Slider"
 const captions = [
   "Matilda 159 Domain",
   "Longrain Melbourne",
-  "Chancery Lane Bistro",
+  "Chancery Lane Bistrot",
   "Estelle",
 ]
 const Landing = ({ pageProps }) => {
