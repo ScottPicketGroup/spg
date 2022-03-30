@@ -40,7 +40,9 @@ export const MenuBtn = styled.div`
 `;
 export const LogoImg = styled.img`
   display: inline;
-  width: ${(props) => props.theme.name === "Mobile" && "100px"};
+  padding: ${props => props.signUp ? '3rem' : '0px'};
+  
+  width: ${(props) => props.signUp ? "275px" : props.theme.name === "Mobile" && "100px"};
 `;
 export const Header1 = styled.h1`
   font-size: ${(props) => (props.theme.name === "Desktop" ? "64px" : "28px")};
@@ -191,3 +193,93 @@ transition: max-height .25s ease-in;
   transition: max-height 0.25s ease-in-out;
 }
 `
+
+export const SignUpModalContainer = styled.div`
+margin-Top: ${(props) => (props.marginTop ? props.marginTop : `0`)};
+position: fixed;
+bottom: 0;
+max-height: ${props => props.signUp ? '13.5rem' : '0px'};
+
+display: flex;
+justify-content: space-between;
+overflow: hidden;
+
+width: 100%;
+background: #333333;
+-moz-transition: 0.3s;
+-ms-transition: 0.3s;
+-o-transition: 0.3s;
+-webkit-transition: 0.3s;
+transition: 0.3s;
+
+@media (max-width: 450px) {
+  margin-top: .25rem;
+  font-size: 1rem;
+  max-height: ${props => props.signUp ? '23.5rem' : '0px'};
+  height: 180px;
+  transition: max-height 0.25s ease-in-out;
+}
+`
+
+export const ModalCloseButton = styled.div`
+ position: absolute;
+ top: 30px;
+ right: 10px;
+ transform: scale(1.5);
+ margin-bottom: 2rem;
+ @media (max-width: 450px) {
+  position: absolute;
+  top: 10px;
+  right: -5px;
+  transform: scale(.75);
+  margin-bottom: 2rem;
+}
+`;
+
+export const RightModalContainer = styled(RightContainer)`
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-right: 8rem;
+  @media (max-width: 450px) {
+    width: 100%;
+    margin: 0;
+    padding: 1.75rem 1rem ;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    }
+`;
+export const LeftModalContainer = styled(LeftContainer)`
+ @media (max-width: 450px) {
+display: none;
+}
+`;
+
+export const IntroWrapper = styled.div `
+width: 80%;
+display: flex;
+align-items: flex-start;
+@media (max-width: 450px) {
+  width: 90%;
+  
+  }
+`
+
+export const BC1Form = styled(BC1)`
+color: white;
+margin-top: 0;
+font-size: 24px;
+:hover {
+  color: white;
+}
+@media (max-width: 450px) {
+  font-size: 12px;
+  padding-top: 0;
+  margin: 0;
+  }
+`;

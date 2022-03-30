@@ -24,6 +24,7 @@ import { BC1, Header1, BC3, Header2 } from "../../global/fontStyles"
 import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
 import SliderFull from "../../image-slider-full/Slider"
+import SignUpModal from "./SignUpModal"
 
 const captions = [
   "Matilda 159 Domain",
@@ -33,6 +34,7 @@ const captions = [
 ]
 const Landing = ({ pageProps }) => {
   const [chancery, setChancery] = useState(false)
+  const [signUp, setSignUp] = useState(false)
   const theme = useTheme()
   const data = useStaticQuery(graphql`
     {
@@ -68,7 +70,7 @@ const Landing = ({ pageProps }) => {
     }
   `)
   const image = getImage(data.file)
-  console.log(image)
+
   return theme ? (
     <div>
       <Container theme={theme}>
@@ -602,6 +604,7 @@ const Landing = ({ pageProps }) => {
         </SectionContainer>
       </Container>
       <Footer />
+    <SignUpModal signUp={signUp} setSignUp={setSignUp}/>
     </div >
   ) : (
   <div></div>
