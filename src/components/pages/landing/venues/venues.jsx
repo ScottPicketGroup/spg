@@ -1,73 +1,74 @@
-import React, {useState, useEffect} from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { getImage, GatsbyImage } from 'gatsby-plugin-image'
+import React, { useState, useEffect } from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
 
-import { venues } from './venue-items'
+import { useVenueItems } from "./venue-items"
 
-import { FullImageContainer, SectionContainer, InnerContainer, LeftContainer, RightContainer } from '../../../global/GlobalStyles'
-import { Grid, Item, ItemImgLink, ItemInfoContainer } from '../styled-components'
+import {
+  FullImageContainer,
+  SectionContainer,
+  InnerContainer,
+  LeftContainer,
+  RightContainer,
+} from "../../../global/GlobalStyles"
+import {
+  Grid,
+  Item,
+  ItemExpandElement,
+  ItemImgLink,
+  ItemInfoContainer,
+} from "../styled-components"
 import { BC3, Header2 } from "../../../global/fontStyles"
+import Renderer from "./DescriptionRenderer"
 const Venues = () => {
-  const data = useStaticQuery(graphql`
-  {
-    allFile(
-      filter: {extension: {}, absolutePath: {regex: "/images/venue-desc/"}}
-    ) {
-      edges {
-        node {
-          id
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, aspectRatio: 1.5)
-          }
-        }
-      }
-    }
-  }
-     
-    `)
+  const venues = useVenueItems()
 
-const [open, setOpen] = useState({})
-const [images, setImages] = useState(data.allFile.edges)
-
-useEffect(() => {
-    venues.map(venue=> {
-        setOpen(open => ({ ...open, [venue.name.toLocaleLowerCase().replace(/\s/g, '')]: false}))
-    })
-   
-}, [venues])
-
-console.log(`images`, images)
-    return (
-        <SectionContainer>
-            <InnerContainer marginTop="6rem">
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-     {
-         venues.map((venue, i) => (
-            <Grid cols={2}>
-            <Item link={true}>
-              <ItemImgLink href={`${venue.url}`} target="_blank" link={true}>
+  console.log(`images`, venues)
+  return (
+    <SectionContainer>
+      <InnerContainer marginTop="6rem">
+        <Grid cols={2}>
+          {venues.map((venue, i) => (
+            <Item>
+              <ItemImgLink
+                href={`${venue.venueWebsite}`}
+                target="_blank"
+                link={true}
+              >
                 <FullImageContainer>
-                <GatsbyImage  
-                image={getImage(data.allFile.edges[i].node)}
-                alt={venue.name} />
+                  <GatsbyImage
+                    image={getImage(venue.venueImage)}
+                    alt="whats-on-image"
+                    style={{
+                      aspectRatio: `4/2.5`
+                    }}
+                  />
                 </FullImageContainer>
                 <Header2 style={{ marginTop: `1.25rem` }}>
-                  {venue.name}
+                  {venue.venueName}
                 </Header2>
-                <BC3 link={true}>{venue.address}</BC3>
+                <BC3 link={true} marginTop=".25rem" marginBottom=".3rem">
+                  {venue.venueAddress}
+                </BC3>
               </ItemImgLink>
               <ItemInfoContainer>
-                  {venue.info}
+                <ItemExpandElement>Read More</ItemExpandElement>
+                <Renderer node={venue.venueDescription} />
+                <ItemImgLink
+                  href={`${venue.venueWebsite}`}
+                  target="_blank"
+                  link={true}
+             
+                >
+                  Visit {venue.venueName}
+                </ItemImgLink>
               </ItemInfoContainer>
             </Item>
-            </Grid>
-         ))
-     }
-              </RightContainer>
-              </InnerContainer>
-         </SectionContainer>   
-    )
+          ))}{" "}
+        </Grid>
+      </InnerContainer>
+    </SectionContainer>
+  )
 }
 
 export default Venues

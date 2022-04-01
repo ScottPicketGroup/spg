@@ -60,7 +60,7 @@ export default SignUpModal
 export const ExternalForm = styled.div`
 
 width: 78.5%;
-margin-right: 1rem;
+margin-right: .85rem;
 @media (max-width: 450px) {
   width: 100%;
   margin: 0;

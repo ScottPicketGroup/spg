@@ -88,7 +88,7 @@ export const MenuHeader = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: ${(props) => `repeat(${props.cols}, 1fr)`};
+  grid-template-columns: 50% 50%;
   grid-gap: ${(props) => (props.theme.name === "Desktop" ? "3.5rem 0rem" : "3.5rem 0")};
   align-items: center;
   align-items: start;
@@ -102,6 +102,8 @@ export const Item = styled.div`
 `;
 
 export const ItemImgLink = styled.a`
+margin-top: .5rem;
+display: block;
   text-decoration: none;
   font-family: ${(props) => props.theme.fontFamily.UntitledSansRegular};
   color: #333333;
