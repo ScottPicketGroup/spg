@@ -10,7 +10,7 @@ const WhatsOn = (props) => {
 
   return theme ? (
     <div theme={theme}>
-      <Seo title="WhatsOn" />
+      <Seo title="Contact" />
       {theme.name === "Desktop" ? (
         <Landing pageProps={props} />
       ) : (

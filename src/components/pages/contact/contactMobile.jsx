@@ -11,6 +11,7 @@ import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";
 import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/MobileHome";
 import ContactUsForm from "./contact-us/ContactUsForm";
+import ContactFormSproutSend from "./ContactForm/ContactFormSproutSend";
 const MobileLanding = ({ pageProps }) => {
   const theme = useTheme();
 
@@ -38,7 +39,7 @@ const MobileLanding = ({ pageProps }) => {
         <SectionContainer>
           <InnerContainer marginTop="3.5rem">
             
-              <ContactUsForm formName="contact-us" />
+             <ContactFormSproutSend formId="CONTACTA_6249530a2d21bc0c493aafb5"/>
       
           </InnerContainer>
         </SectionContainer>
