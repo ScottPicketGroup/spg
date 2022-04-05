@@ -33,7 +33,7 @@ export const LeftContainer = styled.div`
 export const RightContainer = styled.div`
   display: flex;
   width: 67%;
-  justify-content: ${(props) => (props.justifyEnd ? "flex-end" : "flex-start")};
+  justify-content: ${(props) => (props.justifyEnd ? "flex-end" : props.justifySpaceBetween ? "space-between" : "flex-start")};
 `;
 export const MenuBtn = styled.div`
   font-size: 16px;

@@ -13,6 +13,7 @@ import { getImage } from "gatsby-plugin-image"
 import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
 import ContactUsForm from "./contact-us/ContactUsForm"
+import ContactFormSproutSend from "./ContactForm/ContactFormSproutSend"
 
 const Landing = ({ pageProps }) => {
   const data = useStaticQuery(graphql`
@@ -67,7 +68,7 @@ const Landing = ({ pageProps }) => {
           <InnerContainer marginTop="3.5rem">
             <LeftContainer></LeftContainer>
             <RightContainer>
-             <ContactUsForm/>
+           <ContactFormSproutSend/>
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
