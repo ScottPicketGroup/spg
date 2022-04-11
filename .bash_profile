@@ -1,0 +1,1 @@
+alias gd="gatsby-develop"
