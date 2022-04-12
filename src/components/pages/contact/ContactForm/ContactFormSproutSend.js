@@ -3,17 +3,10 @@ import { Helmet } from "react-helmet"
 import styled from "styled-components"
 const ContactFormSproutSend = () => {
   return (
-  
-      
+    <div>
+      <ExternalForm id="CONTACTA_6249530a2d21bc0c493aafb5" />
 
-  
-    <InnerContainer marginTop="3.5rem">
-    <LeftContainer></LeftContainer>
-    <RightContainer>
-    <ExternalForm id="CONTACTA_6249530a2d21bc0c493aafb5" />
-    </RightContainer>
-
-    <Helmet>
+      <Helmet>
         <script type="text/javascript" async>
           var script = document.createElement("script"); script.type =
           "text/javascript"; script.src =
@@ -21,7 +14,7 @@ const ContactFormSproutSend = () => {
           document.getElementsByTagName("head")[0].appendChild(script);
         </script>
       </Helmet>
-  </InnerContainer>
+    </div>
   )
 }
 
