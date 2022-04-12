@@ -26,6 +26,7 @@ import HomeImage from "../../../images/homeImage.png"
 import Footer from "../../Common/Footer/Footer"
 import MobileHome from "../../Common/MobileHome"
 import SliderFull from "../../image-slider-full/Slider"
+import SignUpModal from "./SignUpModal"
 
 const captions = [
   "Matilda 159 Domain",
@@ -36,7 +37,7 @@ const captions = [
 
 const MobileLanding = ({ pageProps }) => {
   const [active, setActive] = useState("")
-
+  const [signUp, setSignUp] = useState(false)
 
   
   const data = useStaticQuery(graphql`
@@ -617,6 +618,7 @@ const MobileLanding = ({ pageProps }) => {
       </Container>
 
       <Footer />
+      <SignUpModal signUp={signUp} setSignUp={setSignUp}/>
     </div>
   ) : (
     <div></div>
