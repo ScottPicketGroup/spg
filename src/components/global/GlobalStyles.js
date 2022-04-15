@@ -25,15 +25,28 @@ export const SectionContainer = styled.div`
 `;
 
 export const LeftContainer = styled.div`
-  display: inline;
-  width: 33%;
+  display: ${(props) =>
+    props.device === "Mobile" ? "flex" : "inline"};
+    width:  ${(props) =>
+      props.device === "Mobile" ? "33%" : "33%"};
+  
+
+
 `;
-export const RightContainer = styled.div`
-  display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
-  width: 66%;
+export const RightContainer = styled.div`  
+margin-top: ${(props) =>
+  props.hero === true
+    ? "0"
+    : props.theme.name === "Desktop"
+    ? "9rem"
+    : "6rem"};
+  display: ${(props) => (
+    props.displayBlock === true ? "block" :
+    props.device === "Mobile" ? "flex" : "inline")};
+    width: ${(props) =>
+      props.device === "Mobile" ? "100%" : "66%"};
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
-   
 `;
 export const TextContainer = styled.div`
   display: inline;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {BC3} from "../../global/fontStyles"
+import { LeftContainer } from "../../global/GlobalStyles";
 export const InnerContainer = styled.div`
   margin-top: ${(props) =>
     props.top === true
@@ -11,13 +12,21 @@ export const InnerContainer = styled.div`
 
   width: 100%;
 `;
-export const LeftContainer = styled.div`
-  display: inline;
-  width: 33%;
-`;
-export const RightContainer = styled.div`
-  display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
-  width: 66%;
+
+export const RightContainer = styled.div`  
+margin-top: ${(props) =>
+  props.top === true
+    ? "1rem"
+    : props.theme.name === "Desktop"
+    ? "9rem"
+    : "6rem"};
+  display: ${(props) => (
+    props.displayBlock === true ? "block" :
+    props.device === "Mobile" ? "flex" : "inline")};
+  width: ${(props) =>
+  props.theme.name === "Desktop"
+      ? "66%"
+      : "100%"};
   justify-content: ${(props) =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
 `;

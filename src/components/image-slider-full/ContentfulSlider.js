@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react"
 
-
 import { gsap } from "gsap"
 import { useSwipeable } from "react-swipeable"
 import { getImage } from "gatsby-plugin-image"
@@ -13,18 +12,15 @@ import {
   SliderImage,
   ControlButtonContainer,
 } from "./slider-components"
-import {
-  RightContainer,
-  LeftContainer
-} from "../global/GlobalStyles"
+import { RightContainer, LeftContainer } from "../global/GlobalStyles"
 import NextIcon from "./control-elements/NextIcon"
 import PreviousIcon from "./control-elements/PreviousIcon"
 
 import { ImageCaption } from "../global/fontStyles"
+import next from "./control-elements/useNavigation"
 
-const SliderFull = ({ images, captions }) => {
-
-
+const ContentfulSliderFullPage = ({ images, contentfulImages, captions }) => {
+  console.log(contentfulImages)
 
   const [imageNumber, setImageNumber] = useState(1)
   let title = useRef(null)
@@ -33,10 +29,11 @@ const SliderFull = ({ images, captions }) => {
     onSwipedLeft: () => nextImage(),
     onSwipedRight: () => previousImage(),
   })
-const [imageCount] = useState(images.allFile.length - 1)
+  const [imageCount] = useState(contentfulImages.length - 1)
   const [activeImg, setActiveImg] = useState(0)
 
   const nextImage = () => {
+    
     gsap.fromTo(
       [title, caption],
       0.1,
@@ -103,52 +100,55 @@ const [imageCount] = useState(images.allFile.length - 1)
     }, 200)
   }
 
+  console.log("contentfulImages", activeImg)
 
-
-return images ? (
-  <div {...handlers}
-    
-  style={{
-    background: `#f9f9f4`
-  }}>
-    
-    <SliderContainer ref={el => (title = el)}>
-      {images && images.allFile.edges.map((image, i) => (
-        <>
-          <SliderImage
-            image={getImage(image.node)}
-            alt="matilda"
-            id={i}
-            activeImg={activeImg}
-          />
-        </>
-      ))}
-    </SliderContainer>
-   
-    <ControlsContainer>
-     
-      
-      <Controls> 
-      <ImageCaption ref={el => (caption = el)}>{captions[imageNumber - 1]}</ImageCaption>
-      <ControlButtonContainer>
-        <ControlButton onClick={previousImage}>
-          <PreviousIcon />
-        </ControlButton>
-        <ControlButton onClick={nextImage}>
-          <NextIcon />
-        </ControlButton>
-        </ControlButtonContainer>
-      </Controls>
-      
-    </ControlsContainer>
-    <MobileControls>
-    <ImageCaption>{captions[imageNumber - 1]}</ImageCaption> 
-       <ImageCaption>{imageNumber}/{images.allFile.edges.length}</ImageCaption>
-    </MobileControls>
-  </div>
-) : (
-  <div></div>
-);
+  return images ? (
+    <div
+      {...handlers}
+      style={{
+        background: `#f9f9f4`,
+      }}
+    >
+      <SliderContainer ref={el => (title = el)}>
+        {images &&
+          contentfulImages.map((image, i) => (
+            <>
+              <SliderImage
+                image={getImage(image)}
+                alt="matilda"
+                id={i}
+                activeImg={activeImg}
+              />
+           
+            </>
+          ))}
+      </SliderContainer>
+  
+      <ControlsContainer>
+        <Controls>
+          <ImageCaption ref={el => (caption = el)}>
+            {contentfulImages[imageNumber - 1].title}
+          </ImageCaption>
+          <ControlButtonContainer>
+            <ControlButton onClick={previousImage}>
+              <PreviousIcon />
+            </ControlButton>
+            <ControlButton onClick={nextImage}>
+              <NextIcon />
+            </ControlButton>
+          </ControlButtonContainer>
+        </Controls>
+      </ControlsContainer>
+      <MobileControls>
+        <ImageCaption>{captions[imageNumber - 1]}</ImageCaption>
+        <ImageCaption>
+        {contentfulImages[imageNumber - 1].title}
+        </ImageCaption>
+      </MobileControls>
+    </div>
+  ) : (
+    <div></div>
+  )
 }
 
-export default SliderFull
+export default ContentfulSliderFullPage
