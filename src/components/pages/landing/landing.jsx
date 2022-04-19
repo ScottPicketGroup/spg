@@ -68,12 +68,12 @@ const Landing = ({ pageProps }) => {
   const image = getImage(data.file)
 
   return theme ? (
+    //need to add mobile to this page
     <div>
       <Container theme={theme}>
         <Home HomeImage={image} path={pageProps.path} />
         <Introduction />
       </Container>
-      
       <ContentfulSliderFullPage images={data} contentfulImages={contentfulImages} captions={captions} />
 
       <Container theme={theme}>
