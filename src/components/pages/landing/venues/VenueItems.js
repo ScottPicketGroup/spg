@@ -18,13 +18,18 @@ import {
 } from "../styled-components"
 import { BC3, Header2 } from "../../../global/fontStyles"
 import Renderer from "./DescriptionRenderer"
-const VenueItems = ({venues}) => {
+const VenueItems = ({ venues }) => {
+  const [active, setActive] = useState("")
 
-
+  const handleExpand = el => {
+    console.log(active)
+    if (active === "") setActive(el)
+    else if (active === el) setActive("")
+    else if (active !== el) setActive(el)
+  }
   return (
-    
     <SectionContainer>
-      <InnerContainer marginTop="6rem">
+      <InnerContainer >
         <Grid cols={2}>
           {venues.map((venue, i) => (
             <Item>
@@ -39,7 +44,7 @@ const VenueItems = ({venues}) => {
                     image={getImage(venue.venueImage)}
                     alt="whats-on-image"
                     style={{
-                      aspectRatio: `4/2.5`
+                      aspectRatio: `4/2.5`,
                     }}
                   />
                 </FullImageContainer>
@@ -50,8 +55,16 @@ const VenueItems = ({venues}) => {
                   {venue.venueAddress}
                 </BC3>
               </ItemImgLink>
-              <ItemInfoContainer>
-                <ItemExpandElement>Read More</ItemExpandElement>
+              <ItemInfoContainer
+                element={venue.venueName}
+                active={active}
+              >
+                <ItemExpandElement
+                  onMouseEnter={() => handleExpand(venue.venueName)}
+                  onClick={() => handleExpand(venue.venueName)}
+                >
+                  Read More
+                </ItemExpandElement>
                 <Renderer node={venue.venueDescription} />
                 <ItemImgLink
                   href={`${venue.venueWebsite}`}

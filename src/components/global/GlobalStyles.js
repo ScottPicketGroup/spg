@@ -26,9 +26,9 @@ export const SectionContainer = styled.div`
 
 export const LeftContainer = styled.div`
   display: ${(props) =>
-    props.device === "Mobile" ? "flex" : "inline"};
+    props.theme.name === "Desktop" ? "flex" : "none"};
     width:  ${(props) =>
-      props.device === "Mobile" ? "33%" : "33%"};
+      props.device === "Mobile" ? "0%" : "33%"};
   
 
 
@@ -89,11 +89,11 @@ export const FullImageContainer = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  display: inline;
+
   width: ${(props) => (props.device === "Desktop" ? "58%" : "100%")};
 `;
 export const ImageView = styled.div`
-  position: relative;
+
   width: 100%;
   padding-top: 66.66%;
 `;

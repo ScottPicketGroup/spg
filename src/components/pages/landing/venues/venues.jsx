@@ -16,7 +16,7 @@ const Venues = ({ theme }) => {
 
   return (
     <SectionContainer style={{ marginBottom: `2.25rem 0 9rem` }}>
-      <InnerContainer>
+      <InnerContainer theme={theme}>
         <LeftContainer></LeftContainer>
         <RightContainer>
           <Header1 theme={theme}>{venuData.sectionHeading}</Header1>

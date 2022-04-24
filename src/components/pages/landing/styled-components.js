@@ -185,23 +185,15 @@ transition: all .2 ease-in-out;
 }
 `
 export const ItemInfoContainer = styled.div`
-margin-Top: ${(props) => (props.marginTop ? props.marginTop : `0`)};
-max-height: 1.3rem;
+max-height: ${props => props.element === props.active ? '500px' : '1.3rem'};
 overflow: hidden;
 transition: max-height 0.25s ease-out;
 width: 100%;
-transition: max-height .25s ease-in;
-@media (min-width: 451px) {
-  :hover {
-  max-height: 550px;
-  transition: max-height 0.25s ease-in;
-}
-}
+
 @media (max-width: 450px) {
   margin-top: .25rem;
   font-size: 1rem;
-  max-height: ${props => props.element === props.active ? '500px' : '1.3rem'};
-  transition: max-height 0.25s ease-in-out;
+  max-height: ${props => props.element === props.active ? '900px' : '1.3rem'};
 }
 `
 
@@ -256,6 +248,7 @@ export const RightModalContainer = styled(RightContainer)`
   align-items: flex-end;
   flex-direction: column;
   margin-right: 8rem;
+  margin-top: 0;
   @media (max-width: 450px) {
     width: 100%;
     margin: 0;

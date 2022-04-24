@@ -11,11 +11,12 @@ const IndexPage = (props) => {
   return theme ? (
     <div theme={theme}>
       <Seo title="Home" />
-      {theme.name === "Desktop" ? (
+      <Landing pageProps={props} />
+      {/* {theme.name === "Desktop" ? (
         <Landing pageProps={props} />
       ) : (
         <MobileLanding pageProps={props} />
-      )}
+      )} */}
     </div>
   ) : (
     <div></div>

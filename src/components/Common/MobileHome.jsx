@@ -15,13 +15,14 @@ import LogoWhite from "../../images/logoWhite.svg";
 import expandIcon from "../../images/expandIcon.png";
 
 import MenuBox from "../Common/Menue";
-import { Menu, MenuHeading, MenuItem } from "../global/fontStyles";
+import { Menu, 
+   MenuItem } from "../global/fontStyles";
 import TableMenu from "./SubMenus/BookTableMenu";
 import GiftVoucher from "./SubMenus/GiftVoucher";
 import Provider from "./SubMenus/Provider";
 import Events from "./SubMenus/Events";
-import footerLogo from "../../images/insta-white.png";
 import InstaIcon from "../../images/social-icons/InstaLogo";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 const MobileHome = ({ HomeImage, path }) => {
   const theme = useTheme();
@@ -65,13 +66,13 @@ const MobileHome = ({ HomeImage, path }) => {
             </MenuBtn>
           </RightContainer>
         </InnerContainer>
+        <GatsbyImage image={HomeImage} 
+      height={20}
+      width={20}
+    
+      alt="test" style={{position: `absolute`}}/>
       </SectionContainer>
-      <ImageContainer>
-        <ImageView>
-          <ImageDiv src={HomeImage} />
-        </ImageView>
-      </ImageContainer>
-
+   
       <MenuBox
         show={show}
         handleClose={hideModal}

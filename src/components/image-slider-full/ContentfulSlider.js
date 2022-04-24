@@ -19,9 +19,7 @@ import PreviousIcon from "./control-elements/PreviousIcon"
 import { ImageCaption } from "../global/fontStyles"
 import next from "./control-elements/useNavigation"
 
-const ContentfulSliderFullPage = ({ images, contentfulImages, captions }) => {
-  console.log(contentfulImages)
-
+const ContentfulSliderFullPage = ({ contentfulImages }) => {
   const [imageNumber, setImageNumber] = useState(1)
   let title = useRef(null)
   let caption = useRef(null)
@@ -100,9 +98,9 @@ const ContentfulSliderFullPage = ({ images, contentfulImages, captions }) => {
     }, 200)
   }
 
-  console.log("contentfulImages", activeImg)
 
-  return images ? (
+
+  return contentfulImages ? (
     <div
       {...handlers}
       style={{
@@ -110,7 +108,7 @@ const ContentfulSliderFullPage = ({ images, contentfulImages, captions }) => {
       }}
     >
       <SliderContainer ref={el => (title = el)}>
-        {images &&
+        {contentfulImages &&
           contentfulImages.map((image, i) => (
             <>
               <SliderImage
@@ -140,7 +138,7 @@ const ContentfulSliderFullPage = ({ images, contentfulImages, captions }) => {
         </Controls>
       </ControlsContainer>
       <MobileControls>
-        <ImageCaption>{captions[imageNumber - 1]}</ImageCaption>
+        <ImageCaption>{imageNumber} / {contentfulImages.length}</ImageCaption>
         <ImageCaption>
         {contentfulImages[imageNumber - 1].title}
         </ImageCaption>
