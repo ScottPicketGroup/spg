@@ -13,26 +13,25 @@ import { useScottPickettPageData } from "../ScottPicketQuery"
 import IntroductionRenderer from "../../../Common/RichTextRenderers/IntroductionRenderer"
 const Intro = () => {
   const theme = useTheme()
-  const { timelineHeading } = useScottPickettPageData()
+  const { timelineHeading, timelineIntro } = useScottPickettPageData()
 
   return theme ? (
     <div>
       <SectionContainer>
-        <TimeLineContainer>
+        <TimeLineContainer first>
           <InnerContainer>
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme} marginBottom=".25rem">
                 {timelineHeading}
               </Header1>
+              <IntroductionRenderer node={timelineIntro} />
             </RightContainer>
           </InnerContainer>
         </TimeLineContainer>
       </SectionContainer>
     </div>
-  ) : (
-    <div></div>
-  )
+  ) : null
 }
 
 export default Intro

@@ -57,7 +57,7 @@ const MobileLanding = ({ pageProps }) => {
   const events = data.allContentfulWhatsOnPageContent.edges[0].node.whatsOnEvents
   return theme ? (
     <div>
-      <Home HomeImage={HomeImage} path={pageProps.path} />
+      <Home HomeImage={data.file.childImageSharp.gatsbyImageData} path={pageProps.path} old={true}/>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <SectionContainer>
           <InnerContainer theme={theme} displayBlock={true}>

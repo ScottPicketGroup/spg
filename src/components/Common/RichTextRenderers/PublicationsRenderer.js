@@ -13,7 +13,7 @@ const PublicationsRenderer = ({ node}) => {
       [BLOCKS.HEADING_2]: (node, children) => <Header2>{children}</Header2>,
       [BLOCKS.HEADING_3]: (node, children) => <Header3>{children}</Header3>,
       [BLOCKS.HYPERLINK]: (node, children) => (
-        <BC1 marginBottom="sm" style={{color: `red !important`}}>{children}</BC1>
+        <a target="_blank" >{children}</a>
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
       

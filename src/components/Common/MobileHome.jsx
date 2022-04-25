@@ -7,7 +7,7 @@ import MobileHeader from "./MobileHeader/MobileHeader"
 import MobileMenu from "./MobileMenu/MobileMenu"
 
 
-const MobileHome = ({ HomeImage, path }) => {
+const MobileHome = ({ HomeImage, path, old }) => {
   const theme = useTheme()
 
   const [show, setShow] = useState(false)
@@ -15,12 +15,20 @@ const MobileHome = ({ HomeImage, path }) => {
   console.log("HomeImage", HomeImage)
   return theme ? (
     <div>
-      <MobileHeader setShow={setShow} />
+      <MobileHeader setShow={setShow} old={old}/>
+      {old ? 
       <GatsbyImage
+      image={getImage(HomeImage)}
+      alt="test"
+      style={{ width: `100vw`, marginLeft: `0` }}
+    /> 
+        : 
+        <GatsbyImage
         image={getImage(HomeImage)}
         alt="test"
         style={{ width: `100vw`, marginLeft: `-5.24vw` }}
       />
+  }
 
     <MobileMenu show={show} setShow={setShow}/>
      

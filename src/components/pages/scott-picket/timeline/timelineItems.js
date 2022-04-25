@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react"
 import { useTheme } from "styled-components"
 import { SectionContainer } from "../../../global/GlobalStyles"
-import { BC3, Header2, BC2 } from "../../../global/fontStyles"
+import { BC3, Header2 } from "../../../global/fontStyles"
 import {
   TimeLineContainer,
   TimeLineGrid,
@@ -10,8 +10,6 @@ import {
   RightContainer,
   LeftContainer,
 } from "../styled-components"
-import timeline from "./timeline.json"
-import HoverImage1 from "../hovers/hover1"
 import { useScottPickettPageData } from "../ScottPicketQuery"
 import TimelineElementRenderer from "../../../Common/RichTextRenderers/TimelineElementRenderer"
 const TimelineItems = () => {

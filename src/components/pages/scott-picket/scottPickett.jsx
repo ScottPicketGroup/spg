@@ -13,7 +13,7 @@ import Accolades from "./accolades/Accolades"
 
 const Landing = ({ pageProps }) => {
   const image = useScottPickettPageData().heroImage
-  const contentfulImages = useScottPickettPageData().introductionGallery
+  const contentfulImages = useScottPickettPageData().fullPageGallery
   const theme = useTheme()
 
   return theme ? (

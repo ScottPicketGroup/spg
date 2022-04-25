@@ -120,6 +120,9 @@ export const Quotation = styled.div`
   color: ${props => props.theme.colors.text};
   line-height: 1;
   text-align: center;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `
 
 export const ItemImgCaption = styled.div`

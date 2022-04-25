@@ -21,29 +21,17 @@ import { BC1, Header1, BC3, ItemImgCaption } from "../../global/fontStyles"
 import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
 import Slidera from "../../image-slider-full/Slider"
+import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
 const captions = ["Oscar’s and The Harrison private dining rooms at Matilda", "Enclosed courtyard at Estelle"]
 
 const Events = ({ pageProps }) => {
   const theme = useTheme()
   const data = useStaticQuery(graphql`
     {
-      allFile(
-        filter: {
-          extension: {}
-          absolutePath: { regex: "/images/events-carousel/" }
-        }
-      ) {
-        edges {
-          node {
-            id
-            childImageSharp {
-              gatsbyImageData(
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                aspectRatio: 1.5
-              )
-            }
-          }
+      contentfulEventsPageContent(id: {eq: "eafc242e-19f2-50d6-ad74-092d024bd738"}) {
+        sliderImages {
+          gatsbyImageData(placeholder: BLURRED)
+          title
         }
       }
       file(name: { in: "events-hero" }) {
@@ -82,7 +70,9 @@ const Events = ({ pageProps }) => {
           </InnerContainer>
         </SectionContainer>
       </Container>
-      <Slidera images={data} captions={captions} />
+      <ContentfulSliderFullPage
+        contentfulImages={data.contentfulEventsPageContent.sliderImages}
+      />
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <SectionContainer>
           <InnerContainer>

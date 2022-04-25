@@ -15,6 +15,7 @@ import PreviousIcon from "./control-elements/PreviousIcon"
 
 import { ImageCaption } from "../global/fontStyles"
 import useNavigation from "./control-elements/useNavigation"
+import gsap from "gsap"
 
 
 const ContentfulSliderFullPage = ({ contentfulImages, sectionGallery }) => {
@@ -22,8 +23,8 @@ const ContentfulSliderFullPage = ({ contentfulImages, sectionGallery }) => {
   let title = useRef(null)
   let caption = useRef(null)
   const handlers = useSwipeable({
-    onSwipedLeft: () => nextImageExt(),
-    onSwipedRight: () => previousImageExt(),
+    onSwipedLeft: () => nextImage(title, caption),
+    onSwipedRight: () => previousImage(title, caption),
   })
   const [imageCount] = useState(contentfulImages.length - 1)
   const [activeImg, setActiveImg] = useState(0)
@@ -31,7 +32,74 @@ const ContentfulSliderFullPage = ({ contentfulImages, sectionGallery }) => {
 const nextImageExt = useNavigation(title, caption, imageNumber, setImageNumber, imageCount, activeImg, setActiveImg)
 const previousImageExt = useNavigation(title, caption, imageNumber, setImageNumber, imageCount, activeImg, setActiveImg)
 
-  
+const nextImage = (title, caption) => {
+    
+  gsap.fromTo(
+    [title, caption],
+    0.1,
+    {
+      autoAlpha: 1,
+    },
+    {
+      autoAlpha: 0,
+    }
+  )
+  gsap.fromTo(
+    [title, caption],
+    0.3,
+    {
+      autoAlpha: 0,
+    },
+    {
+      autoAlpha: 1,
+      delay: 0.3,
+    }
+  )
+
+  setTimeout(() => {
+    if (activeImg < imageCount) {
+      setActiveImg(activeImg + 1)
+      setImageNumber(imageNumber + 1)
+    } else {
+      setActiveImg(0)
+      setImageNumber(1)
+    }
+  }, 200)
+}
+
+const previousImage = (title, caption) => {
+  gsap.fromTo(
+    title,
+    0.1,
+    {
+      autoAlpha: 1,
+    },
+    {
+      autoAlpha: 0,
+    }
+  )
+  gsap.fromTo(
+    title,
+    0.3,
+    {
+      autoAlpha: 0,
+    },
+    {
+      autoAlpha: 1,
+      delay: 0.3,
+    }
+  )
+  setTimeout(() => {
+    if (activeImg > 0) {
+      setActiveImg(activeImg - 1)
+      setImageNumber(imageNumber - 1)
+    } else {
+      setActiveImg(imageCount)
+      setImageNumber(imageCount + 1)
+    }
+  }, 200)
+}
+
 
 
 

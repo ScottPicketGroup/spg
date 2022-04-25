@@ -11,7 +11,7 @@ const TimelineElementRenderer = ({ node, landing, sp, textUnderGallery }) => {
       
    
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <BC2 style={{marginBottom: `2.25rem`}}>{children}
+        <BC2 >{children}
           </BC2>
       ),
     },

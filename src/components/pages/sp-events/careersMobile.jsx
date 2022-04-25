@@ -42,7 +42,7 @@ const Landing = ({ pageProps }) => {
 
   return theme ? (
     <div>
-      <Home HomeImage={image} path={pageProps.path} />
+      <Home HomeImage={image1} path={pageProps.path} old={true}/>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <SectionContainer>
           <InnerContainer>

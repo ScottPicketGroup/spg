@@ -6,11 +6,12 @@ import { InnerContainer, SectionContainer,  } from '../../global/GlobalStyles'
 import Logo from "../../../images/logo.svg";
 import { useTheme } from "styled-components";
 import { LeftContainer, LogoImg, MenuBtn, RightContainer } from './styled-components'
-const MobileHeader = ({setShow}) => {
+const MobileHeader = ({setShow, old}) => {
     const theme = useTheme();
   return (
     <SectionContainer
     style={{ marginBottom: `.75rem`, display: 'block'}}
+    old={old}
   >
     <InnerContainer theme={theme} top={true}>
           <LeftContainer>

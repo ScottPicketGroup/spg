@@ -23,6 +23,10 @@ export const useScottPickettPageData = () => {
           textUnderGallery {
             raw
           }
+          fullPageGallery {
+            gatsbyImageData(placeholder: BLURRED)
+            title
+          }
           timelineHeading
           timelineIntro {
             raw

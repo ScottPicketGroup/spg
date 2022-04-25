@@ -11,11 +11,32 @@ import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";
 
 import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/MobileHome";
+import { getImage } from "gatsby-plugin-image";
 
 const MobileLanding = ({ pageProps }) => {
 
   const data = useStaticQuery(graphql`
   {
+    allFile(
+      filter: {
+        extension: {}
+        absolutePath: {}
+        name: { in: "careers-hero" }
+      }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              aspectRatio: 1.5
+            )
+          }
+        }
+      }
+    }
     allContentfulJobsPostingPageContent {
       edges {
         node {
@@ -37,7 +58,7 @@ const careers = data.allContentfulJobsPostingPageContent.edges[0].node.jobPosts
 
   return theme ? (
     <div>
-       <Home HomeImage={HomeImage} path={pageProps.path} />
+       <Home HomeImage={getImage(data.allFile.edges[0].node)} path={pageProps.path} old={true} />
       <Container theme={theme} style={{paddingBottom: `6rem`}}>
        
         <SectionContainer>

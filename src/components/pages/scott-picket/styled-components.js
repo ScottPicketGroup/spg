@@ -192,7 +192,11 @@ export const Divider = styled.hr`
   opacity: 0.2;
 `;
 export const TimeLineContainer = styled.div`
-border-top: ${(props) => (props.theme.name === "Mobile" ? "1px solid rgba(51%,51%,51%, 25%)" : "")};
+border-top: ${(props) => (
+  props.first ? "none" :
+  props.theme.name === "Mobile" ? "1px solid rgba(51%,51%,51%, 25%)" : 
+  
+"")};
   margin-top: ${(props) => (props.theme.name === "Mobile" ? "1.5rem" : "2.25rem")};
   display: ${(props) => (props.displayBlock === true ? "block" : "flex")};
   flex-direction: ${(props) => (props.theme.name === "Mobile" ? "column" : "")};;
@@ -217,6 +221,7 @@ export const TimeLineGrid = styled.div`
  @media screen and (max-width: 450px) {
    border-top: none;
    flex-direction: column;
+   padding: 0;
  }
 `;
 export const LeftGrid = styled.div`

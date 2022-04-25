@@ -1,7 +1,6 @@
-import { Link } from "gatsby"
 import React from "react"
 import IntroductionRenderer from "../../../Common/RichTextRenderers/IntroductionRenderer"
-import { BC1, Header1 } from "../../../global/fontStyles"
+import {Header1 } from "../../../global/fontStyles"
 import {
   InnerContainer,
   LeftContainer,
@@ -9,7 +8,6 @@ import {
 } from "../../../global/GlobalStyles"
 import ContentfulSliderFullPage from "../../../image-slider-full/ContentfulSlider"
 import { useScottPickettPageData } from "../ScottPicketQuery"
-import IntroSlider from "../sliders/IntroSlider"
 import { RightContainer } from "../styled-components"
 import Quote from "./Quote"
 

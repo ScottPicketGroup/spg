@@ -21,7 +21,7 @@ import { ImageCaption } from "../global/fontStyles"
 const SliderFull = ({ images, captions }) => {
 
 
-
+console.log('images', images)
   const [imageNumber, setImageNumber] = useState(1)
   let title = useRef(null)
   let caption = useRef(null)
@@ -112,7 +112,7 @@ return images ? (
       {images && images.allFile.edges.map((image, i) => (
         <>
           <SliderImage
-            image={getImage(image.node)}
+            image={getImage(image.node.childImageSharp.gatsbyImageData.images[0])}
             alt="matilda"
             id={i}
             activeImg={activeImg}

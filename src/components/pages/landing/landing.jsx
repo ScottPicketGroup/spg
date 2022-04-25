@@ -24,7 +24,7 @@ const Landing = ({ pageProps }) => {
         {theme.name === "Desktop" ? (
           <Home HomeImage={image} path={pageProps.path} />
         ) : (
-          <MobileHome HomeImage={image} path={pageProps.path} />
+          <MobileHome HomeImage={image} path={pageProps.path} old={false}/>
         )}
         <Introduction />
       </Container>
