@@ -16,7 +16,7 @@ const LeftAligned = ({ publication }) => {
         <GatsbyImage image={getImage(publication.bookImage)} />
       </Item>
       <Item>
-        <Header2 marginBottom="1rem" marginTop="-5rem" theme={theme}>
+        <Header2 marginBottom="1rem" publication theme={theme}>
           {publication.heading}
         </Header2>
         {publication.subHeading && (

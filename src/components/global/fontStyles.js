@@ -13,7 +13,7 @@ export const Header1 = styled.h1`
 
 export const Header2 = styled.h2`
   font-size: ${props => (props.theme.name === "Desktop" ? "1.9rem" : "1.5rem")};
-  margin-top: ${props => (props.marginTop ? props.marginTop  :
+  margin-top: ${props => (props.publication && props.theme.name === "Desktop" ? "-5rem" :props.marginTop ? props.marginTop  :
     0)};
   margin-bottom: ${props => (props.marginBottom ? props.marginBottom : 0)};
   line-height: ${props => (props.theme.name === "Desktop" ? "1" : "1")};
