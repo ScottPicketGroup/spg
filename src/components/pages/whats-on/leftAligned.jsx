@@ -25,7 +25,8 @@ const LeftAligned = ({ data }) => {
         </Header3>
         {data.content && <ContentContainer content={content} />}
         {eventLink ? (
-          <a href={eventLink} target="_blank">
+          <a href={eventLink} target="_blank"
+          rel="noreferrer">
             <Button>{linkLabel}</Button>
           </a>
         ) : null}

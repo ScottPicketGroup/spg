@@ -1,7 +1,7 @@
 import React from "react"
 import { useTheme } from "styled-components"
 import { Button, Grid, Item } from "./styled-components"
-import { BC3, BC2, Header2, Header3 } from "../../global/fontStyles"
+import {  Header2, Header3 } from "../../global/fontStyles"
 
 import SliderFull from "./image-slider-full/Slider"
 import ContentContainer from "./ContentContainer"
@@ -26,7 +26,7 @@ console.log(data)
        {data.content &&  <ContentContainer content={content} />}
 
         {eventLink ? (
-          <a href={eventLink} target="_blank">
+          <a href={eventLink} target="_blank" rel="noreferrer">
             <Button>{linkLabel}</Button>
           </a>
         ) : null}

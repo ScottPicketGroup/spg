@@ -2,7 +2,6 @@
 import { gsap } from "gsap"
 const useNavigation = (title, caption, imageNumber, setImageNumber, imageCount, activeImg, setActiveImg) =>  {
  
-    const next = (val) => console.log(val)
     const nextImageExt = (title, caption) => {
     
         gsap.fromTo(

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Img from 'gatsby-image'
 import { StaticImage } from "gatsby-plugin-image"
 export const Title = styled.h1`
   font-size: 1.5em;
@@ -42,11 +41,10 @@ margin-top: ${(props) =>
     : "6rem"};
   display: ${(props) => (
     props.displayBlock === true ? "block" :
-    props.device === "Mobile" ? "flex" : "inline")};
+    props.theme.name === "Mobile" ? "" : "inline")};
     width: ${(props) =>
-      props.device === "Mobile" ? "100%" : "66%"};
-  justify-content: ${(props) =>
-    props.device === "Mobile" ? "flex-end" : "flex-start"};
+      props.theme.name === "Mobile" ? "100%" : "66%"};
+
 `;
 export const TextContainer = styled.div`
   display: inline;

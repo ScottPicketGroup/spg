@@ -18,7 +18,7 @@ const Venues = ({ theme }) => {
     <SectionContainer style={{ marginBottom: `2.25rem 0 9rem` }}>
       <InnerContainer theme={theme}>
         <LeftContainer></LeftContainer>
-        <RightContainer>
+        <RightContainer theme={theme}>
           <Header1 theme={theme}>{venuData.sectionHeading}</Header1>
           <VenueItems venues={venuData.venues} />
         </RightContainer>

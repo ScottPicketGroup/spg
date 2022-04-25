@@ -5,7 +5,6 @@ import styled, { useTheme } from "styled-components";
 
 
 import { Menu,Menu3Item } from "../../global/fontStyles";
-import { globalHistory } from "@reach/router";
 import InstaIcon from "../../../images/social-icons/InstaLogo";
 
 export const FooterLogo = styled.img`
@@ -63,10 +62,7 @@ export const MenuHeader = styled.div`
 
 const GiftVoucher = ({ hideModal }) => {
   const theme = useTheme();
-  const handleRedirect = (path) => {
-    hideModal();
-    setTimeout(() => globalHistory.navigate(path), 200);
-  };
+  
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>
@@ -75,6 +71,7 @@ const GiftVoucher = ({ hideModal }) => {
                    href="https://apps.giverapp.net/pickettandco/"
                    target="_blank"
                    style={{ textDecoration: `none`, color: `inherit` }}
+                   rel="noreferrer"
                  >Scott Pickett Group</a>
         </Menu3Item>
         <Menu3Item  theme={theme}>
@@ -89,6 +86,7 @@ const GiftVoucher = ({ hideModal }) => {
                    href=" https://theestelle.giverapp.net/"
                    target="_blank"
                    style={{ textDecoration: `none`, color: `inherit` }}
+                   rel="noreferrer"
                  >Estelle</a>
         </Menu3Item>
 
@@ -105,6 +103,7 @@ const GiftVoucher = ({ hideModal }) => {
                    href="https://matilda159.giverapp.net/"
                    target="_blank"
                    style={{ textDecoration: `none`, color: `inherit` }}
+                   rel="noreferrer"
                  >Matilda</a>
         </Menu3Item>
 
@@ -113,6 +112,7 @@ const GiftVoucher = ({ hideModal }) => {
                    href="https://pickettsdeli.giverapp.net/"
                    target="_blank"
                    style={{ textDecoration: `none`, color: `inherit` }}
+                   rel="noreferrer"
                  >Pickett's Deli</a>
         </Menu3Item>
     

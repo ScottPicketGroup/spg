@@ -6,7 +6,7 @@ import { useTheme } from "styled-components";
 
 import styled from "styled-components";
 import { globalHistory } from "@reach/router";
-import { Menu, MenuHeading, Menu3Item } from "../../global/fontStyles";
+import { Menu, Menu3Item } from "../../global/fontStyles";
 import InstaIcon from "../../../images/social-icons/InstaLogo";
 
 

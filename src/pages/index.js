@@ -3,7 +3,6 @@ import Seo from "../components/seo";
 import { useTheme } from "styled-components";
 
 import Landing from "../components/pages/landing/landing";
-import MobileLanding from "../components/pages/landing/mobileLanding";
 
 const IndexPage = (props) => {
   const theme = useTheme();
@@ -12,11 +11,7 @@ const IndexPage = (props) => {
     <div theme={theme}>
       <Seo title="Home" />
       <Landing pageProps={props} />
-      {/* {theme.name === "Desktop" ? (
-        <Landing pageProps={props} />
-      ) : (
-        <MobileLanding pageProps={props} />
-      )} */}
+  
     </div>
   ) : (
     <div></div>

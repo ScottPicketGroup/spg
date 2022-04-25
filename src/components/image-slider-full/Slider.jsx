@@ -13,10 +13,6 @@ import {
   SliderImage,
   ControlButtonContainer,
 } from "./slider-components"
-import {
-  RightContainer,
-  LeftContainer
-} from "../global/GlobalStyles"
 import NextIcon from "./control-elements/NextIcon"
 import PreviousIcon from "./control-elements/PreviousIcon"
 

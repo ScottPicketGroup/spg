@@ -74,7 +74,7 @@ function useWindowSize() {
 }
 
 const App = ({ element }) => {
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
 
   return (
     <ThemeProvider
