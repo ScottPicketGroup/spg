@@ -17,7 +17,7 @@ import { ImageCaption } from "../global/fontStyles"
 import useNavigation from "./control-elements/useNavigation"
 
 
-const ContentfulSliderFullPage = ({ contentfulImages }) => {
+const ContentfulSliderFullPage = ({ contentfulImages, sectionGallery }) => {
   const [imageNumber, setImageNumber] = useState(1)
   let title = useRef(null)
   let caption = useRef(null)
@@ -59,7 +59,7 @@ const previousImageExt = useNavigation(title, caption, imageNumber, setImageNumb
       </SliderContainer>
   
       <ControlsContainer>
-        <Controls>
+        <Controls sectionGallery={sectionGallery}>
           <ImageCaption ref={el => (caption = el)}>
             {contentfulImages[imageNumber - 1].title}
           </ImageCaption>

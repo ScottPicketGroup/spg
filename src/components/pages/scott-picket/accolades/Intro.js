@@ -8,12 +8,12 @@ import {
   LeftContainer,
 } from "../styled-components"
 
-import { Header1 } from "../../../global/fontStyles"
+import { BC1, Header1 } from "../../../global/fontStyles"
 import { useScottPickettPageData } from "../ScottPicketQuery"
 import IntroductionRenderer from "../../../Common/RichTextRenderers/IntroductionRenderer"
 const Intro = () => {
   const theme = useTheme()
-  const { timelineHeading } = useScottPickettPageData()
+  const { accoladesHeading } = useScottPickettPageData()
 
   return theme ? (
     <div>
@@ -23,7 +23,7 @@ const Intro = () => {
             <LeftContainer></LeftContainer>
             <RightContainer>
               <Header1 theme={theme} marginBottom=".25rem">
-                {timelineHeading}
+                {accoladesHeading}
               </Header1>
             </RightContainer>
           </InnerContainer>

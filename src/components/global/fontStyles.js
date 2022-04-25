@@ -13,7 +13,8 @@ export const Header1 = styled.h1`
 
 export const Header2 = styled.h2`
   font-size: ${props => (props.theme.name === "Desktop" ? "1.9rem" : "1.5rem")};
-  margin-top: ${props => (props.marginTop ? props.marginTop : 0)};
+  margin-top: ${props => (props.marginTop ? props.marginTop  :
+    0)};
   margin-bottom: ${props => (props.marginBottom ? props.marginBottom : 0)};
   line-height: ${props => (props.theme.name === "Desktop" ? "1" : "1")};
   font-family: ${props => props.theme.fontFamily.Times};
@@ -44,7 +45,13 @@ export const BC1 = styled.p`
       : props.theme.name === "Desktop"
       ? "2.25rem"
       : "1.5rem"};
-  margin-bottom: ${props => (props.marginBottom ? props.marginBottom : 0)};
+  margin-bottom: ${props =>
+     props.textUnderGallery
+      ? "3.5rem": 
+    props.marginBottom
+      ? props.marginBottom
+      
+      : 0};
   font-size: ${props =>
     props.theme.name === "Desktop" ? "1.59rem" : "1.25rem"};
   font-family: ${props => props.theme.fontFamily.UntitledSansLight};
@@ -74,9 +81,12 @@ export const BC2 = styled.p`
   }
 `
 export const BC3 = styled.p`
-  margin-Top: ${props => (props.marginTop ? props.marginTop : `0`)};
+  margin-Top: ${props => (props.marginTop ? props.marginTop : 
+      props.timeLine && props.theme.name === "Mobile" ? "1.5rem" :
+    `0`)};
   margin-bottom: ${props =>
-    props.marginBottom ? props.marginBottom : `.5rem`};
+    props.marginBottom ? props.marginBottom  :
+    `.5rem`};
   font-size: ${props => (props.theme.name === "Desktop" ? "1.2rem" : "1rem")};
   font-family: ${props =>
     props.light
@@ -113,9 +123,8 @@ export const Quotation = styled.div`
 `
 
 export const ItemImgCaption = styled.div`
-margin-bottom: ${props =>
-    props.theme.name === "Desktop" ? "" : "1rem"};
-margin-top: ${props =>
+  margin-bottom: ${props => (props.theme.name === "Desktop" ? "" : "1rem")};
+  margin-top: ${props =>
     props.theme.name === "Desktop" ? "2.25rem" : "1.5rem"};
   font-size: ${props => (props.theme.name === "Desktop" ? "36px" : "20px")};
   font-family: ${props => props.theme.fontFamily.Times};
@@ -152,7 +161,7 @@ export const MenuHeading = styled.div`
 `
 export const MenuItem = styled.div`
   width: 100%;
-  
+
   cursor: pointer;
   font-family: ${props => props.theme.fontFamily.UntitledSansLight};
   font-size: ${props => props.theme.name === "Mobile" && `24px`};

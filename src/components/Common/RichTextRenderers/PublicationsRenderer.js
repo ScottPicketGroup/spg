@@ -1,11 +1,11 @@
 import React from "react"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
-import { BC1, Header1, Header2, Header3 } from "../../global/fontStyles"
+import { BC1, BC3, Header1, Header2, Header3 } from "../../global/fontStyles"
 import { IntroductionRendererContainer } from "./styled-components"
 
 
-const IntroductionRenderer = ({ node, landing, sp, textUnderGallery }) => {
+const PublicationsRenderer = ({ node}) => {
   const options = {
     renderNode: {
       
@@ -16,16 +16,17 @@ const IntroductionRenderer = ({ node, landing, sp, textUnderGallery }) => {
         <BC1 marginBottom="sm" style={{color: `red !important`}}>{children}</BC1>
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <BC1 textUnderGallery>{children}
-          </BC1>
+      
+           <BC3 light>
+          {children}
+         </BC3>
       ),
     },
   }
 
   return <IntroductionRendererContainer 
-  textUnderGallery={textUnderGallery}
-  sp={sp}
+
   >{renderRichText(node, options)}</IntroductionRendererContainer>
 }
 
-export default IntroductionRenderer
+export default PublicationsRenderer

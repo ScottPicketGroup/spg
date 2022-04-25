@@ -31,7 +31,7 @@ padding-right: 75px;
 } 
 `
 export const Controls = styled.div`
-width: ${props => props.right ? '100%' : '64%'};
+width: ${props => props.sectionGallery === true ? '100%' : '64%'};
 display: flex;
 justify-content: space-between;
 align-items: center;

@@ -225,12 +225,17 @@ export const LeftGrid = styled.div`
   width: 37.5%;
   @media screen and (max-width: 450px) {
    padding-bottom: 1.5rem;
+   width: 100%;
  }
 `;
 export const RightGrid = styled.div`
   padding: 0 0.5rem;
   display: inline;
   width: 62.5%;
+  @media screen and (max-width: 450px) {
+    
+    width: 100%;
+  }
   :hover ${LeftGrid}{
     opacity: 1;
   }

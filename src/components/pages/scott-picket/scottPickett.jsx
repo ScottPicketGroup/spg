@@ -1,357 +1,40 @@
 import React from "react"
-
 import { useTheme } from "styled-components"
-import { Container, SectionContainer } from "../../global/GlobalStyles"
-
-import hat from "./timeline/chef-hat.png"
-import {
-  InnerContainer,
-  TimeLineContainer,
-  TimeLineGrid,
-  RightGrid,
-  LeftGrid,
-  RightContainer,
-  LeftContainer,
-  QuotationContainer,
-  Hat,
-} from "./styled-components"
-import { graphql, useStaticQuery } from "gatsby"
-import { getImage} from "gatsby-plugin-image"
-import { BC1, Header1, Header2, Quotation, BC2 } from "../../global/fontStyles"
+import { Container } from "../../global/GlobalStyles"
 import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
 import Timeline from "./timeline/timeline"
-import SliderFull from "./sliders/sliderFull"
-import SliderRight from "./sliders/sliderRight"
 import Publications from "./publications/Publications"
+import { useScottPickettPageData } from "./ScottPicketQuery"
+import MobileHome from "../../Common/MobileHome"
+import Introduction from "./Introduction/Introduction"
+import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
+import Accolades from "./accolades/Accolades"
 
 const Landing = ({ pageProps }) => {
-
-  const data = useStaticQuery(graphql`
-  {
-   
-    
-    file(name: {in: "scott-portrait"}) {
-     id
-            childImageSharp {
-              gatsbyImageData(
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                aspectRatio: 1.5
-                )
-            }
-    }
-  }
-  `)
-  const image = getImage(data.file)
+  const image = useScottPickettPageData().heroImage
+  const contentfulImages = useScottPickettPageData().introductionGallery
   const theme = useTheme()
-console.log(data.allFile)
+
   return theme ? (
     <div>
       <Container theme={theme}>
-        <Home HomeImage={image} path={pageProps.path} />
-
-        <SectionContainer>
-          <InnerContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <Header1 theme={theme}>Scott here, but you can call me 'Chefo'</Header1>
-              <BC1 theme={theme} marginBottom="3.5rem">
-                "My love for great produce began early. As a kid on a farm in
-                Kangarilla, it taught me a lot about food and seasonality.
-                Knowing the growers and producers behind the food we ate gave me
-                a respect for them that I’ve never lost. That connection with an
-                environment like that influenced me to become a chef. So did
-                growing up with my grandmother Audrey’s Sunday roasts."
-              </BC1>
-             
-          
-           <SliderRight/>
-       
-       
-              <BC1 theme={theme} marginBottom="3.5rem" marginTop="9rem">
-                "Those years set the foundations of my values as a chef and
-                restaurateur today. My approach always puts food at the front.
-                It’s based on real cooking – with the greatest respect to the
-                produce. I want you to have incredible food and wine
-                experiences, with incredible service. But the food is the hero.
-
-                </BC1>
-              <BC1 theme={theme} marginBottom="3.5rem" >
-                Now, as a restaurateur, I don’t spend as much time cooking as I
-                used to, but I have some gun Head Chefs to work with. Together,
-                we build on what makes each of the venues special, and try to
-                impart on you our understanding of seasonality and our respect
-                for Australian growers and producers. It’s a journey that’s
-                still going. Can’t wait to share with you what we’ve got planned
-                next."
-              </BC1>
-            </RightContainer>
-          </InnerContainer>
-        </SectionContainer>
-
-
-
-        <SectionContainer>
-          <InnerContainer displayBlock="true">
-            <QuotationContainer>
-              <Quotation 
-              style={{
-                paddingBottom: `9rem`
-              }}
-              >
-                “Those years set the foundations of my values as a chef and
-                restaurateur today. My approach always puts food at the front.
-                It’s based on real cooking – with the greatest respect to the
-                produce.”
-              </Quotation>
-            </QuotationContainer>
-          </InnerContainer>
-        </SectionContainer>
-
-</Container>
-<SliderFull />
-<Container theme={theme} style={{ paddingBottom: `9rem` }}>
-
-        <Timeline />
-        <SectionContainer>
-          <InnerContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <Header1 theme={theme}
-              style={{paddingBottom: `3rem`}}
-              >Accolades</Header1>
-             
-            </RightContainer>
-          </InnerContainer>
-        </SectionContainer>
-
-        <SectionContainer>
-          <TimeLineContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <TimeLineGrid
-              
-              >
-                <LeftGrid>
-                  <Header2>Chancery Lane</Header2>
-                </LeftGrid>
-                <RightGrid>
-                  
-                  <BC2>
-                    {" "}
-                    2020 The Age Good Food Guide 16/20
-                  </BC2>
-                </RightGrid>
-              </TimeLineGrid>
-            </RightContainer>
-          </TimeLineContainer>
-        </SectionContainer>
-
-        <SectionContainer>
-          <TimeLineContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <TimeLineGrid>
-                <LeftGrid>
-                  <Header2>Matilda 159 Domain</Header2>
-                </LeftGrid>
-                <RightGrid>
-                  <BC2>2020 Age Good Food Guide –  <Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2>
-                    2019 Time Out 50 Best Restaurants in Melbourne – Ranked #12
-                  </BC2>
-                  <BC2>
-                    2019 Time Out Melbourne Nominated for Best Fine Dining
-                    Restaurant{" "}
-                  </BC2>
-                  <BC2> 2019 Age Good Food Guide – <Hat src={hat} alt="chef hat" /><Hat src={hat} alt="chef hat" /></BC2>
-
-                  <BC2>
-                    {" "}
-                    2019 Age Good Food Guide – Nominated for Best New Restaurant
-                  </BC2>
-                  <BC2>
-                    {" "}
-                    2019 Gourmet Traveller Restaurant Guide Top 100 – Ranked #85
-                  </BC2>
-                  <BC2>
-                    {" "}
-                    2018 Delicious Top 100 Restaurants 2018 The Australian Top
-                    100 Restaurants
-                  </BC2>
-                </RightGrid>
-              </TimeLineGrid>
-            </RightContainer>
-          </TimeLineContainer>
-        </SectionContainer>
-     
-        
-        
-        <SectionContainer>
-          <TimeLineContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <TimeLineGrid>
-                <LeftGrid>
-                  <Header2>Estelle</Header2>
-                </LeftGrid>
-                <RightGrid>
-                <BC2> 2020 Age Good Food Guide – <Hat src={hat} alt="chef hat" />
-
-</BC2>
-                  <BC2> 2018 Delicious Top 100 Restaurants</BC2>
-                  <BC2> 2018 Gault & Millau Guide – 15/20</BC2> 
-                  <BC2> 2017 Gourmet Traveller Restaurant Guide</BC2>
-                  <BC2> 2017 Age Good Food Guide</BC2>
-                  <BC2> 2016 Delicious Top 100 Restaurants</BC2>
-                  <BC2> 2016 Age Good Food Guide</BC2>
-                  <BC2>
-                    {" "}
-                    2015 Australian Financial Review Top 100 Restaurants –
-                    Ranked #27
-                  </BC2>
-                  <BC2> 2015 Age Good Food Guide – <Hat src={hat} alt="chef hat" />
-
-                  </BC2>
-                  <BC2> 2014 Age Good Food Guide – <Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2>
-                    {" "}
-                    2014 Age Good Food Guide – Finalist for New Restaurant of
-                    the Year
-                  </BC2>
-                  <BC2> 2013 Age Good Food Guide – <Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2>
-                    {" "}
-                    2013 Age Good Food Guide – Winner Young Chef of the Year,
-                    Josh Pelham
-                  </BC2>
-                </RightGrid>
-              </TimeLineGrid>
-            </RightContainer>
-          </TimeLineContainer>
-        </SectionContainer>
-        <SectionContainer>
-          <TimeLineContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <TimeLineGrid
-             
-              >
-                <LeftGrid>
-                  <Header2>Estelle By Scott Pickett (ESP)</Header2>
-                </LeftGrid>
-                <RightGrid>
-                  <BC2>
-                    {" "}
-                    2018 Australian Financial Review Top 100 Restaurants –
-                    Ranked #75
-                  </BC2>
-                  <BC2>
-                    {" "}
-                    2017 Gourmet Traveller Restaurant Guide Top 100 – Ranked #28
-                  </BC2>
-                  <BC2>
-                    {" "}
-                    2017 Australian Financial Review Top 100 Restaurants –
-                    Ranked #55
-                  </BC2>
-                  <BC2> 2017 The Australian Hot 50 Restaurants</BC2>
-                  <BC2> 2017 Age Good Food Guide – <Hat src={hat} alt="chef hat" /><Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2> 2016 Delicious Top 100 Restaurants</BC2>
-                  <BC2> 2016 The Australian Hot 50 Restaurants</BC2>
-                  <BC2>
-                    {" "}
-                    2016 Restaurant & Catering Awards For Excellence Victoria – Winner Best New Restaurant
-                  </BC2>
-                 
-                  <BC2>
-                    {" "}
-                    2016 Australian Financial Review Top 100 Restaurants –
-                    Ranked #58
-                  </BC2>
-                </RightGrid>
-              </TimeLineGrid>
-            </RightContainer>
-          </TimeLineContainer>
-        </SectionContainer>
-        <SectionContainer>
-          <TimeLineContainer>
-            <LeftContainer></LeftContainer>
-            <RightContainer>
-              <TimeLineGrid
-                 style={{
-                  borderBottom: `1px solid rgba(51, 51, 51, 25%)`,
-                  paddingBottom: `5.75rem`,
-                }}
-              >
-                <LeftGrid>
-                  <Header2>Saint Crispin</Header2>
-                </LeftGrid>
-                <RightGrid>
-                  <BC2> 2019 Age Good Food Guide – <Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2> 2018 Age Good Food Guide – <Hat src={hat} alt="chef hat" /><Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2> 2018 Gault & Millau Guide – 14.5/20</BC2>
-                  <BC2> 2017 Age Good Food Guide – <Hat src={hat} alt="chef hat" /><Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2>
-                    {" "}
-                    2017 Australian Financial Review Top 100 Restaurants –
-                    Ranked #95
-                  </BC2>
-                  <BC2> 2016 Age Good Food Guide – <Hat src={hat} alt="chef hat" /><Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2>
-                    {" "}
-                    2016 Australian Financial Review Top 100 Restaurants –
-                    Ranked #44
-                  </BC2>
-                  <BC2> 2016 Delicious Top 100 Restaurants</BC2>
-                  <BC2> 2015 Age Good Food Guide – <Hat src={hat} alt="chef hat" /><Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2>
-                    {" "}
-                    2015 Age Good Food Guide – Nominated for Restaurant of the
-                    Year
-                  </BC2>
-                  <BC2>
-                    {" "}
-                    2015 Australian Financial Review Top 100 Restaurants –Ranked
-                    #20
-                  </BC2>
-                  <BC2>
-                    {" "}
-                    2015 Gourmet Traveller Restaurant Guide Top 100 – Ranked #92
-                  </BC2>
-                  <BC2> 2014 Age Good Food Guide – <Hat src={hat} alt="chef hat" /></BC2>
-                  <BC2>
-                    {" "}
-                    2014 Age Good Food Guide – Winner New Restaurant of the Year
-                  </BC2>
-                  <BC2> 2014 The Australian Hot 100 Restaurants</BC2>
-                  <BC2> 2014 TimeOut – Winner Best New Restaurants </BC2>
-                  <BC2>
-                    {" "}
-                    2014 Gourmet Traveller Wine List of the Year Awards
-                    –Finalist Best New Wine List
-                  </BC2>
-                  <BC2> 2013 The Australian Hot 50 Restaurants</BC2>
-                </RightGrid>
-              </TimeLineGrid>
-            </RightContainer>
-          </TimeLineContainer>
-        </SectionContainer>
-
-<Publications />
-        {/* <CookiesBanner theme={theme}>
-          this website uses cookies to ensure you get the best experience on our
-          website learn more
-          <Button>I Accept</Button>
-        </CookiesBanner> */}
+        {theme.name === "Desktop" ? (
+          <Home HomeImage={image} path={pageProps.path} />
+        ) : (
+          <MobileHome HomeImage={image} path={pageProps.path} />
+        )}
+        <Introduction />
       </Container>
-
+      <ContentfulSliderFullPage contentfulImages={contentfulImages} />
+      <Container theme={theme} style={{ paddingBottom: `9rem` }}>
+        <Timeline />
+        <Accolades />
+        <Publications />
+      </Container>
       <Footer />
     </div>
-  ) : (
-    <div></div>
-  )
+  ) : null
 }
 
 export default Landing

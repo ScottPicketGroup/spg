@@ -1,14 +1,10 @@
 import React, { useState } from "react"
-import { Link, graphql, useStaticQuery } from "gatsby"
-
-import { getImage, StaticImage } from "gatsby-plugin-image"
 import { useTheme } from "styled-components"
 import { Container } from "../../global/GlobalStyles"
 
 import Introduction from "./Introduction/Introduction"
 import Footer from "../../Common/Footer/Footer"
 import Home from "../../Common/DesktopHome"
-import SliderFull from "../../image-slider-full/Slider"
 import SignUpModal from "./SignUpModal"
 import Venues from "./venues/venues"
 import WhatsOnLanding from "./WhatsOn/WhatsOnLanding"

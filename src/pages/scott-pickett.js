@@ -1,26 +1,19 @@
-import React from "react";
+import React from "react"
 
-import Seo from "../components/seo";
-import { useTheme } from "styled-components";
+import Seo from "../components/seo"
+import { useTheme } from "styled-components"
 
-import Landing from "../components/pages/scott-picket/scottPickett";
-import MobileLanding from "../components/pages/scott-picket/mobileScottPickett";
+import Landing from "../components/pages/scott-picket/scottPickett"
 
-const ScottPicket = (props) => {
-  const theme = useTheme();
+const ScottPicket = props => {
+  const theme = useTheme()
 
   return theme ? (
     <div theme={theme}>
       <Seo title="Scott-Picket" />
-      {theme.name === "Desktop" ? (
-        <Landing pageProps={props} />
-      ) : (
-        <MobileLanding pageProps={props} />
-      )}
+      <Landing pageProps={props} />
     </div>
-  ) : (
-    <div></div>
-  );
-};
+  ) : null
+}
 
-export default ScottPicket;
+export default ScottPicket

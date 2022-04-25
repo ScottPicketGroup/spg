@@ -2,34 +2,30 @@ import React from "react"
 import { useTheme } from "styled-components"
 
 import { Grid, Item } from "./styled-components"
-import { BC3, Header2} from "../../../global/fontStyles"
-import { StaticImage } from "gatsby-plugin-image"
+import { Header2, Header3 } from "../../../global/fontStyles"
 
-const LeftAligned = () => {
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+
+import PublicationsRenderer from "../../../Common/RichTextRenderers/PublicationsRenderer"
+const LeftAligned = ({ publication }) => {
   const theme = useTheme()
 
   return theme ? (
     <Grid cols="2">
+    
       <Item>
         <Header2 marginBottom="1rem" marginTop="-5rem" theme={theme}>
-          Scott Pickett: A Cook’s Story
+          {publication.heading}
         </Header2>
-
-        <BC3 light>
-          A Cook’s Story tells of my life combining a passion for food with the
-          art and craft of cooking. It’s an open account of my dramas in the
-          kitchen, the roller-coaster of opening a restaurant, the demands of
-          opening more, and the pleasures and challenges of competition and
-          success
-        </BC3>
-
-        <BC3 light>Available for purchase in local bookstores.</BC3>
+        {publication.subHeading && (
+          <Header3 marginBottom="1rem" theme={theme}>
+            {publication.subHeading}
+          </Header3>
+        )}
+        <PublicationsRenderer node={publication.description} />
       </Item>
       <Item>
-        <StaticImage
-          src="../../../../images/publications/sp-book.jpg"
-          alt="A cooks story"
-        />
+        <GatsbyImage image={getImage(publication.bookImage)} />
       </Item>
     </Grid>
   ) : (
@@ -38,3 +34,4 @@ const LeftAligned = () => {
 }
 
 export default LeftAligned
+
