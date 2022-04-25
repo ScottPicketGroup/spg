@@ -103,8 +103,8 @@ console.log(careers)
         </SectionContainer>
 
         {careers &&
-          careers.map(career => (
-            <SectionContainer>
+          careers.map((career, i) => (
+            <SectionContainer key={i}>
               <InnerContainer>
                 <LeftContainer></LeftContainer>
                 <RightContainer>

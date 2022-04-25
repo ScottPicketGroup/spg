@@ -20,7 +20,7 @@ const NextIcon = () => {
           transform="translate(1763 3051.499)"
           fill="none"
           stroke="#333"
-          stroke-width="1"
+          strokeWidth="1"
         />
         <g
           id="Ellipse_241"
@@ -28,7 +28,7 @@ const NextIcon = () => {
           transform="translate(1788 3080) rotate(180)"
           fill="none"
           stroke="#333"
-          stroke-width="1"
+          strokeWidth="1"
         >
           <circle cx="22" cy="22" r="22" stroke="none" />
           <circle cx="22" cy="22" r="21.5" fill="none" />

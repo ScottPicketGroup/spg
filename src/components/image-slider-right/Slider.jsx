@@ -115,6 +115,7 @@ console.log(captions)
               alt="matilda"
               id={i}
               activeImg={activeImg}
+              key={i}
             />
           </>
         ))}

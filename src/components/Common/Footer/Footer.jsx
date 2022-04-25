@@ -283,7 +283,7 @@ Australia
                       transform="translate(-1122 13421)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                     <path
                       id="Path_11770"
@@ -292,7 +292,7 @@ Australia
                       transform="translate(1698.404 40) rotate(90)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                   </g>
                 </svg>
@@ -310,7 +310,7 @@ Australia
               handleRedirect("/");
             }}
           >
-            <Link style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
+            <Link to="/" style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
               Home
             </Link>
           </MenuItem>
@@ -321,7 +321,7 @@ Australia
               handleRedirect("/scott-pickett");
             }}
           >
-            <Link style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
+            <Link to="/scott-pickett" style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
               Scott Pickett
             </Link>
           </MenuItem>
@@ -343,7 +343,7 @@ Australia
                   transform="translate(1211.552 -6895.646)"
                   fill="none"
                   stroke="#befbf2"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
               </svg>
             }
@@ -370,7 +370,7 @@ Australia
             
           >
             {" "}
-            <Link style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
+            <Link to="/whatson" style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
               What's On
             </Link>
           </MenuItem>
@@ -401,7 +401,9 @@ Australia
             }}
           >
             {" "}
-            <Link style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
+            <Link 
+            to="/careers"
+            style={{ color: "inherit", textDecoration: "none", fontSize: "24px" }}>
               Careers
             </Link>
           </MenuItem>
@@ -448,7 +450,7 @@ Australia
                       transform="translate(-1122 13421)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                     <path
                       id="Path_11770"
@@ -457,7 +459,7 @@ Australia
                       transform="translate(1698.404 40) rotate(90)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                   </g>
                 </svg>

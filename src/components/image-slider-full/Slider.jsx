@@ -120,6 +120,7 @@ return images ? (
             alt="matilda"
             id={i}
             activeImg={activeImg}
+            key={i}
           />
         </>
       ))}

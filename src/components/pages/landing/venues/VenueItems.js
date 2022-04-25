@@ -32,7 +32,7 @@ const VenueItems = ({ venues }) => {
       <InnerContainer >
         <Grid cols={2}>
           {venues.map((venue, i) => (
-            <Item>
+            <Item key={i}>
               <ItemImgLink
                 href={`${venue.venueWebsite}`}
                 target="_blank"

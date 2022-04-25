@@ -1,6 +1,6 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
 import { useLocation } from "@reach/router";
-import styled, { useTheme } from "styled-components";
+import { useTheme } from "styled-components";
 import { Link } from "gatsby";
 import logo from '../../images/logo.svg'
 import {
@@ -15,9 +15,7 @@ import MenuBox from "../Common/Menue";
 import SubMenu from "./SubMenue";
 
 const MenuResusable = () => {
-  const location = useLocation();
   const theme = useTheme();
-  const [offset, setOffset] = useState(0);
   const [open, setOpen] = useState(true);
 
   const [showSubMenu, setShowSubMenu] = useState(false);
@@ -57,15 +55,7 @@ const MenuResusable = () => {
               Home
             </Link>
           </MenuItem>
-          {/* <MenuItem theme={theme}>
-            <Link
-              to="/adapted"
-              style={{ color: "inherit", textDecoration: "none" }}
-              activeStyle={{ fontFamily: `UntitledSansMedium` }}
-            >
-              AdaptedREM
-            </Link>
-          </MenuItem> */}
+   
          
             <MenuItem theme={theme}>
               <Link

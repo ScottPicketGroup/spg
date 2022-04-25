@@ -87,16 +87,7 @@ const BookATable = ({ hideModal }) => {
                    style={{ textDecoration: `none`, color: `inherit` }}
                  >Pastore</a>
         </Menu3Item>
-        {/* <Menu3Item
-          onClick={() => {
-            handleRedirect("#")
-          }}
-          theme={theme}
-        >
-          <Link style={{ color: "inherit", textDecoration: "none" }}>
-            Pastore{" "}
-          </Link>
-        </Menu3Item> */}
+ 
       </Menu>
     
       {theme.name === "Mobile" && <InstaIcon />}

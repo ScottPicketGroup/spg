@@ -70,12 +70,16 @@ const BookATable = ({ hideModal }) => {
     <div>
       <Menu theme={theme} inModal={true}>
         <Menu3Item onClick={() => handleRedirect("/sp-events")} theme={theme}>
-          <Link style={{ color: "inherit", textDecoration: "none", textTransform: "none" }}>
+          <Link 
+          to="/sp-events"
+          style={{ color: "inherit", textDecoration: "none", textTransform: "none" }}>
           SP Events – Offsite events and catering
           </Link>
         </Menu3Item>
         <Menu3Item onClick={() => handleRedirect("/events")} theme={theme}>
-          <Link style={{ color: "inherit", textDecoration: "none", textTransform: "none" }}>
+          <Link 
+          to="/events"
+          style={{ color: "inherit", textDecoration: "none", textTransform: "none" }}>
           Private dining at our restaurants
           </Link>
         </Menu3Item>

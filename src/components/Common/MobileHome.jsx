@@ -112,7 +112,7 @@ const MobileHome = ({ HomeImage, path }) => {
                       transform="translate(-1122 13421)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                     <path
                       id="Path_11770"
@@ -121,7 +121,7 @@ const MobileHome = ({ HomeImage, path }) => {
                       transform="translate(1698.404 40) rotate(90)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                   </g>
                 </svg>
@@ -139,7 +139,7 @@ const MobileHome = ({ HomeImage, path }) => {
               handleRedirect("/");
             }}
           >
-            <Link style={{ color: "inherit", textDecoration: "none" }}>
+            <Link to="/" style={{ color: "inherit", textDecoration: "none" }}>
               Home
             </Link>
           </MenuItem>
@@ -150,7 +150,7 @@ const MobileHome = ({ HomeImage, path }) => {
               handleRedirect("/scott-pickett");
             }}
           >
-            <Link style={{ color: "inherit", textDecoration: "none" }}>
+            <Link to="/scott-pickett" style={{ color: "inherit", textDecoration: "none" }}>
               Scott Pickett
             </Link>
           </MenuItem>
@@ -180,7 +180,7 @@ const MobileHome = ({ HomeImage, path }) => {
             }}
           >
             {" "}
-            <Link style={{ color: "inherit", textDecoration: "none" }}>
+            <Link to="/whatson" style={{ color: "inherit", textDecoration: "none" }}>
               What's On
             </Link>
           </MenuItem>
@@ -210,7 +210,7 @@ const MobileHome = ({ HomeImage, path }) => {
             }}
           >
             {" "}
-            <Link style={{ color: "inherit", textDecoration: "none" }}>
+            <Link to="/careers" style={{ color: "inherit", textDecoration: "none" }}>
               Careers
             </Link>
           </MenuItem>
@@ -257,7 +257,7 @@ const MobileHome = ({ HomeImage, path }) => {
                       transform="translate(-1122 13421)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                     <path
                       id="Path_11770"
@@ -266,7 +266,7 @@ const MobileHome = ({ HomeImage, path }) => {
                       transform="translate(1698.404 40) rotate(90)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                   </g>
                 </svg>

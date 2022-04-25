@@ -22,7 +22,7 @@ const SecondPage = ({ data }) => {
           </TitleWrapper>
           <LogosWrapper>
             {logos.map((logo, i) => (
-              <LogoWrapper href={logo.url} target="_blank">
+              <LogoWrapper href={logo.url} target="_blank" key={i}>
                 <GatsbyImage image={getImage(logo.logo.gatsbyImageData)} />
               </LogoWrapper>
             ))}

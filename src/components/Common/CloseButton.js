@@ -23,7 +23,7 @@ const CloseButton = () => {
                       transform="translate(-1122 13421)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                     <path
                       id="Path_11770"
@@ -32,7 +32,7 @@ const CloseButton = () => {
                       transform="translate(1698.404 40) rotate(90)"
                       fill="none"
                       stroke="#fdf9ee"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                     />
                   </g>
                 </svg>

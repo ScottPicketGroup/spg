@@ -63,5 +63,5 @@ justify-content: space-between;
 
 export const SliderImage = styled(GatsbyImage)`
 aspect-ratio: 3/2;
-display: ${props => props.activeImg === props.id ? 'block' : 'none'};
+display: ${props => props.activeimg === props.id ? 'block' : 'none'};
 `

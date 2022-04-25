@@ -1,6 +1,4 @@
 import React, { useRef, useState } from "react"
-
-import { gsap } from "gsap"
 import { useSwipeable } from "react-swipeable"
 import { getImage } from "gatsby-plugin-image"
 import {
@@ -12,91 +10,28 @@ import {
   SliderImage,
   ControlButtonContainer,
 } from "./slider-components"
-import { RightContainer, LeftContainer } from "../global/GlobalStyles"
 import NextIcon from "./control-elements/NextIcon"
 import PreviousIcon from "./control-elements/PreviousIcon"
 
 import { ImageCaption } from "../global/fontStyles"
-import next from "./control-elements/useNavigation"
+import useNavigation from "./control-elements/useNavigation"
+
 
 const ContentfulSliderFullPage = ({ contentfulImages }) => {
   const [imageNumber, setImageNumber] = useState(1)
   let title = useRef(null)
   let caption = useRef(null)
   const handlers = useSwipeable({
-    onSwipedLeft: () => nextImage(),
-    onSwipedRight: () => previousImage(),
+    onSwipedLeft: () => nextImageExt(),
+    onSwipedRight: () => previousImageExt(),
   })
   const [imageCount] = useState(contentfulImages.length - 1)
   const [activeImg, setActiveImg] = useState(0)
 
-  const nextImage = () => {
-    
-    gsap.fromTo(
-      [title, caption],
-      0.1,
-      {
-        autoAlpha: 1,
-      },
-      {
-        autoAlpha: 0,
-      }
-    )
-    gsap.fromTo(
-      [title, caption],
-      0.3,
-      {
-        autoAlpha: 0,
-      },
-      {
-        autoAlpha: 1,
-        delay: 0.3,
-      }
-    )
+const nextImageExt = useNavigation(title, caption, imageNumber, setImageNumber, imageCount, activeImg, setActiveImg)
+const previousImageExt = useNavigation(title, caption, imageNumber, setImageNumber, imageCount, activeImg, setActiveImg)
 
-    setTimeout(() => {
-      if (activeImg < imageCount) {
-        setActiveImg(activeImg + 1)
-        setImageNumber(imageNumber + 1)
-      } else {
-        setActiveImg(0)
-        setImageNumber(1)
-      }
-    }, 200)
-  }
-
-  const previousImage = () => {
-    gsap.fromTo(
-      title,
-      0.1,
-      {
-        autoAlpha: 1,
-      },
-      {
-        autoAlpha: 0,
-      }
-    )
-    gsap.fromTo(
-      title,
-      0.3,
-      {
-        autoAlpha: 0,
-      },
-      {
-        autoAlpha: 1,
-        delay: 0.3,
-      }
-    )
-    setTimeout(() => {
-      if (activeImg > 0) {
-        setActiveImg(activeImg - 1)
-        setImageNumber(imageNumber - 1)
-      } else {
-        setActiveImg(imageCount)
-        setImageNumber(imageCount + 1)
-      }
-    }, 200)
-  }
+  
 
 
 
@@ -107,7 +42,7 @@ const ContentfulSliderFullPage = ({ contentfulImages }) => {
         background: `#f9f9f4`,
       }}
     >
-      <SliderContainer ref={el => (title = el)}>
+      <SliderContainer ref={el => (title = el)} key={0}>
         {contentfulImages &&
           contentfulImages.map((image, i) => (
             <>
@@ -115,7 +50,8 @@ const ContentfulSliderFullPage = ({ contentfulImages }) => {
                 image={getImage(image)}
                 alt="matilda"
                 id={i}
-                activeImg={activeImg}
+                activeimg={activeImg}
+                key={i}
               />
            
             </>
@@ -128,10 +64,10 @@ const ContentfulSliderFullPage = ({ contentfulImages }) => {
             {contentfulImages[imageNumber - 1].title}
           </ImageCaption>
           <ControlButtonContainer>
-            <ControlButton onClick={previousImage}>
+            <ControlButton onClick={() => previousImageExt(title, caption)}>
               <PreviousIcon />
             </ControlButton>
-            <ControlButton onClick={nextImage}>
+            <ControlButton onClick={() => nextImageExt(title, caption)}>
               <NextIcon />
             </ControlButton>
           </ControlButtonContainer>

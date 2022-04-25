@@ -21,7 +21,7 @@ const MobileTimelineItems = () => {
         }}
       />
       {timeline.map((item, i) => (
-        <SectionContainer>
+        <SectionContainer key={i}>
           <TimeLineContainer theme={theme}>
             <Header2 marginBottom="1rem">{item.year}</Header2>
             <Header3 marginBottom="1.5rem">{item.phase}</Header3>

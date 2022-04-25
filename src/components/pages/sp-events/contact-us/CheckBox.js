@@ -64,5 +64,5 @@ const CheckboxContainer = styled.div`
 const Icon = styled.svg`
   fill: none;
   stroke: #153E35;
-  stroke-width: 2px;
+  strokeWidth: 2px;
 `

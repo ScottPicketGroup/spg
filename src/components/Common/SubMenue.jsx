@@ -109,7 +109,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
             }}
           >
             <Link
-              // to="/"
+              to="/"
               style={{ color: "inherit", textDecoration: "none" }}
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
             >
@@ -125,6 +125,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
               }}
             >
               <Link
+              to="/scott-pickett"
                 style={{
                   color: "inherit",
                   textDecoration: "none",
@@ -152,14 +153,14 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
               handleRedirect("/whatson");
             }}
           >
-            <Link
-              onClick={() => handleOpenSubMenu("bookATable")}
+            <p
+              
               style={{ color: "inherit", textDecoration: "none" }}
               partiallyActive={true}
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
             >
               What's On
-            </Link>
+            </p>
           </MenuItem>
           <MenuItem
             theme={theme}
@@ -187,6 +188,7 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
           >
             {" "}
             <Link
+            to="/careers"
               style={{ color: "inherit", textDecoration: "none" }}
               partiallyActive={true}
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
