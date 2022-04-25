@@ -42,12 +42,13 @@ import SliderFull from "./sliders/sliderFull"
 import Timeline from "./timeline/timeline"
 import MobileTimelineItems from "./timeline/mobileTimelineItems"
 import Publications from "./publications/Publications"
+import { useScottPickettPageData } from "./ScottPicketQuery"
 const MobileLanding = ({ pageProps }) => {
   const theme = useTheme()
-
+  const image = useScottPickettPageData().heroImage
   return theme ? (
     <div>
-      <Home HomeImage={HomeImage} path={pageProps.path} />
+      <Home HomeImage={image} path={pageProps.path} />
       <Container theme={theme} style={{}}>
         <SectionContainer>
           <InnerContainer>

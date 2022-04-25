@@ -25,7 +25,7 @@ const SliderFirstMobile = () => {
     }
     `)
     
-    console.log(`data`, data)
+   
     return (
         <Slider images={data} captions={captions}/>
     )

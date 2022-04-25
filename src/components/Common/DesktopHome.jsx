@@ -3,7 +3,7 @@ import React from "react";
 import { useTheme } from "styled-components";
 import { RightContainer, SectionContainer } from "../../components/global/GlobalStyles";
 
-import { GatsbyImage} from "gatsby-plugin-image"
+import { GatsbyImage, getImage} from "gatsby-plugin-image"
 
 import SideBar from "./SideBar";
 
@@ -14,11 +14,11 @@ const DesktopHome = ({ HomeImage, path }) => {
     <SectionContainer >
       <SideBar path={path}/>
       <RightContainer hero>
-      <GatsbyImage image={HomeImage} 
-      height={20}
-      width={20}
-    
-      alt="test" style/>
+      <GatsbyImage
+        image={getImage(HomeImage)}
+        alt="test"
+        
+      />
       </RightContainer>
     </SectionContainer>
   ) : (
