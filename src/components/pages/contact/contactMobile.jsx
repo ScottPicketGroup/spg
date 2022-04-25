@@ -2,8 +2,8 @@ import React from "react";
 
 import { useTheme } from "styled-components";
 import { Container, SectionContainer } from "../../global/GlobalStyles";
-import { getImage } from "gatsby-plugin-image"
-import HomeImage from "../../../images/heros/contact-hero.jpg";
+
+
 
 import { InnerContainer, RightContainer, Button } from "./styled-components";
 import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";
@@ -11,33 +11,37 @@ import { BC1, Header1, BC3, Header2, Header4 } from "../../global/fontStyles";
 import Footer from "../../Common/Footer/Footer";
 import Home from "../../Common/MobileHome";
 import ContactFormSproutSend from "./ContactForm/ContactFormSproutSend";
-import { useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 const MobileLanding = ({ pageProps }) => {
   const theme = useTheme();
   const data = useStaticQuery(graphql`
-    {
-      allFile(
-        filter: {
-          extension: {}
-          absolutePath: {}
-          name: { in: "contact-hero" }
-        }
-      ) {
-        edges {
-          node {
-            id
-            childImageSharp {
-              gatsbyImageData(
-                layout: FULL_WIDTH
-                placeholder: BLURRED
-                aspectRatio: 1.5
-              )
-            }
+  {
+    allFile(
+      filter: {
+        extension: {}
+        absolutePath: {}
+        name: { in: "contact-hero" }
+      }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+              aspectRatio: 1.5
+            )
           }
         }
       }
     }
+  }
   `)
+
+    
+  
   const image = getImage(data.allFile.edges[0].node)
   return theme ? (
     <div>
