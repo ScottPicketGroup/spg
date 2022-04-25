@@ -1,7 +1,7 @@
 import React from "react"
 import AccoladesGrid from "./AccoladesGrid"
 
-import Intro from "./intro"
+import Intro from "./Intro"
 
 const Accolades = () => {
     

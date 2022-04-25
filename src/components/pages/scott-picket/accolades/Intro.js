@@ -10,7 +10,6 @@ import {
 
 import { BC1, Header1 } from "../../../global/fontStyles"
 import { useScottPickettPageData } from "../ScottPicketQuery"
-import IntroductionRenderer from "../../../Common/RichTextRenderers/IntroductionRenderer"
 const Intro = () => {
   const theme = useTheme()
   const { accoladesHeading } = useScottPickettPageData()
@@ -30,9 +29,7 @@ const Intro = () => {
         </TimeLineContainer>
       </SectionContainer>
     </div>
-  ) : (
-    <div></div>
-  )
+  ) : null
 }
 
 export default Intro
