@@ -3,7 +3,6 @@ import Seo from "../components/seo";
 import { useTheme } from "styled-components";
 
 import Landing from "../components/pages/sp-events/sp-events";
-import MobileLanding from "../components/pages/sp-events/careersMobile";
 
 const Careers = (props) => {
   const theme = useTheme();
@@ -11,15 +10,11 @@ const Careers = (props) => {
   return theme ? (
     <div theme={theme}>
       <Seo title="SP Events" />
-      {theme.name === "Desktop" ? (
+   
         <Landing pageProps={props} />
-      ) : (
-        <MobileLanding pageProps={props} />
-      )}
+    
     </div>
-  ) : (
-    <div></div>
-  );
+  ) : null
 };
 
 export default Careers;

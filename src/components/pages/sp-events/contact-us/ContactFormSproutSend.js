@@ -1,20 +1,26 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import styled from "styled-components"
+import { InnerContainer, LeftContainer, RightContainer, SectionContainer } from "../../../global/GlobalStyles"
 const ContactFormSproutSend = () => {
   return (
-    <div>
-      <ExternalForm id="CONTACTA_624964ea534354b1a696d8f2" />
+    <SectionContainer>
+      <InnerContainer>
+        <LeftContainer></LeftContainer>
+        <RightContainer>
+          <ExternalForm id="CONTACTA_624964ea534354b1a696d8f2" />
 
-      <Helmet>
-        <script type="text/javascript" async>
-          var script = document.createElement("script"); script.type =
-          "text/javascript"; script.src =
-          "https://forms.contacta.io/624964ea534354b1a696d8f2.js";
-          document.getElementsByTagName("head")[0].appendChild(script);
-        </script>
-      </Helmet>
-    </div>
+          <Helmet>
+            <script type="text/javascript" async>
+              var script = document.createElement("script"); script.type =
+              "text/javascript"; script.src =
+              "https://forms.contacta.io/624964ea534354b1a696d8f2.js";
+              document.getElementsByTagName("head")[0].appendChild(script);
+            </script>
+          </Helmet>
+        </RightContainer>
+      </InnerContainer>
+    </SectionContainer>
   )
 }
 
@@ -234,7 +240,7 @@ export const ExternalForm = styled.div`
       background: #333333 !important;
     }
   }
-  .submission-message .valign{
+  .submission-message .valign {
     font-family: UntitledSansRegular;
     font-size: 1.25rem !important;
     color: #333333;

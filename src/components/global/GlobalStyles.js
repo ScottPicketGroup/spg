@@ -38,8 +38,8 @@ margin-top: ${(props) =>
   props.hero === true
     ? "0"
     : props.theme.name === "Desktop"
-    ? "9rem"
-    : "6rem"};
+    ? "0rem"
+    : "0rem"};
   display: ${(props) => (
     props.displayBlock === true ? "block" :
     props.theme.name === "Mobile" ? "" : "inline")};
