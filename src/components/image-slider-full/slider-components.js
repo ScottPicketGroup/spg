@@ -30,7 +30,7 @@ padding-right: 75px;
     display: none;
 } 
 `
-export const Controls = styled.div`
+export const ControlsSection = styled.div`
 width: ${props => props.sectionGallery === true ? '100%' : '64%'};
 display: flex;
 justify-content: space-between;
@@ -62,6 +62,6 @@ justify-content: space-between;
 `
 
 export const SliderImage = styled(GatsbyImage)`
-aspect-ratio: 3/2;
+aspect-ratio: ${props => props.whatsOn === true ? "2/3" : "3/2"};
 display: ${props => props.activeimg === props.id ? 'block' : 'none'};
 `

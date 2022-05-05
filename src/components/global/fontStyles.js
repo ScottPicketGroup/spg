@@ -39,6 +39,13 @@ export const Header4 = styled.h4`
 `
 
 export const BC1 = styled.p`
+a{
+  color: inherit;
+  transition: opacity .2s ease-in;
+  :hover {
+    opacity: .5;
+  }
+}
   margin-top: ${props =>
     props.marginTop
       ? props.marginTop

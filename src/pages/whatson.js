@@ -11,11 +11,9 @@ const WhatsOn = (props) => {
   return theme ? (
     <div theme={theme}>
       <Seo title="WhatsOn" />
-      {theme.name === "Desktop" ? (
+
         <Landing pageProps={props} />
-      ) : (
-        <MobileLanding pageProps={props} />
-      )}
+   
     </div>
   ) : (
     <div></div>

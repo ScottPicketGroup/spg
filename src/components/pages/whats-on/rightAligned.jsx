@@ -3,12 +3,13 @@ import { useTheme } from "styled-components"
 import { Button, Grid, Item } from "./styled-components"
 import {  Header2, Header3 } from "../../global/fontStyles"
 
-import SliderFull from "./image-slider-full/Slider"
+// import SliderFull from "./image-slider-full/Slider"
 import ContentContainer from "./ContentContainer"
+import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
 
 const RightAligned = ({ data }) => {
   const theme = useTheme()
-console.log(data)
+
   const { Heading, subHeading, content, eventLink, linkLabel } = data
   return theme ? (
     <Grid cols="2">
@@ -31,7 +32,7 @@ console.log(data)
           </a>
         ) : null}
       </Item>
-      <Item>{data ? <SliderFull images={data.images} /> : null}</Item>
+      <Item>{data ? <ContentfulSliderFullPage whatsOn={true} contentfulImages={data.images} /> : null}</Item>
     </Grid>
   ) : (
     <div></div>

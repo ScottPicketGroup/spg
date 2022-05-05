@@ -11,7 +11,7 @@ const MobileHome = ({ HomeImage, path, old }) => {
 
   const [show, setShow] = useState(false)
 
-  console.log("HomeImage", HomeImage)
+ 
   return theme ? (
     <div>
       <MobileHeader setShow={setShow} old={old} />

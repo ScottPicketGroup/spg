@@ -45,7 +45,8 @@ export const RightContainer = styled.div`
 `;
 export const RightContainerLink = styled.a`
   display: ${(props) => (props.device === "Mobile" ? "flex" : "inline")};
-  width: 66%;
+  width: ${(props) =>
+    props.theme.name === "Mobile" ? "100%" : "66%"};
   transition: opacity .2s ease-out;
   text-decoration: none;
   justify-content: ${(props) =>

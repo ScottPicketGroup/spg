@@ -64,12 +64,9 @@ export const MenuHeader = styled.div`
   width: 100%;
 `;
 
-const Provider = ({ hideModal }) => {
+const Provider = () => {
   const theme = useTheme();
-  const handleRedirect = (path) => {
-    hideModal();
-    setTimeout(() => globalHistory.navigate(path), 200);
-  };
+
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>

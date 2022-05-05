@@ -10,7 +10,7 @@ import {
 
 const EventImage = ({ src, imageCaption}) => {
   const theme = useTheme();
-console.log(src)
+
   return theme ? (
     <EventImageContainer>
     
