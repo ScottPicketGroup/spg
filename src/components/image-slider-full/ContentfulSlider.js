@@ -17,7 +17,33 @@ const ContentfulSliderFullPage = ({
   const [activeImg, setActiveImg] = useState(0)
 
   let image = useRef(null)
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextImage(),
+    onSwipedRight: () => previousImage(),
+  })
+  const nextImage = () => {
+    setTimeout(() => {
+      if (activeImg < imageCount) {
+        setActiveImg(activeImg + 1)
+        setImageNumber(imageNumber + 1)
+      } else {
+        setActiveImg(0)
+        setImageNumber(1)
+      }
+    }, 200)
+  }
 
+  const previousImage = () => {
+    setTimeout(() => {
+      if (activeImg > 0) {
+        setActiveImg(activeImg - 1)
+        setImageNumber(imageNumber - 1)
+      } else {
+        setActiveImg(imageCount)
+        setImageNumber(imageCount + 1)
+      }
+    }, 200)
+  }
   useEffect(() => {
     gsap.fromTo(
       [image],
