@@ -55,9 +55,10 @@ export const MobileControls = styled.div`
 padding: 1rem 18px 0 18px;
 display: flex;
 justify-content: space-between;
-
+margin-bottom: ${props => props.marginBottom ? '4.5rem' : ''};
 @media screen and (min-width: 451px) {
     display: none;
+    
 }
 `
 

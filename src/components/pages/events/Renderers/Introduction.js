@@ -18,7 +18,6 @@ const Introduction = ({theme}) => {
             <RightContainer>
               <Header1 theme={theme}>{pageHeading}</Header1>
               <IntroductionRenderer node={introduction} />
-             
             </RightContainer>
           </InnerContainer>
         </SectionContainer>

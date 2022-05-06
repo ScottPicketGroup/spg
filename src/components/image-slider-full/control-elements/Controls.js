@@ -42,9 +42,12 @@ const Controls = ({
     }, 200)
   }
 
+  
   return (
     <>
-      <ControlsContainer>
+    {contentfulImages.length > 1 &&
+      (
+      <><ControlsContainer>
         <ControlsSection sectionGallery={sectionGallery}>
           <ImageCaption>{contentfulImages[imageNumber - 1].title}</ImageCaption>
           <ControlButtonContainer>
@@ -57,12 +60,14 @@ const Controls = ({
           </ControlButtonContainer>
         </ControlsSection>
       </ControlsContainer>
-      <MobileControls>
-        <ImageCaption>
-          {imageNumber} / {contentfulImages.length}
-        </ImageCaption>
+      <MobileControls marginBottom>
+     <ImageCaption>
+        {imageNumber} / {contentfulImages.length}
+      </ImageCaption>
         <ImageCaption>{contentfulImages[imageNumber - 1].title}</ImageCaption>
       </MobileControls>
+      </>)}
+
     </>
   )
 }

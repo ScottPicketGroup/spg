@@ -4,17 +4,20 @@ import { Button, Grid, Item } from "./styled-components"
 import { Header2, Header3 } from "../../global/fontStyles"
 
 import ContentContainer from "./ContentContainer"
-// import SliderFull from "./image-slider-full/Slider"
+import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
 
-const LeftAligned = ({ data }) => {
-  console.log(data)
+
+const LeftAligned = ({ data, i }) => {
+  console.log(i)
   const theme = useTheme()
   const { Heading, subHeading, content, eventLink, linkLabel } = data
   return theme ? (
-    <Grid cols="2">
-      {/* <Item>{data.images ? <SliderFull images={data.images} /> : null}</Item> */}
-      <Item>
-        <Header2 marginBottom="1rem" marginTop="-5rem" theme={theme}>
+    <Grid cols="2" first={i}>
+      <Item>{data ? <ContentfulSliderFullPage whatsOn={true} contentfulImages={data.images} marginBottom /> : null}</Item>
+      <Item
+      
+      >
+        <Header2 marginBottom="1rem" marginTop={ theme.name === "Mobile" ? `2.5rem` : `-5rem`} theme={theme}>
           {Heading}
         </Header2>
         <Header3

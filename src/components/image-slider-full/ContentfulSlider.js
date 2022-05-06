@@ -10,6 +10,7 @@ const ContentfulSliderFullPage = ({
   contentfulImages,
   whatsOn,
   sectionGallery,
+  marginBottom
 }) => {
   const [imageNumber, setImageNumber] = useState(1)
   const [imageCount] = useState(contentfulImages.length - 1)
@@ -65,7 +66,7 @@ const ContentfulSliderFullPage = ({
       </SliderContainer>
 
       <Controls
-       
+       marginBottom
         contentfulImages={contentfulImages}
         sectionGallery={sectionGallery}
         imageNumber={imageNumber}
