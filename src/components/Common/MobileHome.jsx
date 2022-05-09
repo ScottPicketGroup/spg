@@ -25,7 +25,7 @@ const MobileHome = ({ HomeImage, path, old }) => {
         <GatsbyImage
           image={getImage(HomeImage)}
           alt="test"
-          style={{ width: `100vw`, marginLeft: `-5.24vw` }}
+          style={{ width: `100vw`, marginLeft: `-5.24vw`, aspectRatio: `4/3` }}
         />
       )}
 

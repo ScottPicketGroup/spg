@@ -25,7 +25,7 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-
+  background-color: #f9f9f4;
     @media (prefers-colour-scheme: dark) {
     background-color: #f9f9f4;
     color: #333333;
