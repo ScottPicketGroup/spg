@@ -47,10 +47,10 @@ const Controls = ({
     <>
     {contentfulImages.length > 1 &&
       (
-      <><ControlsContainer>
+      <><ControlsContainer sectionGallery={sectionGallery}>
         <ControlsSection sectionGallery={sectionGallery}>
           <ImageCaption>{contentfulImages[imageNumber - 1].title}</ImageCaption>
-          <ControlButtonContainer>
+          <ControlButtonContainer sectionGallery={sectionGallery}>
             <ControlButton onClick={previousImage}>
               <PreviousIcon />
             </ControlButton>

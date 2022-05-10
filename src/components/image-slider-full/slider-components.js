@@ -25,7 +25,7 @@ position: relative;
 display: flex;
 justify-content: flex-end;
 margin-top: 1.5rem;
-padding-right: 75px;
+padding-right: ${props => props.sectionGallery === true ? '' : '75px'};
 @media screen and (max-width: 450px) {
     display: none;
 } 
