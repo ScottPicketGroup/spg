@@ -14,7 +14,7 @@ const LeftAligned = ({ publication }) => {
     <Grid cols="2">
     
       <Item>
-        <Header2 marginBottom="1rem" marginTop="-5rem" theme={theme}>
+        <Header2 marginBottom="1rem" marginTop="" theme={theme}>
           {publication.heading}
         </Header2>
         {publication.subHeading && (

@@ -185,7 +185,7 @@ transition: all .2 ease-in-out;
 }
 `
 export const ItemInfoContainer = styled.div`
-max-height: ${props => props.element === props.active ? '500px' : '1.3rem'};
+max-height: ${props => props.element == props.active ? '500px' : '1.3rem'};
 overflow: hidden;
 transition: max-height 0.25s ease-out;
 width: 100%;

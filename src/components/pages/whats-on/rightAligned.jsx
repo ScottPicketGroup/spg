@@ -15,7 +15,7 @@ const RightAligned = ({ data, i }) => {
   return theme ? (
     <Grid cols="2" first={i}>
       <Item >
-        <Header2 marginBottom="1rem" marginTop="-5rem" theme={theme}>
+        <Header2 marginBottom="1rem" marginTop="" theme={theme}>
           {Heading}
         </Header2>
         <Header3

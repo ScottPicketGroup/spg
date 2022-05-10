@@ -17,7 +17,7 @@ const LeftAligned = ({ data, i }) => {
       <Item
       
       >
-        <Header2 marginBottom="1rem" marginTop={ theme.name === "Mobile" ? `2.5rem` : `-5rem`} theme={theme}>
+        <Header2 marginBottom="1rem" marginTop={ theme.name === "Mobile" ? `2.5rem` : ``} theme={theme}>
           {Heading}
         </Header2>
         <Header3
