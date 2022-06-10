@@ -19,6 +19,7 @@ import GiftVoucher from "../SubMenus/GiftVoucher";
 import Provider from "../SubMenus/Provider";
 import Events from "../SubMenus/Events";
 import footerLogo from "../../../images/insta-white.png";
+import SubscribeForm from "./SubscribeForm";
 const FooterComponent = ({path}) => {
 
   const [show, setShow] = useState(false);
@@ -214,23 +215,8 @@ Australia
                 </MenuItem>
               </Menu>
             </Item>
-            <Item theme={theme}>
-              {" "}
-              <Menu theme={theme}>
-                <MenuHeading theme={theme}>Subscribe</MenuHeading>
-                <MenuItem theme={theme}>
-                Sign up for updates from the Scott Pickett Group and to be the first to know about events, new venues, collaborations and more. 
-                </MenuItem>
-                <SubMenuHeading theme={theme}>EMAIL ADDRESS</SubMenuHeading>
-
-                <Input
-                  theme={theme}
-                  placeholder={" Please enter your email address"}
-                />
-
-                <Button>Subscribe</Button>
-              </Menu>
-            </Item>
+            <SubscribeForm theme={theme}/>
+            
           </Grid>
         </Footer>
       </FooterContainer>
