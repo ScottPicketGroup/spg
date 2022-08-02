@@ -21,9 +21,7 @@ import Events from "../SubMenus/Events";
 import footerLogo from "../../../images/insta-white.png";
 
 import FooterLinks from "./FooterLinks";
-
 import SubscribeForm from "./SubscribeForm";
-
 const FooterComponent = ({path}) => {
 
   const [show, setShow] = useState(false);
@@ -182,7 +180,6 @@ Australia
               </Menu>
             </Item>
             <SubscribeForm theme={theme}/>
-            
           </Grid>
         </Footer>
       </FooterContainer>
