@@ -19,6 +19,7 @@ import GiftVoucher from "../SubMenus/GiftVoucher";
 import Provider from "../SubMenus/Provider";
 import Events from "../SubMenus/Events";
 import footerLogo from "../../../images/insta-white.png";
+import FooterLinks from "./FooterLinks";
 const FooterComponent = ({path}) => {
 
   const [show, setShow] = useState(false);
@@ -144,45 +145,7 @@ const FooterComponent = ({path}) => {
               {" "}
               <Menu theme={theme}>
                 <MenuHeading theme={theme}>Venues</MenuHeading>
-                <MenuItem theme={theme}>
-                  <a href="http://www.chancerylane.com.au" target="_blank"
-                  style={{textDecoration: `none`, color: `white`}}
-                  >Chancery Lane </a></MenuItem>
-<MenuItem theme={theme}>
-                  <a href="http://www.leshoppe.com.au" target="_blank"
-                  style={{textDecoration: `none`, color: `white`}}
-                  >Le Shoppe </a></MenuItem>
-<MenuItem theme={theme}>
-                  <a href="https://matilda159.com/" target="_blank"
-                  style={{textDecoration: `none`, color: `white`}}
-                  >Matilda </a></MenuItem>
-
-                <MenuItem theme={theme}>
-                  <a href="https://www.theestelle.com.au/" target="_blank"
-                  style={{textDecoration: `none`, color: `white`}}
-                  >Estelle </a></MenuItem>
-               
-                <MenuItem theme={theme}>
-                  <a href="https://longrainmelbourne.com/" target="_blank"
-                  style={{textDecoration: `none`, color: `white`}}
-                  >Longrain </a></MenuItem>
-                
-                <MenuItem theme={theme}>
-                  <a href="https://longrainmelbourne.com/event/" target="_blank"
-                  style={{textDecoration: `none`, color: `white`}}
-                  >Longsong </a></MenuItem>
-                <MenuItem theme={theme}>
-                  <a href="http://www.pastorerestaurant.com.au" target="_blank"
-                  style={{textDecoration: `none`, color: `white`}}
-                  >Pastore </a></MenuItem>
-                   <MenuItem theme={theme}>
-                  <a href="http://www.pickettsdeli.com" target="_blank"
-                  style={{textDecoration: `none`, color: `white`}}
-                  >Pickett’s Deli & Rotisserie </a></MenuItem>
-                   <MenuItem theme={theme}>
-                  <a href="https://www.spevents.com.au" target="_blank"
-                  style={{textDecoration: `none`, color: `white`}}
-                  >SP Events </a></MenuItem>
+                <FooterLinks/>
                
 
               </Menu>
