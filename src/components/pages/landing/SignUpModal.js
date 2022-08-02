@@ -53,7 +53,7 @@ const SignUpModal = ({ setSignUp, signUp }) => {
           <CloseButton />
         </ModalCloseButton>
       </RightModalContainer>
-    </SignUpModalContainer>ll
+    </SignUpModalContainer>
   )
 }
 
