@@ -39,7 +39,9 @@ const Venues = () => {
               
               }</ItemImgCaption>
               <BC3>
-              {venue.shortAddress && venue.shortAddress.replace(/[0-9]/g, '')}
+
+                  {venue.shortAddress && venue.shortAddress.replace(/[0-9]/g, '')}
+
               </BC3>
             </RightContainerLink>
           </InnerContainer>

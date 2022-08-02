@@ -19,6 +19,7 @@ import GiftVoucher from "../SubMenus/GiftVoucher";
 import Provider from "../SubMenus/Provider";
 import Events from "../SubMenus/Events";
 import footerLogo from "../../../images/insta-white.png";
+
 import FooterLinks from "./FooterLinks";
 import SubscribeForm from "./SubscribeForm";
 const FooterComponent = ({path}) => {

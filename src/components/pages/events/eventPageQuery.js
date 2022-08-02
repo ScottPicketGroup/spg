@@ -26,7 +26,6 @@ export const useEventsPageQuery = () => {
           }
           restaurants {
             venueName
-            shortAddress
             venueImage {
               gatsbyImageData(placeholder: BLURRED)
               title
