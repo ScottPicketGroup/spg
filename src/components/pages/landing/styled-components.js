@@ -198,6 +198,7 @@ width: 100%;
 `
 
 export const SignUpModalContainer = styled.div`
+padding: 0 3.84rem;
 margin-Top: ${(props) => (props.marginTop ? props.marginTop : `0`)};
 position: fixed;
 bottom: 0;
@@ -241,13 +242,13 @@ export const ModalCloseButton = styled.div`
 
 export const RightModalContainer = styled(RightContainer)`
   display: flex;
-  width: 100%;
+  width: 77%;
   min-height: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-direction: column;
-  margin-right: 8rem;
+  
   margin-top: 0;
   @media (max-width: 450px) {
     width: 100%;
@@ -259,13 +260,14 @@ export const RightModalContainer = styled(RightContainer)`
     }
 `;
 export const LeftModalContainer = styled(LeftContainer)`
+width: 38%;
  @media (max-width: 450px) {
 display: none;
 }
 `;
 
 export const IntroWrapper = styled.div `
-width: 80%;
+width: 100%;
 display: flex;
 align-items: flex-start;
 @media (max-width: 450px) {

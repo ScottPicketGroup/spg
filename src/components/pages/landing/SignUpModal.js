@@ -3,6 +3,7 @@ import styled from "styled-components"
 import {
 
   BC1Form,
+  InnerContainer,
   IntroWrapper,
   LeftContainer,
   LeftModalContainer,
@@ -26,6 +27,7 @@ const SignUpModal = ({ setSignUp, signUp }) => {
   }, 1000)
   return (
     <SignUpModalContainer signUp={signUp}>
+      
       <LeftModalContainer>
         <LogoImg src={logo} signUp />
       </LeftModalContainer>
@@ -59,7 +61,7 @@ export default SignUpModal
 
 export const ExternalForm = styled.div`
 
-width: 78.5%;
+width: 92.5%;
 margin-right: .85rem;
 @media (max-width: 450px) {
   width: 100%;
