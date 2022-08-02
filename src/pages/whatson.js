@@ -1,23 +1,19 @@
-import React from "react";
-import Seo from "../components/seo";
-import { useTheme } from "styled-components";
+import React from "react"
+import Seo from "../components/seo"
+import { useTheme } from "styled-components"
 
-import Landing from "../components/pages/whats-on/whatsOn";
-import MobileLanding from "../components/pages/whats-on/mobileWhatsOn";
+import Landing from "../components/pages/whats-on/whatsOn"
 
-const WhatsOn = (props) => {
-  const theme = useTheme();
+const WhatsOn = props => {
+  const theme = useTheme()
 
   return theme ? (
     <div theme={theme}>
       <Seo title="WhatsOn" />
 
-        <Landing pageProps={props} />
-   
+      <Landing pageProps={props} />
     </div>
-  ) : (
-    <div></div>
-  );
-};
+  ) : null
+}
 
-export default WhatsOn;
+export default WhatsOn

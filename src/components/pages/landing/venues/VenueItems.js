@@ -20,13 +20,22 @@ import { BC3, Header2 } from "../../../global/fontStyles"
 import Renderer from "./DescriptionRenderer"
 const VenueItems = ({ venues }) => {
   const [active, setActive] = useState("")
+  const [open, setOpen] = useState("")
+
+React.useEffect(() => {
+  
+},[active]);
 
   const handleExpand = el => {
-    console.log(active)
+    
     if (active === "") setActive(el)
     else if (active === el) setActive("")
     else if (active !== el) setActive(el)
+    console.log('ACTIVE',active,'EL', el)
   }
+
+
+
   return (
     <SectionContainer>
       <InnerContainer >

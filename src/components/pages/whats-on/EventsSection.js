@@ -14,9 +14,9 @@ const EventsSection = ({whatsOnEvents}) => {
                   <LeftContainer></LeftContainer>
                   <RightContainer>
                     {index % 2 === 0 ? (
-                      <RightAligned data={item} />
+                      <RightAligned data={item} i={index}/>
                     ) : (
-                      <LeftAligned data={item} />
+                      <LeftAligned data={item} i={index}/>
                     )}
                   </RightContainer>
                 </InnerContainer>

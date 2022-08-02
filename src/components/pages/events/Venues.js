@@ -1,6 +1,6 @@
 import React from "react"
 
-import { GatsbyImage, getImage, StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { SectionContainer, FullImageContainer, LeftContainer, InnerContainer} from "../../global/GlobalStyles"
 
 import {
@@ -39,7 +39,9 @@ const Venues = () => {
               
               }</ItemImgCaption>
               <BC3>
+
                   {venue.shortAddress && venue.shortAddress.replace(/[0-9]/g, '')}
+
               </BC3>
             </RightContainerLink>
           </InnerContainer>

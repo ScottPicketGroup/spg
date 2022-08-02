@@ -25,7 +25,7 @@ position: relative;
 display: flex;
 justify-content: flex-end;
 margin-top: 1.5rem;
-padding-right: 75px;
+padding-right: ${props => props.sectionGallery === true ? '' : '75px'};
 @media screen and (max-width: 450px) {
     display: none;
 } 
@@ -55,9 +55,10 @@ export const MobileControls = styled.div`
 padding: 1rem 18px 0 18px;
 display: flex;
 justify-content: space-between;
-
+margin-bottom: ${props => props.marginBottom ? '4.5rem' : ''};
 @media screen and (min-width: 451px) {
     display: none;
+    
 }
 `
 

@@ -17,7 +17,7 @@ const DesktopHome = ({ HomeImage, path }) => {
       <GatsbyImage
         image={getImage(HomeImage)}
         alt="test"
-        style={{aspectRatio: `5/3`}}
+        style={{aspectRatio: `3/2`}}
       />
       </RightContainer>
     </SectionContainer>

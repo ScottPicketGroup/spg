@@ -18,7 +18,6 @@ const TextUnderSlider = ({theme}) => {
             <RightContainer>
               <Header1 theme={theme}>{spacesHeading}</Header1>
               <EventsUnderSliderSectionRenderer node={spacesIntro} />
-             
             </RightContainer>
           </InnerContainer>
         </SectionContainer>
