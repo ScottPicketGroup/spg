@@ -5,8 +5,8 @@ export const useWhatsOnPageData = () => {
   const data = useStaticQuery(
     graphql`
     query WhatsOnPageQuery {
-        contentfulWhatsOnPageContent(id: {eq: "f3a7a0a6-51f5-5f93-9c97-d318839ddf2d"}) {
-          id
+        contentfulSpgWhatsOnPageContent(id: {eq: "f3a7a0a6-51f5-5f93-9c97-d318839ddf2d"}) {
+          
           heroImage {
             gatsbyImageData(placeholder: BLURRED)
             title
@@ -33,6 +33,6 @@ export const useWhatsOnPageData = () => {
       
     `);
 
-  return data.contentfulWhatsOnPageContent
+  return data.contentfulSpgWhatsOnPageContent
 }
 
