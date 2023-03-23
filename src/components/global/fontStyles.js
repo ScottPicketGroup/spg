@@ -1,22 +1,31 @@
 import styled from "styled-components"
 
 export const Header1 = styled.h1`
+ margin-top: ${props =>
+    props.publication && props.theme.name === "Desktop"
+      ? ""
+      : props.marginTop
+      ? props.marginTop
+      : 0};
   margin-bottom: ${props => (props.marginBottom ? props.marginBottom : "")};
   font-size: ${props =>
     props.theme.name === "Desktop" ? "2.84rem" : "1.75rem"};
   font-family: ${props => props.theme.fontFamily.Times};
   font-weight: bold;
   color: ${props => props.theme.colors.text};
-  margin: 0;
+
   padding-bottom: ${props => (props.paddingBottom ? props.paddingBottom : "")};
 `
 
 export const Header2 = styled.h2`
   font-size: ${props => (props.theme.name === "Desktop" ? "1.9rem" : "1.5rem")};
 
-  margin-top: ${props => (props.publication && props.theme.name === "Desktop" ? "" : props.marginTop ? props.marginTop  :
-
-    0)};
+  margin-top: ${props =>
+    props.publication && props.theme.name === "Desktop"
+      ? ""
+      : props.marginTop
+      ? props.marginTop
+      : 0};
   margin-bottom: ${props => (props.marginBottom ? props.marginBottom : 0)};
   line-height: ${props => (props.theme.name === "Desktop" ? "1" : "1")};
   font-family: ${props => props.theme.fontFamily.Times};
@@ -41,13 +50,13 @@ export const Header4 = styled.h4`
 `
 
 export const BC1 = styled.p`
-a{
-  color: inherit;
-  transition: opacity .2s ease-in;
-  :hover {
-    opacity: .5;
+  a {
+    color: inherit;
+    transition: opacity 0.2s ease-in;
+    :hover {
+      opacity: 0.5;
+    }
   }
-}
   margin-top: ${props =>
     props.marginTop
       ? props.marginTop
@@ -55,11 +64,10 @@ a{
       ? "2.25rem"
       : "1.5rem"};
   margin-bottom: ${props =>
-     props.textUnderGallery
-      ? "3.5rem": 
-    props.marginBottom
+    props.textUnderGallery
+      ? "3.5rem"
+      : props.marginBottom
       ? props.marginBottom
-      
       : 0};
   font-size: ${props =>
     props.theme.name === "Desktop" ? "1.59rem" : "1.25rem"};
@@ -90,12 +98,14 @@ export const BC2 = styled.p`
   }
 `
 export const BC3 = styled.p`
-  margin-Top: ${props => (props.marginTop ? props.marginTop : 
-      props.timeLine && props.theme.name === "Mobile" ? "1.5rem" :
-    `0`)};
+  margin-Top: ${props =>
+    props.marginTop
+      ? props.marginTop
+      : props.timeLine && props.theme.name === "Mobile"
+      ? "1.5rem"
+      : `0`};
   margin-bottom: ${props =>
-    props.marginBottom ? props.marginBottom  :
-    `.5rem`};
+    props.marginBottom ? props.marginBottom : `.5rem`};
   font-size: ${props => (props.theme.name === "Desktop" ? "1.2rem" : "1rem")};
   font-family: ${props =>
     props.light
