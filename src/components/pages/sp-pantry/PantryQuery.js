@@ -1,47 +1,35 @@
-// import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
-// export const useLandingData = () => {
+export const useSpPantryData = () => {
  
-//   const data = useStaticQuery(
-//     graphql`
-//     query LandingData {
-//       contentfulLandingPageContent {
-//         id
-//         introHeading
-//         introLinkLabel
-//         introduction {
-//           raw
-//         }
-//         landingGallery {
-//           gatsbyImageData(placeholder: BLURRED)
-//           title
-//         }
-//         venuesSection {
-//           sectionHeading
-//           venues {
-//             venueName
-//             venueWebsite
-//             venueAddress
-//             venueDescription {
-//               raw
-//             }
-//             venueImage {
-//               gatsbyImageData
-//             }
-//           }
-//         }
-//         whatsOnHeading
-//         whatsOnDescription {
-//           raw
-//         }
-//         whatsOnLinkLabel
-//         heroImage {
-//           gatsbyImageData
-//         }
-//       }
-//     }
-//     `);
+  const data = useStaticQuery(
+    graphql`
+    query spPantryQuery {
+        contentfulSpPantryPageContent {
+          id
+          heroImage {
+            gatsbyImageData
+            description
+          }
+          title
+          introduction {
+            raw
+          }
+          introLinkLabel
+          fullWidthImage {
+            gatsbyImageData
+          }
+          productsTitle
+          productsIntroduction {
+            raw
+          }
+          products {
+            restaurantSource
+          }
+        }
+      }
+    `);
 
-//   return data.contentfulLandingPageContent
-// }
+  return data.contentfulLandingPageContent
+}
 
