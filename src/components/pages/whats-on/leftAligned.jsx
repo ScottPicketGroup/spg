@@ -13,7 +13,7 @@ const LeftAligned = ({ data, i, path }) => {
   const { Heading, subHeading, content, eventLink, linkLabel } = data
   return theme ? (
     <Grid cols="2" first={i}>
-      <Item>{data ? <ContentfulSliderFullPage whatsOn={true} contentfulImages={data.images} marginBottom /> : null}</Item>
+      <Item>{data ? <ContentfulSliderFullPage whatsOn={true} contentfulImages={data.images} marginBottom path={path}/> : null}</Item>
       <Item
       
       >
