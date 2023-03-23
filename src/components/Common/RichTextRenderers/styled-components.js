@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const IntroductionRendererContainer = styled.div`
+width: ${props => props.product === true && '60%'};
 margin-top: ${props =>
     props.sp === "true"
        

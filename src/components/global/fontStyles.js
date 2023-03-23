@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Header1 = styled.h1`
- margin-top: ${props =>
+  margin-top: ${props =>
     props.publication && props.theme.name === "Desktop"
       ? ""
       : props.marginTop
@@ -60,11 +60,15 @@ export const BC1 = styled.p`
   margin-top: ${props =>
     props.marginTop
       ? props.marginTop
+      : props.product === true
+      ? "0"
       : props.theme.name === "Desktop"
       ? "2.25rem"
       : "1.5rem"};
   margin-bottom: ${props =>
-    props.textUnderGallery
+    props.product === true
+      ? "0"
+      : props.textUnderGallery
       ? "3.5rem"
       : props.marginBottom
       ? props.marginBottom

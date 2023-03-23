@@ -96,9 +96,10 @@ export const MenuHeader = styled.div`
 `;
 
 export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: ${(props) => (props.theme.name === "Desktop" ? "3.5rem 0rem" : "3.5rem 0")};
+display: grid;
+ grid-template-columns: 50% 50%;
+grid-gap: 3.5rem 0;
+
   align-items: center;
   align-items: start;
 `;

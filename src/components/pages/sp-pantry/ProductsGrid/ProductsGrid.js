@@ -11,6 +11,7 @@ import {
 } from "../../../global/GlobalStyles"
 import { useSpPantryData } from "../PantryQuery"
 import { Grid, Item } from "../styled-components"
+import { Link } from "gatsby"
 
 const ProductsGrid = ({ theme }) => {
   const { products } = useSpPantryData()
@@ -32,7 +33,9 @@ const ProductsGrid = ({ theme }) => {
                 <BC3 marginTop="2rem" marginBottom="1rem">
                   {products[0].shortIntro}
                 </BC3>
+                <Link to={`/${product.productName.toLowerCase().replace(/\s/g, '+')}`}>
                 <Button margin="1rem 0">Shop Now</Button>
+                </Link>
               </Item>
             ))}
           </Grid>
