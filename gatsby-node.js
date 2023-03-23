@@ -49,7 +49,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         products.data.allContentfulPantryProduct.edges.forEach(({ node }) => {
           
             // const pathToUse =  node.productName.replace(/\s/g, '+')
-            const path = `/${node.productName}`
+            const path = `/${node.productName.toLowerCase()}`
             createPage({
               path,
               component: PantryProductTemplate,
