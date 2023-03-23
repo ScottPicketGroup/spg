@@ -103,9 +103,23 @@ const MenuResusable = () => {
             Gift Vouchers
             </a>
           </MenuItem>
+         
+          <MenuItem theme={theme}>
+            {" "}
+            <Link
+              to="/pantry"
+              style={{ color: "inherit", textDecoration: "none" }}
+              partiallyActive={true}
+              activeStyle={{ fontFamily: `UntitledSansMedium` }}
+            >
+              Sp Pantry
+            </Link>
+          </MenuItem>
+
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
             Providoor
           </MenuItem>
+         
           {/* <MenuItem theme={theme}>Shop</MenuItem> */}
           <MenuItem theme={theme}>
             {" "}

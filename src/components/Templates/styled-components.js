@@ -14,7 +14,7 @@ export const InnerContainer = styled.div`
 `
 
 export const RightContainer = styled.div`
-margin-bottom: 3rem;
+
   margin-top: ${props =>
   props.none ? '0' :
   props.product ? '6rem' :

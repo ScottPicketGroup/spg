@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { useTheme } from "styled-components"
 import { Container } from "../../global/GlobalStyles"
 
@@ -20,26 +20,27 @@ const Pantry = ({ pageProps }) => {
   const theme = useTheme()
   // const contentfulImages = useLandingData().landingGallery
   // const image = useLandingData().heroImage
-const {heroImage, fullWidthImage} = useSpPantryData()
-const contentfulImages = [fullWidthImage]
-console.log(' contentfulImages',  heroImage)
+  const { heroImage, fullWidthImage } = useSpPantryData()
+  const contentfulImages = [fullWidthImage]
+  const myRef = useRef(null)
+  const executeScroll = () => myRef.current.scrollIntoView({ block: 'start',  behavior: 'smooth' }) 
   return theme ? (
     <div>
-     <Container theme={theme}>
+      <Container theme={theme}>
         {theme.name === "Desktop" ? (
           <Home HomeImage={heroImage} path={pageProps.path} />
         ) : (
-          <MobileHome HomeImage={heroImage} path={pageProps.path} old={false}/>
+          <MobileHome HomeImage={heroImage} path={pageProps.path} old={false} />
         )}
-        <Introduction />
+        <Introduction executeScroll={executeScroll}/>
       </Container>
-      <ContentfulSliderFullPage contentfulImages={contentfulImages} path={pageProps.path}/>
- 
-
-      <Container theme={theme}>
-        <ProductsIntroduction/>
-        <ProductsGrid/>
-
+      <ContentfulSliderFullPage
+        contentfulImages={contentfulImages}
+        path={pageProps.path}
+      />
+      <Container theme={theme} ref={myRef}>
+        <ProductsIntroduction />
+        <ProductsGrid />
       </Container>
       <Footer />
       <SignUpModal signUp={signUp} setSignUp={setSignUp} />

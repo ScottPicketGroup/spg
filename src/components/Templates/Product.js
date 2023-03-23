@@ -19,7 +19,7 @@ const Product = ({ pageContext, location }) => {
   const path = location
   // const contentfulImages = useLandingData().landingGallery
   // const image = useLandingData().heroImage
-  console.log("productData", location)
+  
   const {
     heroImage,
     introduction,
@@ -52,7 +52,7 @@ const Product = ({ pageContext, location }) => {
         {/* <ProductsIntroduction/>
         <ProductsGrid/> */}
         <ProductDetails productDetails={productDetails} />
-        <ProductRange />
+        <ProductRange location={location}/>
         <RestaurantFeature
           restaurantSource={restaurantSource}
           restaurantVerticalImage={restaurantVerticalImage}

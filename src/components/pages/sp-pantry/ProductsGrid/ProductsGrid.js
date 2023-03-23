@@ -33,7 +33,7 @@ const ProductsGrid = ({ theme }) => {
                 <BC3 marginTop="2rem" marginBottom="1rem">
                   {products[0].shortIntro}
                 </BC3>
-                <Link to={`/${product.productName.toLowerCase().replace(/\s/g, '+')}`}>
+                <Link to={`/${product.productName.toLowerCase().replace(/\s/g, '+')}`} style={{textDecoration: 'none'}}>
                 <Button margin="1rem 0">Shop Now</Button>
                 </Link>
               </Item>
