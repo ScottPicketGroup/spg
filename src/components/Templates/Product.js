@@ -54,7 +54,7 @@ const Product = ({ pageContext, location }) => {
         <ProductDetails productDetails={productDetails} />
         <ProductRange />
         <RestaurantFeature
-        restaurantSource={restaurantSource}
+          restaurantSource={restaurantSource}
           restaurantVerticalImage={restaurantVerticalImage}
           restaurantAddress={restaurantAddress}
           restaurantDescription={restaurantDescription}
