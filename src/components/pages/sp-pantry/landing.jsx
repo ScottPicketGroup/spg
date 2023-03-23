@@ -4,36 +4,42 @@ import { Container } from "../../global/GlobalStyles"
 
 import Introduction from "./Introduction/Introduction"
 import Footer from "../../Common/Footer/Footer"
-import Home from "../../Common/DesktopHome"
 import SignUpModal from "./SignUpModal"
-import Venues from "./venues/venues"
-import WhatsOnLanding from "./WhatsOn/WhatsOnLanding"
-import { useLandingData } from "./LandingQuery"
-import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
-import MobileHome from "../../Common/MobileHome"
+import { useSpPantryData } from "./PantryQuery"
 
-const Landing = ({ pageProps }) => {
+// import WhatsOnLanding from "./WhatsOn/WhatsOnLanding"
+import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
+
+import Home from "../../Common/DesktopHome"
+import MobileHome from "../../Common/MobileHome"
+import ProductsIntroduction from "./ProductsIntroduction/ProductsIntroduction"
+import ProductsGrid from "./ProductsGrid/ProductsGrid"
+
+const Pantry = ({ pageProps }) => {
   const [signUp, setSignUp] = useState(false)
   const theme = useTheme()
-  const contentfulImages = useLandingData().landingGallery
-  const image = useLandingData().heroImage
-
+  // const contentfulImages = useLandingData().landingGallery
+  // const image = useLandingData().heroImage
+const {heroImage, fullWidthImage} = useSpPantryData()
+const contentfulImages = [fullWidthImage]
+console.log(' contentfulImages',  heroImage)
   return theme ? (
     <div>
-      <Container theme={theme}>
+     <Container theme={theme}>
         {theme.name === "Desktop" ? (
-          <Home HomeImage={image} path={pageProps.path} />
+          <Home HomeImage={heroImage} path={pageProps.path} />
         ) : (
-          <MobileHome HomeImage={image} path={pageProps.path} old={false}/>
+          <MobileHome HomeImage={heroImage} path={pageProps.path} old={false}/>
         )}
         <Introduction />
       </Container>
-
       <ContentfulSliderFullPage contentfulImages={contentfulImages} path={pageProps.path}/>
+ 
 
       <Container theme={theme}>
-        <Venues />
-        <WhatsOnLanding />
+        <ProductsIntroduction/>
+        <ProductsGrid/>
+
       </Container>
       <Footer />
       <SignUpModal signUp={signUp} setSignUp={setSignUp} />
@@ -43,4 +49,4 @@ const Landing = ({ pageProps }) => {
   )
 }
 
-export default Landing
+export default Pantry

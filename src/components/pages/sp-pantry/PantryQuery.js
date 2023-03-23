@@ -17,6 +17,7 @@ export const useSpPantryData = () => {
           }
           introLinkLabel
           fullWidthImage {
+            title
             gatsbyImageData
           }
           productsTitle
@@ -25,11 +26,17 @@ export const useSpPantryData = () => {
           }
           products {
             restaurantSource
+            shortIntro
+            productName
+            productImage {
+              gatsbyImageData
+              title
+            }
           }
         }
       }
     `);
 
-  return data.contentfulLandingPageContent
+  return data.contentfulSpPantryPageContent
 }
 

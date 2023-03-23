@@ -30,7 +30,7 @@ const Landing = ({ pageProps }) => {
           <MobileHome HomeImage={image} path={pageProps.path} old={false}/>
         )}
         <Introduction introduction={introduction}/>
-        <EventsSection whatsOnEvents={whatsOnEvents} />
+        <EventsSection whatsOnEvents={whatsOnEvents} path={pageProps.path}/>
       </Container>
 
       <Footer />

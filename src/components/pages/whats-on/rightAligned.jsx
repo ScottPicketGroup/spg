@@ -7,7 +7,7 @@ import {  Header2, Header3 } from "../../global/fontStyles"
 import ContentContainer from "./ContentContainer"
 import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
 
-const RightAligned = ({ data, i }) => {
+const RightAligned = ({ data, i, path }) => {
   console.log('i', i)
   const theme = useTheme()
 
@@ -33,7 +33,7 @@ const RightAligned = ({ data, i }) => {
           </a>
         ) : null}
       </Item>
-      <Item>{data ? <ContentfulSliderFullPage whatsOn={true} contentfulImages={data.images} /> : null}</Item>
+      <Item>{data ? <ContentfulSliderFullPage whatsOn={true} contentfulImages={data.images} path={path}/> : null}</Item>
     </Grid>
   ) : (
     <div></div>

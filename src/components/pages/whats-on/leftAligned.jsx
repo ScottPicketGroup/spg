@@ -7,7 +7,7 @@ import ContentContainer from "./ContentContainer"
 import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
 
 
-const LeftAligned = ({ data, i }) => {
+const LeftAligned = ({ data, i, path }) => {
   console.log(i)
   const theme = useTheme()
   const { Heading, subHeading, content, eventLink, linkLabel } = data
@@ -26,7 +26,7 @@ const LeftAligned = ({ data, i }) => {
         >
           {subHeading}
         </Header3>
-        {data.content && <ContentContainer content={content} />}
+        {data.content && <ContentContainer content={content} path={path}/>}
         {eventLink ? (
           <a href={eventLink} target="_blank"
           rel="noreferrer">

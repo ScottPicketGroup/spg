@@ -3,7 +3,7 @@ import { InnerContainer, LeftContainer, RightContainer, SectionContainer } from 
 import LeftAligned from './leftAligned'
 import RightAligned from './rightAligned'
 
-const EventsSection = ({whatsOnEvents}) => {
+const EventsSection = ({whatsOnEvents, path}) => {
   return (
     <>
     {whatsOnEvents &&
@@ -14,9 +14,9 @@ const EventsSection = ({whatsOnEvents}) => {
                   <LeftContainer></LeftContainer>
                   <RightContainer>
                     {index % 2 === 0 ? (
-                      <RightAligned data={item} i={index}/>
+                      <RightAligned data={item} i={index} path={path}/>
                     ) : (
-                      <LeftAligned data={item} i={index}/>
+                      <LeftAligned data={item} i={index} path={path}/>
                     )}
                   </RightContainer>
                 </InnerContainer>

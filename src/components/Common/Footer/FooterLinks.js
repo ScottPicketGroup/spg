@@ -5,7 +5,7 @@ import { useFooterData } from "./useFooterQuery"
 
 const FooterLinks = () => {
   const links = useFooterData().edges[0].node.restaurants
-  console.log("links", links)
+ 
   const theme = useTheme()
   return theme ? (
     <>

@@ -27,7 +27,7 @@ const Events = ({ pageProps }) => {
         )}
         <Introduction />
       </Container>
-      <ContentfulSliderFullPage contentfulImages={contentfulImages} />
+      <ContentfulSliderFullPage contentfulImages={contentfulImages} path={pageProps.path}/>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <TextUnderSlider />
         <Venues />

@@ -11,7 +11,7 @@ import { useScottPickettPageData } from "../ScottPicketQuery"
 import { RightContainer } from "../styled-components"
 import Quote from "./Quote"
 
-const Introduction = ({ theme }) => {
+const Introduction = ({ theme, path }) => {
   const {
     pageHeading,
     introduction,
@@ -27,7 +27,7 @@ const Introduction = ({ theme }) => {
           <RightContainer>
             <Header1 theme={theme}>{pageHeading}</Header1>
             <IntroductionRenderer node={introduction} sp={true} />
-            <ContentfulSliderFullPage contentfulImages={introductionGallery} sectionGallery={true}/>
+            <ContentfulSliderFullPage contentfulImages={introductionGallery} sectionGallery={true} path={path}/>
             <IntroductionRenderer
               node={textUnderGallery}
               textUnderGallery={true}

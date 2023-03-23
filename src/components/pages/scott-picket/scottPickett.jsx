@@ -24,9 +24,9 @@ const Landing = ({ pageProps }) => {
         ) : (
           <MobileHome HomeImage={image} path={pageProps.path} />
         )}
-        <Introduction />
+        <Introduction path={pageProps.path}/>
       </Container>
-      <ContentfulSliderFullPage contentfulImages={contentfulImages} />
+      <ContentfulSliderFullPage contentfulImages={contentfulImages} path={pageProps.path}/>
       <Container theme={theme} style={{ paddingBottom: `9rem` }}>
         <Timeline />
         <Accolades />

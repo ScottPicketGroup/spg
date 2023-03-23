@@ -17,6 +17,7 @@ const Controls = ({
   activeImg,
   setActiveImg,
   sectionGallery,
+  path,
 }) => {
   const nextImage = () => {
     setTimeout(() => {
@@ -42,32 +43,53 @@ const Controls = ({
     }, 200)
   }
 
-  
+  console.log("path", path.includes("pantry"))
   return (
     <>
-    {contentfulImages.length > 1 &&
-      (
-      <><ControlsContainer sectionGallery={sectionGallery}>
-        <ControlsSection sectionGallery={sectionGallery}>
-          <ImageCaption>{contentfulImages[imageNumber - 1].title}</ImageCaption>
-          <ControlButtonContainer sectionGallery={sectionGallery}>
-            <ControlButton onClick={previousImage}>
-              <PreviousIcon />
-            </ControlButton>
-            <ControlButton onClick={nextImage}>
-              <NextIcon />
-            </ControlButton>
-          </ControlButtonContainer>
-        </ControlsSection>
-      </ControlsContainer>
-      <MobileControls marginBottom>
-     <ImageCaption>
-        {imageNumber} / {contentfulImages.length}
-      </ImageCaption>
-        <ImageCaption>{contentfulImages[imageNumber - 1].title}</ImageCaption>
-      </MobileControls>
-      </>)}
-
+      {contentfulImages.length > 1 ? (
+        <>
+          <ControlsContainer sectionGallery={sectionGallery}>
+            <ControlsSection sectionGallery={sectionGallery}>
+              <ImageCaption>
+                {contentfulImages[imageNumber - 1].title}
+              </ImageCaption>
+              <ControlButtonContainer sectionGallery={sectionGallery}>
+                <ControlButton onClick={previousImage}>
+                  <PreviousIcon />
+                </ControlButton>
+                <ControlButton onClick={nextImage}>
+                  <NextIcon />
+                </ControlButton>
+              </ControlButtonContainer>
+            </ControlsSection>
+          </ControlsContainer>
+          <MobileControls marginBottom>
+            <ImageCaption>
+              {imageNumber} / {contentfulImages.length}
+            </ImageCaption>
+            <ImageCaption>
+              {contentfulImages[imageNumber - 1].title}
+            </ImageCaption>
+          </MobileControls>
+        </>
+      ) : path && path.includes("pantry") ? (
+        <>
+          <ControlsContainer sectionGallery={sectionGallery}>
+            <ControlsSection sectionGallery={sectionGallery}>
+              <ImageCaption>
+                {contentfulImages[imageNumber - 1].title}
+              </ImageCaption>
+             
+            </ControlsSection>
+          </ControlsContainer>
+          <MobileControls marginBottom>
+          
+            <ImageCaption>
+              {contentfulImages[imageNumber - 1].title}
+            </ImageCaption>
+          </MobileControls>
+        </>
+      ) : null}
     </>
   )
 }
