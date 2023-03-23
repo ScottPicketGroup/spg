@@ -15,4 +15,8 @@ margin-bottom: ${props =>
       ? "3.5rem"
       
       : "0rem"};
+       @media (max-width: 450px) {
+    width: ${props => props.product === true && '100%'};
+    margin-bottom: ${props => props.product === true && '3rem'};
+       }
 `;

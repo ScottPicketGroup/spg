@@ -33,7 +33,7 @@ const Product = ({ pageContext, location }) => {
     buttonUrl,
   } = pageContext.productData
   return theme ? (
-    <div>
+    <div >
       <Container theme={theme}>
         {theme.name === "Desktop" ? (
           <DesktopHome HomeImage={heroImage} path={path} />
@@ -48,7 +48,7 @@ const Product = ({ pageContext, location }) => {
           restaurantSource={restaurantSource}
         />
       </Container>
-      <Container theme={theme}>
+      <Container theme={theme} product>
         {/* <ProductsIntroduction/>
         <ProductsGrid/> */}
         <ProductDetails productDetails={productDetails} />

@@ -34,6 +34,7 @@ export const RightContainer = styled.div`
   justify-content: ${props =>
     props.device === "Mobile" ? "flex-end" : "flex-start"};
   border-bottom: ${props => props.product && `1px solid rgba(51, 51, 51, 25%)`};
+  
 `
 export const FullContainer = styled.div`
   display: ${props => (props.device === "Mobile" ? "flex" : "inline")};
@@ -111,6 +112,9 @@ export const Grid = styled.div`
     props.theme.name === "Desktop" ? "3.5rem 1rem" : "3.5rem 0"};
   align-items: center;
   align-items: start;
+   @media (max-width: 450px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `
 export const RestaurantGrid = styled.div`
   display: grid;
