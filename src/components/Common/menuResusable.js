@@ -112,13 +112,13 @@ const MenuResusable = () => {
               partiallyActive={true}
               activeStyle={{ fontFamily: `UntitledSansMedium` }}
             >
-              Sp Pantry
+              SP Pantry
             </Link>
           </MenuItem>
 
-          <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
+          {/* <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
             Providoor
-          </MenuItem>
+          </MenuItem> */}
          
           {/* <MenuItem theme={theme}>Shop</MenuItem> */}
           <MenuItem theme={theme}>

@@ -117,7 +117,7 @@ const FooterComponent = ({ path }) => {
                     Gift Vouchers{" "}
                   </a>
                 </MenuItem>
-                <MenuItem
+                {/* <MenuItem
                   theme={theme}
                   onClick={() => {
                     setShow(true)
@@ -125,8 +125,16 @@ const FooterComponent = ({ path }) => {
                   }}
                 >
                   Providoor
-                </MenuItem>
+                </MenuItem> */}
                 {/* <MenuItem theme={theme}>Shop</MenuItem> */}
+                <MenuItem theme={theme}>
+                  <Link
+                    to="/pantry"
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    SP Pantry
+                  </Link>
+                </MenuItem>
                 <MenuItem theme={theme}>
                   <Link
                     to="/careers"

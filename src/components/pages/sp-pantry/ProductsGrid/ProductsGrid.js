@@ -34,7 +34,7 @@ const ProductsGrid = ({ theme }) => {
                   {products[0].shortIntro}
                 </BC3>
                 <Link to={`/${product.productName.toLowerCase().replace(/\s/g, '+')}`} style={{textDecoration: 'none'}}>
-                <Button margin="1rem 0">Shop Now</Button>
+                <Button margin="1rem 0">Discover</Button>
                 </Link>
               </Item>
             ))}

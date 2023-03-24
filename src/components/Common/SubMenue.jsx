@@ -171,10 +171,10 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
             Gift Vouchers
             </a>
           </MenuItem>
-
+{/* 
           <MenuItem theme={theme} onClick={() => handleOpenSubMenu("provider")}>
             Providoor
-          </MenuItem>
+          </MenuItem> */}
 
           {/* <MenuItem theme={theme}>Shop</MenuItem> */}
 
@@ -209,8 +209,8 @@ const SubMenu = ({ hideModal, selectedMenu, handleOpenSubMenu }) => {
             case "bookATable":
               return <TableMenu hideModal={hideModal} />;
             
-            case "provider":
-              return <Provider hideModal={hideModal} />;
+            // case "provider":
+            //   return <Provider hideModal={hideModal} />;
             case "events":
               return <Events hideModal={hideModal} />;
             default:

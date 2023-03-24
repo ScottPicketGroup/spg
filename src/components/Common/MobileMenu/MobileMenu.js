@@ -169,14 +169,29 @@ const MobileMenu = ({
               Gift Vouchers
             </a>
           </MenuItem>
-          <MenuItem
+          {/* <MenuItem
             theme={theme}
             expandIcon={expandIcon}
             onClick={() => handleOpenSubMenu("provider")}
           >
             Providoor
-          </MenuItem>
+          </MenuItem> */}
           {/* <MenuItem theme={theme}>Shop</MenuItem> */}
+          <MenuItem
+            theme={theme}
+            bold={path && path.includes("/pantry")}
+            onClick={() => {
+              handleRedirect("/pantry")
+            }}
+          >
+            {" "}
+            <Link
+              to="/pantry"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              SP Pantry
+            </Link>
+          </MenuItem>
           <MenuItem
             theme={theme}
             bold={path && path.includes("/careers")}
