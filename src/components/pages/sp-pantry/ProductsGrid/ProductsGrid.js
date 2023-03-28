@@ -30,9 +30,9 @@ const ProductsGrid = ({ theme }) => {
                 />
                 <Header1 marginTop="1.75rem">{products[i].productName}</Header1>
                 <BC3>From {products[i].restaurantSource.toUpperCase()}</BC3>
-                {/* <BC3 marginTop="2rem" marginBottom="1rem">
-                  {products[0].shortIntro}
-                </BC3> */}
+                <BC3 marginTop="2rem" marginBottom="1rem">
+                  {products[i].shortIntro}
+                </BC3> 
                 <Link to={`/${product.productName.toLowerCase().replace(/\s/g, '+')}`} style={{textDecoration: 'none'}}>
                 <Button margin="1rem 0">Discover</Button>
                 </Link>
