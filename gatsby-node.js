@@ -15,7 +15,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
             productDetails {
               label
-              text
               details {
                 raw
               }
