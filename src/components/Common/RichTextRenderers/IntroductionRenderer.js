@@ -11,7 +11,7 @@ const IntroductionRenderer = ({
   textUnderGallery,
   product,
 }) => {
-  console.log("product", product)
+ 
   const options = {
     renderNode: {
       [BLOCKS.HEADING_1]: (node, children) => <Header1>{children}</Header1>,

@@ -43,7 +43,7 @@ const Controls = ({
     }, 200)
   }
 
-  console.log("path", path.includes("pantry"))
+  
   return (
     <>
       {contentfulImages.length > 1 ? (

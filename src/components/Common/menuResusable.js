@@ -37,7 +37,7 @@ const MenuResusable = () => {
     };
   });
 
-  console.log(open);
+
 
   return (
     <div>

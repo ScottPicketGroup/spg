@@ -16,7 +16,7 @@ const ContentfulSliderFullPage = ({
   const [imageNumber, setImageNumber] = useState(1)
   const [imageCount] = useState(contentfulImages.length - 1)
   const [activeImg, setActiveImg] = useState(0)
-console.log('contentfulImages', contentfulImages)
+
   let image = useRef(null)
   const handlers = useSwipeable({
     onSwipedLeft: () => nextImage(),

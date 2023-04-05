@@ -8,7 +8,7 @@ import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
 
 
 const LeftAligned = ({ data, i, path }) => {
-  console.log(i)
+
   const theme = useTheme()
   const { Heading, subHeading, content, eventLink, linkLabel } = data
   return theme ? (

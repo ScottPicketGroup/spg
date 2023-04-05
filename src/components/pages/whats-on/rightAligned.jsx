@@ -8,7 +8,7 @@ import ContentContainer from "./ContentContainer"
 import ContentfulSliderFullPage from "../../image-slider-full/ContentfulSlider"
 
 const RightAligned = ({ data, i, path }) => {
-  console.log('i', i)
+
   const theme = useTheme()
 
   const { Heading, subHeading, content, eventLink, linkLabel } = data

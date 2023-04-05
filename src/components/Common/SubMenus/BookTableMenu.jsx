@@ -21,7 +21,7 @@ const BookATable = ({ hideModal }) => {
   }
   const links = useSubMenuData().contentfulBookATableLinksInMenu.bookATableLInk
 
-  console.log(useSubMenuData().contentfulBookATableLinksInMenu.bookATableLInk)
+  
   return theme ? (
     <div>
       <Menu theme={theme} inModal={true}>
@@ -34,7 +34,7 @@ const BookATable = ({ hideModal }) => {
           theme={theme}
         >
           <a
-            href={link.linkURL}
+            href={link.linkUrl}
             target="_blank"
             style={{ textDecoration: `none`, color: `inherit` }}
           >
