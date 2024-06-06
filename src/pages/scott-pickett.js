@@ -10,7 +10,7 @@ const ScottPicket = props => {
 
   return theme ? (
     <div theme={theme}>
-      <Seo title="Scott-Picket" />
+      <Seo title="Scott-Pickett" />
       <Landing pageProps={props} />
     </div>
   ) : null
