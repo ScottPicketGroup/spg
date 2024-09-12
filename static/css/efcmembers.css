@@ -57,23 +57,41 @@
 .form-container input[type="checkbox"] {
     margin-right: 10px;
 }
-
 /* Submit button styling */
-.form-container button[type="submit"] {
-    background-color: #004d40; /* Dark green button */
-    color: white;
-    padding: 12px 20px;
-    border: 2px solid #004d40;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    width: 100%; /* Make button fill width */
+.form-container button[type="submit"],
+.form-container input[type="submit"] {
+    background-color: #004d40 !important; /* Dark green button */
+    color: white !important;
+    border: 2px solid #004d40 !important;
+    border-radius: 5px !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+    width: 20% !important;
+    height: 50px !important;
+
+    /* Flexbox for centering text */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
 }
 
-.form-container button[type="submit"]:hover {
-    background-color: white;
-    color: #004d40;
+.form-container button[type="submit"]:hover,
+.form-container input[type="submit"]:hover {
+    background-color: white !important;
+    color: #004d40 !important;
+}
+
+
+
+.data-block {
+    margin-top: 8px;
+}
+
+.label-option{
+    margin-top: 4px;
 }
 
 /* Mobile responsiveness */
@@ -82,3 +100,4 @@
         padding: 20px;
     }
 }
+
